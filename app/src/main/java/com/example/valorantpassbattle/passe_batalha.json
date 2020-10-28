@@ -1,0 +1,415 @@
+{
+  "Nome": "IGNIÇÃO - ATO 3",
+  "Capitulos": [
+    {
+      "Indice": 1,
+      "Recompensa": "Card de Jogador 'Bucky' e Título 'Na Pilha'",
+      "Niveis": [
+        {
+          "Indice": 1,
+          "EXP Inicial": 0,
+          "EXP Faltante": 0,
+          "Porcentagem": 0.0,
+          "Recompensa": "Marshall Delíquio"
+        },
+        {
+          "Indice": 2,
+          "EXP Inicial": 0,
+          "EXP Faltante": 4000,
+          "Porcentagem": 0.0,
+          "Recompensa": "Chaveiro Bind"
+        },
+        {
+          "Indice": 3,
+          "EXP Inicial": 4000,
+          "EXP Faltante": 5000,
+          "Porcentagem": 0.29,
+          "Recompensa": "10 Pontos de Radianitas"
+        },
+        {
+          "Indice": 4,
+          "EXP Inicial": 9000,
+          "EXP Faltante": 6000,
+          "Porcentagem": 0.66,
+          "Recompensa": "Card Delíquio"
+        },
+        {
+          "Indice": 5,
+          "EXP Inicial": 15000,
+          "EXP Faltante": 7000,
+          "Porcentagem": 1.09,
+          "Recompensa": "Ghost Serenidade"
+        }
+      ]
+    },
+    {
+      "Indice": 2,
+      "Recompensa": "Chaveiro EP 1 // Ato 3 ",
+      "Niveis": [
+        {
+          "Indice": 6,
+          "EXP Inicial": 22000,
+          "EXP Faltante": 8000,
+          "Porcentagem": 1.6,
+          "Recompensa": "Spray Joinha"
+        },
+        {
+          "Indice": 7,
+          "EXP Inicial": 30000,
+          "EXP Faltante": 9000,
+          "Porcentagem": 2.19,
+          "Recompensa": "Chaveiro Abóbora Sinistra"
+        },
+        {
+          "Indice": 8,
+          "EXP Inicial": 39000,
+          "EXP Faltante": 10000,
+          "Porcentagem": 2.84,
+          "Recompensa": "10 Pontos de Radianitas"
+        },
+        {
+          "Indice": 9,
+          "EXP Inicial": 49000,
+          "EXP Faltante": 11000,
+          "Porcentagem": 3.57,
+          "Recompensa": "Saúva-Lorant Card"
+        },
+        {
+          "Indice": 10,
+          "EXP Inicial": 60000,
+          "EXP Faltante": 12000,
+          "Porcentagem": 4.37,
+          "Recompensa": "Bucky Arranque (Variante Rosa)"
+        }
+      ]
+    },
+    {
+      "Indice": 3,
+      "Recompensa": "Título 'Picante'e 10 Pontos de Radianitas",
+      "Niveis": [
+        {
+          "Indice": 11,
+          "EXP Inicial": 72000,
+          "EXP Faltante": 13000,
+          "Porcentagem": 5.25,
+          "Recompensa": "Card de Jogador 'Ghost'"
+        },
+        {
+          "Indice": 12,
+          "EXP Inicial": 85000,
+          "EXP Faltante": 14000,
+          "Porcentagem": 6.2,
+          "Recompensa": "Spray Octo Rave"
+        },
+        {
+          "Indice": 13,
+          "EXP Inicial": 99000,
+          "EXP Faltante": 15000,
+          "Porcentagem": 7.22,
+          "Recompensa": "10 Pontos de Radianitas"
+        },
+        {
+          "Indice": 14,
+          "EXP Inicial": 114000,
+          "EXP Faltante": 16000,
+          "Porcentagem": 8.31,
+          "Recompensa": "Chaveiro Agente Esquilo"
+        },
+        {
+          "Indice": 15,
+          "EXP Inicial": 130000,
+          "EXP Faltante": 17000,
+          "Porcentagem": 9.48,
+          "Recompensa": "Judge Serenidade"
+        }
+      ]
+    },
+    {
+      "Indice": 4,
+      "Recompensa": "Spray 'SE CUIDE E LAVE AS MÃOS'",
+      "Niveis": [
+        {
+          "Indice": 16,
+          "EXP Inicial": 147000,
+          "EXP Faltante": 18000,
+          "Porcentagem": 10.71,
+          "Recompensa": "Classic Arranque"
+        },
+        {
+          "Indice": 17,
+          "EXP Inicial": 165000,
+          "EXP Faltante": 19000,
+          "Porcentagem": 12.03,
+          "Recompensa": "Versus // Raze + Killjoy (Card de Jogador)"
+        },
+        {
+          "Indice": 18,
+          "EXP Inicial": 184000,
+          "EXP Faltante": 20000,
+          "Porcentagem": 13.41,
+          "Recompensa": "Spray Delíquio"
+        },
+        {
+          "Indice": 19,
+          "EXP Inicial": 204000,
+          "EXP Faltante": 21000,
+          "Porcentagem": 14.87,
+          "Recompensa": "10 Pontos de Radianitas"
+        },
+        {
+          "Indice": 20,
+          "EXP Inicial": 225000,
+          "EXP Faltante": 22000,
+          "Porcentagem": 16.4,
+          "Recompensa": "Shorty Delíquio"
+        }
+      ]
+    },
+    {
+      "Indice": 5,
+      "Recompensa": "Card Relaxando e 10 Pontos de Radianitas",
+      "Niveis": [
+        {
+          "Indice": 21,
+          "EXP Inicial": 247000,
+          "EXP Faltante": 23000,
+          "Porcentagem": 18.0,
+          "Recompensa": "Spray 'Vem buscar seu Presentinho'"
+        },
+        {
+          "Indice": 22,
+          "EXP Inicial": 270000,
+          "EXP Faltante": 24000,
+          "Porcentagem": 19.68,
+          "Recompensa": "10 Pontos de Radianitas"
+        },
+        {
+          "Indice": 23,
+          "EXP Inicial": 294000,
+          "EXP Faltante": 25000,
+          "Porcentagem": 21.43,
+          "Recompensa": "Chaveiro Mira de Batata"
+        },
+        {
+          "Indice": 24,
+          "EXP Inicial": 319000,
+          "EXP Faltante": 26000,
+          "Porcentagem": 23.25,
+          "Recompensa": "Spray 8-BIT de Valorant"
+        },
+        {
+          "Indice": 25,
+          "EXP Inicial": 345000,
+          "EXP Faltante": 27000,
+          "Porcentagem": 25.15,
+          "Recompensa": "Phantom Serenidade"
+        }
+      ]
+    },
+    {
+      "Indice": 6,
+      "Recompensa": "Chaveiro Rosa Imortal",
+      "Niveis": [
+        {
+          "Indice": 26,
+          "EXP Inicial": 372000,
+          "EXP Faltante": 28000,
+          "Porcentagem": 27.11,
+          "Recompensa": "Spray 'SEM OP' (Sem Operator)"
+        },
+        {
+          "Indice": 27,
+          "EXP Inicial": 400000,
+          "EXP Faltante": 29000,
+          "Porcentagem": 29.15,
+          "Recompensa": "10 Pontos de Radianitas"
+        },
+        {
+          "Indice": 28,
+          "EXP Inicial": 429000,
+          "EXP Faltante": 30000,
+          "Porcentagem": 31.27,
+          "Recompensa": "Spray Dendrito Estelar"
+        },
+        {
+          "Indice": 29,
+          "EXP Inicial": 459000,
+          "EXP Faltante": 31000,
+          "Porcentagem": 33.45,
+          "Recompensa": "Card de Jogador de ID da Skye"
+        },
+        {
+          "Indice": 30,
+          "EXP Inicial": 490000,
+          "EXP Faltante": 32000,
+          "Porcentagem": 35.71,
+          "Recompensa": "Guardian Delíquio"
+        }
+      ]
+    },
+    {
+      "Indice": 7,
+      "Recompensa": "Título 'Isca' e 10 Pontos de Radianitas",
+      "Niveis": [
+        {
+          "Indice": 31,
+          "EXP Inicial": 522000,
+          "EXP Faltante": 33000,
+          "Porcentagem": 38.05,
+          "Recompensa": "Chaveiro Segredos Ancestrais"
+        },
+        {
+          "Indice": 32,
+          "EXP Inicial": 555000,
+          "EXP Faltante": 34000,
+          "Porcentagem": 40.45,
+          "Recompensa": "10 Pontos de Radianitas"
+        },
+        {
+          "Indice": 33,
+          "EXP Inicial": 589000,
+          "EXP Faltante": 35000,
+          "Porcentagem": 42.93,
+          "Recompensa": "Chaveiro Sorvetinho Fofo"
+        },
+        {
+          "Indice": 34,
+          "EXP Inicial": 624000,
+          "EXP Faltante": 36000,
+          "Porcentagem": 45.48,
+          "Recompensa": "Spray 'Arrasei'"
+        },
+        {
+          "Indice": 35,
+          "EXP Inicial": 660000,
+          "EXP Faltante": 37000,
+          "Porcentagem": 48.1,
+          "Recompensa": "Stinger Arranque"
+        }
+      ]
+    },
+    {
+      "Indice": 8,
+      "Recompensa": "Spray OctoAtaque2",
+      "Niveis": [
+        {
+          "Indice": 36,
+          "EXP Inicial": 697000,
+          "EXP Faltante": 38000,
+          "Porcentagem": 50.8,
+          "Recompensa": "Spray GGWP"
+        },
+        {
+          "Indice": 37,
+          "EXP Inicial": 735000,
+          "EXP Faltante": 39000,
+          "Porcentagem": 53.57,
+          "Recompensa": "Chaveiro Aronguinho"
+        },
+        {
+          "Indice": 38,
+          "EXP Inicial": 774000,
+          "EXP Faltante": 40000,
+          "Porcentagem": 56.41,
+          "Recompensa": "Segredo Linhagem Secreta"
+        },
+        {
+          "Indice": 39,
+          "EXP Inicial": 814000,
+          "EXP Faltante": 41000,
+          "Porcentagem": 59.33,
+          "Recompensa": "10 Pontos de Radianitas"
+        },
+        {
+          "Indice": 40,
+          "EXP Inicial": 855000,
+          "EXP Faltante": 42000,
+          "Porcentagem": 62.32,
+          "Recompensa": "Spectre Serenidade"
+        }
+      ]
+    },
+    {
+      "Indice": 9,
+      "Recompensa": "Chaveiro Gelinho, seu amiguinho",
+      "Niveis": [
+        {
+          "Indice": 41,
+          "EXP Inicial": 897000,
+          "EXP Faltante": 43000,
+          "Porcentagem": 65.38,
+          "Recompensa": "10 Pontos de Radianitas"
+        },
+        {
+          "Indice": 42,
+          "EXP Inicial": 940000,
+          "EXP Faltante": 44000,
+          "Porcentagem": 68.51,
+          "Recompensa": "Versus // Vandal + Phantom (Card de Jogador)"
+        },
+        {
+          "Indice": 43,
+          "EXP Inicial": 984000,
+          "EXP Faltante": 45000,
+          "Porcentagem": 71.72,
+          "Recompensa": "Spray 'Fica, Vai ter bolo'"
+        },
+        {
+          "Indice": 44,
+          "EXP Inicial": 1029000,
+          "EXP Faltante": 46000,
+          "Porcentagem": 75.0,
+          "Recompensa": "Chaveiro Observador da Ruína"
+        },
+        {
+          "Indice": 45,
+          "EXP Inicial": 1075000,
+          "EXP Faltante": 47000,
+          "Porcentagem": 78.35,
+          "Recompensa": "Vandal Delíquio"
+        }
+      ]
+    },
+    {
+      "Indice": 10,
+      "Recompensa": "Sheriff Arranque e Card Perigo: Radianita",
+      "Niveis": [
+        {
+          "Indice": 46,
+          "EXP Inicial": 1122000,
+          "EXP Faltante": 48000,
+          "Porcentagem": 81.78,
+          "Recompensa": "Spray Manja a Estratégia"
+        },
+        {
+          "Indice": 47,
+          "EXP Inicial": 1170000,
+          "EXP Faltante": 49000,
+          "Porcentagem": 85.28,
+          "Recompensa": "Chaveiro Discoteca"
+        },
+        {
+          "Indice": 48,
+          "EXP Inicial": 1219000,
+          "EXP Faltante": 50000,
+          "Porcentagem": 88.85,
+          "Recompensa": "Card Memento Mori"
+        },
+        {
+          "Indice": 49,
+          "EXP Inicial": 1269000,
+          "EXP Faltante": 51000,
+          "Porcentagem": 92.49,
+          "Recompensa": "10 Pontos de Radianitas"
+        },
+        {
+          "Indice": 50,
+          "EXP Inicial": 1320000,
+          "EXP Faltante": 52000,
+          "Porcentagem": 96.21,
+          "Recompensa": "Adaga Delíquio"
+        }
+      ]
+    }
+  ]
+}
