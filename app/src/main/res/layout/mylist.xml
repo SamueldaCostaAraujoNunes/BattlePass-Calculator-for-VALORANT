@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Index"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:padding="2dp"
+        android:textColor="#4d4d4d" />
+    <TextView
+        android:id="@+id/expInitial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exp Inicial"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/expMissing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exp Faltando"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/totalPercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Porcentagem"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/reward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recompensa"
+        android:layout_marginLeft="10dp"/>
+</LinearLayout>

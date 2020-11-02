@@ -1,10 +1,13 @@
 {
   "Nome": "IGNIÇÃO - ATO 3",
+  "Data Inicial": "13/10/2020",
+  "Data Final": "11/01/2021",
+  "EXP total": 1372000,
   "Capitulos": [
     {
       "Indice": 1,
       "Recompensa": "Card de Jogador 'Bucky' e Título 'Na Pilha'",
-      "Niveis": [
+      "Tiers": [
         {
           "Indice": 1,
           "EXP Inicial": 0,
@@ -45,7 +48,7 @@
     {
       "Indice": 2,
       "Recompensa": "Chaveiro EP 1 // Ato 3 ",
-      "Niveis": [
+      "Tiers": [
         {
           "Indice": 6,
           "EXP Inicial": 22000,
@@ -86,7 +89,7 @@
     {
       "Indice": 3,
       "Recompensa": "Título 'Picante'e 10 Pontos de Radianitas",
-      "Niveis": [
+      "Tiers": [
         {
           "Indice": 11,
           "EXP Inicial": 72000,
@@ -127,7 +130,7 @@
     {
       "Indice": 4,
       "Recompensa": "Spray 'SE CUIDE E LAVE AS MÃOS'",
-      "Niveis": [
+      "Tiers": [
         {
           "Indice": 16,
           "EXP Inicial": 147000,
@@ -168,7 +171,7 @@
     {
       "Indice": 5,
       "Recompensa": "Card Relaxando e 10 Pontos de Radianitas",
-      "Niveis": [
+      "Tiers": [
         {
           "Indice": 21,
           "EXP Inicial": 247000,
@@ -209,7 +212,7 @@
     {
       "Indice": 6,
       "Recompensa": "Chaveiro Rosa Imortal",
-      "Niveis": [
+      "Tiers": [
         {
           "Indice": 26,
           "EXP Inicial": 372000,
@@ -250,7 +253,7 @@
     {
       "Indice": 7,
       "Recompensa": "Título 'Isca' e 10 Pontos de Radianitas",
-      "Niveis": [
+      "Tiers": [
         {
           "Indice": 31,
           "EXP Inicial": 522000,
@@ -291,7 +294,7 @@
     {
       "Indice": 8,
       "Recompensa": "Spray OctoAtaque2",
-      "Niveis": [
+      "Tiers": [
         {
           "Indice": 36,
           "EXP Inicial": 697000,
@@ -332,7 +335,7 @@
     {
       "Indice": 9,
       "Recompensa": "Chaveiro Gelinho, seu amiguinho",
-      "Niveis": [
+      "Tiers": [
         {
           "Indice": 41,
           "EXP Inicial": 897000,
@@ -373,7 +376,7 @@
     {
       "Indice": 10,
       "Recompensa": "Sheriff Arranque e Card Perigo: Radianita",
-      "Niveis": [
+      "Tiers": [
         {
           "Indice": 46,
           "EXP Inicial": 1122000,

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/activity_input_et_level_current"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Tier Atual"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/activity_input_et_exp_missing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="EXP para Completar"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/activity_input_et_initial_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Data Inicial" />
+
+    <Button
+        android:id="@+id/activity_input_bt_salvar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Salvar" />
+
+</LinearLayout>

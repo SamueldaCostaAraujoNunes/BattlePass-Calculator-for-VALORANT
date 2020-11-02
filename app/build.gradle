@@ -32,6 +32,10 @@ android {
 }
 
 dependencies {
+    implementation 'com.github.AAChartModel:AAChartCore-Kotlin:-SNAPSHOT'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    implementation 'com.github.majorkik:SparkLineLayout:1.0.1'
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.2.0'

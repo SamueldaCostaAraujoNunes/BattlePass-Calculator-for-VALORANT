@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".ui.activity.GraphicPassBattleActivity">
+
+<!--    <com.majorik.sparklinelibrary.SparkLineLayout-->
+<!--        android:id="@+id/graph"-->
+<!--        android:layout_width="400dp"-->
+<!--        android:layout_height="400dp"-->
+<!--        android:background="#212121"-->
+<!--        app:s_line_bezier="0.1"-->
+<!--        app:s_line_thickness="4dp"-->
+<!--        app:s_marker_background_color="#FF0000"-->
+<!--        app:s_marker_border_color="#FF0000"-->
+<!--        app:s_marker_border_size="2dp"-->
+<!--        app:s_marker_height="3dp"-->
+<!--        app:s_marker_width="3dp"-->
+<!--        app:s_marker_circle_style="true"-->
+<!--        app:s_split_ratio="0.9"-->
+<!--        app:s_split_left_color="#FED32C"-->
+<!--        app:s_split_line="true"-->
+<!--        app:s_split_right_color="#303030" />-->
+
+    <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
+        android:id="@+id/aa_chart_view"
+        android:layout_width="match_parent"
+        android:layout_height="350dp">
+
+    </com.github.aachartmodel.aainfographics.aachartcreator.AAChartView>
+
+    <EditText
+        android:id="@+id/activity_graphic_pass_battle_et_level_current"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Tier Atual"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/activity_graphic_pass_battle_et_exp_missing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="EXP para Completar"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/bt_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"/>
+</LinearLayout>
