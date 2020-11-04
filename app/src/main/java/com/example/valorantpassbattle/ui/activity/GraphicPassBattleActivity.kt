@@ -6,7 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.example.valorantpassbattle.R
-import com.example.valorantpassbattle.model.Charts.Charts
+import com.example.valorantpassbattle.ui.activity.Charts.Charts
 import com.example.valorantpassbattle.model.Historic.Historic
 import com.example.valorantpassbattle.model.PassBattle.PassBattle
 import com.example.valorantpassbattle.model.PassBattle.PassBattleFactory
@@ -29,14 +29,16 @@ class GraphicPassBattleActivity : AppCompatActivity(), View.OnClickListener{
         createViews();
         setClickListener();
         createObjects();
+    }
+
+    override fun onResume() {
+        super.onResume()
         attCharts("XP por Tier", listOfRewards);
     }
 
     override fun onClick(view: View) {
         when ( view.id) {
-            R.id.bt_save -> {
-                clickBtnSave()
-            }
+            R.id.bt_save -> clickBtSave()
         }
     }
 
@@ -58,7 +60,7 @@ class GraphicPassBattleActivity : AppCompatActivity(), View.OnClickListener{
         listOfRewards = ArrayList(passBattle.tiers.map { it -> it.expInitial })
     }
 
-    private fun clickBtnSave() {
+    private fun clickBtSave() {
         val tierIndex = et_tier.text.toString().toInt()
         val xpFaltando = et_exp_missing.text.toString().toInt()
         val historic = Historic()

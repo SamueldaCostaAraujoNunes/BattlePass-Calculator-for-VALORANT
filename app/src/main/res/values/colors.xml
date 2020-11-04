@@ -5,6 +5,13 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="black">#111111</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="bottom_bar">@color/valorant_dark</color>
+
+    <color name="valorant_primary">#FF4655</color>
+    <color name="valorant_accent">#4DE167</color>
+    <color name="valorant_dark">#0F1923</color>
+    <color name="valorant_light">#ECE8E1</color>
 </resources>

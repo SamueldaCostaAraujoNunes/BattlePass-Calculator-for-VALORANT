@@ -1,5 +1,6 @@
 package com.example.valorantpassbattle.ui.activity
 
+import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.os.Bundle
 import android.text.InputType
@@ -23,6 +24,7 @@ class InputActivity : AppCompatActivity() {
         createDataPicker(etInitialData)
     }
 
+    @SuppressLint("SetTextI18n")
     fun createDataPicker(et: EditText){
         et.setInputType(InputType.TYPE_NULL)
         et.setOnClickListener {

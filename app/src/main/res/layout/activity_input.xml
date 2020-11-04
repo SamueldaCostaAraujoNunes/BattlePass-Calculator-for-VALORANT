@@ -10,29 +10,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:hint="Tier Atual"
-        android:inputType="number" />
+        android:hint="@string/tier_atual"
+        android:inputType="number"
+        android:autofillHints="number" />
 
     <EditText
         android:id="@+id/activity_input_et_exp_missing"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:hint="EXP para Completar"
-        android:inputType="number" />
+        android:hint="@string/exp_para_completar"
+        android:inputType="number"
+        android:autofillHints="number" />
 
     <EditText
         android:id="@+id/activity_input_et_initial_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:hint="Data Inicial" />
+        android:inputType="date"
+        android:hint="@string/data_inicial"
+        android:autofillHints="number" />
 
     <Button
         android:id="@+id/activity_input_bt_salvar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="Salvar" />
+        android:text="@string/salvar" />
 
 </LinearLayout>

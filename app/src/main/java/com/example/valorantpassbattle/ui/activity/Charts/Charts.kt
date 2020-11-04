@@ -1,7 +1,5 @@
-package com.example.valorantpassbattle.model.Charts
+package com.example.valorantpassbattle.ui.activity.Charts
 
-import android.util.Log
-import com.example.valorantpassbattle.model.Observer.IObserver
 import com.github.aachartmodel.aainfographics.aachartcreator.*
 
 class Charts(val chartView: AAChartView) {

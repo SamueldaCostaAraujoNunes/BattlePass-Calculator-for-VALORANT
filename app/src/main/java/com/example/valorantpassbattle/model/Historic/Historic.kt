@@ -17,7 +17,7 @@ class Historic() {
             val interval = ultimoTierListado..tier.tierCurrent
             val q = tier.tierCurrent - ultimoTierListado
             for (inicio in interval){
-                var razao = if(q != 0) {
+                val razao = if(q != 0) {
                     tier.xpAtual / (tier.tierCurrent - ultimoTierListado)
                 }else{
                     tier.xpAtual

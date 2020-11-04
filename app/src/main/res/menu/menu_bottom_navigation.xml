@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu">
+
+    <item
+        android:id="@+id/item_bar_chart"
+        android:icon="@drawable/ic_baseline_bar_chart_24"
+        android:title="@null" />
+
+    <item
+        android:id="@+id/item_timeline"
+        android:icon="@drawable/ic_baseline_timeline_24"
+        android:title="@null" />
+
+    <item
+        android:enabled="false"
+        android:title="@null" />
+
+    <item
+        android:id="@+id/item_timer"
+        android:icon="@drawable/ic_baseline_timer_24"
+        android:title="@null" />
+
+    <item
+        android:id="@+id/item_apps"
+        android:icon="@drawable/ic_baseline_apps_24"
+        android:title="@null" />
+
+</menu>

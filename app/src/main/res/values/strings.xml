@@ -9,4 +9,8 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="tier_atual">Tier Atual</string>
+    <string name="exp_para_completar">EXP para Completar</string>
+    <string name="salvar">Salvar</string>
+    <string name="data_inicial">Data Inicial</string>
 </resources>
