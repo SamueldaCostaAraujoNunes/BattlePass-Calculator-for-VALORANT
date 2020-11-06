@@ -13,4 +13,6 @@
     <string name="exp_para_completar">EXP para Completar</string>
     <string name="salvar">Salvar</string>
     <string name="data_inicial">Data Inicial</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

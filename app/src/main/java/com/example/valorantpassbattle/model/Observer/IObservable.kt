@@ -1,5 +1,7 @@
 package com.example.valorantpassbattle.model.Observer
 
+import com.example.valorantpassbattle.model.Historic.Historic
+
 interface IObservable {
     val observers: ArrayList<IObserver>
 

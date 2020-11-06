@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CardViewStyle" parent="CardView">
+        <item name="cardCornerRadius">10dp</item>
+        <item name="cardElevation">6dp</item>
+        <item name="cardBackgroundColor">@color/valorant_dark1</item>
+    </style>
+</resources>

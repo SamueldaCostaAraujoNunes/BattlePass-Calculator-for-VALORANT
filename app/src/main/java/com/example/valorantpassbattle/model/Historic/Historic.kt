@@ -1,44 +1,102 @@
 package com.example.valorantpassbattle.model.Historic
 
-class Historic() {
-    val arrayXp: ArrayList<UserInputsXp> = ArrayList<UserInputsXp>()
+import android.content.Context
+import com.example.valorantpassbattle.model.DataBase.MySharedPreferences
+import com.example.valorantpassbattle.model.Observer.IObservable
+import com.example.valorantpassbattle.model.Observer.IObserver
+import java.util.Comparator
+import java.util.function.Predicate
 
-    fun add(userInput: UserInputsXp){
-        arrayXp.add(userInput)
+class Historic(context: Context): ArrayList<UserInputsTier>(), IObservable {
+    private val bd = MySharedPreferences(context)
+    private val mObserver = ArrayList<IObserver>()
+    private val key = bd.keyHistoricUserInputsPassBattle
+        init {
+        val loadArray: List<UserInputsTier> = bd.getListHistoric()
+        this.addAll(loadArray)
     }
 
-    fun generateHistoricXpUser(): ArrayList<Int> {
-        val xpPerTier = ArrayList<Int>()
-        val arrayComparcao = ArrayList<UserInputsXp>(arrayXp)
-        arrayComparcao.sortWith(compareBy { it -> it.tierCurrent })
-        var ultimoTierListado = 0
-        for(tier in arrayComparcao){
-            val rangeTiers = ArrayList<Int>()
-            val interval = ultimoTierListado..tier.tierCurrent
-            val q = tier.tierCurrent - ultimoTierListado
-            for (inicio in interval){
-                val razao = if(q != 0) {
-                    tier.xpAtual / (tier.tierCurrent - ultimoTierListado)
-                }else{
-                    tier.xpAtual
-                }
-                rangeTiers.add((razao*inicio).toInt())
-            }
-            xpPerTier.addAll(rangeTiers)
-            ultimoTierListado = tier.tierCurrent
-        }
-        return xpPerTier
+    // ArrayList
+
+    override fun set(index: Int, element: UserInputsTier): UserInputsTier {
+        val aux = super.set(index, element)
+        event()
+        return aux
     }
 
-    fun generateMedianProgress(): ArrayList<Int> {
-        val xpPerTier = ArrayList<Int>()
-        val arrayComparcao = ArrayList<UserInputsXp>(arrayXp)
-        arrayComparcao.sortWith(compareBy { it -> it.tierCurrent })
-        val ultimoTier = arrayComparcao.last()
-        val xpMedio = ultimoTier.xpAtual / ultimoTier.tierCurrent
-        for(tier in 0..ultimoTier.tierCurrent){
-            xpPerTier.add((xpMedio * tier).toInt())
-        }
-        return xpPerTier
+    override fun remove(element: UserInputsTier): Boolean {
+        val aux = super<ArrayList>.remove(element)
+        event()
+        return aux
     }
+
+    override fun removeAll(elements: Collection<UserInputsTier>): Boolean {
+        val aux = super.removeAll(elements)
+        event()
+        return aux
+    }
+
+    override fun removeIf(filter: Predicate<in UserInputsTier>): Boolean {
+        val aux = super.removeIf(filter)
+        event()
+        return aux
+    }
+
+    override fun removeAt(index: Int): UserInputsTier {
+        val aux = super.removeAt(index)
+        event()
+        return aux
+    }
+
+    override fun add(element: UserInputsTier): Boolean {
+        val aux = super<ArrayList>.add(element)
+        event()
+        return aux
+    }
+
+    override fun add(index: Int, element: UserInputsTier) {
+        super<ArrayList>.add(index, element)
+        event()
+    }
+
+    override fun addAll(elements: Collection<UserInputsTier>): Boolean {
+        val aux = super.addAll(elements)
+        event()
+        return aux
+    }
+
+    override fun addAll(index: Int, elements: Collection<UserInputsTier>): Boolean {
+        val aux = super.addAll(index, elements)
+        event()
+        return aux
+    }
+
+    // Observer
+
+    private fun event(){
+        bd.setListHistoric(this)
+        sendUpdateEvent()
+    }
+
+    override val observers: ArrayList<IObserver>
+        get() = mObserver
+
+    override fun add(observer: IObserver) {
+        observers.add(observer)
+    }
+
+    override fun remove(observer: IObserver) {
+        observers.remove(observer)
+    }
+
+    override fun sendUpdateEvent() {
+        observers.forEach { it.update() }
+    }
+
+    // Calculos
+
+    fun median(): ArrayList<Int> {
+        return ArrayList(this.map { it -> it.tierExpMissing})
+    }
+
 }

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.fragment.PrincipalFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="14dp"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardChart"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="14dp"
+            style="@style/CardViewStyle">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentChart"
+                android:name="com.example.valorantpassbattle.ui.fragment.Principal.ChartFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="14dp"
+            style="@style/CardViewStyle">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentTierCurrent"
+                android:name="com.example.valorantpassbattle.ui.fragment.Principal.TierCurrentFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardPropriets"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="14dp"
+            style="@style/CardViewStyle">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentPropriets"
+                android:name="com.example.valorantpassbattle.ui.fragment.Principal.PropriedadesFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardListTiers"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="14dp"
+            style="@style/CardViewStyle">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentListTiers"
+                android:name="com.example.valorantpassbattle.ui.fragment.Principal.TiersFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="55dp"/>
+    </LinearLayout>
+
+
+</ScrollView>

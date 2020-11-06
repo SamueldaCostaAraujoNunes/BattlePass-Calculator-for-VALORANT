@@ -28,7 +28,6 @@ class PassBattle(json: JSONObject) {
         var year = dateSplit[2].toInt()
         dateInit.clear()
         dateInit.set(year, month, day)
-        Log.i("Data Inicial: ", dateInit.toString())
 
         // Create dateFinaly
         date = json.get("Data Final").toString()
@@ -38,7 +37,6 @@ class PassBattle(json: JSONObject) {
         year = dateSplit[2].toInt()
         dateFinally.clear()
         dateFinally.set(year, month, day)
-        Log.i("Data Final: ", dateFinally.toString())
 
         //Create listTiers
         for (chapter in chapters){
