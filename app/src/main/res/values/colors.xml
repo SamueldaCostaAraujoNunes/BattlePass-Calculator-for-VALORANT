@@ -1,13 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="bottom_bar">@color/valorant_dark</color>
+    <color name="blue_900">#140f30</color>
+    <color name="blue_800">#201e46</color>
+    <color name="blue_700">#282653</color>
+    <color name="blue_600">#2f2e5d</color>
+    <color name="blue_500">#353564</color>
+    <color name="blue_400">#4f5078</color>
+    <color name="blue_300">#6a6d8d</color>
+    <color name="blue_200">#9294ae</color>
+    <color name="blue_100">#bcbecf</color>
+    <color name="blue_50">#e4e5eb</color>
 
-    <color name="white">#FFFFFF</color>
-    <color name="valorant_primary">#FF4655</color>
-    <color name="valorant_accent">#FF4655</color>
-    <color name="valorant_dark">#0F1923</color>
-    <color name="valorant_dark0">#172737</color>
-    <color name="valorant_dark1">#1B2E42</color>
-    <color name="valorant_light">#ECE8E1</color>
+    <color name="red_900">#c8001f</color>
+    <color name="red_800">#d8002c</color>
+    <color name="red_700">#e50934</color>
+    <color name="red_600">#f71d3a</color>
+    <color name="red_500">#ff2a3a</color>
+    <color name="red_400">#ff4655</color>
+    <color name="red_300">#f26e78</color>
+    <color name="red_200">#f8989e</color>
+    <color name="red_100">#ffccd5</color>
+    <color name="red_50">#ffebef</color>
+
+    <color name="gray_900">#000000</color>
+    <color name="gray_800">#262626</color>
+    <color name="gray_700">#434343</color>
+    <color name="gray_600">#555555</color>
+    <color name="gray_500">#7b7b7b</color>
+    <color name="gray_400">#9d9d9d</color>
+    <color name="gray_300">#c4c4c4</color>
+    <color name="gray_200">#d9d9d9</color>
+    <color name="gray_100">#e9e9e9</color>
+    <color name="gray_50">#f5f5f5</color>
+
+    <color name="text_light">#ECE8E1</color>
+    <color name="text_dark">#111111</color>
+    <color name="alert">#E69700</color>
+    <color name="sucess">#4CD964</color>
 </resources>

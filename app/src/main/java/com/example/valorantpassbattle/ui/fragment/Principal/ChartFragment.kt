@@ -34,7 +34,7 @@ class ChartFragment() : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val aaChartView = requireView().findViewById<AAChartView>(R.id.aa_chart_view)
         val chart = ChartFactory(requireContext(), aaChartView)
-        chart.setData("XP por Tier") { chart.getTiersPerXp() }
+        chart.setData("XP Total") { chart.getTiersPerXp() }
         chart.setData("Seu Histórico") { properties.historicTierPositionPerXp() };
         chart.show()
         historic.add(chart)

@@ -1,17 +1,29 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.ValorantPassBattle" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Font. -->
+        <item name="android:fontFamily">@font/valorant_font_family</item>
+
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/valorant_primary</item>
-        <item name="colorPrimaryVariant">@color/valorant_primary</item>
-        <item name="colorOnPrimary">@color/valorant_light</item>
+        <item name="colorPrimaryVariant">@color/blue_500</item>
+        <item name="colorPrimarySurface">@color/blue_700</item>
+        <item name="colorPrimary">@color/blue_800</item>
+        <item name="colorPrimaryDark">@color/blue_900</item>
+        <item name="colorOnPrimary">@color/text_light</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/valorant_accent</item>
-        <item name="colorSecondaryVariant">@color/valorant_accent</item>
-        <item name="colorOnSecondary">@color/valorant_dark</item>
+        <item name="colorSecondary">@color/red_400</item>
+        <item name="colorSecondaryVariant">@color/red_500</item>
+        <item name="colorOnSecondary">@color/text_light</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorSecondaryVariant</item>
+        <!-- Accent brand Color. -->
+        <item name="colorAccent">@color/sucess</item>
+        <!-- Error brand Color.-->
+        <item name="colorControlNormal">@color/red_500</item>
+        <item name="colorControlActivated">@color/red_400</item>
+        <item name="colorError">@color/alert</item>
         <!-- Customize your theme here. -->
+        <item name="colorOnSurface">@color/text_dark</item>
     </style>
 
     <style name="Theme.ValorantPassBattle.NoActionBar">

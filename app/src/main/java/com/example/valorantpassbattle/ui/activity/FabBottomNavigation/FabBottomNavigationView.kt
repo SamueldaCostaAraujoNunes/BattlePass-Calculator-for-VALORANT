@@ -5,6 +5,9 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Paint
 import android.util.AttributeSet
+import android.util.TypedValue
+import androidx.annotation.AttrRes
+import androidx.annotation.ColorInt
 import androidx.core.animation.doOnEnd
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
@@ -45,11 +48,21 @@ class FabBottomNavigationView @JvmOverloads constructor(
             .build()
 
         materialShapeDrawable = MaterialShapeDrawable(shapeAppearanceModel).apply {
-            setTint(ContextCompat.getColor(context, R.color.bottom_bar))
+            setTint(context.getColorFromAttr(R.attr.colorPrimaryVariant))
             paintStyle = Paint.Style.FILL_AND_STROKE
         }
 
         background = materialShapeDrawable
+    }
+
+    @ColorInt
+    fun Context.getColorFromAttr(
+        @AttrRes attrColor: Int,
+        typedValue: TypedValue = TypedValue(),
+        resolveRefs: Boolean = true
+    ): Int {
+        theme.resolveAttribute(attrColor, typedValue, resolveRefs)
+        return typedValue.data
     }
 
     fun transform(fab: FloatingActionButton) {

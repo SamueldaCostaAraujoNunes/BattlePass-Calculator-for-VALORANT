@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="14dp"
         android:gravity="center"
-        android:textColor="@color/white"
+        android:textColor="?attr/colorOnPrimary"
         android:textSize="20dp"
         android:hint="Tier 34"/>
 

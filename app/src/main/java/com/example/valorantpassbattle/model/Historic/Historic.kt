@@ -10,7 +10,6 @@ import java.util.function.Predicate
 class Historic(context: Context): ArrayList<UserInputsTier>(), IObservable {
     private val bd = MySharedPreferences(context)
     private val mObserver = ArrayList<IObserver>()
-    private val key = bd.keyHistoricUserInputsPassBattle
         init {
         val loadArray: List<UserInputsTier> = bd.getListHistoric()
         this.addAll(loadArray)
@@ -71,9 +70,15 @@ class Historic(context: Context): ArrayList<UserInputsTier>(), IObservable {
         return aux
     }
 
+    override fun clear() {
+        super.clear()
+        event()
+    }
+
     // Observer
 
     private fun event(){
+        sortBy { it.tierCurrent }
         bd.setListHistoric(this)
         sendUpdateEvent()
     }
@@ -92,11 +97,4 @@ class Historic(context: Context): ArrayList<UserInputsTier>(), IObservable {
     override fun sendUpdateEvent() {
         observers.forEach { it.update() }
     }
-
-    // Calculos
-
-    fun median(): ArrayList<Int> {
-        return ArrayList(this.map { it -> it.tierExpMissing})
-    }
-
 }

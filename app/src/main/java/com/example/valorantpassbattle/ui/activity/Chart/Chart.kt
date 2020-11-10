@@ -3,7 +3,6 @@ package com.example.valorantpassbattle.ui.activity.Chart
 import android.content.Context
 import com.example.valorantpassbattle.R
 import com.example.valorantpassbattle.model.ColorFromXml
-import com.example.valorantpassbattle.model.Historic.Historic
 import com.example.valorantpassbattle.model.Observer.IObserver
 import com.github.aachartmodel.aainfographics.aachartcreator.*
 import com.github.aachartmodel.aainfographics.aaoptionsmodel.AAStyle
@@ -21,22 +20,25 @@ open class Chart(val context: Context, val chartView: AAChartView): IObserver {
     }
 
     fun createModel(){
-        val backgroundColor = colorGenerator.getColor(R.color.valorant_dark1)
-        val colorPrimary = colorGenerator.getColor(R.color.valorant_primary)
-        val white = colorGenerator.getColor(R.color.valorant_light)
-        val colorsTheme = model
+        val colorOnPrimary = colorGenerator.getColor(R.attr.colorOnPrimary)
+        val colorSecondary = colorGenerator.getColor(R.attr.colorSecondary)
+        val colorAccent = colorGenerator.getColor(R.attr.colorAccent)
+        val colorError = colorGenerator.getColor(R.attr.colorError)
+        model
             .chartType(AAChartType.Area)
             .tooltipValueSuffix(" Xp")
             .title("Seu Passe de Batalha")
-            .titleStyle(AAStyle()
-                .color(white)
-                .fontSize(14F))
-            .backgroundColor(backgroundColor)
+            .titleStyle(
+                AAStyle()
+                    .color(colorOnPrimary)
+                    .fontSize(14F)
+            )
+            .backgroundColor("#00000000")
             .yAxisTitle("XP")
-            .axesTextColor(white)
+            .axesTextColor(colorOnPrimary)
             .gradientColorEnable(true)
             .markerSymbol(AAChartSymbolType.Diamond)
-            .colorsTheme(arrayOf(colorPrimary, "#ffc069", "#06caf4", "#7dffc0"))
+            .colorsTheme(arrayOf(colorSecondary, colorAccent, colorError, "#7dffc0"))
     }
 
     fun setData(label: String, function: () -> ArrayList<Int>){

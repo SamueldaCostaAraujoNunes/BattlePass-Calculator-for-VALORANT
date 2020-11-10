@@ -3,6 +3,7 @@ package com.example.valorantpassbattle.model.Properties
 import android.util.Log
 import com.example.valorantpassbattle.model.Historic.Historic
 import com.example.valorantpassbattle.model.PassBattle.PassBattle
+import com.example.valorantpassbattle.model.PassBattle.Tier
 
 class Properties(val historic: Historic, val passBattle: PassBattle) {
 
@@ -10,24 +11,37 @@ class Properties(val historic: Historic, val passBattle: PassBattle) {
         val mHistoric = ArrayList(historic)
         mHistoric.sortBy { it.tierCurrent }
         val tiersPerXp = ArrayList<Int>()
-        var tierInicial = 0
-        var xpTotal = 0
-        var ultimoXp = 0
-        for(tier in mHistoric){
-            val tierCurrent = passBattle.getTier(tier.tierCurrent)!!
-            Log.i("Historic", "index: " + tierCurrent.index)
-            val xpSum = (tierCurrent.expInitial + (tierCurrent.expMissing - tier.tierExpMissing)).toFloat()
-            Log.i("Historic", "xpSum: " + xpSum)
-            val razao = (xpSum - xpTotal) / (tier.tierCurrent - tierInicial)
-            Log.i("Historic", "razao: " + razao)
-            for(t in tierInicial .. tier.tierCurrent){
-                Log.i("Historic", "ultimoXp: " + ultimoXp)
-                tiersPerXp.add(ultimoXp + razao.toInt())
-                ultimoXp = (t*razao).toInt()
+        var ultimoTier = 0
+        var ultimoXp = 0F
+
+        if(!mHistoric.isEmpty()){
+            tiersPerXp.add(0)
+        }
+        for(tierUserInput in mHistoric){
+            val tierCurrent = passBattle.getTier(tierUserInput.tierCurrent)!!
+            val expCurrent = (tierCurrent.expInitial + (tierCurrent.expMissing - tierUserInput.tierExpMissing)).toFloat()
+
+            val diferencaDeTier = tierCurrent.index - ultimoTier
+            val diferencaDeXp = expCurrent - ultimoXp
+            val razao = diferencaDeXp / diferencaDeTier
+
+            for (t in 1..diferencaDeTier){
+                Log.i("Historic", (t + ultimoTier).toString())
+                val xp = ((razao*t) + ultimoXp).toInt()
+                tiersPerXp.add(xp)
             }
-            tierInicial = tier.tierCurrent
-            xpTotal = xpSum.toInt()
+            ultimoTier = tierCurrent.index
+            ultimoXp = expCurrent
         }
         return tiersPerXp
+    }
+
+    fun getListTiers(): ArrayList<Tier> {
+        return passBattle.tiers
+    }
+
+    fun getTierCurrent(): Int {
+        val ultimoTier: Int = if (historic.isEmpty()) 0 else historic.last().tierCurrent
+        return ultimoTier
     }
 }

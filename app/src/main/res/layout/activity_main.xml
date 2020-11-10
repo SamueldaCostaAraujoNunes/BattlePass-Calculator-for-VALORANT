@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/valorant_dark0"
+    android:background="?attr/colorPrimaryDark"
     tools:context=".ui.activity.MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
@@ -37,6 +37,6 @@
         app:layout_anchor="@id/bottomNavigationView"
         app:layout_anchorGravity="fill_vertical|center_horizontal"
         app:srcCompat="@drawable/ic_plus_24"
-        app:tint="@color/valorant_light" />
+        app:tint="?attr/colorOnPrimary" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

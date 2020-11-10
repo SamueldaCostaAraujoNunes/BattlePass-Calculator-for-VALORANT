@@ -1,27 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
     android:orientation="vertical"
     android:padding="10dp">
 
-    <EditText
-        android:id="@+id/tierinput_dialog_et_level_current"
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/mTextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:autofillHints="number"
         android:hint="@string/tier_atual"
-        android:inputType="number" />
+        android:theme="@style/EditTextThemeOverlay"
+        app:errorTextAppearance="@style/ErrorTextAppearance">
 
-    <EditText
-        android:id="@+id/tierinput_dialog_et_exp_missing"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tierinput_dialog_et_level_current"
+            style="@style/mEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:autofillHints="number"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/mTextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:autofillHints="number"
         android:hint="@string/exp_para_completar"
-        android:inputType="number" />
+        android:theme="@style/EditTextThemeOverlay"
+        app:errorTextAppearance="@style/ErrorTextAppearance">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tierinput_dialog_et_exp_missing"
+            style="@style/mEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:autofillHints="number"
+            android:inputType="number"
+            app:helperText="OutlinedBox helper helper" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,20 +55,20 @@
 
         <Button
             android:id="@+id/tierinput_dialog_btn_cancel"
-            style="@style/Base.Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="Cancelar" />
+            android:backgroundTint="?attr/colorPrimaryVariant"
+            android:text="@string/cancelar" />
 
 
         <Button
             android:id="@+id/tierinput_dialog_btn_save"
-            style="@style/Base.Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="Salvar" />
+            android:backgroundTint="?attr/colorSecondaryVariant"
+            android:text="@string/salvar" />
     </LinearLayout>
 
 </LinearLayout>

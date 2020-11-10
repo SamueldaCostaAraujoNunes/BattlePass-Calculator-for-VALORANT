@@ -1,29 +1,29 @@
 package com.example.valorantpassbattle.ui.fragment.Principal
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import com.example.valorantpassbattle.R
-import com.example.valorantpassbattle.ui.fragment.Principal.dummy.DummyContent
+import com.example.valorantpassbattle.model.ColorFromXml
+import com.example.valorantpassbattle.model.Properties.Properties
+import com.example.valorantpassbattle.ui.activity.MainActivity
+import com.example.valorantpassbattle.ui.adapter.MyItemRecyclerViewAdapter
 
-/**
- * A fragment representing a list of Items.
- */
 class TiersFragment : Fragment() {
 
     private var columnCount = 1
+    lateinit var properties: Properties
+    lateinit var colorXML: ColorFromXml
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        arguments?.let {
-            columnCount = it.getInt(ARG_COLUMN_COUNT)
-        }
+        properties = MainActivity.Companion.properties
+        colorXML = MainActivity.Companion.colorXML
     }
 
     override fun onCreateView(
@@ -39,24 +39,10 @@ class TiersFragment : Fragment() {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                adapter = MyItemRecyclerViewAdapter(DummyContent.ITEMS)
+                adapter = MyItemRecyclerViewAdapter(values = properties.getListTiers(), colorXML = colorXML, tierCurrentFun = properties::getTierCurrent)
+                properties.historic.add(adapter as MyItemRecyclerViewAdapter)
             }
         }
         return view
-    }
-
-    companion object {
-
-        // TODO: Customize parameter argument names
-        const val ARG_COLUMN_COUNT = "column-count"
-
-        // TODO: Customize parameter initialization
-        @JvmStatic
-        fun newInstance(columnCount: Int) =
-            TiersFragment().apply {
-                arguments = Bundle().apply {
-                    putInt(ARG_COLUMN_COUNT, columnCount)
-                }
-            }
     }
 }
