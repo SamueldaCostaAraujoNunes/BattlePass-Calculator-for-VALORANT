@@ -1,6 +1,6 @@
 package com.example.valorantpassbattle.model.PassBattle
 
-import android.util.Log
+import android.icu.text.SimpleDateFormat
 import org.json.JSONObject
 import java.util.*
 
@@ -20,23 +20,13 @@ class PassBattle(json: JSONObject) {
         for (i in 0 until jArray.length()) {
             chapters.add(Chapter(jArray.getJSONObject(i)))
         }
+        val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
         // Create dateInit
         var date = json.get("Data Inicial").toString()
-        var dateSplit = date.split("/")
-        var day = dateSplit[0].toInt()
-        var month = dateSplit[1].toInt()
-        var year = dateSplit[2].toInt()
-        dateInit.clear()
-        dateInit.set(year, month, day)
-
+        dateInit.time = sdf.parse(date)
         // Create dateFinaly
         date = json.get("Data Final").toString()
-        dateSplit = date.split("/")
-        day = dateSplit[0].toInt()
-        month = dateSplit[1].toInt()
-        year = dateSplit[2].toInt()
-        dateFinally.clear()
-        dateFinally.set(year, month, day)
+        dateFinally.time = sdf.parse(date)
 
         //Create listTiers
         for (chapter in chapters){
@@ -45,11 +35,22 @@ class PassBattle(json: JSONObject) {
     }
 
     fun getTier(indexTier: Int): Tier? {
-        for(tier in tiers){
-            if(tier.index == indexTier){
+        for (tier in tiers) {
+            if (tier.index == indexTier) {
                 return tier
             }
         }
         return null
     }
+
+    fun getDateInit(): String? {
+        val sdf = SimpleDateFormat("dd/MM/yyyy")
+        return sdf.format(dateInit.time)
+    }
+
+    fun getDateFinally(): String? {
+        val sdf = SimpleDateFormat("dd/MM/yyyy")
+        return sdf.format(dateFinally.time)
+    }
+
 }

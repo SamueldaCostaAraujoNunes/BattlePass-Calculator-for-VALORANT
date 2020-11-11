@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.valorantpassbattle.R
 import com.example.valorantpassbattle.ui.adapter.MyPageSliderAdapter
+import com.example.valorantpassbattle.ui.fragment.Propriedades.ProgressFragment
+import com.example.valorantpassbattle.ui.fragment.Propriedades.TimelineFragment
 import kotlinx.android.synthetic.main.fragment_propriedades.*
 
 
@@ -22,9 +24,8 @@ class PropriedadesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val adapter = MyPageSliderAdapter(this)
 
-        adapter.addFragment(TierCurrentFragment())
-        adapter.addFragment(TiersFragment())
-        adapter.addFragment(ChartFragment())
+        adapter.addFragment(ProgressFragment())
+        adapter.addFragment(TimelineFragment())
         pager.adapter = adapter
         dots_indicator.setViewPager2(pager)
     }

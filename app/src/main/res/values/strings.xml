@@ -6,7 +6,16 @@
     <string name="exp_para_completar">EXP para Completar</string>
     <string name="salvar">Salvar</string>
     <string name="cancelar">Cancelar</string>
+
     <string name="data_inicial">Data Inicial</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="progresso">% Progresso: </string>
+    <string name="total_de_xp">Total de XP: </string>
+    <string name="xp_p_dia">XP p/ Dia: </string>
+    <string name="exp_adiant_atrasado">EXP Adiant/Atrasado: </string>
+
+    <string name="linha_do_tempo">Linha do Tempo</string>
+    <string name="data_inicial_do_ato">Data inicial do Ato: </string>
+    <string name="data_final_do_ato">Data final do Ato: </string>
+    <string name="data_finalizacao">Data de finalização: </string>
+    <string name="dias_adiantados_atrasados">Dias adiantados/atrasados: </string>
 </resources>
