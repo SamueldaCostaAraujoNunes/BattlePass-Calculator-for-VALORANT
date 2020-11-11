@@ -24,15 +24,20 @@
         <item name="colorAccent">?attr/colorSecondaryVariant</item>
     </style>
 
+    <style name="mButton" parent="TextAppearance.AppCompat.Button">
+        <item name="fontFamily">@font/impact_font_family</item>
+    </style>
+
+
     <style name="mTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="android:colorControlActivated">?attr/colorSecondary</item>
         <item name="boxBackgroundColor">?attr/colorPrimaryDark</item>
         <item name="hintTextColor">?attr/colorOnPrimary</item>
         <item name="android:textColorHint">?attr/colorOnPrimary</item>
         <item name="android:textColor">?attr/colorOnPrimary</item>
-
     </style>
     <style name="mEditText" parent="Widget.AppCompat.EditText">
         <item name="android:background">?attr/colorPrimarySurface</item>
+        <item name="android:fontFamily">@font/muli_font_family</item>
     </style>
 </resources>

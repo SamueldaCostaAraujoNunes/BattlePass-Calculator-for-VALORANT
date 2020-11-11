@@ -5,18 +5,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.*
+import androidx.recyclerview.widget.RecyclerView.SmoothScroller
 import com.example.valorantpassbattle.R
 import com.example.valorantpassbattle.model.ColorFromXml
 import com.example.valorantpassbattle.model.Properties.Properties
 import com.example.valorantpassbattle.ui.activity.MainActivity
 import com.example.valorantpassbattle.ui.adapter.MyItemRecyclerViewAdapter
 
+
 class TiersFragment : Fragment() {
 
     private var columnCount = 1
+    private var tierCurrent = 1
     lateinit var properties: Properties
     lateinit var colorXML: ColorFromXml
 
@@ -39,8 +40,13 @@ class TiersFragment : Fragment() {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                adapter = MyItemRecyclerViewAdapter(values = properties.getListTiers(), colorXML = colorXML, tierCurrentFun = properties::getTierCurrent)
+                adapter = MyItemRecyclerViewAdapter(
+                    values = properties.getListTiers(),
+                    colorXML = colorXML,
+                    tierCurrentFun = properties::getTierCurrent
+                )
                 properties.historic.add(adapter as MyItemRecyclerViewAdapter)
+                tierCurrent = if(properties.historic.isEmpty()) 1 else properties.historic.last().tierCurrent
             }
         }
         return view

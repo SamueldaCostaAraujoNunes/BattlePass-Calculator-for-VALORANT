@@ -55,6 +55,7 @@
 
         <Button
             android:id="@+id/tierinput_dialog_btn_cancel"
+            style="@style/mButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -64,6 +65,7 @@
 
         <Button
             android:id="@+id/tierinput_dialog_btn_save"
+            style="@style/mButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"

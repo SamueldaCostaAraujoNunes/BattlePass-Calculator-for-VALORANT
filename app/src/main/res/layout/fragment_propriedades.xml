@@ -1,23 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.Principal.PropriedadesFragment">
+    tools:context=".ui.fragment.Principal.PropriedadesFragment"
+    android:id="@+id/container"
+    android:layout_margin="10dp"
+    android:fitsSystemWindows="true">
+    <!-- activity_screen_slide.xml -->
+    <androidx.viewpager2.widget.ViewPager2
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
-            <ListView
-                android:layout_width="1000dp"
-                android:layout_height="match_parent"/>
-        </LinearLayout>
-
-    </ScrollView>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/tab_background"
+        app:tabGravity="fill"
+        app:tabInlineLabel="true"
+        app:tabIndicator="@drawable/tab_foreground"
+        app:tabIndicatorColor="?attr/colorSecondary"
+        app:tabIndicatorFullWidth="true"
+        app:tabIndicatorGravity="stretch"
+        app:tabIndicatorHeight="54dp"
+        app:tabMode="fixed"
+        app:tabTextColor="?attr/colorOnPrimary" />
 
 </FrameLayout>

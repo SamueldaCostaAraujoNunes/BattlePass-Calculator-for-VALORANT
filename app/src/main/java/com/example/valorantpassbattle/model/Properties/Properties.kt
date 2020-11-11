@@ -16,22 +16,22 @@ class Properties(val historic: Historic, val passBattle: PassBattle) {
 
         if(!mHistoric.isEmpty()){
             tiersPerXp.add(0)
-        }
-        for(tierUserInput in mHistoric){
-            val tierCurrent = passBattle.getTier(tierUserInput.tierCurrent)!!
-            val expCurrent = (tierCurrent.expInitial + (tierCurrent.expMissing - tierUserInput.tierExpMissing)).toFloat()
+            for(tierUserInput in mHistoric){
+                val tierCurrent = passBattle.getTier(tierUserInput.tierCurrent)!!
+                val expCurrent = (tierCurrent.expInitial + (tierCurrent.expMissing - tierUserInput.tierExpMissing)).toFloat()
 
-            val diferencaDeTier = tierCurrent.index - ultimoTier
-            val diferencaDeXp = expCurrent - ultimoXp
-            val razao = diferencaDeXp / diferencaDeTier
+                val diferencaDeTier = tierCurrent.index - ultimoTier
+                val diferencaDeXp = expCurrent - ultimoXp
+                val razao = diferencaDeXp / diferencaDeTier
 
-            for (t in 1..diferencaDeTier){
-                Log.i("Historic", (t + ultimoTier).toString())
-                val xp = ((razao*t) + ultimoXp).toInt()
-                tiersPerXp.add(xp)
+                for (t in 1..diferencaDeTier){
+                    Log.i("Historic", (t + ultimoTier).toString())
+                    val xp = ((razao*t) + ultimoXp).toInt()
+                    tiersPerXp.add(xp)
+                }
+                ultimoTier = tierCurrent.index
+                ultimoXp = expCurrent
             }
-            ultimoTier = tierCurrent.index
-            ultimoXp = expCurrent
         }
         return tiersPerXp
     }

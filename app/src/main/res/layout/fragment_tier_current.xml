@@ -5,13 +5,32 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragment.Principal.TierCurrentFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="14dp"
-        android:gravity="center"
-        android:textColor="?attr/colorOnPrimary"
-        android:textSize="20dp"
-        android:hint="Tier 34"/>
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/valorant"
+            android:hint="Tier 34"
+            android:paddingTop="14dp"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muli_font_family"
+            android:hint="Spray 'Arrasei'"
+            android:paddingTop="8dp"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="20dp" />
+
+    </LinearLayout>
 
 </FrameLayout>
