@@ -22,6 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:autofillHints="number"
+            android:background="@drawable/et_background"
             android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -40,6 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:autofillHints="number"
+            android:background="@drawable/et_background"
             android:inputType="number"
             app:helperText="OutlinedBox helper helper" />
 

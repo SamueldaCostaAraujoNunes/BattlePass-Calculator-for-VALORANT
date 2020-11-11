@@ -5,11 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.viewpager.widget.ViewPager
 import com.example.valorantpassbattle.R
 import com.example.valorantpassbattle.ui.adapter.MyPageSliderAdapter
-import com.google.android.material.tabs.TabLayout
-import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.fragment_propriedades.*
 
 
@@ -25,15 +22,11 @@ class PropriedadesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val adapter = MyPageSliderAdapter(this)
 
-        adapter.addFragment(TierCurrentFragment(), "Tier Atual")
-        adapter.addFragment(TiersFragment(), "Lista de Tiers")
-        adapter.addFragment(ChartFragment(), "Grafico")
+        adapter.addFragment(TierCurrentFragment())
+        adapter.addFragment(TiersFragment())
+        adapter.addFragment(ChartFragment())
         pager.adapter = adapter
-//        tabLayout.setupWithViewPager(pager)
-        TabLayoutMediator(tabLayout, pager,
-            TabLayoutMediator.TabConfigurationStrategy { tab, position ->
-                tab.text = adapter.getPageTitle(position)
-            }).attach()
+        dots_indicator.setViewPager2(pager)
     }
 }
 

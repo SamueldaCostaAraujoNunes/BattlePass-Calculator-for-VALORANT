@@ -3,12 +3,9 @@ package com.example.valorantpassbattle.ui.activity
 import android.app.AlertDialog
 import android.content.Context
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.valorantpassbattle.R
@@ -46,7 +43,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setContext(this);
+        setContext(this)
         createListeners()
     }
 
@@ -107,6 +104,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             .setCustomTitle(titleView)
         //show dialog
         val mAlertDialog = mBuilder.show()
+//        mAlertDialog.getWindow()?.setBackgroundDrawableResource(R.drawable.dialog_background)
         //add listenerTxetChanged
 //        tvTierIndex.addTextChangedListener(TextWatcherTierIndex(tvTierIndex, tvTierExpMissing))
 
