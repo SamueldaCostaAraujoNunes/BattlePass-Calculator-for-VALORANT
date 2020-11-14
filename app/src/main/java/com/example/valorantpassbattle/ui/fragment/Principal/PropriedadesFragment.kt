@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import com.example.valorantpassbattle.R
 import com.example.valorantpassbattle.ui.adapter.MyPageSliderAdapter
 import com.example.valorantpassbattle.ui.fragment.Propriedades.ProgressFragment
+import com.example.valorantpassbattle.ui.fragment.Propriedades.ProjectionsFragment
 import com.example.valorantpassbattle.ui.fragment.Propriedades.TimelineFragment
 import kotlinx.android.synthetic.main.fragment_propriedades.*
 
@@ -26,6 +27,7 @@ class PropriedadesFragment : Fragment() {
 
         adapter.addFragment(ProgressFragment())
         adapter.addFragment(TimelineFragment())
+        adapter.addFragment(ProjectionsFragment())
         pager.adapter = adapter
         dots_indicator.setViewPager2(pager)
     }

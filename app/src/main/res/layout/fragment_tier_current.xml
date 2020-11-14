@@ -14,19 +14,28 @@
         android:padding="10dp">
 
         <TextView
+            android:id="@+id/tv_tier_index"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/valorant"
-            android:hint="Tier 34"
-            android:paddingTop="14dp"
+            android:paddingTop="4dp"
+            android:textColor="?attr/colorSecondary"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_tier_rewind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muli_font_family"
+            android:paddingTop="8dp"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20dp" />
 
         <TextView
+            android:id="@+id/tv_percentage_tier"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli_font_family"
-            android:hint="Spray 'Arrasei'"
             android:paddingTop="8dp"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20dp" />

@@ -23,7 +23,11 @@
             android:layout_margin="8dp"
             android:autofillHints="number"
             android:background="@drawable/et_background"
-            android:inputType="number" />
+            android:inputType="number"
+            android:textColor="?attr/colorOnPrimary"
+            android:textColorHighlight="?attr/colorSecondary"
+            android:textColorHint="?attr/colorPrimaryDark"
+            android:textColorLink="?attr/colorSecondary" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -43,7 +47,10 @@
             android:autofillHints="number"
             android:background="@drawable/et_background"
             android:inputType="number"
-            app:helperText="OutlinedBox helper helper" />
+            android:textColor="?attr/colorOnPrimary"
+            android:textColorHighlight="?attr/colorSecondary"
+            android:textColorHint="?attr/colorPrimaryDark"
+            android:textColorLink="?attr/colorSecondary" />
 
     </com.google.android.material.textfield.TextInputLayout>
 

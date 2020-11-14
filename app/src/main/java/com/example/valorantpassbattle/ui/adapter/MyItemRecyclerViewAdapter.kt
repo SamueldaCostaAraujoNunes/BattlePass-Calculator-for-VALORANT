@@ -32,7 +32,7 @@ class MyItemRecyclerViewAdapter(
         val tierIndexView = holder.idView
         val tierRewardView = holder.contentView
 
-        val gray = Color.parseColor(colorXML.getColorFromColors(R.color.gray_500))
+        val gray = Color.parseColor(colorXML.getColorFromColors(R.color.mGray))
         val white = Color.parseColor(colorXML.getColorFromColors(R.color.text_light))
         val accent = Color.parseColor(colorXML.getColor(R.attr.colorAccent))
 
@@ -41,7 +41,7 @@ class MyItemRecyclerViewAdapter(
         tierRewardView.paintFlags = tierRewardView.paintFlags and Paint.STRIKE_THRU_TEXT_FLAG.inv()
 
         if(item.index < tierCurrent) {
-            tierRewardView.setPaintFlags(tierRewardView.getPaintFlags() or Paint.STRIKE_THRU_TEXT_FLAG)
+            tierRewardView.paintFlags = tierRewardView.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
             tierIndexView.setTextColor(gray)
             tierRewardView.setTextColor(gray)
         }

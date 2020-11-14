@@ -3,6 +3,9 @@ package com.example.valorantpassbattle.model.Properties
 import android.annotation.SuppressLint
 import android.icu.text.SimpleDateFormat
 import android.util.Log
+import com.example.valorantpassbattle.model.GameType.DisputaDeSpike
+import com.example.valorantpassbattle.model.GameType.GameType
+import com.example.valorantpassbattle.model.GameType.SemClassificacao
 import com.example.valorantpassbattle.model.Historic.Historic
 import com.example.valorantpassbattle.model.PassBattle.PassBattle
 import com.example.valorantpassbattle.model.PassBattle.Tier
@@ -10,6 +13,14 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 class Properties(val historic: Historic, val passBattle: PassBattle) {
+
+    lateinit var semClassificacao: SemClassificacao
+    lateinit var disputaDeSpike: DisputaDeSpike
+
+    init {
+        semClassificacao = SemClassificacao()
+        disputaDeSpike = DisputaDeSpike()
+    }
 
     fun historicTierPositionPerXp(): ArrayList<Int> {
         val mHistoric = ArrayList(historic)
@@ -121,5 +132,51 @@ class Properties(val historic: Historic, val passBattle: PassBattle) {
         val dateFinal = Calendar.getInstance()
         dateFinal.time = sdf.parse(finishForecast())
         return daysApart(passBattle.dateFinally, dateFinal) + 1
+    }
+
+    fun percentageTier(): Double {
+        val tierUser = if (historic.isEmpty()) null else historic.last()
+        if (tierUser != null) {
+            val tier = passBattle.getTier(tierUser.tierCurrent)!!
+            val total = tier.expMissing
+            val percentage = ((total - tierUser.tierExpMissing).toDouble() / total) * 100
+            val result = Math.round(percentage * 100).toDouble() / 100
+            return result
+        } else {
+            return 0.toDouble()
+        }
+    }
+
+    fun daysMissingFinalBattlePass(): Int {
+        val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
+        val now = Calendar.getInstance()
+        return daysApart(passBattle.dateFinally, now) + 1
+    }
+
+    fun jogosRestantes(gameType: GameType): Float {
+        val xpTotal = passBattle.expTotal
+        val xpCurrent = getTotalXp()
+        val xpDif = xpTotal - xpCurrent
+
+        val qGames = (xpDif.toFloat() / gameType.xp)
+        return qGames
+    }
+
+    fun tempoRestante(gameType: GameType): Float {
+        val qGames = jogosRestantes(gameType)
+        val time = qGames * gameType.duration
+        return time
+    }
+
+    fun jogosPorDia(gameType: GameType): Int {
+        val days = daysMissingFinalBattlePass()
+        val qGames = jogosRestantes(gameType)
+        return (qGames / days).toInt() + 1
+    }
+
+    fun horasPorDia(gameType: GameType): Float {
+        val jogosPorDia = jogosPorDia(gameType)
+        val horas = jogosPorDia * gameType.duration
+        return horas
     }
 }

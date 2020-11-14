@@ -4,7 +4,6 @@ import android.content.Context
 import com.example.valorantpassbattle.model.DataBase.MySharedPreferences
 import com.example.valorantpassbattle.model.Observer.IObservable
 import com.example.valorantpassbattle.model.Observer.IObserver
-import java.util.Comparator
 import java.util.function.Predicate
 
 class Historic(context: Context): ArrayList<UserInputsTier>(), IObservable {
@@ -48,6 +47,13 @@ class Historic(context: Context): ArrayList<UserInputsTier>(), IObservable {
     }
 
     override fun add(element: UserInputsTier): Boolean {
+        for ((cont, inputUser) in this.withIndex()) {
+            if (element.tierCurrent == inputUser.tierCurrent) {
+                super.set(cont, element)
+                event()
+                return true
+            }
+        }
         val aux = super<ArrayList>.add(element)
         event()
         return aux

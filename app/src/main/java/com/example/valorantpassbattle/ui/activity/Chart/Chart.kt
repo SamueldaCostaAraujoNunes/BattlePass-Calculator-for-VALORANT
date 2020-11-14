@@ -5,7 +5,6 @@ import com.example.valorantpassbattle.R
 import com.example.valorantpassbattle.model.ColorFromXml
 import com.example.valorantpassbattle.model.Observer.IObserver
 import com.github.aachartmodel.aainfographics.aachartcreator.*
-import com.github.aachartmodel.aainfographics.aaoptionsmodel.AAStyle
 
 
 open class Chart(val context: Context, val chartView: AAChartView): IObserver {
@@ -27,12 +26,12 @@ open class Chart(val context: Context, val chartView: AAChartView): IObserver {
         model
             .chartType(AAChartType.Area)
             .tooltipValueSuffix(" Xp")
-            .title("Seu Passe de Batalha")
-            .titleStyle(
-                AAStyle()
-                    .color(colorOnPrimary)
-                    .fontSize(14F)
-            )
+//            .title("Seu Passe de Batalha")
+//            .titleStyle(
+//                AAStyle()
+//                    .color(colorOnPrimary)
+//                    .fontSize(14F)
+//            )
             .backgroundColor("#00000000")
             .yAxisTitle("XP")
             .axesTextColor(colorOnPrimary)

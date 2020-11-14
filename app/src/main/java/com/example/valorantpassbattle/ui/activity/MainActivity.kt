@@ -16,6 +16,7 @@ import com.example.valorantpassbattle.model.PassBattle.PassBattle
 import com.example.valorantpassbattle.model.PassBattle.PassBattleFactory
 import com.example.valorantpassbattle.model.PassBattle.Tier
 import com.example.valorantpassbattle.model.Properties.Properties
+import com.example.valorantpassbattle.ui.fragment.PrincipalFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.dialog_tierinput.view.*
 import kotlinx.android.synthetic.main.dialog_title.view.*
@@ -43,8 +44,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        createFragment(R.id.fragmentPrincipal, PrincipalFragment())
         setContext(this)
         createListeners()
+    }
+
+    private fun createFragment(layout: Int, fragment: androidx.fragment.app.Fragment) {
+        supportFragmentManager.beginTransaction().replace(layout, fragment).commit()
     }
 
     private fun createListeners() {
@@ -56,25 +62,29 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             val previousItem = bottomNavigationView.selectedItemId
             val nextItem = item.itemId
+//            var fragment: androidx.fragment.app.Fragment? = null
             if (previousItem != nextItem) {
                 when (nextItem) {
-                    R.id.item_bar_chart -> {
-                        Log.i("ItemSelected", "createNavigationItemSelectedListener: Chart")
-
+                    R.id.item_home -> {
+//                        fragment = PrincipalFragment()
+                        Log.i("ItemSelected", "createNavigationItemSelectedListener: Home")
                     }
                     R.id.item_timeline -> {
+//                        fragment = ChartFragment()
                         Log.i("ItemSelected", "createNavigationItemSelectedListener: Timeline")
                     }
                     R.id.item_timer -> {
+//                        fragment = ProgressFragment()
                         Log.i("ItemSelected", "createNavigationItemSelectedListener: Timer")
                         historic.clear()
                     }
                     R.id.item_apps -> {
+//                        fragment = TimelineFragment()
                         Log.i("ItemSelected", "createNavigationItemSelectedListener: Apps")
                         bottomNavigationView.transform(fab)
                     }
                 }
-
+//                createFragment(R.id.fragmentPrincipal, fragment!!)
             }
             true
         }
@@ -143,7 +153,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val tierInt = tierStr.toInt()
                 if ((tierInt < index) or (tierInt > 50)) tv.error =
                     "Insira um tier entre ${index} e 50!"
-                if (tierInt <= ultimoTier) tv.error = "Insira um tier maior que ${ultimoTier}!"
+                if (tierInt < ultimoTier) tv.error = "Insira um tier maior que ${ultimoTier}!"
             } else {
                 tv.error = "Insira um tier menor que 50!"
             }

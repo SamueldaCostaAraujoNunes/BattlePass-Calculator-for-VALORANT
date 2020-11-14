@@ -18,4 +18,12 @@
     <string name="data_final_do_ato">Data final do Ato: </string>
     <string name="data_finalizacao">Data de finalização: </string>
     <string name="dias_adiantados_atrasados">Dias adiantados/atrasados: </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sem_classificacao">Sem Classificação</string>
+    <string name="disputa_de_spike">Disputa de Spike</string>
+    <string name="horas_por_dia">Horas por Dia</string>
+    <string name="jogos_por_dia">Jogos por Dia</string>
+    <string name="tempo_restante_horas">Tempo Restante</string>
+    <string name="jogos_restantes">Jogos Restantes</string>
 </resources>

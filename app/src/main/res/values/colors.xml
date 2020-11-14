@@ -38,4 +38,5 @@
     <color name="text_dark">#111111</color>
     <color name="alert">#E69700</color>
     <color name="sucess">#4CD964</color>
+    <color name="mGray">#908FA3</color>
 </resources>

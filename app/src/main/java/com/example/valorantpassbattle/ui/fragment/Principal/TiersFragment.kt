@@ -5,8 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.*
-import androidx.recyclerview.widget.RecyclerView.SmoothScroller
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.valorantpassbattle.R
 import com.example.valorantpassbattle.model.ColorFromXml
 import com.example.valorantpassbattle.model.Properties.Properties
@@ -49,6 +50,7 @@ class TiersFragment : Fragment() {
                 tierCurrent = if(properties.historic.isEmpty()) 1 else properties.historic.last().tierCurrent
             }
         }
+        (view as RecyclerView).layoutManager?.scrollToPosition(tierCurrent - 5)
         return view
     }
 }

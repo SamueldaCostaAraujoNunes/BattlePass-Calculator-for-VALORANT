@@ -5,11 +5,29 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragment.Principal.ChartFragment">
 
-    <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
-        android:id="@+id/aa_chart_view"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    </com.github.aachartmodel.aainfographics.aachartcreator.AAChartView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/valorant"
+            android:hint="Seu passe de batalha"
+            android:paddingLeft="24dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="14dp"
+            android:textColorHint="?attr/colorSecondary"
+            android:textSize="20dp" />
+
+        <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
+            android:id="@+id/aa_chart_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.github.aachartmodel.aainfographics.aachartcreator.AAChartView>
+    </LinearLayout>
+
 
 </FrameLayout>

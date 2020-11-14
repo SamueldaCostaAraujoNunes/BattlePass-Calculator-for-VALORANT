@@ -8,7 +8,6 @@
     tools:context=".ui.activity.MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
-        android:name="com.example.valorantpassbattle.ui.fragment.PrincipalFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/fragmentPrincipal" />
@@ -22,7 +21,6 @@
         app:fab_cradle_margin="8dp"
         app:fab_cradle_rounded_corner_radius="8dp"
         app:fab_size="50dp"
-        app:itemIconTint="@android:color/white"
         app:menu="@menu/menu_bottom_navigation" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

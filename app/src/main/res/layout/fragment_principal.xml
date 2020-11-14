@@ -15,7 +15,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardChart"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="450dp"
             android:layout_marginHorizontal="14dp"
             android:layout_marginTop="14dp"
             style="@style/CardViewStyle">
@@ -47,7 +47,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardPropriets"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="14dp"
             android:layout_marginTop="14dp"
             style="@style/CardViewStyle">
