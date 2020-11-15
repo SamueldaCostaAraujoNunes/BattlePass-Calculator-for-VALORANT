@@ -6,27 +6,25 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.valorantpassbattle.R
-import com.example.valorantpassbattle.model.Properties.Properties
 import com.example.valorantpassbattle.ui.activity.MainActivity
+import kotlinx.android.synthetic.main.fragment_settings.*
 
+class SettingsFragment : Fragment() {
 
-class PrincipalFragment : Fragment() {
-    private lateinit var properties: Properties
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        properties = MainActivity.properties
+    override fun onResume() {
+        super.onResume()
+        clear_historic.setOnClickListener { MainActivity.historic.clear() }
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_principal, container, false)
+        return inflater.inflate(R.layout.fragment_settings, container, false)
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        properties.historic.deleteAll()
+        MainActivity.historic.deleteAll()
     }
 }

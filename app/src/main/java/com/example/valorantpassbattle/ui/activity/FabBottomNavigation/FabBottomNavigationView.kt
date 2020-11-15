@@ -9,8 +9,6 @@ import android.util.TypedValue
 import androidx.annotation.AttrRes
 import androidx.annotation.ColorInt
 import androidx.core.animation.doOnEnd
-import androidx.core.content.ContextCompat
-import androidx.core.view.isVisible
 import com.example.valorantpassbattle.R
 import com.google.android.material.bottomappbar.BottomAppBarTopEdgeTreatment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -65,13 +63,15 @@ class FabBottomNavigationView @JvmOverloads constructor(
         return typedValue.data
     }
 
-    fun transform(fab: FloatingActionButton) {
-        if (fab.isVisible) {
+    fun transform(fab: FloatingActionButton, status: Boolean) {
+        if (!status) {
             fab.hide(object : FloatingActionButton.OnVisibilityChangedListener() {
                 override fun onHidden(fab: FloatingActionButton?) {
                     super.onHidden(fab)
                     ValueAnimator.ofFloat(materialShapeDrawable.interpolation, 0F).apply {
-                        addUpdateListener { materialShapeDrawable.interpolation = it.animatedValue as Float }
+                        addUpdateListener {
+                            materialShapeDrawable.interpolation = it.animatedValue as Float
+                        }
                         start()
                     }
                 }

@@ -100,6 +100,10 @@ class Historic(context: Context): ArrayList<UserInputsTier>(), IObservable {
         observers.remove(observer)
     }
 
+    fun deleteAll() {
+        observers.clear()
+    }
+
     override fun sendUpdateEvent() {
         observers.forEach { it.update() }
     }

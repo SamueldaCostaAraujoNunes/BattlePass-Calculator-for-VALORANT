@@ -1,25 +1,22 @@
 package com.example.valorantpassbattle.ui.activity
 
-import android.app.AlertDialog
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.valorantpassbattle.R
 import com.example.valorantpassbattle.model.ColorFromXml
 import com.example.valorantpassbattle.model.Historic.Historic
-import com.example.valorantpassbattle.model.Historic.UserInputsTier
 import com.example.valorantpassbattle.model.PassBattle.PassBattle
 import com.example.valorantpassbattle.model.PassBattle.PassBattleFactory
-import com.example.valorantpassbattle.model.PassBattle.Tier
 import com.example.valorantpassbattle.model.Properties.Properties
+import com.example.valorantpassbattle.ui.dialog.DialogInput
+import com.example.valorantpassbattle.ui.fragment.ChartsFragment
+import com.example.valorantpassbattle.ui.fragment.InfosFragment
 import com.example.valorantpassbattle.ui.fragment.PrincipalFragment
+import com.example.valorantpassbattle.ui.fragment.SettingsFragment
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.dialog_tierinput.view.*
-import kotlinx.android.synthetic.main.dialog_title.view.*
 
 
 @Suppress("UNREACHABLE_CODE")
@@ -62,29 +59,28 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             val previousItem = bottomNavigationView.selectedItemId
             val nextItem = item.itemId
-//            var fragment: androidx.fragment.app.Fragment? = null
+            var fragment: androidx.fragment.app.Fragment? = null
             if (previousItem != nextItem) {
                 when (nextItem) {
                     R.id.item_home -> {
-//                        fragment = PrincipalFragment()
+                        fragment = PrincipalFragment()
                         Log.i("ItemSelected", "createNavigationItemSelectedListener: Home")
                     }
                     R.id.item_timeline -> {
-//                        fragment = ChartFragment()
+                        fragment = ChartsFragment()
                         Log.i("ItemSelected", "createNavigationItemSelectedListener: Timeline")
                     }
                     R.id.item_timer -> {
-//                        fragment = ProgressFragment()
+                        fragment = InfosFragment()
                         Log.i("ItemSelected", "createNavigationItemSelectedListener: Timer")
-                        historic.clear()
                     }
                     R.id.item_apps -> {
-//                        fragment = TimelineFragment()
+                        fragment = SettingsFragment()
                         Log.i("ItemSelected", "createNavigationItemSelectedListener: Apps")
-                        bottomNavigationView.transform(fab)
                     }
                 }
-//                createFragment(R.id.fragmentPrincipal, fragment!!)
+                bottomNavigationView.transform(fab, nextItem != R.id.item_apps)
+                createFragment(R.id.fragmentPrincipal, fragment!!)
             }
             true
         }
@@ -92,89 +88,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(view: View) {
         when (view.id) {
-            R.id.fab -> openDialogInputTier()
+            R.id.fab -> DialogInput(this).show()
         }
     }
-
-    fun openDialogInputTier() {
-        //Inflate the dialog with custom view
-        val inflater = this.layoutInflater
-
-        val titleView: View = inflater.inflate(R.layout.dialog_title, null)
-        titleView.title.text = "Tier Form"
-
-        val mDialogView = LayoutInflater.from(this).inflate(R.layout.dialog_tierinput, null)
-        val tvTierIndex = mDialogView.tierinput_dialog_et_level_current
-        val tvTierExpMissing = mDialogView.tierinput_dialog_et_exp_missing
-
-
-        //AlertDialogBuilder
-        val mBuilder = AlertDialog.Builder(this)
-            .setView(mDialogView)
-            .setCustomTitle(titleView)
-        //show dialog
-        val mAlertDialog = mBuilder.show()
-//        mAlertDialog.getWindow()?.setBackgroundDrawableResource(R.drawable.dialog_background)
-        //add listenerTxetChanged
-//        tvTierIndex.addTextChangedListener(TextWatcherTierIndex(tvTierIndex, tvTierExpMissing))
-
-        //login button click of custom layout
-        mDialogView.tierinput_dialog_btn_save.setOnClickListener {
-            //get text from EditTexts of custom layout
-            val tierInputCurrent = if (historic.isEmpty()) null else historic.last()
-            val tierCurrent = passBattle.getTier(tierInputCurrent?.tierCurrent ?: 1)
-            if (validadeTierIndex(tvTierIndex, tierCurrent?.index ?: 0)) {
-                val tierInput = passBattle.getTier(tvTierIndex.text.toString().toInt())!!
-                if (validadeTierExpMissing(tvTierExpMissing, tierInput)) {
-                    val tier = tvTierIndex.text.toString().toInt()
-                    val expMissing = tvTierExpMissing.text.toString().toInt()
-                    val inputUser = UserInputsTier(tier, expMissing)
-                    historic.add(inputUser)
-                    //dismiss dialog
-                    mAlertDialog.dismiss()
-                }
-            }
-        }
-
-        //cancel button click of custom layout
-        mDialogView.tierinput_dialog_btn_cancel.setOnClickListener {
-            //dismiss dialog
-            mAlertDialog.dismiss()
-        }
-    }
-
-
-    fun validadeTierIndex(tv: TextView, index: Int): Boolean {
-        val tierStr = tv.text.toString()
-        val ultimoTier = if (historic.isEmpty()) 0 else historic.last().tierCurrent
-        if (tierStr == "") tv.error = "Insira um tier!"
-        if (tierStr.isNotEmpty()) {
-            if (tierStr.length <= 3) {
-                val tierInt = tierStr.toInt()
-                if ((tierInt < index) or (tierInt > 50)) tv.error =
-                    "Insira um tier entre ${index} e 50!"
-                if (tierInt < ultimoTier) tv.error = "Insira um tier maior que ${ultimoTier}!"
-            } else {
-                tv.error = "Insira um tier menor que 50!"
-            }
-        }
-
-        return tv.error == null
-    }
-
-    fun validadeTierExpMissing(tv: TextView, tier: Tier): Boolean {
-        val tierStr = tv.text.toString()
-        if (tierStr == "") tv.error = "Insira o EXP faltando!"
-        if (tierStr.isNotEmpty()) {
-            if (tierStr.length <= 5) {
-                val tierInt = tierStr.toInt()
-                if ((tierInt < 0) or (tierInt > tier.expMissing)) tv.error =
-                    "Insira um EXP entre 0 e ${tier.expMissing}!"
-            } else {
-                tv.error = "Insira um EXP menor ou igual a ${tier.expMissing}!"
-            }
-        }
-        return tv.error == null
-    }
-
 }

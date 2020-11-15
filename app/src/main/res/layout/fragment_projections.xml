@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -16,17 +17,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/valorant"
-            android:hint="Expectativas"
+            android:hint="@string/expectativas"
             android:paddingLeft="10dp"
             android:paddingTop="24dp"
             android:textColorHint="?attr/colorSecondary"
             android:textSize="20sp" />
 
         <TableLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="@drawable/et_background">
+            android:background="@drawable/et_background"
+            android:paddingBottom="4dp">
 
             <TableRow
                 android:background="@drawable/row_background"
@@ -45,7 +47,7 @@
                     android:gravity="center"
                     android:text="@string/sem_classificacao"
                     android:textColor="?attr/colorOnPrimary"
-                    android:textSize="13sp" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -55,7 +57,7 @@
                     android:gravity="center"
                     android:text="@string/disputa_de_spike"
                     android:textColor="?attr/colorOnPrimary"
-                    android:textSize="13sp" />
+                    android:textSize="18sp" />
             </TableRow>
 
             <TableRow android:padding="4dp">
@@ -63,32 +65,39 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:fontFamily="@font/muli_font_family"
                     android:gravity="center"
                     android:includeFontPadding="true"
                     android:text="@string/jogos_restantes"
-                    android:textColor="?attr/colorSecondary" />
+                    android:textColor="?attr/colorSecondary"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/tv_jogos_restantes_sc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:fontFamily="@font/muli_font_family"
                     android:gravity="center"
                     android:text="5"
-                    android:textColor="?attr/colorOnPrimary" />
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textSize="16sp"
+                    app:autoSizeMaxTextSize="16sp" />
 
                 <TextView
                     android:id="@+id/tv_jogos_restantes_ds"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:fontFamily="@font/muli_font_family"
                     android:gravity="center"
                     android:text="20"
-                    android:textColor="?attr/colorOnPrimary" />
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textSize="16sp" />
             </TableRow>
 
             <TableRow android:padding="4dp">
@@ -96,32 +105,38 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:fontFamily="@font/muli_font_family"
                     android:gravity="center"
                     android:includeFontPadding="true"
                     android:text="@string/tempo_restante_horas"
-                    android:textColor="?attr/colorSecondary" />
+                    android:textColor="?attr/colorSecondary"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/tv_tempo_restante_sc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:fontFamily="@font/muli_font_family"
                     android:gravity="center"
                     android:text="3:01"
-                    android:textColor="?attr/colorOnPrimary" />
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/tv_tempo_restante_ds"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:fontFamily="@font/muli_font_family"
                     android:gravity="center"
                     android:text="2:26"
-                    android:textColor="?attr/colorOnPrimary" />
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textSize="16sp" />
             </TableRow>
 
             <TableRow android:padding="4dp">
@@ -129,32 +144,38 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:fontFamily="@font/muli_font_family"
                     android:gravity="center"
                     android:includeFontPadding="true"
                     android:text="@string/jogos_por_dia"
-                    android:textColor="?attr/colorSecondary" />
+                    android:textColor="?attr/colorSecondary"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/tv_jogos_dia_sc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:fontFamily="@font/muli_font_family"
                     android:gravity="center"
                     android:text="1"
-                    android:textColor="?attr/colorOnPrimary" />
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/tv_jogos_dia_ds"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:fontFamily="@font/muli_font_family"
                     android:gravity="center"
                     android:text="1"
-                    android:textColor="?attr/colorOnPrimary" />
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textSize="16sp" />
             </TableRow>
 
             <TableRow android:padding="4dp">
@@ -162,32 +183,38 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:fontFamily="@font/muli_font_family"
                     android:gravity="center"
                     android:includeFontPadding="true"
                     android:text="@string/horas_por_dia"
-                    android:textColor="?attr/colorSecondary" />
+                    android:textColor="?attr/colorSecondary"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/tv_horas_dia_sc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:fontFamily="@font/muli_font_family"
                     android:gravity="center"
                     android:text="0:02"
-                    android:textColor="?attr/colorOnPrimary" />
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/tv_horas_dia_ds"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:fontFamily="@font/muli_font_family"
                     android:gravity="center"
                     android:text="0:02"
-                    android:textColor="?attr/colorOnPrimary" />
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textSize="16sp" />
             </TableRow>
         </TableLayout>
     </LinearLayout>

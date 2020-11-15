@@ -56,5 +56,4 @@ class ProgressFragment : Fragment(), IObserver {
         xp_p_dia.text = xpPerDay
         exp_adiant_atrasado.text = exp
     }
-
 }

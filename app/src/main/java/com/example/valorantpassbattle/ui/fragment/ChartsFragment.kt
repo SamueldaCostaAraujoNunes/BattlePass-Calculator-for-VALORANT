@@ -9,20 +9,19 @@ import com.example.valorantpassbattle.R
 import com.example.valorantpassbattle.model.Properties.Properties
 import com.example.valorantpassbattle.ui.activity.MainActivity
 
-
-class PrincipalFragment : Fragment() {
+class ChartsFragment : Fragment() {
     private lateinit var properties: Properties
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        properties = MainActivity.properties
+        properties = MainActivity.Companion.properties
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_principal, container, false)
+        return inflater.inflate(R.layout.fragment_charts, container, false)
     }
 
     override fun onDestroyView() {
