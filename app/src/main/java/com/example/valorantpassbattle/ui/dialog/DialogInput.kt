@@ -11,7 +11,6 @@ import com.example.valorantpassbattle.model.Historic.UserInputsTier
 import com.example.valorantpassbattle.model.PassBattle.Tier
 import com.example.valorantpassbattle.ui.activity.MainActivity
 import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.InterstitialAd
 import com.google.android.gms.ads.MobileAds
 import com.google.android.material.textfield.TextInputEditText
@@ -72,7 +71,7 @@ class DialogInput(context: Context) : AlertDialog(context) {
     fun initAdMob() {
         MobileAds.initialize(context, R.string.admob_app_id.toString())
         mInterstitialAd = InterstitialAd(context)
-        mInterstitialAd.adUnitId = "ca-app-pub-3940256099942544/1033173712"
+        mInterstitialAd.adUnitId = R.string.admob_fullscreen_ad.toString()
         mInterstitialAd.loadAd(AdRequest.Builder().build())
     }
 
@@ -82,12 +81,6 @@ class DialogInput(context: Context) : AlertDialog(context) {
         } else {
             Log.d("TAG", "The interstitial wasn't loaded yet.")
         }
-    }
-
-    fun criaAnuncio(view: View, id: Int) {
-        val mAdView = view.findViewById<AdView>(id)
-        val adRequest = AdRequest.Builder().build()
-        mAdView.loadAd(adRequest)
     }
 
     fun validadeTierIndex(tv: TextView, index: Int): Boolean {
