@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import com.example.valorantpassbattle.R
 import com.example.valorantpassbattle.model.Properties.Properties
 import com.example.valorantpassbattle.ui.activity.MainActivity
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
 
 class InfosFragment : Fragment() {
 
@@ -23,6 +25,17 @@ class InfosFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_infos, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        criaAnuncio(view, R.id.adView4)
+    }
+
+    fun criaAnuncio(view: View, id: Int) {
+        val mAdView = view.findViewById<AdView>(id)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
     }
 
     override fun onDestroyView() {

@@ -21,7 +21,6 @@
         <item name="fontFamily">@font/impact_font_family</item>
     </style>
 
-
     <style name="mTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="android:colorControlActivated">?attr/colorSecondary</item>
         <item name="boxBackgroundColor">?attr/colorPrimaryDark</item>
@@ -35,8 +34,13 @@
         <item name="android:fontFamily">@font/muli_font_family</item>
     </style>
 
-    <style name="firtsRowTable">
-
-
+    <style name="AppCompat.TelaCheia" parent="Theme.ValorantPassBattle.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
     </style>
+
+    <style name="CheckBoxTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">?attr/colorOnPrimary</item>
+        <item name="colorControlActivated">?attr/colorSecondary</item>
+    </style>
+
 </resources>

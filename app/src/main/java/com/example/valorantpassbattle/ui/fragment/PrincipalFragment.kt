@@ -8,7 +8,8 @@ import androidx.fragment.app.Fragment
 import com.example.valorantpassbattle.R
 import com.example.valorantpassbattle.model.Properties.Properties
 import com.example.valorantpassbattle.ui.activity.MainActivity
-
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
 
 class PrincipalFragment : Fragment() {
     private lateinit var properties: Properties
@@ -16,6 +17,18 @@ class PrincipalFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         properties = MainActivity.properties
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        criaAnuncio(view, R.id.adView1)
+        criaAnuncio(view, R.id.adView2)
+    }
+
+    fun criaAnuncio(view: View, id: Int) {
+        val mAdView = view.findViewById<AdView>(id)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
     }
 
     override fun onCreateView(

@@ -10,6 +10,8 @@ class PassBattle(json: JSONObject) {
     val dateFinally = Calendar.getInstance()
     val name = json.get("Nome").toString()
     val expTotal = json.get("EXP total").toString().toInt()
+    val expMissaoDiaria = json.get("EXP Missao Diaria").toString().toInt()
+    val expMissaoSemanal = json.get("EXP Missao Semanal").toString().toInt()
     val chapters = arrayListOf<Chapter>()
     val tiers = arrayListOf<Tier>()
 

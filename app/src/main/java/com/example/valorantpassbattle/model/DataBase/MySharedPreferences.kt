@@ -2,17 +2,20 @@ package com.example.valorantpassbattle.model.DataBase
 
 import android.content.Context
 import android.content.SharedPreferences
-import android.util.Log
 import com.example.valorantpassbattle.model.Historic.UserInputsTier
 import com.google.gson.Gson
-import com.google.gson.internal.LinkedTreeMap
 import com.google.gson.reflect.TypeToken
 
 
 @Suppress("UNREACHABLE_CODE")
 class MySharedPreferences(context: Context) {
-    final val keySharedPreferences = "MySharedPreferencesKey"
-    final val keyHistoricUserInputsPassBattle = "keyHistoricUserInputsPassBattle"
+    val keySharedPreferences = "MySharedPreferencesKey"
+    val keyHistoricUserInputsPassBattle = "keyHistoricUserInputsPassBattle"
+    val keyFirstInputComplete = "keyFirstInputComplete"
+    val keyMissoesDiarias = "keyMissoesDiarias"
+    val keyMissoesSemanais = "keyMissoesSemanais"
+
+
     private val sharedPreferences: SharedPreferences = context.getSharedPreferences(
         keySharedPreferences,
         Context.MODE_PRIVATE
@@ -65,5 +68,14 @@ class MySharedPreferences(context: Context) {
 
     private operator fun get(key: String): String? {
         return sharedPreferences.getString(key, null)
+    }
+
+    fun getBoolean(key: String): Boolean {
+        return sharedPreferences.getBoolean(key, false)
+    }
+
+    fun setBoolean(key: String, value: Boolean) {
+        editor.putBoolean(key, value)
+        editor.commit()
     }
 }

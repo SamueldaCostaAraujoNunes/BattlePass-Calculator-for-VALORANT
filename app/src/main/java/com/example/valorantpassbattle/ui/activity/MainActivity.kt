@@ -2,8 +2,6 @@ package com.example.valorantpassbattle.ui.activity
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.valorantpassbattle.R
 import com.example.valorantpassbattle.model.ColorFromXml
@@ -16,14 +14,17 @@ import com.example.valorantpassbattle.ui.fragment.ChartsFragment
 import com.example.valorantpassbattle.ui.fragment.InfosFragment
 import com.example.valorantpassbattle.ui.fragment.PrincipalFragment
 import com.example.valorantpassbattle.ui.fragment.SettingsFragment
+import com.google.android.gms.ads.InterstitialAd
+import com.google.android.gms.ads.MobileAds
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 @Suppress("UNREACHABLE_CODE")
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity() {
     companion object {
         private lateinit var context: Context
 
+        lateinit var mInterstitialAd: InterstitialAd
         lateinit var historic: Historic
         lateinit var passBattle: PassBattle
         lateinit var properties: Properties
@@ -35,6 +36,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             passBattle = PassBattleFactory(context).getPassBattle()
             properties = Properties(historic, passBattle)
             colorXML = ColorFromXml(context)
+            MobileAds.initialize(context, R.string.admob_app_id.toString())
+            mInterstitialAd = InterstitialAd(context)
         }
     }
 
@@ -52,43 +55,26 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun createListeners() {
         createNavigationItemSelectedListener()
-        fab.setOnClickListener(this)
+        fab.setOnClickListener { DialogInput(this).show() }
     }
 
     private fun createNavigationItemSelectedListener() {
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             val previousItem = bottomNavigationView.selectedItemId
             val nextItem = item.itemId
-            var fragment: androidx.fragment.app.Fragment? = null
             if (previousItem != nextItem) {
-                when (nextItem) {
-                    R.id.item_home -> {
-                        fragment = PrincipalFragment()
-                        Log.i("ItemSelected", "createNavigationItemSelectedListener: Home")
+                val fragment: androidx.fragment.app.Fragment =
+                    when (nextItem) {
+                        R.id.item_home -> PrincipalFragment()
+                        R.id.item_timeline -> ChartsFragment()
+                        R.id.item_timer -> InfosFragment()
+                        R.id.item_apps -> SettingsFragment()
+                        else -> PrincipalFragment()
                     }
-                    R.id.item_timeline -> {
-                        fragment = ChartsFragment()
-                        Log.i("ItemSelected", "createNavigationItemSelectedListener: Timeline")
-                    }
-                    R.id.item_timer -> {
-                        fragment = InfosFragment()
-                        Log.i("ItemSelected", "createNavigationItemSelectedListener: Timer")
-                    }
-                    R.id.item_apps -> {
-                        fragment = SettingsFragment()
-                        Log.i("ItemSelected", "createNavigationItemSelectedListener: Apps")
-                    }
-                }
                 bottomNavigationView.transform(fab, nextItem != R.id.item_apps)
-                createFragment(R.id.fragmentPrincipal, fragment!!)
+                createFragment(R.id.fragmentPrincipal, fragment)
             }
             true
-        }
-    }
-
-    override fun onClick(view: View) {
-        when (view.id) {
-            R.id.fab -> DialogInput(this).show()
         }
     }
 }

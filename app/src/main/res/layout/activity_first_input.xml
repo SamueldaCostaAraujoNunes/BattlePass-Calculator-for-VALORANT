@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".ui.activity.FirstInputActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/valorant_font_family"
+            android:padding="14dp"
+            android:text="@string/insira_seus_dados"
+            android:textColor="?attr/colorSecondary"
+            android:textSize="20sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/mTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tier_atual"
+            android:theme="@style/EditTextThemeOverlay"
+            app:errorTextAppearance="@style/ErrorTextAppearance">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tierinput_dialog_et_level_current"
+                style="@style/mEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:autofillHints="number"
+                android:background="@drawable/et_background"
+                android:inputType="number"
+                android:textColor="?attr/colorOnPrimary"
+                android:textColorHighlight="?attr/colorSecondary"
+                android:textColorHint="?attr/colorPrimaryDark"
+                android:textColorLink="?attr/colorSecondary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/mTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/exp_para_completar"
+            android:theme="@style/EditTextThemeOverlay"
+            app:errorTextAppearance="@style/ErrorTextAppearance">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tierinput_dialog_et_exp_missing"
+                style="@style/mEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:autofillHints="number"
+                android:background="@drawable/et_background"
+                android:inputType="number"
+                android:textColor="?attr/colorOnPrimary"
+                android:textColorHighlight="?attr/colorSecondary"
+                android:textColorHint="?attr/colorPrimaryDark"
+                android:textColorLink="?attr/colorSecondary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--        <TextView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:fontFamily="@font/valorant_font_family"-->
+        <!--            android:paddingLeft="14dp"-->
+        <!--            android:paddingTop="14dp"-->
+        <!--            android:paddingBottom="14dp"-->
+        <!--            android:text="Missoes"-->
+        <!--            android:textColor="?attr/colorSecondary"-->
+        <!--            android:textSize="20sp" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/cb_diarias"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_alignParentTop="true"-->
+        <!--            android:layout_centerHorizontal="true"-->
+        <!--            android:layout_marginLeft="8dp"-->
+        <!--            android:fontFamily="@font/muli_font_family"-->
+        <!--            android:text="@string/diarias"-->
+        <!--            android:textColor="?attr/colorOnPrimary"-->
+        <!--            android:textSize="18sp"-->
+        <!--            android:theme="@style/CheckBoxTheme" />-->
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/cb_semanais"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_alignParentTop="true"-->
+        <!--            android:layout_centerHorizontal="true"-->
+        <!--            android:layout_marginLeft="8dp"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            android:fontFamily="@font/muli_font_family"-->
+        <!--            android:text="@string/semanais"-->
+        <!--            android:textColor="?attr/colorOnPrimary"-->
+        <!--            android:textSize="18sp"-->
+        <!--            android:theme="@style/CheckBoxTheme" />-->
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_save"
+        style="@style/mButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="8dp"
+        android:backgroundTint="?attr/colorSecondaryVariant"
+        android:text="@string/salvar"
+        android:textColor="?attr/colorOnPrimary" />
+</RelativeLayout>

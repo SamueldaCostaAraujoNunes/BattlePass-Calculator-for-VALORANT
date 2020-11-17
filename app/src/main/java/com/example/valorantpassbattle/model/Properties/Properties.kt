@@ -2,7 +2,6 @@ package com.example.valorantpassbattle.model.Properties
 
 import android.annotation.SuppressLint
 import android.icu.text.SimpleDateFormat
-import android.util.Log
 import com.example.valorantpassbattle.model.GameType.DisputaDeSpike
 import com.example.valorantpassbattle.model.GameType.GameType
 import com.example.valorantpassbattle.model.GameType.SemClassificacao
@@ -41,7 +40,6 @@ class Properties(val historic: Historic, val passBattle: PassBattle) {
                 val razao = diferencaDeXp / diferencaDeTier
 
                 for (t in 1..diferencaDeTier) {
-                    Log.i("Historic", (t + ultimoTier).toString())
                     val xp = ((razao * t) + ultimoXp).toInt()
                     tiersPerXp.add(xp)
                 }
@@ -67,6 +65,14 @@ class Properties(val historic: Historic, val passBattle: PassBattle) {
         val xpCurrent =
             if (historic.isEmpty()) 0 else (passBattle.getTier(historic.last().tierCurrent)!!.expMissing - historic.last().tierExpMissing)
         return xpPass + xpCurrent
+    }
+
+    fun getTotalXpBP(): Int {
+        val diaria = if (historic.missoesDiarias) passBattle.expMissaoDiaria else 0
+        val semanal = if (historic.missoesSemanais) passBattle.expMissaoSemanal else 0
+        val total = passBattle.expTotal
+        val nTotal = total - (diaria + semanal)
+        return nTotal
     }
 
     fun getProgressPorcent(): Double {
@@ -109,6 +115,7 @@ class Properties(val historic: Historic, val passBattle: PassBattle) {
         return getTotalXp() - xpExpected.toInt()
     }
 
+
     @SuppressLint("SimpleDateFormat")
     fun finishForecast(): String? {
         if (historic.isEmpty()) {
@@ -119,7 +126,7 @@ class Properties(val historic: Historic, val passBattle: PassBattle) {
         val xpDif = xpTotal - xpCurrent
         val totalDays = xpDif.toDouble() / getXpPerDia()
         val dateFinally = passBattle.dateInit.clone() as Calendar
-        dateFinally.add(Calendar.DAY_OF_MONTH, totalDays.toInt() + 30)
+        dateFinally.add(Calendar.DAY_OF_MONTH, totalDays.toInt() + 36)
         val sdf = SimpleDateFormat("dd/MM/yyyy")
         return sdf.format(dateFinally.time)
     }
@@ -128,10 +135,10 @@ class Properties(val historic: Historic, val passBattle: PassBattle) {
         if (historic.isEmpty()) {
             return 0
         }
-        val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
+        val sdf = SimpleDateFormat("dd/MM/yyyy", Locale("pt", "BR"))
         val dateFinal = Calendar.getInstance()
         dateFinal.time = sdf.parse(finishForecast())
-        return daysApart(passBattle.dateFinally, dateFinal) + 1
+        return daysApart(passBattle.dateFinally, dateFinal)
     }
 
     fun percentageTier(): Double {
@@ -145,6 +152,19 @@ class Properties(val historic: Historic, val passBattle: PassBattle) {
         } else {
             return 0.toDouble()
         }
+    }
+
+
+    fun dayCurrent(): Int {
+        val now = Calendar.getInstance()
+        val days = daysApart(now, passBattle.dateInit) + 1
+        return days
+    }
+
+    fun daysForClosed(): Int {
+        val now = Calendar.getInstance()
+        val days = daysApart(passBattle.dateFinally, now)
+        return days
     }
 
     fun daysMissingFinalBattlePass(): Int {
@@ -179,4 +199,5 @@ class Properties(val historic: Historic, val passBattle: PassBattle) {
         val horas = jogosPorDia * gameType.duration
         return horas
     }
+
 }

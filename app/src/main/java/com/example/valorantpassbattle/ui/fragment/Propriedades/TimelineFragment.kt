@@ -39,21 +39,29 @@ class TimelineFragment : Fragment(), IObserver {
         val dateInit = properties.passBattle.getDateInit()
         val dateFinally = properties.passBattle.getDateFinally()
         val finishForecast = properties.finishForecast()
-        val daysForClosed = properties.daysMissing()!!
+        val daysMissing = properties.daysMissing()!!
+        val dayCurrent = properties.dayCurrent()
+        val daysForClosed = properties.daysForClosed()
 
         tag_dias_adiantados_atrasados.hint =
-            if (daysForClosed >= 0) "Dias Adiantados:" else "Dias Atrasados:"
+            if (daysMissing >= 0) "Dias Adiantados:" else "Dias Atrasados:"
 
-        if (daysForClosed >= 0) {
-            dias_adiantados_atrasados.setTextColor(Color.parseColor(colorGenerator.getColor(R.attr.colorAccent)))
+        if (daysMissing >= 0) {
+            val colorAccent = Color.parseColor(colorGenerator.getColor(R.attr.colorAccent))
+            dias_adiantados_atrasados.setTextColor(colorAccent)
+            data_finalizacao.setTextColor(colorAccent)
         } else {
-            dias_adiantados_atrasados.setTextColor(Color.parseColor(colorGenerator.getColor(R.attr.colorError)))
+            val colorError = Color.parseColor(colorGenerator.getColor(R.attr.colorError))
+            dias_adiantados_atrasados.setTextColor(colorError)
+            data_finalizacao.setTextColor(colorError)
         }
 
         data_inicial_do_ato.text = dateInit
         data_final_do_ato.text = dateFinally
         data_finalizacao.text = finishForecast
-        dias_adiantados_atrasados.text = daysForClosed.toString()
+        dia_do_passe.text = dayCurrent.toString()
+        dias_para_acabar.text = daysForClosed.toString()
+        dias_adiantados_atrasados.text = daysMissing.toString()
     }
 
 }

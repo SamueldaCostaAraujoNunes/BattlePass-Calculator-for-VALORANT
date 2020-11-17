@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">Valorant PassBattle</string>
+    <string name="app_name">Valorant BattlePass Calculator</string>
+    <string name="admob_app_id">ca-app-pub-8166893603837665~8814773378</string>
+    <string name="admob_fullscreen_ad">ca-app-pub-8166893603837665/9696610205</string>
+    <string name="admob_card1">ca-app-pub-8166893603837665/1151055719</string>
     <string name="action_settings">Settings</string>
 
     <string name="tier_atual">Tier Atual</string>
@@ -17,9 +20,9 @@
     <string name="data_inicial_do_ato">Data inicial do Ato: </string>
     <string name="data_final_do_ato">Data final do Ato: </string>
     <string name="data_finalizacao">Data de finalização: </string>
+    <string name="dia_do_passe">Dia do passe: </string>
     <string name="dias_adiantados_atrasados">Dias adiantados/atrasados: </string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="sem_classificacao">Sem Classificação</string>
     <string name="disputa_de_spike">Disputa de Spike</string>
     <string name="horas_por_dia">Horas por Dia</string>
@@ -27,4 +30,14 @@
     <string name="tempo_restante_horas">Tempo Restante</string>
     <string name="jogos_restantes">Jogos Restantes</string>
     <string name="expectativas">Expectativas</string>
+    <string name="dias_para_o_fim_do_passe">Dias para o fim do passe:</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+
+    <string name="home">Home</string>
+    <string name="gr_ficos">Gráficos</string>
+    <string name="informa_es">Informações</string>
+    <string name="configura_es">Configurações</string>
+    <string name="insira_seus_dados">Insira os dados</string>
+    <string name="semanais">Semanais</string>
+    <string name="diarias">Diarias</string>
 </resources>

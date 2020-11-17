@@ -8,12 +8,30 @@ import java.util.function.Predicate
 
 class Historic(context: Context): ArrayList<UserInputsTier>(), IObservable {
     private val bd = MySharedPreferences(context)
+    private var missoesDiariasValue: Boolean = false
+    private var missoesSemanaisValue: Boolean = false
     private val mObserver = ArrayList<IObserver>()
-        init {
+
+    init {
         val loadArray: List<UserInputsTier> = bd.getListHistoric()
+        missoesDiariasValue = bd.getBoolean(bd.keyMissoesDiarias)
+        missoesSemanaisValue = bd.getBoolean(bd.keyMissoesSemanais)
         this.addAll(loadArray)
     }
 
+    var missoesDiarias: Boolean
+        get() = missoesDiariasValue
+        set(value) {
+            missoesDiariasValue = value
+            bd.setBoolean(bd.keyMissoesDiarias, value)
+        }
+
+    var missoesSemanais: Boolean
+        get() = missoesSemanaisValue
+        set(value) {
+            missoesSemanaisValue = value
+            bd.setBoolean(bd.keyMissoesSemanais, value)
+        }
     // ArrayList
 
     override fun set(index: Int, element: UserInputsTier): UserInputsTier {

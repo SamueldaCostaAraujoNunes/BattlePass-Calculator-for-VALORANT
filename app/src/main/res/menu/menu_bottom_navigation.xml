@@ -5,12 +5,14 @@
     <item
         android:id="@+id/item_home"
         android:icon="@drawable/ic_baseline_home_24"
-        android:title="Home" />
+        android:fontFamily="@font/muli_font_family"
+        android:title="@string/home" />
 
     <item
         android:id="@+id/item_timeline"
         android:icon="@drawable/ic_baseline_timeline_24"
-        android:title="Gráficos" />
+        android:fontFamily="@font/muli_font_family"
+        android:title="@string/gr_ficos" />
 
     <item
         android:enabled="false"
@@ -18,12 +20,14 @@
 
     <item
         android:id="@+id/item_timer"
-        android:icon="@drawable/ic_baseline_timer_24"
-        android:title="Timer" />
+        android:fontFamily="@font/muli_font_family"
+        android:icon="@drawable/ic_baseline_info_24"
+        android:title="@string/informa_es" />
 
     <item
         android:id="@+id/item_apps"
-        android:icon="@drawable/ic_baseline_apps_24"
-        android:title="Menu" />
+        android:fontFamily="@font/muli_font_family"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="@string/configura_es" />
 
 </menu>

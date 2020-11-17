@@ -1,40 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/scrollView"
     tools:context=".ui.fragment.PrincipalFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="14dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingBottom="14dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardChart"
+            style="@style/CardViewStyle"
             android:layout_width="match_parent"
             android:layout_height="450dp"
             android:layout_marginHorizontal="14dp"
-            android:layout_marginTop="14dp"
-            style="@style/CardViewStyle">
+            android:layout_marginTop="14dp">
 
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/fragmentChart"
-                android:name="com.example.valorantpassbattle.ui.fragment.Principal.ChartFragment"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/valorant"
+                    android:hint="Seu passe de batalha"
+                    android:paddingLeft="24dp"
+                    android:paddingTop="24dp"
+                    android:paddingBottom="14dp"
+                    android:textColorHint="?attr/colorSecondary"
+                    android:textSize="20dp" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/fragmentChart"
+                    android:name="com.example.valorantpassbattle.ui.fragment.Principal.ChartExpPerTierFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardTextView"
+            style="@style/CardViewStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="14dp"
-            android:layout_marginTop="14dp"
-            style="@style/CardViewStyle">
+            android:layout_marginTop="14dp">
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentTierCurrent"
@@ -44,13 +62,32 @@
 
         </androidx.cardview.widget.CardView>
 
+
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardPropriets"
+            style="@style/CardViewStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="14dp"
-            android:layout_marginTop="14dp"
-            style="@style/CardViewStyle">
+            android:layout_marginTop="14dp">
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                ads:adSize="LARGE_BANNER"
+                ads:adUnitId="ca-app-pub-3940256099942544/6300978111" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardPropriets"
+            style="@style/CardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="14dp">
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentPropriets"
@@ -62,11 +99,11 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardListTiers"
+            style="@style/CardViewStyle"
             android:layout_width="match_parent"
-            android:layout_height="500dp"
+            android:layout_height="450dp"
             android:layout_marginHorizontal="14dp"
-            android:layout_marginTop="14dp"
-            style="@style/CardViewStyle">
+            android:layout_marginTop="14dp">
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentListTiers"
@@ -76,9 +113,27 @@
 
         </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            style="@style/CardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="14dp">
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                ads:adSize="LARGE_BANNER"
+                ads:adUnitId="ca-app-pub-3940256099942544/6300978111" />
+
+        </androidx.cardview.widget.CardView>
+
         <View
             android:layout_width="match_parent"
-            android:layout_height="55dp"/>
+            android:layout_height="55dp" />
     </LinearLayout>
 
 
