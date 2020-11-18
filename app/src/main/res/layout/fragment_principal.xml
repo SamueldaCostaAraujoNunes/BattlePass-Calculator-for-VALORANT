@@ -5,7 +5,7 @@
     android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".ui.fragment.PrincipalFragment">
+    tools:context="br.com.battlepassCalculatorValorant.ui.fragment.PrincipalFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,7 +39,7 @@
 
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/fragmentChart"
-                    android:name="com.example.valorantpassbattle.ui.fragment.Principal.ChartExpPerTierFragment"
+                    android:name="br.com.battlepassCalculatorValorant.ui.fragment.Principal.ChartExpPerTierFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
             </LinearLayout>
@@ -56,7 +56,7 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentTierCurrent"
-                android:name="com.example.valorantpassbattle.ui.fragment.Principal.TierCurrentFragment"
+                android:name="br.com.battlepassCalculatorValorant.ui.fragment.Principal.TierCurrentFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
@@ -91,7 +91,7 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentPropriets"
-                android:name="com.example.valorantpassbattle.ui.fragment.Principal.PropriedadesFragment"
+                android:name="br.com.battlepassCalculatorValorant.ui.fragment.Principal.PropriedadesFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
@@ -107,7 +107,7 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentListTiers"
-                android:name="com.example.valorantpassbattle.ui.fragment.Principal.TiersFragment"
+                android:name="br.com.battlepassCalculatorValorant.ui.fragment.Principal.TiersFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 

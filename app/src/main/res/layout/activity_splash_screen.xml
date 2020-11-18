@@ -6,7 +6,7 @@
     android:background="?attr/colorPrimarySurface"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".ui.activity.SplashScreenActivity">
+    tools:context="br.com.battlepassCalculatorValorant.ui.activity.SplashScreenActivity">
 
     <ImageView
         android:layout_width="180dp"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.valorantpassbattle">
+    package="br.com.battlepassCalculatorValorant">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -14,11 +14,11 @@
         android:theme="@style/Theme.ValorantPassBattle">
 
         <activity
-            android:name=".ui.activity.FirstInputActivity"
+            android:name="br.com.battlepassCalculatorValorant.ui.activity.FirstInputActivity"
             android:theme="@style/Theme.ValorantPassBattle.NoActionBar" />
 
         <activity
-            android:name=".ui.activity.SplashScreenActivity"
+            android:name="br.com.battlepassCalculatorValorant.ui.activity.SplashScreenActivity"
             android:theme="@style/AppCompat.TelaCheia">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,7 +27,7 @@
         </activity>
 
         <activity
-            android:name=".ui.activity.MainActivity"
+            android:name="br.com.battlepassCalculatorValorant.ui.activity.MainActivity"
             android:hardwareAccelerated="true"
             android:theme="@style/Theme.ValorantPassBattle.NoActionBar" />
 

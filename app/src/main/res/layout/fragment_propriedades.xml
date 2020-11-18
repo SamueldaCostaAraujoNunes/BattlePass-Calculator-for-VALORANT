@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
     android:fitsSystemWindows="true"
-    tools:context=".ui.fragment.Principal.PropriedadesFragment">
+    tools:context="br.com.battlepassCalculatorValorant.ui.fragment.Principal.PropriedadesFragment">
     <!-- activity_screen_slide.xml -->
     <androidx.viewpager2.widget.ViewPager2 xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/pager"

@@ -9,6 +9,6 @@
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
-    tools:context=".ui.fragment.Principal.TiersFragment"
+    tools:context="br.com.battlepassCalculatorValorant.ui.fragment.Principal.TiersFragment"
     tools:listitem="@layout/fragment_tiers"
     />

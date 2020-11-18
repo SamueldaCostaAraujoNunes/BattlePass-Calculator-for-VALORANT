@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.Principal.ChartExpPerTierFragment">
+    tools:context="br.com.battlepassCalculatorValorant.ui.fragment.Principal.ChartExpPerTierFragment">
 
     <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
         android:id="@+id/aa_chart_view"

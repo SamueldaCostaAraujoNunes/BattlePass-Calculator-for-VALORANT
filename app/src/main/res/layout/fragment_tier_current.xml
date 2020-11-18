@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.Principal.TierCurrentFragment">
+    tools:context="br.com.battlepassCalculatorValorant.ui.fragment.Principal.TierCurrentFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

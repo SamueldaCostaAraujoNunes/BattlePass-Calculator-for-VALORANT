@@ -7,7 +7,7 @@
     android:background="?attr/colorPrimary"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context=".ui.activity.FirstInputActivity">
+    tools:context="br.com.battlepassCalculatorValorant.ui.activity.FirstInputActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
