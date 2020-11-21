@@ -53,13 +53,13 @@
             android:layout_marginTop="14dp">
 
             <com.google.android.gms.ads.AdView
-                android:id="@+id/adView4"
+                android:id="@+id/adView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="8dp"
-                ads:adSize="LARGE_BANNER"
-                ads:adUnitId="@string/admob_card4" />
+                ads:adSize="MEDIUM_RECTANGLE"
+                ads:adUnitId="@string/admob_card5" />
 
         </androidx.cardview.widget.CardView>
 
@@ -79,6 +79,23 @@
 
         </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            style="@style/CardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="14dp">
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                ads:adSize="LARGE_BANNER"
+                ads:adUnitId="@string/admob_card4" />
+
+        </androidx.cardview.widget.CardView>
 
         <View
             android:layout_width="match_parent"

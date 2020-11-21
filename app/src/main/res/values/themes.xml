@@ -2,17 +2,17 @@
     <!-- Base application theme. -->
     <style name="Theme.ValorantPassBattle" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimaryVariant">@color/blue_500</item>
-        <item name="colorPrimarySurface">@color/blue_700</item>
-        <item name="colorPrimary">@color/blue_800</item>
-        <item name="colorPrimaryDark">@color/blue_900</item>
-        <item name="colorOnPrimary">@color/text_light</item>
+        <item name="colorPrimaryVariant">#0F1923</item>
+        <item name="colorPrimarySurface">#505A69</item>
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorPrimaryDark">#ECE8E1</item>
+        <item name="colorOnPrimary">@color/text_dark</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/red_400</item>
         <item name="colorSecondaryVariant">@color/red_500</item>
-        <item name="colorOnSecondary">@color/text_light</item>
+        <item name="colorOnSecondary">@color/mGray</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorSecondaryVariant</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorSecondary</item>
         <!-- Accent brand Color. -->
         <item name="colorAccent">@color/sucess</item>
         <!-- Error brand Color.-->

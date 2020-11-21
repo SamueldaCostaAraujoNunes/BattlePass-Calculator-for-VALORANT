@@ -12,7 +12,6 @@ import br.com.battlepassCalculatorValorant.model.PassBattle.Tier
 import br.com.battlepassCalculatorValorant.ui.activity.MainActivity
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.InterstitialAd
-import com.google.android.gms.ads.MobileAds
 import com.google.android.material.textfield.TextInputEditText
 import kotlinx.android.synthetic.main.dialog_tierinput.view.*
 import kotlinx.android.synthetic.main.dialog_title.view.*
@@ -69,14 +68,9 @@ class DialogInput(context: Context) : AlertDialog(context) {
     }
 
     fun initAdMob() {
-        MobileAds.initialize(context, R.string.admob_app_id.toString())
         mInterstitialAd = InterstitialAd(context)
-        mInterstitialAd.adUnitId = R.string.admob_fullscreen_ad.toString()
-        mInterstitialAd.loadAd(
-            AdRequest.Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .build()
-        )
+        mInterstitialAd.adUnitId = context.resources.getString(R.string.admob_fullscreen_ad)
+        mInterstitialAd.loadAd(AdRequest.Builder().build())
     }
 
     fun launcherAdMob() {

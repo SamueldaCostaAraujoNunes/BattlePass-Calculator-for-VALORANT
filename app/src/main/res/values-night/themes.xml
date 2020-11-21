@@ -10,7 +10,7 @@
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/red_400</item>
         <item name="colorSecondaryVariant">@color/red_500</item>
-        <item name="colorOnSecondary">@color/text_light</item>
+        <item name="colorOnSecondary">@color/mGray</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorSecondaryVariant</item>
         <!-- Accent brand Color. -->

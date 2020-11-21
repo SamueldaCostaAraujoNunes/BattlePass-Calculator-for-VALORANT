@@ -1,5 +1,6 @@
 package br.com.battlepassCalculatorValorant.ui.fragment.Principal
 
+import android.animation.ValueAnimator
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -28,12 +29,18 @@ class PropriedadesFragment : Fragment() {
 
         adapter.addFragment(ProgressFragment())
         adapter.addFragment(TimelineFragment())
+//        adapter.addFragment(AdMobFragment())
         adapter.addFragment(ProjectionsFragment())
+
         pager.adapter = adapter
         dots_indicator.setViewPager2(pager)
+        dots_indicator.dotsClickable = false
+
+
         pager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
+
                 val v: View = adapter.getItem(position)?.requireView()!!
                 v.post {
                     val wMeasureSpec =
@@ -41,14 +48,20 @@ class PropriedadesFragment : Fragment() {
                     val hMeasureSpec =
                         View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED)
                     v.measure(wMeasureSpec, hMeasureSpec)
-
-                    if (pager.layoutParams.height != v.measuredHeight) {
-                        pager.layoutParams = (pager.layoutParams as ViewGroup.LayoutParams)
-                            .also { lp -> lp.height = v.measuredHeight }
+//                        pager.layoutParams = (pager.layoutParams as ViewGroup.LayoutParams)
+//                            .also { lp -> lp.height = v.measuredHeight }
+                    val anim = ValueAnimator.ofInt(pager.layoutParams.height, v.measuredHeight)
+                    anim.addUpdateListener {
+                        val height = it.animatedValue as Int
+                        pager.layoutParams.height = height
                     }
+                    anim.duration = 210
+                    anim.start()
                 }
             }
+
         })
+
     }
 }
 

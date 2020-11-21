@@ -34,6 +34,7 @@
                 android:hint="@string/data_inicial_do_ato"
                 android:paddingTop="8dp"
                 android:paddingRight="5dp"
+                android:textColorHint="?attr/colorOnSecondary"
                 android:textSize="20dp" />
 
             <TextView
@@ -58,6 +59,7 @@
                 android:hint="@string/data_finalizacao"
                 android:paddingTop="8dp"
                 android:paddingRight="5dp"
+                android:textColorHint="?attr/colorOnSecondary"
                 android:textSize="20dp" />
 
             <TextView
@@ -82,6 +84,7 @@
                 android:hint="@string/data_final_do_ato"
                 android:paddingTop="8dp"
                 android:paddingRight="5dp"
+                android:textColorHint="?attr/colorOnSecondary"
                 android:textSize="20dp" />
 
             <TextView
@@ -107,6 +110,7 @@
                 android:hint="@string/dia_do_passe"
                 android:paddingTop="8dp"
                 android:paddingRight="5dp"
+                android:textColorHint="?attr/colorOnSecondary"
                 android:textSize="20dp" />
 
             <TextView
@@ -132,6 +136,7 @@
                 android:hint="@string/dias_para_o_fim_do_passe"
                 android:paddingTop="8dp"
                 android:paddingRight="5dp"
+                android:textColorHint="?attr/colorOnSecondary"
                 android:textSize="20dp" />
 
             <TextView
@@ -157,6 +162,7 @@
                 android:hint="@string/dias_adiantados_atrasados"
                 android:paddingTop="8dp"
                 android:paddingRight="5dp"
+                android:textColorHint="?attr/colorOnSecondary"
                 android:textSize="20dp" />
 
             <TextView

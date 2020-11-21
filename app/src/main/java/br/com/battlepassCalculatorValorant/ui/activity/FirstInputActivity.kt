@@ -2,19 +2,38 @@ package br.com.battlepassCalculatorValorant.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.DataBase.MySharedPreferences
 import br.com.battlepassCalculatorValorant.model.Historic.Historic
 import br.com.battlepassCalculatorValorant.model.Historic.UserInputsTier
 import br.com.battlepassCalculatorValorant.model.PassBattle.PassBattleFactory
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.InterstitialAd
 import kotlinx.android.synthetic.main.activity_first_input.*
 
 class FirstInputActivity : AppCompatActivity() {
+    private lateinit var mInterstitialAd: InterstitialAd
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_first_input)
         bt_save.setOnClickListener { buttonSaveClick() }
+        initAdMob()
+    }
+
+    fun initAdMob() {
+        mInterstitialAd = InterstitialAd(this)
+        mInterstitialAd.adUnitId = resources.getString(R.string.admob_fullscreen_ad)
+        mInterstitialAd.loadAd(AdRequest.Builder().build())
+    }
+
+    fun launcherAdMob() {
+        if (mInterstitialAd.isLoaded) {
+            mInterstitialAd.show()
+        } else {
+            Log.d("TAG", "The interstitial wasn't loaded yet.")
+        }
     }
 
     fun buttonSaveClick() {
@@ -29,6 +48,7 @@ class FirstInputActivity : AppCompatActivity() {
 //                historic.missoesDiarias = diariasCheck
 //                val semanaisCheck = cb_semanais.isChecked
 //                historic.missoesSemanais = semanaisCheck
+                launcherAdMob()
                 mostrarProxActivity()
             }
         }

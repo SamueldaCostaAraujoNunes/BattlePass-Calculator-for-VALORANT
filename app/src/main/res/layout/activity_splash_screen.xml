@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:fontFamily="@font/valorant_font_family"
-        android:text="valorant"
+        android:text="vAlorant"
         android:textColor="?attr/colorSecondary"
         android:textSize="30sp" />
 

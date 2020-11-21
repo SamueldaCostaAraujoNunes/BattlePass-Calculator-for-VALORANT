@@ -2,6 +2,7 @@ package br.com.battlepassCalculatorValorant.ui.activity
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.ColorFromXml
@@ -14,6 +15,7 @@ import br.com.battlepassCalculatorValorant.ui.fragment.ChartsFragment
 import br.com.battlepassCalculatorValorant.ui.fragment.InfosFragment
 import br.com.battlepassCalculatorValorant.ui.fragment.PrincipalFragment
 import br.com.battlepassCalculatorValorant.ui.fragment.SettingsFragment
+import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.InterstitialAd
 import com.google.android.gms.ads.MobileAds
 import kotlinx.android.synthetic.main.activity_main.*
@@ -21,9 +23,10 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 @Suppress("UNREACHABLE_CODE")
 class MainActivity : AppCompatActivity() {
+    private lateinit var mInterstitialAd: InterstitialAd
+
     companion object {
         private lateinit var context: Context
-
         lateinit var mInterstitialAd: InterstitialAd
         lateinit var historic: Historic
         lateinit var passBattle: PassBattle
@@ -47,6 +50,22 @@ class MainActivity : AppCompatActivity() {
         createFragment(R.id.fragmentPrincipal, PrincipalFragment())
         setContext(this)
         createListeners()
+        initAdMob()
+    }
+
+    fun initAdMob() {
+        mInterstitialAd = InterstitialAd(context)
+        mInterstitialAd.adUnitId = context.resources.getString(R.string.admob_fullscreen_ad)
+        mInterstitialAd.loadAd(AdRequest.Builder().build())
+    }
+
+    fun launcherAdMob() {
+        if (mInterstitialAd.isLoaded) {
+            mInterstitialAd.show()
+            initAdMob()
+        } else {
+            Log.d("TAG", "The interstitial wasn't loaded yet.")
+        }
     }
 
     private fun createFragment(layout: Int, fragment: androidx.fragment.app.Fragment) {
@@ -71,7 +90,11 @@ class MainActivity : AppCompatActivity() {
                         R.id.item_apps -> SettingsFragment()
                         else -> PrincipalFragment()
                     }
-                bottomNavigationView.transform(fab, nextItem != R.id.item_apps)
+                val config = nextItem != R.id.item_apps
+                bottomNavigationView.transform(fab, config)
+//                if (config) {
+//                    launcherAdMob()
+//                }
                 createFragment(R.id.fragmentPrincipal, fragment)
             }
             true

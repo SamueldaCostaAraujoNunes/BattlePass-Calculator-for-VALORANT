@@ -14,6 +14,7 @@ class MySharedPreferences(context: Context) {
     val keyFirstInputComplete = "keyFirstInputComplete"
     val keyMissoesDiarias = "keyMissoesDiarias"
     val keyMissoesSemanais = "keyMissoesSemanais"
+    val keyThemeStatus = "keyThemeStatus"
 
 
     private val sharedPreferences: SharedPreferences = context.getSharedPreferences(
@@ -78,4 +79,17 @@ class MySharedPreferences(context: Context) {
         editor.putBoolean(key, value)
         editor.commit()
     }
+
+    var darkMode = getInt(keyThemeStatus)
+        set(value) = setInt(keyThemeStatus, value)
+
+    fun getInt(key: String): Int {
+        return sharedPreferences.getInt(key, 0)
+    }
+
+    fun setInt(key: String, value: Int) {
+        editor.putInt(key, value)
+        editor.commit()
+    }
+
 }

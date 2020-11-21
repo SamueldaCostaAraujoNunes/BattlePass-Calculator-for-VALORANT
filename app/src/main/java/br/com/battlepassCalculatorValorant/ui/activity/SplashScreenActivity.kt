@@ -6,11 +6,14 @@ import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.DataBase.MySharedPreferences
+import br.com.battlepassCalculatorValorant.ui.theme.Theme
 
 
 class SplashScreenActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val theme = Theme(this)
+        theme.checkTheme()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
         val handle = Handler()

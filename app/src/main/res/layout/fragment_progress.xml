@@ -34,6 +34,7 @@
                 android:hint="@string/total_de_xp"
                 android:paddingTop="8dp"
                 android:paddingRight="5dp"
+                android:textColorHint="?attr/colorOnSecondary"
                 android:textSize="20dp" />
 
             <TextView
@@ -58,6 +59,7 @@
                 android:hint="@string/progresso"
                 android:paddingTop="8dp"
                 android:paddingRight="5dp"
+                android:textColorHint="?attr/colorOnSecondary"
                 android:textSize="20dp" />
 
             <TextView
@@ -82,6 +84,7 @@
                 android:hint="@string/xp_p_dia"
                 android:paddingTop="8dp"
                 android:paddingRight="5dp"
+                android:textColorHint="?attr/colorOnSecondary"
                 android:textSize="20dp" />
 
             <TextView
@@ -107,6 +110,7 @@
                 android:hint="@string/exp_adiant_atrasado"
                 android:paddingTop="8dp"
                 android:paddingRight="5dp"
+                android:textColorHint="?attr/colorOnSecondary"
                 android:textSize="20dp" />
 
             <TextView
