@@ -107,6 +107,7 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentListTiers"
+                android:layout_margin="14dp"
                 android:name="br.com.battlepassCalculatorValorant.ui.fragment.Principal.TiersFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

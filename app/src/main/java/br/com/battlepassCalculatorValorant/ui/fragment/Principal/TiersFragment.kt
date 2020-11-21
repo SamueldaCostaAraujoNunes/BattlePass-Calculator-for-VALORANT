@@ -42,15 +42,16 @@ class TiersFragment : Fragment() {
                     else -> GridLayoutManager(context, columnCount)
                 }
                 adapter = MyItemRecyclerViewAdapter(
+                    context = requireContext(),
                     values = properties.getListTiers(),
                     colorXML = colorXML,
                     tierCurrentFun = properties::getTierCurrent
                 )
                 properties.historic.add(adapter as MyItemRecyclerViewAdapter)
                 tierCurrent = if(properties.historic.isEmpty()) 1 else properties.historic.last().tierCurrent
+                layoutManager?.scrollToPosition(tierCurrent - 5)
             }
         }
-        (view as RecyclerView).layoutManager?.scrollToPosition(tierCurrent - 5)
         return view
     }
 }

@@ -1,5 +1,6 @@
 package br.com.battlepassCalculatorValorant.ui.adapter
 
+import android.content.Context
 import android.graphics.Color
 import android.graphics.Paint
 import android.view.LayoutInflater
@@ -11,9 +12,11 @@ import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.ColorFromXml
 import br.com.battlepassCalculatorValorant.model.Observer.IObserver
 import br.com.battlepassCalculatorValorant.model.PassBattle.Tier
+import br.com.battlepassCalculatorValorant.ui.dialog.DialogTier
 
 
 class MyItemRecyclerViewAdapter(
+    private val context: Context,
     private val values: ArrayList<Tier>,
     private val tierCurrentFun: () -> Int,
     private val colorXML: ColorFromXml
@@ -51,6 +54,10 @@ class MyItemRecyclerViewAdapter(
 
         tierIndexView.text = item.index.toString()
         tierRewardView.text = item.reward
+
+        holder.itemView.setOnClickListener {
+            DialogTier(context, item).show()
+        }
     }
 
     override fun getItemCount(): Int = values.size

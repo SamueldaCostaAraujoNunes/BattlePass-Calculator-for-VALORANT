@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.ui.activity.MainActivity
 import br.com.battlepassCalculatorValorant.ui.theme.Theme
+import kotlinx.android.synthetic.main.dialog_title.view.*
 import kotlinx.android.synthetic.main.fragment_settings.*
 
 class SettingsFragment : Fragment() {
@@ -39,9 +40,8 @@ class SettingsFragment : Fragment() {
     }
 
     private fun chooseThemeDialog() {
-
-        val builder = AlertDialog.Builder(context)
-        builder.setTitle("Theme Mode")
+        val builder = AlertDialog.Builder(context, R.style.alertDialog)
+            .setCustomTitle(createTitle("Theme Mode"))
         val styles = arrayOf("Light", "Dark", "System default")
         val checkedItem = theme.getThemeMode()
 
@@ -52,6 +52,12 @@ class SettingsFragment : Fragment() {
 
         val dialog = builder.create()
         dialog.show()
+    }
+
+    private fun createTitle(title: String): View {
+        val titleView: View = this.layoutInflater.inflate(R.layout.dialog_title, null)
+        titleView.title.text = title
+        return titleView
     }
 
 }

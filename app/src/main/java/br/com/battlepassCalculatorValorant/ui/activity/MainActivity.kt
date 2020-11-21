@@ -68,6 +68,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        bottomNavigationView.selectedItemId = R.id.item_home
+    }
+
     private fun createFragment(layout: Int, fragment: androidx.fragment.app.Fragment) {
         supportFragmentManager.beginTransaction().replace(layout, fragment).commit()
     }

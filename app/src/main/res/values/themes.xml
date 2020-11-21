@@ -31,4 +31,6 @@
     <style name="Theme.ValorantPassBattle.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.ValorantPassBattle.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.ValorantPassBattle.Dialog.Alert" parent="ThemeOverlay.AppCompat.Dialog.Alert" />
 </resources>

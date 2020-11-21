@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">Valorant BattlePass Calculator</string>
+    <string name="title_activity_main">Valorant Main</string>
     <string name="action_settings">Settings</string>
 
     <string name="tier_atual">Tier Atual</string>
     <string name="exp_para_completar">EXP para Completar</string>
+    <string name="exp_inicial">EXP Inicial:</string>
     <string name="salvar">Salvar</string>
     <string name="cancelar">Cancelar</string>
 
@@ -51,4 +53,8 @@
     <string name="admob_card5">ca-app-pub-8166893603837665/2218587193</string>
     <string name="publicidade">Publicidade</string>
     <string name="trocar_tema">Trocar Tema</string>
+    <string name="exp_para_completar_">EXP para completar:</string>
+    <string name="porcentagem_do_passe">Porcentagem do Passe:</string>
+    <string name="recompensa">Recompensa:</string>
+
 </resources>

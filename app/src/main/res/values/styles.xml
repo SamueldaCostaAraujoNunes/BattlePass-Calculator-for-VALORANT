@@ -43,4 +43,10 @@
         <item name="colorControlActivated">?attr/colorSecondary</item>
     </style>
 
+    <style name="alertDialog" parent="Theme.ValorantPassBattle.Dialog.Alert">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textColorPrimary">?attr/colorPrimary</item>
+    </style>
+
 </resources>

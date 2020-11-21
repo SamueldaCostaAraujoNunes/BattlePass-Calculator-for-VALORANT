@@ -70,7 +70,7 @@
             android:layout_margin="8dp"
             android:backgroundTint="?attr/colorPrimaryVariant"
             android:text="@string/cancelar"
-            android:textColor="?attr/colorOnPrimary" />
+            android:textColor="@color/text_light" />
 
 
         <Button
@@ -81,7 +81,7 @@
             android:layout_margin="8dp"
             android:backgroundTint="?attr/colorSecondaryVariant"
             android:text="@string/salvar"
-            android:textColor="?attr/colorOnPrimary" />
+            android:textColor="@color/text_light" />
     </LinearLayout>
 
 </LinearLayout>
