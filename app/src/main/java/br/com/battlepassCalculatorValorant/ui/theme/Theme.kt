@@ -10,6 +10,7 @@ class Theme(val context: Context) {
         AppCompatDelegate.MODE_NIGHT_YES,
         AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
     )
+    val styles = arrayOf("Light", "Dark", "System default")
 
     fun checkTheme() {
         AppCompatDelegate.setDefaultNightMode(myThemes[MySharedPreferences(context).darkMode])

@@ -11,6 +11,10 @@ interface IObservable {
         observers.remove(observer)
     }
 
+    fun deleteAll() {
+        observers.clear()
+    }
+
     fun sendUpdateEvent() {
         observers.forEach { it.update() }
     }

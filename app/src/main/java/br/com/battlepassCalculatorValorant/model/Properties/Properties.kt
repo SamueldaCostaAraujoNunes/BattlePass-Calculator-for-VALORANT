@@ -67,14 +67,6 @@ class Properties(val historic: Historic, val passBattle: PassBattle) {
         return xpPass + xpCurrent
     }
 
-    fun getTotalXpBP(): Int {
-        val diaria = if (historic.missoesDiarias) passBattle.expMissaoDiaria else 0
-        val semanal = if (historic.missoesSemanais) passBattle.expMissaoSemanal else 0
-        val total = passBattle.expTotal
-        val nTotal = total - (diaria + semanal)
-        return nTotal
-    }
-
     fun getProgressPorcent(): Double {
         val xpCurrent = getTotalXp()
         val xpTotal = passBattle.expTotal

@@ -42,10 +42,9 @@ class SettingsFragment : Fragment() {
     private fun chooseThemeDialog() {
         val builder = AlertDialog.Builder(context, R.style.alertDialog)
             .setCustomTitle(createTitle("Theme Mode"))
-        val styles = arrayOf("Light", "Dark", "System default")
         val checkedItem = theme.getThemeMode()
 
-        builder.setSingleChoiceItems(styles, checkedItem) { dialog, which ->
+        builder.setSingleChoiceItems(theme.styles, checkedItem) { dialog, which ->
             theme.setThemeMode(which)
             dialog.dismiss()
         }
