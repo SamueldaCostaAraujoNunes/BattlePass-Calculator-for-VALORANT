@@ -9,7 +9,9 @@ import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.Observer.IObserver
 import br.com.battlepassCalculatorValorant.model.Properties.Properties
 import br.com.battlepassCalculatorValorant.ui.activity.MainActivity
+import br.com.battlepassCalculatorValorant.ui.adapter.MyImageSliderAdapter
 import kotlinx.android.synthetic.main.fragment_tier_current.*
+
 
 class TierCurrentFragment : Fragment(), IObserver {
 
@@ -38,13 +40,18 @@ class TierCurrentFragment : Fragment(), IObserver {
         val tier = properties.passBattle.getTier(lastTierIndex)
         if (tier != null) {
             val tierIndex = "Tier " + tier.index.toString()
-            val tierReward = tier.reward
+            val tierReward = tier.reward[0].nome
             val percentageTier = properties.percentageTier()
             val percentageTierText = percentageTier.toString() + "% Feito"
 
             tv_tier_index.text = tierIndex
             tv_tier_rewind.text = tierReward
             tv_percentage_tier.text = percentageTierText
+
+            val mViewPagerAdapter = MyImageSliderAdapter(requireContext(), tier)
+            viewPagerMain.adapter = mViewPagerAdapter
+            dots_indicator_images.setViewPager2(viewPagerMain)
         }
     }
+
 }

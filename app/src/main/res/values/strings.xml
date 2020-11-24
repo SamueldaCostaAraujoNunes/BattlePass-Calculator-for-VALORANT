@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Valorant BattlePass Calculator</string>
+    <string name="app_name">BattlePass Calculator for VALORANT</string>
     <string name="title_activity_main">Valorant Main</string>
     <string name="action_settings">Settings</string>
 

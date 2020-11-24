@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="?attr/colorPrimary"
@@ -106,5 +107,23 @@
             android:textSize="20dp" />
     </LinearLayout>
 
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/dialogViewPagerMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+        android:id="@+id/indicator_image_slider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        app:dotsColor="?attr/colorPrimarySurface"
+        app:dotsCornerRadius="8dp"
+        app:dotsSize="16dp"
+        app:dotsSpacing="4dp"
+        app:dotsWidthFactor="2.5"
+        app:progressMode="false"
+        app:selectedDotColor="?attr/colorSecondary" />
 
 </LinearLayout>

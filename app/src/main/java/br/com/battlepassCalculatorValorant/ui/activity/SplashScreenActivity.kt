@@ -3,7 +3,6 @@ package br.com.battlepassCalculatorValorant.ui.activity
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.DataBase.MySharedPreferences
@@ -25,7 +24,6 @@ class SplashScreenActivity : AppCompatActivity() {
         val bd = MySharedPreferences(this)
         if (bd[bd.keyHistoricUserInputsPassBattle] != null) {
             bd.deleteBD()
-            Log.i("Teste", "Deletando o bd antigo")
         }
         val intent = if (bd.getBoolean(bd.keyFirstInputComplete)) {
             Intent(this@SplashScreenActivity, MainActivity::class.java)

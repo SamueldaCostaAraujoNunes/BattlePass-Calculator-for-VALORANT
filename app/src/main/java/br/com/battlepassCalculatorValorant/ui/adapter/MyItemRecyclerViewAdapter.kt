@@ -53,7 +53,8 @@ class MyItemRecyclerViewAdapter(
         }
 
         tierIndexView.text = item.index.toString()
-        tierRewardView.text = item.reward
+        val reward = item.reward[0].tipo + " " + item.reward[0].nome
+        tierRewardView.text = reward
 
         holder.itemView.setOnClickListener {
             DialogTier(context, item).show()

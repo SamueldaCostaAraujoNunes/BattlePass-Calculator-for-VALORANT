@@ -6,8 +6,10 @@ import android.view.View
 import androidx.appcompat.app.AlertDialog
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.PassBattle.Tier
+import br.com.battlepassCalculatorValorant.ui.adapter.MyImageSliderAdapter
 import kotlinx.android.synthetic.main.dialog_tier.view.*
 import kotlinx.android.synthetic.main.dialog_title.view.*
+
 
 @SuppressLint("InflateParams")
 class DialogTier(context: Context, tier: Tier) : AlertDialog(context) {
@@ -36,13 +38,26 @@ class DialogTier(context: Context, tier: Tier) : AlertDialog(context) {
             tv_exp_initial_tier.text = expInitial
             tv_exp_missing_tier.text = expMissing
             tv_total_percentage_tier.text = totalPercentage
-            tv_reward_tier.text = reward
+            tv_reward_tier.text = reward[0].nome
+
+            val mViewPagerAdapter = MyImageSliderAdapter(context, tier)
+            dialogViewPagerMain.adapter = mViewPagerAdapter
+            indicator_image_slider.setViewPager2(dialogViewPagerMain)
         }
         return mDialogView
     }
 
     override fun show() {
         builder.show()
+    }
+
+    fun selectedImageUrl(tier: Tier): String {
+        val reward = tier.reward[0]
+        return if (reward.isCard()) {
+            reward.imagens[1]
+        } else {
+            reward.imagens[0]
+        }
     }
 
 
