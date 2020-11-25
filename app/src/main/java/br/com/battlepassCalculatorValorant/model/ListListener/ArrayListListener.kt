@@ -47,7 +47,7 @@ open class ArrayListListener<T> : ArrayList<T>() {
         onChangeListener()
     }
 
-    override fun addAll(elements: Collection<T>): Boolean {
+    final override fun addAll(elements: Collection<T>): Boolean {
         val aux = super.addAll(elements)
         onChangeListener()
         return aux

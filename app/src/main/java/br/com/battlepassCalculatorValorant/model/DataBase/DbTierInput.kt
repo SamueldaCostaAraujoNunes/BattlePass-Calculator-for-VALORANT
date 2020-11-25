@@ -87,13 +87,16 @@ class DbTierInput(val context: Context) : SQLiteOpenHelper(context, NOME_BANCO, 
         return !delete_data.equals(-1)
     }
 
-    fun updateData(tier: String, tierInputsTier: UserInputsTier): Boolean {
+    fun updateData(tierInputsTier: UserInputsTier): Boolean {
         val db = this.writableDatabase
         val contentValues = ContentValues()
         contentValues.put(TIER, tierInputsTier.tierCurrent)
         contentValues.put(EXP_MISSING, tierInputsTier.tierExpMissing)
         contentValues.put(DATE, tierInputsTier.date.timeInMillis)
-        val update_data = db.update(TABELA, contentValues, "$TIER=?", arrayOf(tier))
+        val update_data = db.update(
+            TABELA, contentValues, "$TIER=?",
+            arrayOf(tierInputsTier.tierCurrent.toString())
+        )
         db.close()
 
         return !update_data.equals(-1)

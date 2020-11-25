@@ -51,14 +51,4 @@ class DialogTier(context: Context, tier: Tier) : AlertDialog(context) {
         builder.show()
     }
 
-    fun selectedImageUrl(tier: Tier): String {
-        val reward = tier.reward[0]
-        return if (reward.isCard()) {
-            reward.imagens[1]
-        } else {
-            reward.imagens[0]
-        }
-    }
-
-
 }

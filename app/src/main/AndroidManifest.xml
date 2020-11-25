@@ -13,6 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ValorantPassBattle">
 
+        <receiver
+            android:name="br.com.battlepassCalculatorValorant.ui.notification.NotificationReceiver"
+            android:enabled="true" />
+
         <activity
             android:name="br.com.battlepassCalculatorValorant.ui.activity.FirstInputActivity"
             android:theme="@style/Theme.ValorantPassBattle.NoActionBar" />

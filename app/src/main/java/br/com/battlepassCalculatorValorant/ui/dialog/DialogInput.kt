@@ -1,21 +1,31 @@
 package br.com.battlepassCalculatorValorant.ui.dialog
 
+import android.app.AlarmManager
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
 import android.content.Context
+import android.content.Context.ALARM_SERVICE
+import android.content.Intent
+import android.os.Build
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat.getSystemService
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.Historic.UserInputsTier
 import br.com.battlepassCalculatorValorant.model.PassBattle.Tier
 import br.com.battlepassCalculatorValorant.ui.activity.MainActivity
+import br.com.battlepassCalculatorValorant.ui.notification.NotificationReceiver
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.InterstitialAd
 import com.google.android.material.textfield.TextInputEditText
 import kotlinx.android.synthetic.main.dialog_tierinput.view.*
 import kotlinx.android.synthetic.main.dialog_title.view.*
 
+@Suppress("CAST_NEVER_SUCCEEDS")
 class DialogInput(context: Context) : AlertDialog(context) {
     private lateinit var mInterstitialAd: InterstitialAd
     var tvTierIndex: TextInputEditText
@@ -37,6 +47,7 @@ class DialogInput(context: Context) : AlertDialog(context) {
 
         builder = Builder(context).setView(mDialogView).setCustomTitle(titleView)
         initAdMob()
+        createNotificationChannel()
     }
 
     override fun show() {
@@ -56,7 +67,8 @@ class DialogInput(context: Context) : AlertDialog(context) {
                     val tier = tvTierIndex.text.toString().toInt()
                     val expMissing = tvTierExpMissing.text.toString().toInt()
                     val inputUser = UserInputsTier(tier, expMissing)
-                    MainActivity.historic.add(inputUser)
+                    MainActivity.historic.create(inputUser)
+                    createNotification()
                     dialog.dismiss()
                     launcherAdMob()
                 }
@@ -65,6 +77,35 @@ class DialogInput(context: Context) : AlertDialog(context) {
         mDialogView.tierinput_dialog_btn_cancel.setOnClickListener {
             dialog.dismiss()
         }
+    }
+
+    fun createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val name = "LemubitReminderChannel"
+            val description = "Channel for Lemubit Reminder"
+            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            val channel = NotificationChannel("notifyLemubit", name, importance)
+            channel.description = description
+
+            val notificationManager =
+                getSystemService(context, NotificationManager::class.java) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+
+        }
+    }
+
+    fun createNotification() {
+        val intent = Intent(context, NotificationReceiver::class.java)
+        val pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0)
+        val alarmManager = context.getSystemService(ALARM_SERVICE) as AlarmManager
+        val timeAtButtonClick = System.currentTimeMillis()
+        val tenSecondsIntMillis = (1000 * 60 * 12).toLong()
+
+        alarmManager.set(
+            AlarmManager.RTC_WAKEUP,
+            timeAtButtonClick + tenSecondsIntMillis,
+            pendingIntent
+        )
     }
 
     fun initAdMob() {

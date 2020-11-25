@@ -43,7 +43,7 @@ class FirstInputActivity : AppCompatActivity() {
                 val expMissing = tierinput_dialog_et_exp_missing.text.toString().toInt()
                 val inputUser = UserInputsTier(tier, expMissing)
                 val historic = Historic(this)
-                historic.add(inputUser)
+                historic.create(inputUser)
                 launcherAdMob()
                 mostrarProxActivity()
             }
