@@ -118,6 +118,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
+        android:paddingTop="8dp"
         app:dotsColor="?attr/colorPrimarySurface"
         app:dotsCornerRadius="8dp"
         app:dotsSize="16dp"

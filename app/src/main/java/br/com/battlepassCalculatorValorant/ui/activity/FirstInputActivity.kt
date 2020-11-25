@@ -44,10 +44,6 @@ class FirstInputActivity : AppCompatActivity() {
                 val inputUser = UserInputsTier(tier, expMissing)
                 val historic = Historic(this)
                 historic.add(inputUser)
-//                val diariasCheck =  cb_diarias.isChecked
-//                historic.missoesDiarias = diariasCheck
-//                val semanaisCheck = cb_semanais.isChecked
-//                historic.missoesSemanais = semanaisCheck
                 launcherAdMob()
                 mostrarProxActivity()
             }

@@ -7,6 +7,15 @@ class Reward(json: JSONObject) {
     val tipo = json.get("Tipo").toString()
     val imagens = arrayListOf<String>()
 
+    companion object {
+        const val skin = "Skin"
+        const val card = "Card"
+        const val chaveiro = "Chaveiro"
+        const val spray = "Spray"
+        const val titulo = "Título"
+        const val radianita = "Radianitas"
+    }
+
     init {
         val jArray = json.getJSONArray("Imagens")
         for (i in 0 until jArray.length()) {
@@ -15,26 +24,26 @@ class Reward(json: JSONObject) {
     }
 
     fun isSkin(): Boolean {
-        return tipo == "Skin"
+        return tipo == skin
     }
 
     fun isCard(): Boolean {
-        return tipo == "Card"
+        return tipo == card
     }
 
     fun isChaveiro(): Boolean {
-        return tipo == "Chaveiro"
+        return tipo == chaveiro
     }
 
     fun isSpray(): Boolean {
-        return tipo == "Spray"
+        return tipo == spray
     }
 
     fun isTitulo(): Boolean {
-        return tipo == "Título"
+        return tipo == titulo
     }
 
     fun isRadianita(): Boolean {
-        return tipo == "Radianitas"
+        return tipo == radianita
     }
 }
