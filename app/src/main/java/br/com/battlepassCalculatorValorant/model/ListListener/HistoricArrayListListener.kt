@@ -10,6 +10,7 @@ open class HistoricArrayListListener(context: Context) : ArrayListListener<UserI
 
     init {
         addAll(db.readData())
+        sortBy { it.tierCurrent }
     }
 
     fun create(userInputTier: UserInputsTier): Boolean {

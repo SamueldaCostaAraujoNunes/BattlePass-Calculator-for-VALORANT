@@ -1,4 +1,4 @@
-package br.com.battlepassCalculatorValorant.model.Advertisement
+package br.com.battlepassCalculatorValorant.ui.Advertisement
 
 import android.content.Context
 import android.view.View

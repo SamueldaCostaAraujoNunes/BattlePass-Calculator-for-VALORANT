@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.model.Advertisement.Advertisement
 import br.com.battlepassCalculatorValorant.model.Properties.Properties
+import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement
 import br.com.battlepassCalculatorValorant.ui.activity.MainActivity
 import kotlinx.android.synthetic.main.fragment_infos.*
 

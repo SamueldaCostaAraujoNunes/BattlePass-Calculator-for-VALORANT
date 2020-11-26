@@ -6,18 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.model.PassBattle.Tier
+import br.com.battlepassCalculatorValorant.model.PassBattle.Reward
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_image_view.view.*
 
 
 internal class MyImageSliderAdapter(// Context object
     var context: Context, // Array of images
-    var tier: Tier
+    var reward: Reward
 
 ) : RecyclerView.Adapter<MyImageSliderAdapter.PageHolder>() {
 
-    val reward = tier.reward[0]
     var imagesUrl = selectedImageUrl()
 
     fun selectedImageUrl(): ArrayList<String> {

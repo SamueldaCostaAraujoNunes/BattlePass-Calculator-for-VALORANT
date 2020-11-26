@@ -61,6 +61,11 @@
     <string name="trocar_tema">Trocar Tema</string>
     <string name="exp_para_completar_">EXP para completar:</string>
     <string name="porcentagem_do_passe">Porcentagem do Passe:</string>
-    <string name="recompensa">Recompensa:</string>
+    <string name="recompensa">Recompensa: </string>
+    <string name="capitulo">Capítulo: </string>
+
+    <string name="recompensa_por_tier">Recompensa por tier</string>
+    <string name="recompensa_por_capitulo">Recompensa por Capítulo</string>
+    <string name="tipo">Tipo:</string>
 
 </resources>

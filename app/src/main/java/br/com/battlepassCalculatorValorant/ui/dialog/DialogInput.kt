@@ -15,9 +15,9 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat.getSystemService
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.model.Advertisement.Advertisement
 import br.com.battlepassCalculatorValorant.model.Historic.UserInputsTier
 import br.com.battlepassCalculatorValorant.model.PassBattle.Tier
+import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement
 import br.com.battlepassCalculatorValorant.ui.activity.MainActivity
 import br.com.battlepassCalculatorValorant.ui.notification.NotificationReceiver
 import com.google.android.gms.ads.InterstitialAd
@@ -101,7 +101,7 @@ class DialogInput(context: Context) : AlertDialog(context) {
         val pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0)
         val alarmManager = context.getSystemService(ALARM_SERVICE) as AlarmManager
         val timeAtButtonClick = System.currentTimeMillis()
-        val tenSecondsIntMillis = (1000 * 60 * 12).toLong()
+        val tenSecondsIntMillis = (1000 * 60 * 60 * 12).toLong()
 //        val tenSecondsIntMillis = (1000 * 10).toLong()
 
         alarmManager.set(

@@ -15,18 +15,18 @@ import br.com.battlepassCalculatorValorant.model.PassBattle.Tier
 import br.com.battlepassCalculatorValorant.ui.dialog.DialogTier
 
 
-class MyItemRecyclerViewAdapter(
+class MyItemTierRewardRecyclerViewAdapter(
     private val context: Context,
     private val values: ArrayList<Tier>,
     private val tierCurrentFun: () -> Int,
     private val colorXML: ColorFromXml
-) : RecyclerView.Adapter<MyItemRecyclerViewAdapter.ViewHolder>(), IObserver {
+) : RecyclerView.Adapter<MyItemTierRewardRecyclerViewAdapter.ViewHolder>(), IObserver {
     private var tierCurrent = 0
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         tierCurrent = tierCurrentFun()
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.fragment_tiers, parent, false)
+            .inflate(R.layout.fragment_item_tiers, parent, false)
         return ViewHolder(view)
     }
 
@@ -52,7 +52,7 @@ class MyItemRecyclerViewAdapter(
             tierRewardView.setTextColor(accent)
         }
 
-        tierIndexView.text = item.index.toString()
+        tierIndexView.text = "T" + item.index.toString()
         val reward = item.reward[0].tipo + " " + item.reward[0].nome
         tierRewardView.text = reward
 

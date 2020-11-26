@@ -12,11 +12,11 @@ import br.com.battlepassCalculatorValorant.ui.activity.MainActivity
 import kotlinx.android.synthetic.main.fragment_projections.*
 
 class ProjectionsFragment : Fragment(), IObserver {
-    private lateinit var properties: Properties
+    private lateinit var prop: Properties
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        properties = MainActivity.Companion.properties
-        properties.historic.add(this)
+        prop = MainActivity.Companion.properties
+        prop.historic.add(this)
         super.onCreate(savedInstanceState)
     }
 
@@ -33,17 +33,17 @@ class ProjectionsFragment : Fragment(), IObserver {
 
     override fun update() {
 
-        val jogosRestantesSC = properties.jogosRestantes(properties.semClassificacao)
-        val jogosRestantesDS = properties.jogosRestantes(properties.disputaDeSpike)
+        val jogosRestantesSC = prop.jogosRestantes(prop.semClassificacao)
+        val jogosRestantesDS = prop.jogosRestantes(prop.disputaDeSpike)
 
-        val tempoRestanteSC = properties.tempoRestante(properties.semClassificacao)
-        val tempoRestanteDS = properties.tempoRestante(properties.disputaDeSpike)
+        val tempoRestanteSC = prop.tempoRestante(prop.semClassificacao)
+        val tempoRestanteDS = prop.tempoRestante(prop.disputaDeSpike)
 
-        val jogosDiaSC = properties.jogosPorDia(properties.semClassificacao)
-        val jogosDiaDS = properties.jogosPorDia(properties.disputaDeSpike)
+        val jogosDiaSC = prop.jogosPorDia(prop.semClassificacao)
+        val jogosDiaDS = prop.jogosPorDia(prop.disputaDeSpike)
 
-        val horasDiasSC = properties.horasPorDia(properties.semClassificacao)
-        val horasDiasDS = properties.horasPorDia(properties.disputaDeSpike)
+        val horasDiasSC = prop.horasPorDia(prop.semClassificacao)
+        val horasDiasDS = prop.horasPorDia(prop.disputaDeSpike)
 
         //Jogos Restantes
         tv_jogos_restantes_sc.text = jogosRestantesSC.toInt().toString()

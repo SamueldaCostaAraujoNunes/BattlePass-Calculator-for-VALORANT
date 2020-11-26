@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:layout_margin="10dp"
     android:fitsSystemWindows="true"
-    tools:context="br.com.battlepassCalculatorValorant.ui.fragment.Principal.PropriedadesFragment">
+    tools:context="br.com.battlepassCalculatorValorant.ui.fragment.Principal.RewardsFragment">
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/pager"
+        android:id="@+id/pager_rewards"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent" />
 
     <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
-        android:id="@+id/dots_indicator"
+        android:id="@+id/dots_indicator_rewards"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:dotsColor="?attr/colorPrimarySurface"

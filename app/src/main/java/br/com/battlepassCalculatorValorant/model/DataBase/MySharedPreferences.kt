@@ -21,7 +21,7 @@ class MySharedPreferences(context: Context) {
         sharedPreferences.edit().remove(keyHistoricUserInputsPassBattle).apply()
     }
 
-    var darkMode = getInt(keyThemeStatus)
+    var darkMode = getInt(keyThemeStatus, 2)
         set(value) = setInt(keyThemeStatus, value)
 
     operator fun set(key: String?, value: String?) {
@@ -42,8 +42,8 @@ class MySharedPreferences(context: Context) {
         editor.commit()
     }
 
-    private fun getInt(key: String): Int {
-        return sharedPreferences.getInt(key, 0)
+    private fun getInt(key: String, default: Int = 0): Int {
+        return sharedPreferences.getInt(key, default)
     }
 
     private fun setInt(key: String, value: Int) {

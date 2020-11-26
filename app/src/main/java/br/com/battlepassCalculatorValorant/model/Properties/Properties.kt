@@ -6,6 +6,7 @@ import br.com.battlepassCalculatorValorant.model.GameType.DisputaDeSpike
 import br.com.battlepassCalculatorValorant.model.GameType.GameType
 import br.com.battlepassCalculatorValorant.model.GameType.SemClassificacao
 import br.com.battlepassCalculatorValorant.model.Historic.Historic
+import br.com.battlepassCalculatorValorant.model.PassBattle.Chapter
 import br.com.battlepassCalculatorValorant.model.PassBattle.PassBattle
 import br.com.battlepassCalculatorValorant.model.PassBattle.Tier
 import java.util.*
@@ -54,9 +55,18 @@ class Properties(val historic: Historic, val passBattle: PassBattle) {
         return passBattle.tiers
     }
 
+    fun getListChapters(): ArrayList<Chapter> {
+        return passBattle.chapters
+    }
+
     fun getTierCurrent(): Int {
         val ultimoTier: Int = if (historic.isEmpty()) 0 else historic.last().tierCurrent
         return ultimoTier
+    }
+
+    fun getChapterCurrent(): Int {
+        val tierCurrent: Int = getTierCurrent()
+        return (tierCurrent - 1) / 5 + 1
     }
 
     fun getTotalXp(): Int {

@@ -120,10 +120,9 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentListTiers"
-                android:name="br.com.battlepassCalculatorValorant.ui.fragment.Principal.TiersFragment"
+                android:name="br.com.battlepassCalculatorValorant.ui.fragment.Principal.RewardsFragment"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="14dp" />
+                android:layout_height="match_parent" />
 
         </androidx.cardview.widget.CardView>
 

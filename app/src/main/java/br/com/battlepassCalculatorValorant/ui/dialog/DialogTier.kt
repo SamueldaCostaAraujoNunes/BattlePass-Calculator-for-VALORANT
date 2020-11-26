@@ -40,7 +40,7 @@ class DialogTier(context: Context, tier: Tier) : AlertDialog(context) {
             tv_total_percentage_tier.text = totalPercentage
             tv_reward_tier.text = reward[0].nome
 
-            val mViewPagerAdapter = MyImageSliderAdapter(context, tier)
+            val mViewPagerAdapter = MyImageSliderAdapter(context, tier.reward[0])
             dialogViewPagerMain.adapter = mViewPagerAdapter
             indicator_image_slider.setViewPager2(dialogViewPagerMain)
         }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="br.com.battlepassCalculatorValorant.ui.fragment.Propriedades.ProgressFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/valorant"
+            android:hint="@string/recompensa_por_tier"
+            android:paddingTop="14dp"
+            android:textColorHint="?attr/colorSecondary"
+            android:textSize="20dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleViewTierRewards"
+            android:name="com.example.valorantpassbattle.ui.fragment.Principal.TiersFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            app:layoutManager="LinearLayoutManager"
+            tools:context="br.com.battlepassCalculatorValorant.ui.fragment.Principal.TiersRewardFragment"
+            tools:listitem="@layout/fragment_item_tiers" />
+    </LinearLayout>
+
+</FrameLayout>
+
+
