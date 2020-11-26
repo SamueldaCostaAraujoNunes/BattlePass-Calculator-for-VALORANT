@@ -5,10 +5,12 @@ import android.app.TaskStackBuilder
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.ui.activity.MainActivity
+import br.com.battlepassCalculatorValorant.ui.activity.MainActivity.Companion.colorXML
 
 
 class NotificationReceiver : BroadcastReceiver() {
@@ -20,8 +22,9 @@ class NotificationReceiver : BroadcastReceiver() {
 
         val builder = NotificationCompat.Builder(context, "notifyLemubit")
             .setSmallIcon(R.drawable.ic_stat_name)
-            .setContentTitle("Ei Psciu!! Hora de atualizar seu passe, hein?!")
-            .setContentText("Atualize os dados do passe, para se manter informado!")
+            .setContentTitle("Ei Psiu!! Hora de atualizar seu passe, hein?!")
+            .setColor(Color.parseColor(colorXML.getColor(R.attr.colorSecondary)))
+            .setContentText("Atualize os dados do passe para se manter informado!")
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setContentIntent(pendingIntent)
         val notificationManager = NotificationManagerCompat.from(context)

@@ -15,11 +15,11 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat.getSystemService
 import br.com.battlepassCalculatorValorant.R
+import br.com.battlepassCalculatorValorant.model.Advertisement.Advertisement
 import br.com.battlepassCalculatorValorant.model.Historic.UserInputsTier
 import br.com.battlepassCalculatorValorant.model.PassBattle.Tier
 import br.com.battlepassCalculatorValorant.ui.activity.MainActivity
 import br.com.battlepassCalculatorValorant.ui.notification.NotificationReceiver
-import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.InterstitialAd
 import com.google.android.material.textfield.TextInputEditText
 import kotlinx.android.synthetic.main.dialog_tierinput.view.*
@@ -28,6 +28,7 @@ import kotlinx.android.synthetic.main.dialog_title.view.*
 @Suppress("CAST_NEVER_SUCCEEDS")
 class DialogInput(context: Context) : AlertDialog(context) {
     private lateinit var mInterstitialAd: InterstitialAd
+    private lateinit var adv: Advertisement
     var tvTierIndex: TextInputEditText
     var tvTierExpMissing: TextInputEditText
     var mDialogView: View
@@ -46,7 +47,8 @@ class DialogInput(context: Context) : AlertDialog(context) {
         tvTierExpMissing = mDialogView.tierinput_dialog_et_exp_missing
 
         builder = Builder(context).setView(mDialogView).setCustomTitle(titleView)
-        initAdMob()
+        adv = Advertisement(context)
+        mInterstitialAd = adv.createInterstitial()
         createNotificationChannel()
     }
 
@@ -100,18 +102,13 @@ class DialogInput(context: Context) : AlertDialog(context) {
         val alarmManager = context.getSystemService(ALARM_SERVICE) as AlarmManager
         val timeAtButtonClick = System.currentTimeMillis()
         val tenSecondsIntMillis = (1000 * 60 * 12).toLong()
+//        val tenSecondsIntMillis = (1000 * 10).toLong()
 
         alarmManager.set(
             AlarmManager.RTC_WAKEUP,
             timeAtButtonClick + tenSecondsIntMillis,
             pendingIntent
         )
-    }
-
-    fun initAdMob() {
-        mInterstitialAd = InterstitialAd(context)
-        mInterstitialAd.adUnitId = context.resources.getString(R.string.admob_fullscreen_ad)
-        mInterstitialAd.loadAd(AdRequest.Builder().build())
     }
 
     fun launcherAdMob() {

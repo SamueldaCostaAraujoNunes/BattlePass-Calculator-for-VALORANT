@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollView"
     android:layout_width="match_parent"
@@ -12,6 +11,22 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingBottom="14dp">
+
+        <androidx.cardview.widget.CardView
+            style="@style/CardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="14dp">
+
+            <RelativeLayout
+                android:id="@+id/adContainer3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp" />
+
+        </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardChartExpPerTier"
@@ -52,14 +67,12 @@
             android:layout_marginHorizontal="14dp"
             android:layout_marginTop="14dp">
 
-            <com.google.android.gms.ads.AdView
-                android:id="@+id/adView3"
+            <RelativeLayout
+                android:id="@+id/adContainer4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="8dp"
-                ads:adSize="MEDIUM_RECTANGLE"
-                ads:adUnitId="@string/admob_card3" />
+                android:layout_margin="8dp" />
 
         </androidx.cardview.widget.CardView>
 
