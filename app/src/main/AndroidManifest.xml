@@ -5,33 +5,35 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:hardwareAccelerated="true"
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ValorantPassBattle">
+        <activity
+            android:name=".ui.activity.Settings.EditHistoricActivity"
+            android:theme="@style/Theme.ValorantPassBattle.NoActionBar" />
 
         <receiver
-            android:name="br.com.battlepassCalculatorValorant.ui.notification.NotificationReceiver"
+            android:name=".ui.notification.NotificationReceiver"
             android:enabled="true" />
 
         <activity
-            android:name="br.com.battlepassCalculatorValorant.ui.activity.FirstInputActivity"
-            android:theme="@style/Theme.ValorantPassBattle.NoActionBar" />
-
+            android:name=".ui.activity.FirstInputActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
         <activity
-            android:name="br.com.battlepassCalculatorValorant.ui.activity.SplashScreenActivity"
+            android:name=".ui.activity.SplashScreenActivity"
             android:theme="@style/AppCompat.TelaCheia">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="br.com.battlepassCalculatorValorant.ui.activity.MainActivity"
+            android:name=".ui.activity.MainActivity"
             android:hardwareAccelerated="true"
             android:theme="@style/Theme.ValorantPassBattle.NoActionBar" />
 

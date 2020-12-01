@@ -26,6 +26,7 @@ class Advertisement(val context: Context) {
         parent.visibility = View.GONE
         adView.visibility = View.GONE
         adView.adSize = size
+
         adView.adUnitId = if (BuildConfig.DEBUG) {
             context.getString(R.string.admob_card_id_test)
         } else {

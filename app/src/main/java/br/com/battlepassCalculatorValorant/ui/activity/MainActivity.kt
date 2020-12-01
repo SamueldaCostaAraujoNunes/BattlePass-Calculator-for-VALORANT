@@ -53,6 +53,7 @@ class MainActivity : AppCompatActivity() {
         initAdMob()
     }
 
+
     fun initAdMob() {
         mInterstitialAd = InterstitialAd(context)
         mInterstitialAd.adUnitId = context.resources.getString(R.string.admob_fullscreen_ad)

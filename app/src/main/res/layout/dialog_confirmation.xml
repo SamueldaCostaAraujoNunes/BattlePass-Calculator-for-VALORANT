@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_confirmation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/muli_font_family"
+        android:gravity="center"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/tierinput_dialog_btn_cancel"
+            style="@style/mButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:backgroundTint="?attr/colorPrimaryVariant"
+            android:text="@string/cancelar"
+            android:textColor="@color/text_light" />
+
+
+        <Button
+            android:id="@+id/tierinput_dialog_btn_save"
+            style="@style/mButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:backgroundTint="?attr/colorSecondaryVariant"
+            android:text="@string/salvar"
+            android:textColor="@color/text_light" />
+    </LinearLayout>
+
+</LinearLayout>

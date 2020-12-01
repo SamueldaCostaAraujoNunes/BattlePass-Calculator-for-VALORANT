@@ -123,14 +123,16 @@ class Properties(val historic: Historic, val passBattle: PassBattle) {
         if (historic.isEmpty()) {
             return "00/00/0000"
         }
-        val xpTotal = passBattle.expTotal
-        val xpCurrent = getTotalXp()
+        val xpTotal = (passBattle.expTotal).toDouble()
+        val xpCurrent = getTotalXp().toDouble()
         val xpDif = xpTotal - xpCurrent
-        val totalDays = xpDif.toDouble() / getXpPerDia()
-        val dateFinally = passBattle.dateInit.clone() as Calendar
-        dateFinally.add(Calendar.DAY_OF_MONTH, totalDays.toInt() + 36)
+        val xpPerDayExpected = getXpPerDia()
+        val totalDays = xpDif / xpPerDayExpected
+        val dateFinally = Calendar.getInstance()
+        dateFinally.add(Calendar.DAY_OF_MONTH, totalDays.toInt() + 1)
         val sdf = SimpleDateFormat("dd/MM/yyyy")
-        return sdf.format(dateFinally.time)
+        val dateFinallyFormated = sdf.format(dateFinally.time)
+        return dateFinallyFormated
     }
 
     fun daysMissing(): Int? {

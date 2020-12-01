@@ -101,12 +101,13 @@ class DialogInput(context: Context) : AlertDialog(context) {
         val pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0)
         val alarmManager = context.getSystemService(ALARM_SERVICE) as AlarmManager
         val timeAtButtonClick = System.currentTimeMillis()
-        val tenSecondsIntMillis = (1000 * 60 * 60 * 12).toLong()
-//        val tenSecondsIntMillis = (1000 * 10).toLong()
+        val day = 1000 * 60 * 60 * 24
+        val gameDuration = 1000 * 60 * 40
+        val duration = (day - gameDuration).toLong()
 
         alarmManager.set(
             AlarmManager.RTC_WAKEUP,
-            timeAtButtonClick + tenSecondsIntMillis,
+            timeAtButtonClick + duration,
             pendingIntent
         )
     }

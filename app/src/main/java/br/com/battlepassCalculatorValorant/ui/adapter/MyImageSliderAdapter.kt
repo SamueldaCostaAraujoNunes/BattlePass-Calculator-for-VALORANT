@@ -19,9 +19,9 @@ internal class MyImageSliderAdapter(// Context object
 
     var imagesUrl = selectedImageUrl()
 
-    fun selectedImageUrl(): ArrayList<String> {
+    fun selectedImageUrl(default: Int = 1): ArrayList<String> {
         return if (reward.isCard()) {
-            arrayListOf(reward.imagens[1])
+            arrayListOf(reward.imagens[default])
         } else {
             reward.imagens
         }

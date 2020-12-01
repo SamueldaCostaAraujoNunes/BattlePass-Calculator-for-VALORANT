@@ -3,20 +3,17 @@ package br.com.battlepassCalculatorValorant.model.DataBase
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
-import android.database.sqlite.SQLiteOpenHelper
 import br.com.battlepassCalculatorValorant.model.Historic.UserInputsTier
 import java.util.*
 import kotlin.collections.ArrayList
 
-class DbTierInput(val context: Context) : SQLiteOpenHelper(context, NOME_BANCO, null, VERSAO) {
+class DbTierInput(val context: Context) : MyDataBase(context) {
 
     companion object {
-        private const val NOME_BANCO = "TierInputsHistory.db"
         private const val TABELA = "historicInputs"
         private const val TIER = "tier"
         private const val DATE = "date"
         private const val EXP_MISSING = "expMissing"
-        private const val VERSAO = 1
     }
 
     override fun onCreate(db: SQLiteDatabase) {
@@ -100,7 +97,6 @@ class DbTierInput(val context: Context) : SQLiteOpenHelper(context, NOME_BANCO, 
         db.close()
 
         return !update_data.equals(-1)
-
     }
 
 }

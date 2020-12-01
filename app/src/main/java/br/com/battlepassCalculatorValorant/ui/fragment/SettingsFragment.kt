@@ -1,6 +1,7 @@
 package br.com.battlepassCalculatorValorant.ui.fragment
 
 import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.ui.activity.MainActivity
+import br.com.battlepassCalculatorValorant.ui.activity.Settings.EditHistoricActivity
 import br.com.battlepassCalculatorValorant.ui.theme.Theme
 import kotlinx.android.synthetic.main.dialog_title.view.*
 import kotlinx.android.synthetic.main.fragment_settings.*
@@ -24,6 +26,10 @@ class SettingsFragment : Fragment() {
         super.onResume()
         clear_historic.setOnClickListener { MainActivity.historic.clear() }
         btn_change_theme.setOnClickListener { chooseThemeDialog() }
+        btn_edit_historic.setOnClickListener {
+            val intent = Intent(requireContext(), EditHistoricActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onCreateView(
