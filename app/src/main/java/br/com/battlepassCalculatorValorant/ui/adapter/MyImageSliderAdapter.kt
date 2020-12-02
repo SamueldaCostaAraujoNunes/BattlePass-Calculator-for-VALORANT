@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.PassBattle.Reward
-import com.squareup.picasso.Picasso
+import br.com.battlepassCalculatorValorant.model.Util.DowloaderImagers
 import kotlinx.android.synthetic.main.item_image_view.view.*
 
 
@@ -42,7 +42,13 @@ internal class MyImageSliderAdapter(// Context object
         holder: PageHolder,
         position: Int
     ) {
-        Picasso.with(context).load(imagesUrl[position]).into(holder.imgView)
+
+        val uri = imagesUrl[position]
+        val imageView = holder.imgView
+        DowloaderImagers(context, DowloaderImagers.apng).downloadImage(
+            uri,
+            imageView
+        )
     }
 
     class PageHolder(root: View) : RecyclerView.ViewHolder(root) {

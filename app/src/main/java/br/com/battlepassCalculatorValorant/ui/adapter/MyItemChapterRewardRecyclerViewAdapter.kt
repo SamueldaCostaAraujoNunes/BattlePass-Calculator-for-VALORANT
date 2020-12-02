@@ -23,6 +23,7 @@ class MyItemChapterRewardRecyclerViewAdapter(
 ) : RecyclerView.Adapter<MyItemChapterRewardRecyclerViewAdapter.ViewHolder>(), IObserver {
     private var chapterCurrent = 0
     private var values: ArrayList<RewardWithParent> = ArrayList()
+    private var filterValues: ArrayList<RewardWithParent> = ArrayList()
 
     init {
         for (chapter in chapters) {
@@ -30,6 +31,7 @@ class MyItemChapterRewardRecyclerViewAdapter(
                 values.add(RewardWithParent(reward, chapter.index))
             }
         }
+        filterValues.addAll(values)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -40,7 +42,7 @@ class MyItemChapterRewardRecyclerViewAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = values[position]
+        val item = filterValues[position]
         val chapterIndexView = holder.idView
         val chapterRewardView = holder.contentView
 
@@ -73,7 +75,21 @@ class MyItemChapterRewardRecyclerViewAdapter(
         }
     }
 
-    override fun getItemCount(): Int = values.size
+    fun filter(text: String) {
+        filterValues.clear()
+        if (text == "Tudo") {
+            filterValues.addAll(values)
+        } else {
+            for (item in values) {
+                if (item.reward.tipo == text) {
+                    filterValues.add(item)
+                }
+            }
+        }
+        notifyDataSetChanged()
+    }
+
+    override fun getItemCount(): Int = filterValues.size
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val idView: TextView = view.findViewById(R.id.item_number)

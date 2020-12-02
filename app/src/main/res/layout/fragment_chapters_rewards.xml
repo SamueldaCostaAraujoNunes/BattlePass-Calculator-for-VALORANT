@@ -14,14 +14,35 @@
         android:orientation="vertical"
         android:padding="10dp">
 
-        <TextView
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/valorant"
-            android:hint="@string/recompensa_por_capitulo"
-            android:paddingTop="14dp"
-            android:textColorHint="?attr/colorSecondary"
-            android:textSize="20dp" />
+            android:orientation="horizontal"
+            android:paddingTop="14dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/valorant"
+                android:hint="@string/recompensa_por_capitulo"
+                android:textColorHint="?attr/colorSecondary"
+                android:textSize="20dp" />
+
+            <ImageButton
+                android:id="@+id/btn_search_chapter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="6"
+                android:background="?android:selectableItemBackground"
+                android:gravity="center"
+                android:src="@drawable/ic_baseline_search_24"
+                android:tint="?attr/colorSecondary" />
+
+
+        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycleViewChapterRewards"

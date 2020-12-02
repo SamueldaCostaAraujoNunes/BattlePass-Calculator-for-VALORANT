@@ -22,6 +22,7 @@ class MyItemTierRewardRecyclerViewAdapter(
     private val colorXML: ColorFromXml
 ) : RecyclerView.Adapter<MyItemTierRewardRecyclerViewAdapter.ViewHolder>(), IObserver {
     private var tierCurrent = 0
+    private val filterValues = values.toMutableList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         tierCurrent = tierCurrentFun()
@@ -31,7 +32,7 @@ class MyItemTierRewardRecyclerViewAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = values[position]
+        val item = filterValues[position]
         val tierIndexView = holder.idView
         val tierRewardView = holder.contentView
 
@@ -61,7 +62,21 @@ class MyItemTierRewardRecyclerViewAdapter(
         }
     }
 
-    override fun getItemCount(): Int = values.size
+    fun filter(text: String) {
+        filterValues.clear()
+        if (text == "Tudo") {
+            filterValues.addAll(values)
+        } else {
+            for (item in values) {
+                if (item.reward[0].tipo == text) {
+                    filterValues.add(item)
+                }
+            }
+        }
+        notifyDataSetChanged()
+    }
+
+    override fun getItemCount(): Int = filterValues.size
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val idView: TextView = view.findViewById(R.id.item_number)

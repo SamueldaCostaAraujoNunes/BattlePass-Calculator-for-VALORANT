@@ -33,4 +33,14 @@
     <style name="Theme.ValorantPassBattle.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="Theme.ValorantPassBattle.Dialog.Alert" parent="ThemeOverlay.AppCompat.Dialog.Alert" />
+
+    <style name="CustomPopupTheme" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+        <item name="popupMenuStyle">@style/PopupMenu</item>
+    </style>
+
+    <style name="PopupMenu" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:popupBackground">?attr/colorPrimaryVariant</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
 </resources>

@@ -14,6 +14,7 @@ class Reward(json: JSONObject) {
         const val spray = "Spray"
         const val titulo = "Título"
         const val radianita = "Radianitas"
+        val types = arrayListOf<String>(skin, card, chaveiro, spray, titulo, radianita)
     }
 
     init {
