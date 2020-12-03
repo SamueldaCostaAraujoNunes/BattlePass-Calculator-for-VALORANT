@@ -4,7 +4,9 @@
     <style name="CardViewStyle" parent="CardView">
         <item name="cardCornerRadius">10dp</item>
         <item name="cardElevation">6dp</item>
-        <item name="cardBackgroundColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <item name="cardBackgroundColor">?attr/colorPrimary</item>
+        <item name="android:layout_marginHorizontal" tools:targetApi="o">14dp</item>
+        <item name="android:layout_marginTop">14dp</item>
     </style>
 
     <style name="ErrorTextAppearance" parent="TextAppearance.AppCompat">
@@ -48,5 +50,6 @@
         <item name="android:textColor">?attr/colorOnPrimary</item>
         <item name="android:textColorPrimary">?attr/colorPrimary</item>
     </style>
+
 
 </resources>

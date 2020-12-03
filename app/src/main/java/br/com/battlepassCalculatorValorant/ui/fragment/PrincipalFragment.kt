@@ -21,14 +21,13 @@ class PrincipalFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         properties = MainActivity.properties
-        adv = Advertisement(requireContext())
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adv.createBanner(adContainer0, R.string.admob_card0, BANNER)
-        adv.createBanner(adContainer1, R.string.admob_card1, LARGE_BANNER)
-        adv.createBanner(adContainer2, R.string.admob_card2, MEDIUM_RECTANGLE)
+        adContainer0.createBanner(R.string.admob_card0, BANNER)
+        adContainer1.createBanner(R.string.admob_card1, LARGE_BANNER)
+        adContainer2.createBanner(R.string.admob_card2, MEDIUM_RECTANGLE)
     }
 
     override fun onCreateView(

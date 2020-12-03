@@ -12,29 +12,17 @@
         android:orientation="vertical"
         android:paddingBottom="14dp">
 
-        <androidx.cardview.widget.CardView
-            style="@style/CardViewStyle"
-            android:layout_width="match_parent"
+        <br.com.battlepassCalculatorValorant.ui.Advertisement.AdvertisementView
+            android:id="@+id/adContainer5"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="14dp"
-            android:layout_marginTop="14dp">
-
-            <RelativeLayout
-                android:id="@+id/adContainer5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="8dp" />
-
-        </androidx.cardview.widget.CardView>
+            android:layout_gravity="center" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardProgressFragment"
             style="@style/CardViewStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="14dp"
-            android:layout_marginTop="14dp">
+            android:layout_height="wrap_content">
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentChart"
@@ -48,9 +36,7 @@
             android:id="@+id/cardTimelineFragment"
             style="@style/CardViewStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="14dp"
-            android:layout_marginTop="14dp">
+            android:layout_height="wrap_content">
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentPropriets"
@@ -60,29 +46,17 @@
 
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            style="@style/CardViewStyle"
-            android:layout_width="match_parent"
+        <br.com.battlepassCalculatorValorant.ui.Advertisement.AdvertisementView
+            android:id="@+id/adContainer6"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="14dp"
-            android:layout_marginTop="14dp">
-
-            <RelativeLayout
-                android:id="@+id/adContainer6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="8dp" />
-
-        </androidx.cardview.widget.CardView>
+            android:layout_gravity="center" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardProjectionsFragment"
             style="@style/CardViewStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="14dp"
-            android:layout_marginTop="14dp">
+            android:layout_height="wrap_content">
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentTierCurrent"
@@ -92,22 +66,11 @@
 
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            style="@style/CardViewStyle"
-            android:layout_width="match_parent"
+        <br.com.battlepassCalculatorValorant.ui.Advertisement.AdvertisementView
+            android:id="@+id/adContainer7"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="14dp"
-            android:layout_marginTop="14dp">
-
-
-            <RelativeLayout
-                android:id="@+id/adContainer7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="8dp" />
-
-        </androidx.cardview.widget.CardView>
+            android:layout_gravity="center" />
 
         <View
             android:layout_width="match_parent"

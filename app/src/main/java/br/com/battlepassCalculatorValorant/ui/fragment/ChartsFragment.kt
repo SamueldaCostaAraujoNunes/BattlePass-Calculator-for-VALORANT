@@ -13,12 +13,10 @@ import kotlinx.android.synthetic.main.fragment_charts.*
 
 class ChartsFragment : Fragment() {
     private lateinit var properties: Properties
-    private lateinit var adv: Advertisement
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         properties = MainActivity.properties
-        adv = Advertisement(requireContext())
     }
 
     override fun onCreateView(
@@ -30,8 +28,8 @@ class ChartsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adv.createBanner(adContainer3, R.string.admob_card3, Advertisement.BANNER)
-        adv.createBanner(adContainer4, R.string.admob_card4, Advertisement.MEDIUM_RECTANGLE)
+        adContainer3.createBanner(R.string.admob_card3, Advertisement.BANNER)
+        adContainer4.createBanner(R.string.admob_card4, Advertisement.MEDIUM_RECTANGLE)
     }
 
 

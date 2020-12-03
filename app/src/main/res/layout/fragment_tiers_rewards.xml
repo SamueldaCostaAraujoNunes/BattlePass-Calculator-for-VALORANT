@@ -37,7 +37,7 @@
                 android:layout_weight="6"
                 android:background="?android:selectableItemBackground"
                 android:gravity="center"
-                android:src="@drawable/ic_baseline_search_24"
+                android:src="@drawable/ic_baseline_filter_alt_24"
                 android:tint="?attr/colorSecondary" />
 
 

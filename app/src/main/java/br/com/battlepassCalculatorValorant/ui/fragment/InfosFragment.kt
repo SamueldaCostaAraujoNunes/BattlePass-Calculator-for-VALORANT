@@ -14,12 +14,10 @@ import kotlinx.android.synthetic.main.fragment_infos.*
 class InfosFragment : Fragment() {
 
     private lateinit var properties: Properties
-    private lateinit var adv: Advertisement
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         properties = MainActivity.properties
-        adv = Advertisement(requireContext())
     }
 
     override fun onCreateView(
@@ -31,9 +29,9 @@ class InfosFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adv.createBanner(adContainer5, R.string.admob_card5, Advertisement.BANNER)
-        adv.createBanner(adContainer6, R.string.admob_card6, Advertisement.LARGE_BANNER)
-        adv.createBanner(adContainer7, R.string.admob_card7, Advertisement.MEDIUM_RECTANGLE)
+        adContainer5.createBanner(R.string.admob_card5, Advertisement.BANNER)
+        adContainer6.createBanner(R.string.admob_card6, Advertisement.LARGE_BANNER)
+        adContainer7.createBanner(R.string.admob_card7, Advertisement.MEDIUM_RECTANGLE)
     }
 
     override fun onDestroyView() {
