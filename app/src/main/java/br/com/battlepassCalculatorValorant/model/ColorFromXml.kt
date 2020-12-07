@@ -17,7 +17,7 @@ class ColorFromXml(val context: Context) {
         ).substring(2)
     }
 
-    fun convertIntToHex(colorInt: Int): String {
+    private fun convertIntToHex(colorInt: Int): String {
         return String.format("#%06X", 0xFFFFFF and colorInt)
     }
 

@@ -3,10 +3,10 @@
 
     <style name="CardViewStyle" parent="CardView">
         <item name="cardCornerRadius">10dp</item>
-        <item name="cardElevation">6dp</item>
+        <item name="cardElevation">5dp</item>
+        <item name="cardUseCompatPadding">true</item>
         <item name="cardBackgroundColor">?attr/colorPrimary</item>
-        <item name="android:layout_marginHorizontal" tools:targetApi="o">14dp</item>
-        <item name="android:layout_marginTop">14dp</item>
+        <item name="android:layout_marginHorizontal" tools:targetApi="o">8dp</item>
     </style>
 
     <style name="ErrorTextAppearance" parent="TextAppearance.AppCompat">
@@ -48,8 +48,14 @@
     <style name="alertDialog" parent="Theme.ValorantPassBattle.Dialog.Alert">
         <item name="android:background">?attr/colorPrimary</item>
         <item name="android:textColor">?attr/colorOnPrimary</item>
-        <item name="android:textColorPrimary">?attr/colorPrimary</item>
+        <item name="android:textColorPrimary">?attr/colorOnPrimary</item>
+        <item name="android:textAppearanceSmall">@style/MyTextAppearance</item>
+        <item name="android:textAppearanceMedium">@style/MyTextAppearance</item>
+        <item name="android:textAppearanceLarge">@style/MyTextAppearance</item>
     </style>
 
-
+    <style name="MyTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/muli_font_family</item>
+        <item name="android:textSize">22sp</item>
+    </style>
 </resources>

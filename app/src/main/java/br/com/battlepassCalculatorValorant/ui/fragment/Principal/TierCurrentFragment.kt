@@ -18,9 +18,9 @@ class TierCurrentFragment : Fragment(), IObserver {
     private lateinit var properties: Properties
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         properties = MainActivity.Companion.properties
         properties.historic.add(this)
-        super.onCreate(savedInstanceState)
     }
 
     override fun onCreateView(

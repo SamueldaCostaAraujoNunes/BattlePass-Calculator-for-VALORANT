@@ -14,13 +14,8 @@ import kotlin.collections.ArrayList
 
 class Properties(val historic: Historic, val passBattle: PassBattle) {
 
-    lateinit var semClassificacao: SemClassificacao
-    lateinit var disputaDeSpike: DisputaDeSpike
-
-    init {
-        semClassificacao = SemClassificacao()
-        disputaDeSpike = DisputaDeSpike()
-    }
+    var semClassificacao: SemClassificacao = SemClassificacao()
+    var disputaDeSpike: DisputaDeSpike = DisputaDeSpike()
 
     fun historicTierPositionPerXp(): ArrayList<Int> {
         val mHistoric = ArrayList(historic)
@@ -204,4 +199,56 @@ class Properties(val historic: Historic, val passBattle: PassBattle) {
         return horas
     }
 
+    fun days(): Int {
+        return daysApart(passBattle.dateFinally, passBattle.dateInit) + 1
+    }
+
+    fun expMissaoDiaria(): Float {
+        val days = days()
+        val xpPerDay = passBattle.expMissaoDiaria.toFloat() / days
+        val xpCurrent = xpPerDay * dayCurrent()
+        return xpCurrent
+    }
+
+    fun expMissaoSemanal(): Float {
+        val weeks = (days() / 7)
+        val xpPerWeek = passBattle.expMissaoSemanal.toFloat() / weeks
+        val xpCurrent = xpPerWeek * (dayCurrent() / 7)
+        return xpCurrent
+    }
+
+    fun expNormalGame(): Int {
+        val total = getTotalXp()
+        return total - (getExpMissaoDiaria() + getExpMissaoSemanal())
+    }
+
+    fun getExpMissaoDiaria(): Int {
+        return passBattle.expMissaoDiaria
+    }
+
+    fun getExpMissaoSemanal(): Int {
+        return passBattle.expMissaoSemanal
+    }
+
+    fun getNormalGame(): Int {
+        return (passBattle.expTotal - (getExpMissaoSemanal() + getExpMissaoDiaria()))
+    }
+
+    fun getPercentMissaoDiaria(): Float {
+        val missao = getExpMissaoDiaria()
+        val total = passBattle.expTotal
+        return (missao.toFloat() / total.toFloat())
+    }
+
+    fun getPercentMissaoSemanal(): Float {
+        val missao = getExpMissaoSemanal()
+        val total = passBattle.expTotal
+        return (missao.toFloat() / total.toFloat()) + 0.01F
+    }
+
+    fun getPercentNormalGame(): Float {
+        val missao = getNormalGame()
+        val total = passBattle.expTotal
+        return (missao.toFloat() / total.toFloat()) + 0.01F
+    }
 }

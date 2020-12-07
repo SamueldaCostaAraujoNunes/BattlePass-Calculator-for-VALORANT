@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.model.DataBase.MySharedPreferences
+import br.com.battlepassCalculatorValorant.model.DataBase.SharedPreferences.FirstInputSharedPreferences
 import br.com.battlepassCalculatorValorant.model.Historic.Historic
 import br.com.battlepassCalculatorValorant.model.Historic.UserInputsTier
 import br.com.battlepassCalculatorValorant.model.PassBattle.PassBattleFactory
@@ -51,8 +51,7 @@ class FirstInputActivity : AppCompatActivity() {
     }
 
     private fun mostrarProxActivity() {
-        val bd = MySharedPreferences(this)
-        bd.setBoolean(bd.keyFirstInputComplete, true)
+        FirstInputSharedPreferences(this).firstInputExists = true
         val intent = Intent(this@FirstInputActivity, MainActivity::class.java)
         startActivity(intent)
         finish()

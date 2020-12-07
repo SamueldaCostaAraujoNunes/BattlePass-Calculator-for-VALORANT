@@ -25,6 +25,7 @@ import com.google.android.material.textfield.TextInputEditText
 import kotlinx.android.synthetic.main.dialog_tierinput.view.*
 import kotlinx.android.synthetic.main.dialog_title.view.*
 
+
 @Suppress("CAST_NEVER_SUCCEEDS")
 class DialogInput(context: Context) : AlertDialog(context) {
     private lateinit var mInterstitialAd: InterstitialAd
@@ -47,6 +48,7 @@ class DialogInput(context: Context) : AlertDialog(context) {
         tvTierExpMissing = mDialogView.tierinput_dialog_et_exp_missing
 
         builder = Builder(context).setView(mDialogView).setCustomTitle(titleView)
+
         adv = Advertisement(context)
         mInterstitialAd = adv.createInterstitial()
         createNotificationChannel()
@@ -101,7 +103,7 @@ class DialogInput(context: Context) : AlertDialog(context) {
         val pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0)
         val alarmManager = context.getSystemService(ALARM_SERVICE) as AlarmManager
         val timeAtButtonClick = System.currentTimeMillis()
-        val day = 1000 * 60 * 60 * 5
+        val day = 1000 * 60 * 60 * 1
         val gameDuration = 1000 * 60 * 40
         val duration = (day - gameDuration).toLong()
 

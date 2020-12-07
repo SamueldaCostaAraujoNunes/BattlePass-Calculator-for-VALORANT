@@ -54,6 +54,25 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center" />
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardFragmentExpMissoes"
+            style="@style/CardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/fragmentExpMissoes"
+                    android:name="br.com.battlepassCalculatorValorant.ui.fragment.Propriedades.ExpStatisticFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="55dp" />
