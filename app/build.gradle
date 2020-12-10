@@ -11,8 +11,8 @@ android {
         applicationId "br.com.samuelnunes.valorantpassbattle"
         minSdkVersion 24
         targetSdkVersion 29
-        versionCode 13
-        versionName "2.4"
+        versionCode 14
+        versionName "2.4.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

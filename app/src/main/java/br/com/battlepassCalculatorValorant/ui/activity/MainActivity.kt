@@ -45,8 +45,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
         setContext(this)
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         createFragment(R.id.fragmentPrincipal, PrincipalFragment())
         createListeners()

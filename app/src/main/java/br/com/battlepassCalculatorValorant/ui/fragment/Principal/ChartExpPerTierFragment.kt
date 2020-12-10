@@ -18,8 +18,8 @@ class ChartExpPerTierFragment : Fragment() {
     private lateinit var historic: Historic
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        properties = MainActivity.Companion.properties
-        historic = MainActivity.Companion.historic
+        properties = MainActivity.properties
+        historic = MainActivity.historic
         super.onCreate(savedInstanceState)
     }
 
