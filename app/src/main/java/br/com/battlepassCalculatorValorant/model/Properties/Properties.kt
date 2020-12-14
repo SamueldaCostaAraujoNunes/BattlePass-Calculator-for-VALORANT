@@ -5,6 +5,7 @@ import android.content.Context
 import android.icu.text.SimpleDateFormat
 import br.com.battlepassCalculatorValorant.model.GameType.DisputaDeSpike
 import br.com.battlepassCalculatorValorant.model.GameType.GameType
+import br.com.battlepassCalculatorValorant.model.GameType.GuerraDeBolaDeNeve
 import br.com.battlepassCalculatorValorant.model.GameType.SemClassificacao
 import br.com.battlepassCalculatorValorant.model.Historic.Historic
 import br.com.battlepassCalculatorValorant.model.PassBattle.Chapter
@@ -21,6 +22,7 @@ class Properties(val context: Context) {
 
     var semClassificacao: SemClassificacao = SemClassificacao()
     var disputaDeSpike: DisputaDeSpike = DisputaDeSpike()
+    val guerraDeBolaDeNeve: GuerraDeBolaDeNeve = GuerraDeBolaDeNeve()
 
     fun getTiersPerXp(): ArrayList<Int> {
         return ArrayList(passBattle.tiers.map { it.expInitial })
