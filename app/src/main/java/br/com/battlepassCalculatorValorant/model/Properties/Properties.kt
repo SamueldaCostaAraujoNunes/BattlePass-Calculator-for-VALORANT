@@ -1,21 +1,30 @@
 package br.com.battlepassCalculatorValorant.model.Properties
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.icu.text.SimpleDateFormat
 import br.com.battlepassCalculatorValorant.model.GameType.DisputaDeSpike
 import br.com.battlepassCalculatorValorant.model.GameType.GameType
 import br.com.battlepassCalculatorValorant.model.GameType.SemClassificacao
 import br.com.battlepassCalculatorValorant.model.Historic.Historic
 import br.com.battlepassCalculatorValorant.model.PassBattle.Chapter
-import br.com.battlepassCalculatorValorant.model.PassBattle.PassBattle
 import br.com.battlepassCalculatorValorant.model.PassBattle.Tier
+import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerHistoric
+import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerPassBattle
 import java.util.*
 import kotlin.collections.ArrayList
 
-class Properties(val historic: Historic, val passBattle: PassBattle) {
+class Properties(val context: Context) {
+
+    val historic: Historic = ManagerHistoric.getInstance(context)
+    val passBattle = ManagerPassBattle.getInstance(context).getPassBattle()
 
     var semClassificacao: SemClassificacao = SemClassificacao()
     var disputaDeSpike: DisputaDeSpike = DisputaDeSpike()
+
+    fun getTiersPerXp(): ArrayList<Int> {
+        return ArrayList(passBattle.tiers.map { it.expInitial })
+    }
 
     fun historicTierPositionPerXp(): ArrayList<Int> {
         val mHistoric = ArrayList(historic)

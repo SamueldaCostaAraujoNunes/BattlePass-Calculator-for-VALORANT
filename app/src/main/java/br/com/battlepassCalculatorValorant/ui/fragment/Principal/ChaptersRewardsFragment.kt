@@ -15,6 +15,7 @@ import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.ColorFromXml
 import br.com.battlepassCalculatorValorant.model.PassBattle.Reward
 import br.com.battlepassCalculatorValorant.model.Properties.Properties
+import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerProperties
 import br.com.battlepassCalculatorValorant.ui.activity.MainActivity
 import br.com.battlepassCalculatorValorant.ui.adapter.MyItemChapterRewardRecyclerViewAdapter
 
@@ -28,7 +29,7 @@ class ChaptersRewardsFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        properties = MainActivity.properties
+        properties = ManagerProperties.getInstance(requireContext())
         colorXML = MainActivity.colorXML
     }
 

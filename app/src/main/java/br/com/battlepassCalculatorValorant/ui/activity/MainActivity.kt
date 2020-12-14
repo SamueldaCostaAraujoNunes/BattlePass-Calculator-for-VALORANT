@@ -2,20 +2,15 @@ package br.com.battlepassCalculatorValorant.ui.activity
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.ColorFromXml
-import br.com.battlepassCalculatorValorant.model.Historic.Historic
-import br.com.battlepassCalculatorValorant.model.PassBattle.PassBattle
-import br.com.battlepassCalculatorValorant.model.PassBattle.PassBattleFactory
-import br.com.battlepassCalculatorValorant.model.Properties.Properties
+import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement
 import br.com.battlepassCalculatorValorant.ui.dialog.DialogInput
 import br.com.battlepassCalculatorValorant.ui.fragment.ChartsFragment
 import br.com.battlepassCalculatorValorant.ui.fragment.InfosFragment
 import br.com.battlepassCalculatorValorant.ui.fragment.PrincipalFragment
 import br.com.battlepassCalculatorValorant.ui.fragment.SettingsFragment
-import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.InterstitialAd
 import com.google.android.gms.ads.MobileAds
 import kotlinx.android.synthetic.main.activity_main.*
@@ -24,20 +19,15 @@ import kotlinx.android.synthetic.main.activity_main.*
 @Suppress("UNREACHABLE_CODE")
 class MainActivity : AppCompatActivity() {
     private lateinit var mInterstitialAd: InterstitialAd
+    private var advertisementCount: Int = 0
 
     companion object {
         private lateinit var context: Context
         lateinit var mInterstitialAd: InterstitialAd
-        lateinit var historic: Historic
-        lateinit var passBattle: PassBattle
-        lateinit var properties: Properties
         lateinit var colorXML: ColorFromXml
 
         fun setContext(con: Context) {
             context = con
-            historic = Historic(context)
-            passBattle = PassBattleFactory(context).getPassBattle()
-            properties = Properties(historic, passBattle)
             colorXML = ColorFromXml(context)
             MobileAds.initialize(context, R.string.admob_app_id.toString())
             mInterstitialAd = InterstitialAd(context)
@@ -54,18 +44,17 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun initAdMob() {
-        mInterstitialAd = InterstitialAd(context)
-        mInterstitialAd.adUnitId = context.resources.getString(R.string.admob_fullscreen_ad)
-        mInterstitialAd.loadAd(AdRequest.Builder().build())
+    private fun initAdMob() {
+        advertisementCount = 0
+        mInterstitialAd = Advertisement(context).createInterstitial()
     }
 
-    fun launcherAdMob() {
-        if (mInterstitialAd.isLoaded) {
+    private fun launcherAdMob() {
+        if (mInterstitialAd.isLoaded && advertisementCount >= 4) {
             mInterstitialAd.show()
             initAdMob()
         } else {
-            Log.d("TAG", "The interstitial wasn't loaded yet.")
+            advertisementCount++
         }
     }
 
@@ -96,11 +85,10 @@ class MainActivity : AppCompatActivity() {
                         R.id.item_apps -> SettingsFragment()
                         else -> PrincipalFragment()
                     }
+                advertisementCount++
+                launcherAdMob()
                 val config = nextItem != R.id.item_apps
                 bottomNavigationView.transform(fab, config)
-//                if (config) {
-//                    launcherAdMob()
-//                }
                 createFragment(R.id.fragmentPrincipal, fragment)
             }
             true

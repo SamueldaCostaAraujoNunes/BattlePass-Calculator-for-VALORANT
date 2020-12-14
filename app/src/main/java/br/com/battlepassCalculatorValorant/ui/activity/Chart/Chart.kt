@@ -7,7 +7,7 @@ import br.com.battlepassCalculatorValorant.model.Observer.IObserver
 import com.github.aachartmodel.aainfographics.aachartcreator.*
 
 
-open class Chart(val context: Context, val chartView: AAChartView): IObserver {
+class Chart(val context: Context, val chartView: AAChartView) : IObserver {
     val colorGenerator = ColorFromXml(context)
     val model = AAChartModel()
     private var series = ArrayList<AASeriesElement>()
@@ -26,12 +26,6 @@ open class Chart(val context: Context, val chartView: AAChartView): IObserver {
         model
             .chartType(AAChartType.Area)
             .tooltipValueSuffix(" Xp")
-//            .title("Seu Passe de Batalha")
-//            .titleStyle(
-//                AAStyle()
-//                    .color(colorOnPrimary)
-//                    .fontSize(14F)
-//            )
             .backgroundColor("#00000000")
             .yAxisTitle("XP")
             .axesTextColor(colorOnPrimary)

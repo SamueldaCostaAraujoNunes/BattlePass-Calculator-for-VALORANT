@@ -8,8 +8,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.Historic.Historic
+import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerProperties
 import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement
-import br.com.battlepassCalculatorValorant.ui.activity.MainActivity
 import com.google.android.gms.ads.InterstitialAd
 import com.google.android.material.textfield.TextInputEditText
 import kotlinx.android.synthetic.main.dialog_tierinput.view.*
@@ -18,8 +18,11 @@ import kotlinx.android.synthetic.main.dialog_title.view.*
 @Suppress("CAST_NEVER_SUCCEEDS")
 class DialogEditInput(context: Context, val position: Int, val historic: Historic) :
     AlertDialog(context) {
-    private lateinit var mInterstitialAd: InterstitialAd
-    private lateinit var adv: Advertisement
+
+    private val passBattle = ManagerProperties.getInstance(context).passBattle
+
+    private var mInterstitialAd: InterstitialAd
+    private var adv: Advertisement
     var tvTierIndex: TextInputEditText
     var tvTierExpMissing: TextInputEditText
     var mDialogView: View
@@ -55,8 +58,8 @@ class DialogEditInput(context: Context, val position: Int, val historic: Histori
     fun setOnClickListener() {
         mDialogView.tierinput_dialog_btn_save.setOnClickListener {
             val tierInputCurrent =
-                if (MainActivity.historic.isEmpty()) null else MainActivity.historic.last()
-            val tierCurrent = MainActivity.passBattle.getTier(tierInputCurrent?.tierCurrent ?: 1)
+                if (historic.isEmpty()) null else historic.last()
+            val tierCurrent = passBattle.getTier(tierInputCurrent?.tierCurrent ?: 1)
             if (validadeTierExpMissing(tvTierExpMissing, tierCurrent?.expMissing ?: 50000)) {
                 tier.tierExpMissing = tvTierExpMissing.text.toString().toInt()
                 historic.update(tier)

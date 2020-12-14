@@ -13,7 +13,7 @@ import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.ColorFromXml
 import br.com.battlepassCalculatorValorant.model.Observer.IObserver
 import br.com.battlepassCalculatorValorant.model.Properties.Properties
-import br.com.battlepassCalculatorValorant.ui.activity.MainActivity
+import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerProperties
 import br.com.battlepassCalculatorValorant.ui.progressBar.mProgressBarView
 import kotlinx.android.synthetic.main.dialog_title.view.*
 
@@ -28,7 +28,7 @@ class ExpStatisticFragment : Fragment(), IObserver {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        properties = MainActivity.properties
+        properties = ManagerProperties.getInstance(requireContext())
         properties.historic.add(this)
     }
 

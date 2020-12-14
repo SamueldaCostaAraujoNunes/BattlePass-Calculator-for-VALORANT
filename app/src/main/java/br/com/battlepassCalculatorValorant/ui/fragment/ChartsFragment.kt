@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.Properties.Properties
+import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerProperties
 import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement
-import br.com.battlepassCalculatorValorant.ui.activity.MainActivity
 import kotlinx.android.synthetic.main.fragment_charts.*
 
 class ChartsFragment : Fragment() {
@@ -16,7 +16,7 @@ class ChartsFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        properties = MainActivity.properties
+        properties = ManagerProperties.getInstance(requireContext())
     }
 
     override fun onCreateView(

@@ -8,7 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.ui.activity.MainActivity
+import br.com.battlepassCalculatorValorant.model.Historic.Historic
+import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerHistoric
 import br.com.battlepassCalculatorValorant.ui.activity.Settings.EditHistoricActivity
 import br.com.battlepassCalculatorValorant.ui.theme.Theme
 import kotlinx.android.synthetic.main.dialog_title.view.*
@@ -16,15 +17,17 @@ import kotlinx.android.synthetic.main.fragment_settings.*
 
 class SettingsFragment : Fragment() {
     lateinit var theme: Theme
+    lateinit var historic: Historic
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        historic = ManagerHistoric.getInstance(requireContext())
         theme = Theme(requireContext())
     }
 
     override fun onResume() {
         super.onResume()
-        clear_historic.setOnClickListener { MainActivity.historic.clear() }
+        clear_historic.setOnClickListener { historic.clear() }
         btn_change_theme.setOnClickListener { chooseThemeDialog() }
         btn_edit_historic.setOnClickListener {
             val intent = Intent(requireContext(), EditHistoricActivity::class.java)
@@ -41,8 +44,7 @@ class SettingsFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        MainActivity.historic.deleteAll()
-
+        historic.deleteAll()
     }
 
     private fun chooseThemeDialog() {

@@ -10,6 +10,7 @@ import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.ColorFromXml
 import br.com.battlepassCalculatorValorant.model.Observer.IObserver
 import br.com.battlepassCalculatorValorant.model.Properties.Properties
+import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerProperties
 import br.com.battlepassCalculatorValorant.ui.activity.MainActivity
 import kotlinx.android.synthetic.main.fragment_timeline.*
 
@@ -17,8 +18,7 @@ class TimelineFragment : Fragment(), IObserver {
     private lateinit var properties: Properties
     private lateinit var colorGenerator: ColorFromXml
     override fun onCreate(savedInstanceState: Bundle?) {
-
-        properties = MainActivity.Companion.properties
+        properties = ManagerProperties.getInstance(requireContext())
         properties.historic.add(this)
         colorGenerator = MainActivity.Companion.colorXML
         super.onCreate(savedInstanceState)

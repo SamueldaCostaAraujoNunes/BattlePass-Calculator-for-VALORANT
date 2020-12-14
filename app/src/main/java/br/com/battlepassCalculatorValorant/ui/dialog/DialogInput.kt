@@ -17,8 +17,8 @@ import androidx.core.content.ContextCompat.getSystemService
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.Historic.UserInputsTier
 import br.com.battlepassCalculatorValorant.model.PassBattle.Tier
+import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerProperties
 import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement
-import br.com.battlepassCalculatorValorant.ui.activity.MainActivity
 import br.com.battlepassCalculatorValorant.ui.notification.NotificationReceiver
 import com.google.android.gms.ads.InterstitialAd
 import com.google.android.material.textfield.TextInputEditText
@@ -28,6 +28,9 @@ import kotlinx.android.synthetic.main.dialog_title.view.*
 
 @Suppress("CAST_NEVER_SUCCEEDS")
 class DialogInput(context: Context) : AlertDialog(context) {
+
+    private val properties = ManagerProperties.getInstance(context)
+
     private lateinit var mInterstitialAd: InterstitialAd
     private lateinit var adv: Advertisement
     var tvTierIndex: TextInputEditText
@@ -62,16 +65,16 @@ class DialogInput(context: Context) : AlertDialog(context) {
     fun setOnClickListener() {
         mDialogView.tierinput_dialog_btn_save.setOnClickListener {
             val tierInputCurrent =
-                if (MainActivity.historic.isEmpty()) null else MainActivity.historic.last()
-            val tierCurrent = MainActivity.passBattle.getTier(tierInputCurrent?.tierCurrent ?: 1)
+                if (properties.historic.isEmpty()) null else properties.historic.last()
+            val tierCurrent = properties.passBattle.getTier(tierInputCurrent?.tierCurrent ?: 1)
             if (validadeTierIndex(tvTierIndex, tierCurrent?.index ?: 0)) {
                 val tierInput =
-                    MainActivity.passBattle.getTier(tvTierIndex.text.toString().toInt())!!
+                    properties.passBattle.getTier(tvTierIndex.text.toString().toInt())!!
                 if (validadeTierExpMissing(tvTierExpMissing, tierInput)) {
                     val tier = tvTierIndex.text.toString().toInt()
                     val expMissing = tvTierExpMissing.text.toString().toInt()
                     val inputUser = UserInputsTier(tier, expMissing)
-                    MainActivity.historic.create(inputUser)
+                    properties.historic.create(inputUser)
                     createNotification()
                     dialog.dismiss()
                     launcherAdMob()
@@ -125,7 +128,7 @@ class DialogInput(context: Context) : AlertDialog(context) {
     fun validadeTierIndex(tv: TextView, index: Int): Boolean {
         val tierStr = tv.text.toString()
         val ultimoTier =
-            if (MainActivity.historic.isEmpty()) 0 else MainActivity.historic.last().tierCurrent
+            if (properties.historic.isEmpty()) 0 else properties.historic.last().tierCurrent
         if (tierStr == "") tv.error = "Insira um tier!"
         if (tierStr.isNotEmpty()) {
             if (tierStr.length <= 3) {
@@ -150,10 +153,10 @@ class DialogInput(context: Context) : AlertDialog(context) {
 
                 var ultimoXp = tier.expMissing
                 val ultimoTier =
-                    if (MainActivity.historic.isEmpty()) 0 else MainActivity.historic.last().tierCurrent
+                    if (properties.historic.isEmpty()) 0 else properties.historic.last().tierCurrent
                 if (tier.index == ultimoTier) {
                     ultimoXp =
-                        if (MainActivity.historic.isEmpty()) 0 else MainActivity.historic.last().tierExpMissing
+                        if (properties.historic.isEmpty()) 0 else properties.historic.last().tierExpMissing
                 }
                 if ((tierInt < 0) or (tierInt > ultimoXp)) tv.error =
                     "Insira um EXP entre 0 e ${ultimoXp}!"

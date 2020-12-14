@@ -7,20 +7,18 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.Properties.Properties
-import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement
+import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerProperties
 import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement.Companion.BANNER
 import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement.Companion.LARGE_BANNER
 import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement.Companion.MEDIUM_RECTANGLE
-import br.com.battlepassCalculatorValorant.ui.activity.MainActivity
 import kotlinx.android.synthetic.main.fragment_principal.*
 
 class PrincipalFragment : Fragment() {
     private lateinit var properties: Properties
-    private lateinit var adv: Advertisement
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        properties = ManagerProperties.getInstance(requireContext())
         super.onCreate(savedInstanceState)
-        properties = MainActivity.properties
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

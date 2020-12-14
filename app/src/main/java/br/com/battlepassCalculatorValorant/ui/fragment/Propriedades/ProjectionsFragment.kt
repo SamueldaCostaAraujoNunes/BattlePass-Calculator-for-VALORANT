@@ -8,15 +8,15 @@ import androidx.fragment.app.Fragment
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.Observer.IObserver
 import br.com.battlepassCalculatorValorant.model.Properties.Properties
-import br.com.battlepassCalculatorValorant.ui.activity.MainActivity
+import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerProperties
 import kotlinx.android.synthetic.main.fragment_projections.*
 
 class ProjectionsFragment : Fragment(), IObserver {
-    private lateinit var prop: Properties
+    private lateinit var properties: Properties
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        prop = MainActivity.Companion.properties
-        prop.historic.add(this)
+        properties = ManagerProperties.getInstance(requireContext())
+        properties.historic.add(this)
         super.onCreate(savedInstanceState)
     }
 
@@ -33,17 +33,17 @@ class ProjectionsFragment : Fragment(), IObserver {
 
     override fun update() {
 
-        val jogosRestantesSC = prop.jogosRestantes(prop.semClassificacao)
-        val jogosRestantesDS = prop.jogosRestantes(prop.disputaDeSpike)
+        val jogosRestantesSC = properties.jogosRestantes(properties.semClassificacao)
+        val jogosRestantesDS = properties.jogosRestantes(properties.disputaDeSpike)
 
-        val tempoRestanteSC = prop.tempoRestante(prop.semClassificacao)
-        val tempoRestanteDS = prop.tempoRestante(prop.disputaDeSpike)
+        val tempoRestanteSC = properties.tempoRestante(properties.semClassificacao)
+        val tempoRestanteDS = properties.tempoRestante(properties.disputaDeSpike)
 
-        val jogosDiaSC = prop.jogosPorDia(prop.semClassificacao)
-        val jogosDiaDS = prop.jogosPorDia(prop.disputaDeSpike)
+        val jogosDiaSC = properties.jogosPorDia(properties.semClassificacao)
+        val jogosDiaDS = properties.jogosPorDia(properties.disputaDeSpike)
 
-        val horasDiasSC = prop.horasPorDia(prop.semClassificacao)
-        val horasDiasDS = prop.horasPorDia(prop.disputaDeSpike)
+        val horasDiasSC = properties.horasPorDia(properties.semClassificacao)
+        val horasDiasDS = properties.horasPorDia(properties.disputaDeSpike)
 
         //Jogos Restantes
         tv_jogos_restantes_sc.text = jogosRestantesSC.toInt().toString()
