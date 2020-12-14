@@ -4,13 +4,13 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.Historic.Historic
-import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerHistoric
+import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerProperties
 import br.com.battlepassCalculatorValorant.ui.adapter.MyEditHistoricAdapter
 import kotlinx.android.synthetic.main.activity_edit_historic.*
 
 class EditHistoricActivity : AppCompatActivity() {
 
-    val historic: Historic = ManagerHistoric.getInstance(this)
+    val historic: Historic = ManagerProperties.getInstance(this).historic
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

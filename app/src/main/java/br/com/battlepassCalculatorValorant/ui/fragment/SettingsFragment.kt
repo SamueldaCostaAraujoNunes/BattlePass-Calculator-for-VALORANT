@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.Historic.Historic
-import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerHistoric
+import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerProperties
 import br.com.battlepassCalculatorValorant.ui.activity.Settings.EditHistoricActivity
 import br.com.battlepassCalculatorValorant.ui.theme.Theme
 import kotlinx.android.synthetic.main.dialog_title.view.*
@@ -21,7 +21,7 @@ class SettingsFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        historic = ManagerHistoric.getInstance(requireContext())
+        historic = ManagerProperties.getInstance(requireContext()).historic
         theme = Theme(requireContext())
     }
 

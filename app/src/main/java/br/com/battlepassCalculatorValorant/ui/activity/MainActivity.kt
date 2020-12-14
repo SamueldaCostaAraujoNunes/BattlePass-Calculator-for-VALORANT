@@ -4,7 +4,6 @@ import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.model.ColorFromXml
 import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement
 import br.com.battlepassCalculatorValorant.ui.dialog.DialogInput
 import br.com.battlepassCalculatorValorant.ui.fragment.ChartsFragment
@@ -12,7 +11,6 @@ import br.com.battlepassCalculatorValorant.ui.fragment.InfosFragment
 import br.com.battlepassCalculatorValorant.ui.fragment.PrincipalFragment
 import br.com.battlepassCalculatorValorant.ui.fragment.SettingsFragment
 import com.google.android.gms.ads.InterstitialAd
-import com.google.android.gms.ads.MobileAds
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -24,12 +22,9 @@ class MainActivity : AppCompatActivity() {
     companion object {
         private lateinit var context: Context
         lateinit var mInterstitialAd: InterstitialAd
-        lateinit var colorXML: ColorFromXml
 
         fun setContext(con: Context) {
             context = con
-            colorXML = ColorFromXml(context)
-            MobileAds.initialize(context, R.string.admob_app_id.toString())
             mInterstitialAd = InterstitialAd(context)
         }
     }
