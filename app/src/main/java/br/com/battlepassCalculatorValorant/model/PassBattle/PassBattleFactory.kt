@@ -11,10 +11,9 @@ class PassBattleFactory(val context: Context){
     private val passBattle = PassBattle(json)
 
     fun readJson(): JSONObject {
-        var jsonStr: String? = null
         try {
             val inputStream: InputStream = context.assets.open(PATH_INFOS)
-            jsonStr = inputStream.bufferedReader().use { it.readText() }
+            val jsonStr: String = inputStream.bufferedReader().use { it.readText() }
             val json = JSONObject(jsonStr)
             return json
         }catch(e: IOException) {

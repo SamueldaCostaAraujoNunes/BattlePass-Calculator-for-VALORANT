@@ -9,8 +9,7 @@ class MyPageSliderAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
     override fun getItemCount(): Int = mFragmentList.size
 
     override fun createFragment(position: Int): Fragment {
-        val fragment = mFragmentList[position]
-        return fragment
+        return mFragmentList[position]
     }
 
     fun addFragment(fragment: Fragment) {

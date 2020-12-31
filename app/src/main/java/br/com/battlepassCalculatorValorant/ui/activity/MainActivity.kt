@@ -1,6 +1,5 @@
 package br.com.battlepassCalculatorValorant.ui.activity
 
-import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.com.battlepassCalculatorValorant.R
@@ -19,18 +18,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mInterstitialAd: InterstitialAd
     private var advertisementCount: Int = 0
 
-    companion object {
-        private lateinit var context: Context
-        lateinit var mInterstitialAd: InterstitialAd
-
-        fun setContext(con: Context) {
-            context = con
-            mInterstitialAd = InterstitialAd(context)
-        }
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
-        setContext(this)
+        mInterstitialAd = InterstitialAd(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         createFragment(R.id.fragmentPrincipal, PrincipalFragment())
@@ -38,14 +27,13 @@ class MainActivity : AppCompatActivity() {
         initAdMob()
     }
 
-
     private fun initAdMob() {
         advertisementCount = 0
-        mInterstitialAd = Advertisement(context).createInterstitial()
+        mInterstitialAd = Advertisement(this).createInterstitial()
     }
 
     private fun launcherAdMob() {
-        if (mInterstitialAd.isLoaded && advertisementCount >= 4) {
+        if (mInterstitialAd.isLoaded && advertisementCount >= 3) {
             mInterstitialAd.show()
             initAdMob()
         } else {
@@ -80,11 +68,10 @@ class MainActivity : AppCompatActivity() {
                         R.id.item_apps -> SettingsFragment()
                         else -> PrincipalFragment()
                     }
-                advertisementCount++
-                launcherAdMob()
                 val config = nextItem != R.id.item_apps
                 bottomNavigationView.transform(fab, config)
                 createFragment(R.id.fragmentPrincipal, fragment)
+                launcherAdMob()
             }
             true
         }

@@ -59,15 +59,6 @@
                     android:textColor="?attr/colorOnPrimary"
                     android:textSize="18sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/muli_font_family"
-                    android:gravity="center"
-                    android:text="Guerra de Neve"
-                    android:textColor="?attr/colorOnPrimary"
-                    android:textSize="18sp" />
             </TableRow>
 
             <TableRow android:padding="4dp">
@@ -109,17 +100,6 @@
                     android:textColor="?attr/colorOnPrimary"
                     android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/tv_jogos_restantes_gn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/muli_font_family"
-                    android:gravity="center"
-                    android:text="20"
-                    android:textColor="?attr/colorOnPrimary"
-                    android:textSize="16sp" />
             </TableRow>
 
             <TableRow android:padding="4dp">
@@ -160,17 +140,6 @@
                     android:textColor="?attr/colorOnPrimary"
                     android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/tv_tempo_restante_gn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/muli_font_family"
-                    android:gravity="center"
-                    android:text="2:26"
-                    android:textColor="?attr/colorOnPrimary"
-                    android:textSize="16sp" />
             </TableRow>
 
             <TableRow android:padding="4dp">
@@ -211,17 +180,6 @@
                     android:textColor="?attr/colorOnPrimary"
                     android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/tv_jogos_dia_gn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/muli_font_family"
-                    android:gravity="center"
-                    android:text="1"
-                    android:textColor="?attr/colorOnPrimary"
-                    android:textSize="16sp" />
             </TableRow>
 
             <TableRow android:padding="4dp">
@@ -262,17 +220,6 @@
                     android:textColor="?attr/colorOnPrimary"
                     android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/tv_horas_dia_gn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/muli_font_family"
-                    android:gravity="center"
-                    android:text="0:02"
-                    android:textColor="?attr/colorOnPrimary"
-                    android:textSize="16sp" />
             </TableRow>
         </TableLayout>
     </LinearLayout>

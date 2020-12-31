@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import br.com.battlepassCalculatorValorant.R
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdView
+import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement
+import kotlinx.android.synthetic.main.fragment_ad_mob.*
 
 class AdMobFragment : Fragment() {
 
@@ -20,17 +20,7 @@ class AdMobFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        criaAnuncio(view, R.id.adView5)
-    }
-
-    fun criaAnuncio(view: View, id: Int) {
-        val mAdView = view.findViewById<AdView>(id)
-        val adRequest =
-            AdRequest
-                .Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .build()
-        mAdView.loadAd(adRequest)
+        adContainer8.createBanner(R.string.admob_card8, Advertisement.MEDIUM_RECTANGLE)
     }
 
 }

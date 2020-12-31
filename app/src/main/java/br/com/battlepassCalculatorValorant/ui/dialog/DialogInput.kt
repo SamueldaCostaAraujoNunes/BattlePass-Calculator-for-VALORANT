@@ -1,24 +1,22 @@
 package br.com.battlepassCalculatorValorant.ui.dialog
 
 import android.app.AlarmManager
-import android.app.NotificationChannel
-import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Context.ALARM_SERVICE
 import android.content.Intent
-import android.os.Build
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
-import androidx.core.content.ContextCompat.getSystemService
+import br.com.battlepassCalculatorValorant.BuildConfig
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.Historic.UserInputsTier
 import br.com.battlepassCalculatorValorant.model.PassBattle.Tier
 import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerProperties
 import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement
+import br.com.battlepassCalculatorValorant.ui.notification.NotificationChannel
 import br.com.battlepassCalculatorValorant.ui.notification.NotificationReceiver
 import com.google.android.gms.ads.InterstitialAd
 import com.google.android.material.textfield.TextInputEditText
@@ -31,19 +29,19 @@ class DialogInput(context: Context) : AlertDialog(context) {
 
     private val properties = ManagerProperties.getInstance(context)
 
-    private lateinit var mInterstitialAd: InterstitialAd
-    private lateinit var adv: Advertisement
+    private var mInterstitialAd: InterstitialAd
+    private var adv: Advertisement
     var tvTierIndex: TextInputEditText
     var tvTierExpMissing: TextInputEditText
     var mDialogView: View
-    var builder: AlertDialog.Builder
+    var builder: Builder
     lateinit var dialog: AlertDialog
 
     init {
         val inflater = this.layoutInflater
 
         val titleView: View = inflater.inflate(R.layout.dialog_title, null)
-        titleView.title.text = "Tier Form"
+        titleView.title.text = context.getString(R.string.insira_seus_dados)
 
         mDialogView = LayoutInflater.from(context).inflate(R.layout.dialog_tierinput, null)
 
@@ -54,7 +52,7 @@ class DialogInput(context: Context) : AlertDialog(context) {
 
         adv = Advertisement(context)
         mInterstitialAd = adv.createInterstitial()
-        createNotificationChannel()
+        NotificationChannel(context).create()
     }
 
     override fun show() {
@@ -86,21 +84,6 @@ class DialogInput(context: Context) : AlertDialog(context) {
         }
     }
 
-    fun createNotificationChannel() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val name = "LemubitReminderChannel"
-            val description = "Channel for Lemubit Reminder"
-            val importance = NotificationManager.IMPORTANCE_DEFAULT
-            val channel = NotificationChannel("notifyLemubit", name, importance)
-            channel.description = description
-
-            val notificationManager =
-                getSystemService(context, NotificationManager::class.java) as NotificationManager
-            notificationManager.createNotificationChannel(channel)
-
-        }
-    }
-
     fun createNotification() {
         val intent = Intent(context, NotificationReceiver::class.java)
         val pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0)
@@ -108,7 +91,11 @@ class DialogInput(context: Context) : AlertDialog(context) {
         val timeAtButtonClick = System.currentTimeMillis()
         val day = 1000 * 60 * 60 * 24
         val gameDuration = 1000 * 60 * 50
-        val duration = (day - gameDuration).toLong()
+        val duration = if (BuildConfig.DEBUG) {
+            (1000 * 15).toLong()
+        } else {
+            (day - gameDuration).toLong()
+        }
 
         alarmManager.set(
             AlarmManager.RTC_WAKEUP,

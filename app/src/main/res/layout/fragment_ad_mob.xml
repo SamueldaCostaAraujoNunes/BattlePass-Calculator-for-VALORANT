@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -23,14 +22,11 @@
             android:textColorHint="?attr/colorSecondary"
             android:textSize="20dp" />
 
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/adView5"
+        <br.com.battlepassCalculatorValorant.ui.Advertisement.AdvertisementView
+            android:id="@+id/adContainer8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="8dp"
-            ads:adSize="MEDIUM_RECTANGLE"
-            ads:adUnitId="@string/admob_card5" />
+            android:layout_gravity="center" />
     </LinearLayout>
 
 

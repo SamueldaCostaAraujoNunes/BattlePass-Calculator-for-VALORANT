@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ValorantPassBattle">
         <activity
+            android:name=".ui.activity.IntroTutorial.IntroTutorialActivity"
+            android:theme="@style/Theme.ValorantPassBattle.Light.NoActionBar.FullScreen"></activity>
+        <activity
             android:name=".ui.activity.Settings.EditHistoricActivity"
             android:theme="@style/Theme.ValorantPassBattle.NoActionBar" />
 
@@ -25,10 +28,9 @@
             android:theme="@style/Theme.ValorantPassBattle.NoActionBar" />
         <activity
             android:name=".ui.activity.SplashScreenActivity"
-            android:theme="@style/AppCompat.TelaCheia">
+            android:theme="@style/Theme.ValorantPassBattle.Light.NoActionBar.FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

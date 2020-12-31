@@ -18,10 +18,3 @@ class DisputaDeSpike : GameType() {
         duration = 0.167F
     }
 }
-
-class GuerraDeBolaDeNeve : GameType() {
-    init {
-        xp = 800
-        duration = 0.167F
-    }
-}

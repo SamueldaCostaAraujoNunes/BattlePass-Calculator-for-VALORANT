@@ -26,10 +26,16 @@ class DbTierInput(val context: Context) : MyDataBase(context) {
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
-        db.execSQL("DROP TABLE IF EXISTS" + TABELA)
+        db.execSQL("DROP TABLE IF EXISTS " + TABELA)
         onCreate(db)
     }
 
+    override fun onDowngrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+        if (db != null) {
+            db.execSQL("DROP TABLE IF EXISTS " + TABELA)
+            onCreate(db)
+        }
+    }
 
     fun removeAll() {
         val db: SQLiteDatabase = this.writableDatabase

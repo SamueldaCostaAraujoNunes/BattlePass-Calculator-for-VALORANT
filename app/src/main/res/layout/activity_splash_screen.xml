@@ -32,7 +32,7 @@
         android:elevation="14dp"
         android:fontFamily="@font/valorant_font_family"
         android:paddingBottom="10dp"
-        android:text="Ato iii"
+        android:text="EP II Ato I"
         android:textColor="?attr/colorOnSecondary"
         android:textSize="27sp" />
 

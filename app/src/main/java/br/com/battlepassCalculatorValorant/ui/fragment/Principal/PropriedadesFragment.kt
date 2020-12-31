@@ -29,7 +29,6 @@ class PropriedadesFragment : Fragment() {
 
         adapter.addFragment(ProgressFragment())
         adapter.addFragment(TimelineFragment())
-//        adapter.addFragment(AdMobFragment())
         adapter.addFragment(ProjectionsFragment())
 
         pager.adapter = adapter
@@ -48,15 +47,18 @@ class PropriedadesFragment : Fragment() {
                     val hMeasureSpec =
                         View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED)
                     v.measure(wMeasureSpec, hMeasureSpec)
-//                        pager.layoutParams = (pager.layoutParams as ViewGroup.LayoutParams)
-//                            .also { lp -> lp.height = v.measuredHeight }
-                    val anim = ValueAnimator.ofInt(pager.layoutParams.height, v.measuredHeight)
-                    anim.addUpdateListener {
-                        val height = it.animatedValue as Int
-                        pager.layoutParams.height = height
+                    try {
+                        val anim = ValueAnimator.ofInt(pager.layoutParams.height, v.measuredHeight)
+                        anim.addUpdateListener {
+                            val height = it.animatedValue as Int
+                            pager.layoutParams.height = height
+                        }
+                        anim.duration = 210
+                        anim.start()
+                    } catch (e: Exception) {
+                        pager.layoutParams = (pager.layoutParams as ViewGroup.LayoutParams)
+                            .also { lp -> lp.height = v.measuredHeight }
                     }
-                    anim.duration = 210
-                    anim.start()
                 }
             }
 

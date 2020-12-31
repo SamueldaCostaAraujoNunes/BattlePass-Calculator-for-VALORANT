@@ -35,39 +35,31 @@ class ProjectionsFragment : Fragment(), IObserver {
 
         val jogosRestantesSC = properties.jogosRestantes(properties.semClassificacao)
         val jogosRestantesDS = properties.jogosRestantes(properties.disputaDeSpike)
-        val jogosRestantesGN = properties.jogosRestantes(properties.guerraDeBolaDeNeve)
 
         val tempoRestanteSC = properties.tempoRestante(properties.semClassificacao)
         val tempoRestanteDS = properties.tempoRestante(properties.disputaDeSpike)
-        val tempoRestanteGN = properties.tempoRestante(properties.guerraDeBolaDeNeve)
 
         val jogosDiaSC = properties.jogosPorDia(properties.semClassificacao)
         val jogosDiaDS = properties.jogosPorDia(properties.disputaDeSpike)
-        val jogosDiaGN = properties.jogosPorDia(properties.guerraDeBolaDeNeve)
 
         val horasDiasSC = properties.horasPorDia(properties.semClassificacao)
         val horasDiasDS = properties.horasPorDia(properties.disputaDeSpike)
-        val horasDiasGN = properties.horasPorDia(properties.guerraDeBolaDeNeve)
 
         //Jogos Restantes
         tv_jogos_restantes_sc.text = jogosRestantesSC.toInt().toString()
         tv_jogos_restantes_ds.text = jogosRestantesDS.toInt().toString()
-        tv_jogos_restantes_gn.text = jogosRestantesGN.toInt().toString()
 
         //Tempo Restante
         tv_tempo_restante_sc.text = convertHours(tempoRestanteSC)
         tv_tempo_restante_ds.text = convertHours(tempoRestanteDS)
-        tv_tempo_restante_gn.text = convertHours(tempoRestanteGN)
 
         //Jogos Por Dia
         tv_jogos_dia_sc.text = jogosDiaSC.toString()
         tv_jogos_dia_ds.text = jogosDiaDS.toString()
-        tv_jogos_dia_gn.text = jogosDiaGN.toString()
 
         //Horas por dia
         tv_horas_dia_sc.text = convertHours(horasDiasSC)
         tv_horas_dia_ds.text = convertHours(horasDiasDS)
-        tv_horas_dia_gn.text = convertHours(horasDiasGN)
     }
 
     private fun convertHours(time: Float): String {
