@@ -13,7 +13,6 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import br.com.battlepassCalculatorValorant.BuildConfig
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.model.DataBase.SharedPreferences.FirstInputSharedPreferences
 import br.com.battlepassCalculatorValorant.model.Historic.Historic
 import br.com.battlepassCalculatorValorant.model.Historic.UserInputsTier
 import br.com.battlepassCalculatorValorant.model.PassBattle.PassBattleFactory
@@ -59,7 +58,6 @@ class InputScreenTutorialFragment : Fragment() {
     }
 
     private fun mostrarProxActivity() {
-        FirstInputSharedPreferences(requireContext()).firstInputExists = true
         (activity as IntroTutorialActivity?)?.nextActivity()
     }
 

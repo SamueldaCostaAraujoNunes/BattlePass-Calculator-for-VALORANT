@@ -13,23 +13,22 @@ open class MySharedPreferences(context: Context) {
         Context.MODE_PRIVATE
     )
     private val editor = sharedPreferences.edit()
-
     // String
     fun set(key: String?, value: String?) {
         editor.putString(key, value)
-        editor.commit()
+        editor.apply()
     }
 
     // Boolean
     fun set(key: String, value: Boolean) {
         editor.putBoolean(key, value)
-        editor.commit()
+        editor.apply()
     }
 
     // Int
     fun set(key: String, value: Int) {
         editor.putInt(key, value)
-        editor.commit()
+        editor.apply()
     }
 
     // String

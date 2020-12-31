@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import br.com.battlepassCalculatorValorant.R
+import br.com.battlepassCalculatorValorant.model.DataBase.SharedPreferences.FirstInputSharedPreferences
 import br.com.battlepassCalculatorValorant.ui.activity.MainActivity
 import br.com.battlepassCalculatorValorant.ui.adapter.IntroSliderAdapter
 import kotlinx.android.synthetic.main.activity_intro_tutorial.*
@@ -62,6 +63,7 @@ class IntroTutorialActivity : AppCompatActivity() {
     }
 
     fun nextActivity() {
+        FirstInputSharedPreferences(this).firstInputExists = true
         startActivity(Intent(this, MainActivity::class.java))
         finish()
     }
