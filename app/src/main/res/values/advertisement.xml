@@ -1,0 +1,17 @@
+<resources>
+    <string name="admob_app_id" translatable="false">ca-app-pub-8166893603837665~8814773378</string>
+
+    <string name="admob_fullscreen_ad" translatable="false">ca-app-pub-8166893603837665/9696610205</string>
+    <string name="admob_fullscreen_id_teste" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="admob_card_id_test" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string name="admob_card0" translatable="false">ca-app-pub-8166893603837665/3605590984</string>
+    <string name="admob_card1" translatable="false">ca-app-pub-8166893603837665/1151055719</string>
+    <string name="admob_card2" translatable="false">ca-app-pub-8166893603837665/1675661719</string>
+    <string name="admob_card3" translatable="false">ca-app-pub-8166893603837665/4779309535</string>
+    <string name="admob_card4" translatable="false">ca-app-pub-8166893603837665/3985952674</string>
+    <string name="admob_card5" translatable="false">ca-app-pub-8166893603837665/2218587193</string>
+    <string name="admob_card6" translatable="false">ca-app-pub-8166893603837665/5848610943</string>
+    <string name="admob_card7" translatable="false">ca-app-pub-8166893603837665/5281634738</string>
+    <string name="admob_card8" translatable="false">ca-app-pub-8166893603837665/5281634738</string>
+</resources>

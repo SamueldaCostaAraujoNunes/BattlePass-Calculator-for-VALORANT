@@ -13,6 +13,7 @@ import br.com.battlepassCalculatorValorant.model.Properties.Properties
 import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerColorFromXml
 import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerProperties
 import kotlinx.android.synthetic.main.fragment_progress.*
+import kotlin.math.absoluteValue
 
 class ProgressFragment : Fragment(), IObserver {
     private lateinit var properties: Properties
@@ -36,14 +37,17 @@ class ProgressFragment : Fragment(), IObserver {
     }
 
     override fun update() {
-        val totalDeXp = properties.getTotalXp().toString() + " XP"
+        val totalDeXp = properties.getTotalXp().toString() + " EXP"
         val progressPorcent = properties.getProgressPorcent().toString() + "%"
-        val xpPerDay = properties.getXpPerDia().toString() + " XP"
+        val xpPerDay = properties.getXpPerDia().toString() + " EXP"
         val expAdiantadoAtrasado = properties.getExpAdiantAtrasado()
-        val exp = "$expAdiantadoAtrasado XP"
+        val exp = "${expAdiantadoAtrasado.absoluteValue} EXP"
 
-        tag_exp_adiant_atrasado.hint =
-            if (expAdiantadoAtrasado >= 0) "Exp Adiantado:" else "Exp Atrasado:"
+        tag_exp_adiant_atrasado.hint = "EXP ${
+            if (expAdiantadoAtrasado >= 0)
+                requireContext().getString(R.string.adiantado) else
+                requireContext().getString(R.string.atrasado)
+        }:"
 
         if (expAdiantadoAtrasado >= 0) {
             exp_adiant_atrasado.setTextColor(Color.parseColor(colorGenerator.getColor(R.attr.colorAccent)))

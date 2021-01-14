@@ -45,7 +45,7 @@ class IntroTutorialActivity : AppCompatActivity() {
             override fun onPageSelected(position: Int) {
                 if (position < fragmentList.lastIndex) {
                     tvNext.visibility = View.VISIBLE
-                    tvNext.text = getString(R.string.next)
+                    tvNext.text = getString(R.string.proximo)
                 } else {
                     tvNext.visibility = View.GONE
                 }

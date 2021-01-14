@@ -9,9 +9,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.battlepassCalculatorValorant.R
+import br.com.battlepassCalculatorValorant.model.BattlePass.Tier
 import br.com.battlepassCalculatorValorant.model.ColorFromXml
 import br.com.battlepassCalculatorValorant.model.Observer.IObserver
-import br.com.battlepassCalculatorValorant.model.PassBattle.Tier
 import br.com.battlepassCalculatorValorant.ui.dialog.DialogTier
 
 
@@ -53,8 +53,10 @@ class MyItemTierRewardRecyclerViewAdapter(
             tierRewardView.setTextColor(accent)
         }
 
-        tierIndexView.text = "T" + item.index.toString()
-        val reward = item.reward[0].tipo + " " + item.reward[0].nome
+        val markerTier = if (position < 50) "T" else "E"
+        val idTier = markerTier + item.index.toString()
+        tierIndexView.text = idTier
+        val reward = item.reward[0].getTypeTranslated(context) + " " + item.reward[0].nome
         tierRewardView.text = reward
 
         holder.itemView.setOnClickListener {

@@ -3,12 +3,12 @@ package br.com.battlepassCalculatorValorant.model.Properties
 import android.annotation.SuppressLint
 import android.content.Context
 import android.icu.text.SimpleDateFormat
+import br.com.battlepassCalculatorValorant.model.BattlePass.Chapter
+import br.com.battlepassCalculatorValorant.model.BattlePass.Tier
 import br.com.battlepassCalculatorValorant.model.GameType.DisputaDeSpike
 import br.com.battlepassCalculatorValorant.model.GameType.GameType
 import br.com.battlepassCalculatorValorant.model.GameType.SemClassificacao
 import br.com.battlepassCalculatorValorant.model.Historic.Historic
-import br.com.battlepassCalculatorValorant.model.PassBattle.Chapter
-import br.com.battlepassCalculatorValorant.model.PassBattle.Tier
 import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerHistoric
 import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerPassBattle
 import java.util.*
@@ -39,7 +39,8 @@ class Properties(val context: Context) {
         if (!mHistoric.isEmpty()) {
             tiersPerXp.add(0)
             for (tierUserInput in mHistoric) {
-                val tierCurrent = passBattle.getTier(tierUserInput.tierCurrent)!!
+                val tierCurrent =
+                    passBattle.getTier(tierUserInput.tierCurrent) ?: passBattle.getTier(50)!!
                 val expCurrent =
                     (tierCurrent.expInitial + (tierCurrent.expMissing - tierUserInput.tierExpMissing)).toFloat()
 
@@ -84,9 +85,16 @@ class Properties(val context: Context) {
         return xpPass + xpCurrent
     }
 
+    fun getTotalXpBattlePass(): Int {
+        return if (passBattle.espilogoIsValide)
+            passBattle.expTotal + passBattle.epilogoExpTotal
+        else
+            passBattle.expTotal
+    }
+
     fun getProgressPorcent(): Double {
         val xpCurrent = getTotalXp()
-        val xpTotal = passBattle.expTotal
+        val xpTotal = getTotalXpBattlePass()
         val num = (xpCurrent.toDouble() / xpTotal) * 100
         val rounded = Math.round(num * 100.0) / 100.0
         return rounded
@@ -119,7 +127,7 @@ class Properties(val context: Context) {
         val now = Calendar.getInstance()
         val days = daysApart(now, passBattle.dateInit) + 1
         val daysDurationBattlePass = daysApart(passBattle.dateFinally, passBattle.dateInit) + 1
-        val xpPerDay = (passBattle.expTotal.toDouble() / daysDurationBattlePass)
+        val xpPerDay = (getTotalXpBattlePass().toDouble() / daysDurationBattlePass)
         val xpExpected = days * xpPerDay
         return getTotalXp() - xpExpected.toInt()
     }
@@ -130,7 +138,7 @@ class Properties(val context: Context) {
         if (historic.isEmpty()) {
             return "00/00/0000"
         }
-        val xpTotal = (passBattle.expTotal).toDouble()
+        val xpTotal = getTotalXpBattlePass().toDouble()
         val xpCurrent = getTotalXp().toDouble()
         val xpDif = xpTotal - xpCurrent
         val xpPerDayExpected = getXpPerDia()
@@ -185,7 +193,7 @@ class Properties(val context: Context) {
     }
 
     fun jogosRestantes(gameType: GameType): Float {
-        val xpTotal = passBattle.expTotal
+        val xpTotal = getTotalXpBattlePass()
         val xpCurrent = getTotalXp()
         val xpDif = xpTotal - xpCurrent
 
@@ -243,24 +251,24 @@ class Properties(val context: Context) {
     }
 
     fun getNormalGame(): Int {
-        return (passBattle.expTotal - (getExpMissaoSemanal() + getExpMissaoDiaria()))
+        return (getTotalXpBattlePass() - (getExpMissaoSemanal() + getExpMissaoDiaria()))
     }
 
     fun getPercentMissaoDiaria(): Float {
         val missao = getExpMissaoDiaria()
-        val total = passBattle.expTotal
+        val total = getTotalXpBattlePass()
         return (missao.toFloat() / total.toFloat())
     }
 
     fun getPercentMissaoSemanal(): Float {
         val missao = getExpMissaoSemanal()
-        val total = passBattle.expTotal
+        val total = getTotalXpBattlePass()
         return (missao.toFloat() / total.toFloat()) + 0.01F
     }
 
     fun getPercentNormalGame(): Float {
         val missao = getNormalGame()
-        val total = passBattle.expTotal
+        val total = getTotalXpBattlePass()
         return (missao.toFloat() / total.toFloat()) + 0.01F
     }
 }

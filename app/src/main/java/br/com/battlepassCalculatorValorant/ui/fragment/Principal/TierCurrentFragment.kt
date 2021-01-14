@@ -39,10 +39,11 @@ class TierCurrentFragment : Fragment(), IObserver {
             if (properties.historic.isEmpty()) 1 else properties.historic.last().tierCurrent
         val tier = properties.passBattle.getTier(lastTierIndex)
         if (tier != null) {
-            val tierIndex = "Tier " + tier.index.toString()
+            val tierIndex = requireContext().getString(R.string.tier) + " " + tier.index.toString()
             val tierReward = tier.reward[0].nome
             val percentageTier = properties.percentageTier()
-            val percentageTierText = percentageTier.toString() + "% Feito"
+            val percentageTierText =
+                percentageTier.toString() + "% " + requireContext().getString(R.string.feito)
 
             tv_tier_index.text = tierIndex
             tv_tier_rewind.text = tierReward

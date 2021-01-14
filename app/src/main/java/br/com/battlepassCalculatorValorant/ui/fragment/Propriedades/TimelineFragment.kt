@@ -13,6 +13,7 @@ import br.com.battlepassCalculatorValorant.model.Properties.Properties
 import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerColorFromXml
 import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerProperties
 import kotlinx.android.synthetic.main.fragment_timeline.*
+import kotlin.math.absoluteValue
 
 class TimelineFragment : Fragment(), IObserver {
     private lateinit var properties: Properties
@@ -44,7 +45,10 @@ class TimelineFragment : Fragment(), IObserver {
         val daysForClosed = properties.daysForClosed()
 
         tag_dias_adiantados_atrasados.hint =
-            if (daysMissing >= 0) "Dias Adiantados:" else "Dias Atrasados:"
+            if (daysMissing >= 0)
+                requireContext().getString(R.string.dias_adiantados)
+            else
+                requireContext().getString(R.string.dias_atrasados)
 
         if (daysMissing >= 0) {
             val colorAccent = Color.parseColor(colorGenerator.getColor(R.attr.colorAccent))
@@ -61,7 +65,7 @@ class TimelineFragment : Fragment(), IObserver {
         data_finalizacao.text = finishForecast
         dia_do_passe.text = dayCurrent.toString()
         dias_para_acabar.text = daysForClosed.toString()
-        dias_adiantados_atrasados.text = daysMissing.toString()
+        dias_adiantados_atrasados.text = daysMissing.absoluteValue.toString()
     }
 
 }

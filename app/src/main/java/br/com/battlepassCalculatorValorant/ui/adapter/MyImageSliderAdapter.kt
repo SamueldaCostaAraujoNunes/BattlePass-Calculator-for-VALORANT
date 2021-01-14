@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.model.PassBattle.Reward
+import br.com.battlepassCalculatorValorant.model.BattlePass.Reward
 import br.com.battlepassCalculatorValorant.model.Util.DowloaderImagers
 import kotlinx.android.synthetic.main.item_image_view.view.*
 

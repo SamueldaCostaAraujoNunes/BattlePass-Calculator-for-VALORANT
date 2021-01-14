@@ -25,9 +25,9 @@ class Chart(val context: Context, val chartView: AAChartView) : IObserver {
         val colorError = colorGenerator.getColor(R.attr.colorError)
         model
             .chartType(AAChartType.Area)
-            .tooltipValueSuffix(" Xp")
+            .tooltipValueSuffix(" EXP")
             .backgroundColor("#00000000")
-            .yAxisTitle("XP")
+            .yAxisTitle("EXP")
             .axesTextColor(colorOnPrimary)
             .gradientColorEnable(true)
             .markerSymbol(AAChartSymbolType.Diamond)

@@ -10,7 +10,6 @@ import br.com.battlepassCalculatorValorant.ui.adapter.RewardWithParent
 import kotlinx.android.synthetic.main.dialog_chapter.view.*
 import kotlinx.android.synthetic.main.dialog_tier.view.dialogViewPagerMain
 import kotlinx.android.synthetic.main.dialog_tier.view.indicator_image_slider
-import kotlinx.android.synthetic.main.dialog_title.view.*
 
 
 @SuppressLint("InflateParams")
@@ -20,14 +19,15 @@ class DialogChapter(context: Context, chapter: RewardWithParent) : AlertDialog(c
     init {
         builder = Builder(context)
             .setView(createContent(chapter))
-            .setCustomTitle(createTitle("Capítulo ${chapter.index}"))
+            .setTitle("Capítulo ${chapter.index}")
+//            .setCustomTitle(createTitle("Capítulo ${chapter.index}"))
     }
-
-    private fun createTitle(title: String): View {
-        val titleView: View = this.layoutInflater.inflate(R.layout.dialog_title, null)
-        titleView.title.text = title
-        return titleView
-    }
+//
+//    private fun createTitle(title: String): View {
+//        val titleView: View = this.layoutInflater.inflate(R.layout.dialog_title, null)
+//        titleView.title.text = title
+//        return titleView
+//    }
 
     private fun createContent(chapter: RewardWithParent): View {
         val mDialogView = this.layoutInflater.inflate(R.layout.dialog_chapter, null)

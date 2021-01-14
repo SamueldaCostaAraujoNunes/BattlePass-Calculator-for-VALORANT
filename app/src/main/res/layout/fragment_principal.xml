@@ -33,7 +33,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/valorant"
-                    android:hint="Seu passe de batalha"
+                    android:hint="@string/seu_passe_de_batalha"
                     android:paddingLeft="24dp"
                     android:paddingTop="24dp"
                     android:paddingBottom="14dp"

@@ -1,0 +1,1343 @@
+{
+  "Nome": {
+    "pt": "FORMAÇÃO: ATO 1",
+    "es": "FORMACIÓN: ACTO 1",
+    "default": "FORMATION: ACT 1"
+  },
+  "Data Inicial": "12/01/2021",
+  "Data Final": "01/03/2021",
+  "EXP total": 980000,
+  "EXP Epilogo": 201250,
+  "EXP Missao Diaria": 192000,
+  "EXP Missao Semanal": 231000,
+  "Capitulos": [
+    {
+      "Indice": 1,
+      "Recompensa": [
+        {
+          "Nome": {
+            "pt": "Phantom Diagrama",
+            "es": "Esquema de Phantom",
+            "default": "Phantom Schema"
+          },
+          "Tipo": "Card",
+          "Imagens": [
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap1-1-1.png",
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap1-1-2.png",
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap1-1-3.png"
+          ]
+        },
+        {
+          "Nome": {
+            "pt": "Wraith",
+            "es": "Wraith",
+            "default": "Wraith"
+          },
+          "Tipo": "Título",
+          "Imagens": [
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Titulo.png"
+          ]
+        }
+      ],
+      "Tiers": [
+        {
+          "Indice": 1,
+          "EXP Inicial": 0,
+          "EXP Faltante": 0,
+          "Porcentagem": 0.0,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Bulldog Infinito",
+                "es": "Bulldog Infinito",
+                "default": "Infinity Bulldog"
+              },
+              "Tipo": "Skin",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/1-1.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/1-2.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/1-3.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/1-4.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 2,
+          "EXP Inicial": 0,
+          "EXP Faltante": 2000,
+          "Porcentagem": 0.0,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Altas Aventuras",
+                "es": "Cuento Chinos",
+                "default": "Tall Tales"
+              },
+              "Tipo": "Chaveiro",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/2-1.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 3,
+          "EXP Inicial": 2000,
+          "EXP Faltante": 2750,
+          "Porcentagem": 0.22,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "10 Pontos",
+                "es": "10 Points",
+                "default": "10 Points"
+              },
+              "Tipo": "Radianitas",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 4,
+          "EXP Inicial": 4750,
+          "EXP Faltante": 3500,
+          "Porcentagem": 0.50,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Infinito",
+                "es": "Infinito",
+                "default": "Infinity"
+              },
+              "Tipo": "Card",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/4-1.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/4-2.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/4-3.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 5,
+          "EXP Inicial": 8250,
+          "EXP Faltante": 4250,
+          "Porcentagem": 0.87,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Bucky Pulverizante",
+                "es": "Bucky Aerosol",
+                "default": "Aerosol Bucky"
+              },
+              "Tipo": "Skin",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/5-1.png"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Indice": 2,
+      "Recompensa": [
+        {
+          "Nome": {
+            "pt": "Moeda Ep 2 // 1",
+            "es": "Moneda Ep 2 // 1",
+            "default": "Ep 2 // 1 Coin"
+          },
+          "Tipo": "Chaveiro",
+          "Imagens": [
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap2-1-1.png"
+          ]
+        }
+      ],
+      "Tiers": [
+        {
+          "Indice": 6,
+          "EXP Inicial": 12500,
+          "EXP Faltante": 5000,
+          "Porcentagem": 1.32,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "EZ",
+                "es": "EZ",
+                "default": "EZ"
+              },
+              "Tipo": "Spray",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/6-1.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 7,
+          "EXP Inicial": 17500,
+          "EXP Faltante": 5750,
+          "Porcentagem": 1.85,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Choco-Doguinho",
+                "es": "Chococachorro",
+                "default": "Hershey Pup"
+              },
+              "Tipo": "Spray",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/7-1.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 8,
+          "EXP Inicial": 23250,
+          "EXP Faltante": 6500,
+          "Porcentagem": 2.46,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "10 Pontos",
+                "es": "10 Points",
+                "default": "10 Points"
+              },
+              "Tipo": "Radianitas",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 9,
+          "EXP Inicial": 29750,
+          "EXP Faltante": 7250,
+          "Porcentagem": 3.15,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Brotinho",
+                "es": "Brotes",
+                "default": "Sproutling"
+              },
+              "Tipo": "Card",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/9-1.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/9-2.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/9-3.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 10,
+          "EXP Inicial": 37000,
+          "EXP Faltante": 8000,
+          "Porcentagem": 3.92,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Ghost Posto Avançado",
+                "es": "Ghost Industrial",
+                "default": "Outpost Ghost"
+              },
+              "Tipo": "Skin",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/10-1.png"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Indice": 3,
+      "Recompensa": [
+        {
+          "Nome": {
+            "pt": "Azar",
+            "es": "Desafortunado",
+            "default": "Unlucky"
+          },
+          "Tipo": "Título",
+          "Imagens": [
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Titulo.png"
+          ]
+        },
+        {
+          "Nome": {
+            "pt": "10 Pontos",
+            "es": "10 Points",
+            "default": "10 Points"
+          },
+          "Tipo": "Radianitas",
+          "Imagens": [
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+          ]
+        }
+      ],
+      "Tiers": [
+        {
+          "Indice": 11,
+          "EXP Inicial": 45000,
+          "EXP Faltante": 8750,
+          "Porcentagem": 4.77,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Shorty Diagrama",
+                "es": "Esquema de Shorty",
+                "default": "Shorty Schema"
+              },
+              "Tipo": "Card",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/11-1.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/11-2.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/11-3.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 12,
+          "EXP Inicial": 53750,
+          "EXP Faltante": 9500,
+          "Porcentagem": 5.7,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Sem Shorty",
+                "es": "No Shorty",
+                "default": "No Shorty"
+              },
+              "Tipo": "Spray",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/12-1.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 13,
+          "EXP Inicial": 63250,
+          "EXP Faltante": 10250,
+          "Porcentagem": 6.71,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "10 Pontos",
+                "es": "10 Points",
+                "default": "10 Points"
+              },
+              "Tipo": "Radianitas",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 14,
+          "EXP Inicial": 73500,
+          "EXP Faltante": 11000,
+          "Porcentagem": 7.8,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Saleiro",
+                "es": "Salero",
+                "default": "Salt Shaker"
+              },
+              "Tipo": "Chaveiro",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/14-1.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 15,
+          "EXP Inicial": 84500,
+          "EXP Faltante": 11750,
+          "Porcentagem": 8.97,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Shorty Pulverizante",
+                "es": "Shorty Aerosol",
+                "default": "Aerosol Shorty"
+              },
+              "Tipo": "Skin",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/15-1.png"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Indice": 4,
+      "Recompensa": [
+        {
+          "Nome": {
+            "pt": "Indo C",
+            "es": "Hacia C",
+            "default": "Going C"
+          },
+          "Tipo": "Spray",
+          "Imagens": [
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap4-1-1.png"
+          ]
+        }
+      ],
+      "Tiers": [
+        {
+          "Indice": 16,
+          "EXP Inicial": 96250,
+          "EXP Faltante": 12500,
+          "Porcentagem": 10.21,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Spectre Infinito",
+                "es": "Spectre Infinito",
+                "default": "Infinity Spectre"
+              },
+              "Tipo": "Skin",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/16-1.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/16-2.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/16-3.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/16-4.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 17,
+          "EXP Inicial": 108750,
+          "EXP Faltante": 13250,
+          "Porcentagem": 11.54,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "ID de Yoru",
+                "es": "ID de Yoru",
+                "default": "Yoru ID"
+              },
+              "Tipo": "Card",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/17-1.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/17-2.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/17-3.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 18,
+          "EXP Inicial": 122000,
+          "EXP Faltante": 14000,
+          "Porcentagem": 12.95,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Frango Glitch",
+                "es": "CyberPollo",
+                "default": "Glitch Out Chicken"
+              },
+              "Tipo": "Spray",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/18-1.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 19,
+          "EXP Inicial": 136000,
+          "EXP Faltante": 14750,
+          "Porcentagem": 14.43,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "10 Pontos",
+                "es": "10 Points",
+                "default": "10 Points"
+              },
+              "Tipo": "Radianitas",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 20,
+          "EXP Inicial": 150750,
+          "EXP Faltante": 15500,
+          "Porcentagem": 16,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Judge Posto Avançado",
+                "es": "Judge Industrial",
+                "default": "Outpost Judge"
+              },
+              "Tipo": "Skin",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/20-1.png"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Indice": 5,
+      "Recompensa": [
+        {
+          "Nome": {
+            "pt": "Versus // Vitória + Derrota",
+            "es": "Versus // Victoria + Derrota",
+            "default": "Versus // Victory + Defeat"
+          },
+          "Tipo": "Card",
+          "Imagens": [
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap5-1-1.png",
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap5-1-2.png",
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap5-1-3.png"
+          ]
+        },
+        {
+          "Nome": {
+            "pt": "10 Pontos",
+            "es": "10 Points",
+            "default": "10 Points"
+          },
+          "Tipo": "Radianitas",
+          "Imagens": [
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+          ]
+        }
+      ],
+      "Tiers": [
+        {
+          "Indice": 21,
+          "EXP Inicial": 166250,
+          "EXP Faltante": 16250,
+          "Porcentagem": 17.64,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Rostos pra Dar e Vender",
+                "es": "Rostros en todas partes",
+                "default": "Faces in Places"
+              },
+              "Tipo": "Spray",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/21-1.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 22,
+          "EXP Inicial": 182500,
+          "EXP Faltante": 17000,
+          "Porcentagem": 19.37,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "10 Pontos",
+                "es": "10 Points",
+                "default": "10 Points"
+              },
+              "Tipo": "Radianitas",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 23,
+          "EXP Inicial": 199500,
+          "EXP Faltante": 17750,
+          "Porcentagem": 21.17,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Aronguinho Lutador",
+                "es": "Cangrejo de Batalla",
+                "default": "Battle Crab"
+              },
+              "Tipo": "Chaveiro",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/23-1.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 24,
+          "EXP Inicial": 217250,
+          "EXP Faltante": 18500,
+          "Porcentagem": 23.06,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Mirtilo",
+                "es": "Mora",
+                "default": "Blueberry"
+              },
+              "Tipo": "Spray",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/24-1.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 25,
+          "EXP Inicial": 235750,
+          "EXP Faltante": 19250,
+          "Porcentagem": 25.02,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Operator Pulverizante",
+                "es": "Operator Aerosol",
+                "default": "Aerosol Operator"
+              },
+              "Tipo": "Skin",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/25-1.png"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Indice": 6,
+      "Recompensa": [
+        {
+          "Nome": {
+            "pt": "Fogos Lunares",
+            "es": "Cohetes Lunares",
+            "default": "Lunar Firework"
+          },
+          "Tipo": "Chaveiro",
+          "Imagens": [
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap6-1-1.png"
+          ]
+        }
+      ],
+      "Tiers": [
+        {
+          "Indice": 26,
+          "EXP Inicial": 255000,
+          "EXP Faltante": 20000,
+          "Porcentagem": 27.07,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "<3",
+                "es": "<3",
+                "default": "<3"
+              },
+              "Tipo": "Spray",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/26-1.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 27,
+          "EXP Inicial": 275000,
+          "EXP Faltante": 20750,
+          "Porcentagem": 29.19,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "10 Pontos",
+                "es": "10 Points",
+                "default": "10 Points"
+              },
+              "Tipo": "Radianitas",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 28,
+          "EXP Inicial": 295750,
+          "EXP Faltante": 21500,
+          "Porcentagem": 31.39,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Hora de Dançar",
+                "es": "A bailar",
+                "default": "Make 'em dance"
+              },
+              "Tipo": "Spray",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/28-1.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 29,
+          "EXP Inicial": 317250,
+          "EXP Faltante": 22250,
+          "Porcentagem": 33.67,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Ares Diagrama",
+                "es": "Esquema de Ares",
+                "default": "Ares Schema"
+              },
+              "Tipo": "Card",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/29-1.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/29-2.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/29-3.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 30,
+          "EXP Inicial": 339500,
+          "EXP Faltante": 23000,
+          "Porcentagem": 36.04,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Ares Posto Avançado",
+                "es": "Ares Industrial",
+                "default": "Outpost Ares"
+              },
+              "Tipo": "Skin",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/30-1.png"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Indice": 7,
+      "Recompensa": [
+        {
+          "Nome": {
+            "pt": "10 Pontos",
+            "es": "10 Points",
+            "default": "10 Points"
+          },
+          "Tipo": "Radianitas",
+          "Imagens": [
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+          ]
+        },
+        {
+          "Nome": {
+            "pt": "Bombado",
+            "es": "Mejorado",
+            "default": "Boosted"
+          },
+          "Tipo": "Título",
+          "Imagens": [
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Titulo.png"
+          ]
+        }
+      ],
+      "Tiers": [
+        {
+          "Indice": 31,
+          "EXP Inicial": 362500,
+          "EXP Faltante": 23750,
+          "Porcentagem": 38.48,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Versus // Omen + Sage",
+                "es": "Versus // Omen + Sage",
+                "default": "Versus // Omen + Sage"
+              },
+              "Tipo": "Card",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/31-1.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/31-2.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/31-3.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 32,
+          "EXP Inicial": 386250,
+          "EXP Faltante": 24500,
+          "Porcentagem": 41,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "10 Pontos",
+                "es": "10 Points",
+                "default": "10 Points"
+              },
+              "Tipo": "Radianitas",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 33,
+          "EXP Inicial": 410750,
+          "EXP Faltante": 25250,
+          "Porcentagem": 43.60,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Herança Ancestral",
+                "es": "Herencia Ancestral",
+                "default": "Ancient Inheritance"
+              },
+              "Tipo": "Chaveiro",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/33-1.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 34,
+          "EXP Inicial": 436000,
+          "EXP Faltante": 26000,
+          "Porcentagem": 46.28,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Que dó do Robozinho",
+                "es": "¡Ay, pobre robot!",
+                "default": "Alas, poor robot!"
+              },
+              "Tipo": "Spray",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/34-1.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 35,
+          "EXP Inicial": 462000,
+          "EXP Faltante": 26750,
+          "Porcentagem": 49.04,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Guardian Infinito",
+                "es": "Guardian Infinito",
+                "default": "Infinity Guardian"
+              },
+              "Tipo": "Skin",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/35-1.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/35-2.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/35-3.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/35-4.png"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Indice": 8,
+      "Recompensa": [
+        {
+          "Nome": {
+            "pt": "Perigo: Radianita",
+            "es": "Peligro de Radianita",
+            "default": "Radianite Hazard"
+          },
+          "Tipo": "Spray",
+          "Imagens": [
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap8-1-1.png"
+          ]
+        }
+      ],
+      "Tiers": [
+        {
+          "Indice": 36,
+          "EXP Inicial": 488750,
+          "EXP Faltante": 27500,
+          "Porcentagem": 51.88,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Que foi aquilo?",
+                "es": "¿Qué fue eso?",
+                "default": "What was that?"
+              },
+              "Tipo": "Spray",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/36-1.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 37,
+          "EXP Inicial": 516250,
+          "EXP Faltante": 28250,
+          "Porcentagem": 54.8,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Encare a Tundra",
+                "es": "Enfrenta la Tundra",
+                "default": "Take on the Tundra"
+              },
+              "Tipo": "Chaveiro",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/37-1.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 38,
+          "EXP Inicial": 544500,
+          "EXP Faltante": 29000,
+          "Porcentagem": 57.8,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Ponte entre Mundos",
+                "es": "Puente entre Mundos",
+                "default": "Bridge Between Worlds"
+              },
+              "Tipo": "Card",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/38-1.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/38-2.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/38-3.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 39,
+          "EXP Inicial": 573500,
+          "EXP Faltante": 29750,
+          "Porcentagem": 60.88,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "10 Pontos",
+                "es": "10 Points",
+                "default": "10 Points"
+              },
+              "Tipo": "Radianitas",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 40,
+          "EXP Inicial": 603250,
+          "EXP Faltante": 30500,
+          "Porcentagem": 64.04,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Odin Pulverizante",
+                "es": "Odin Aerosol",
+                "default": "Aerosol Odin"
+              },
+              "Tipo": "Skin",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/40-1.png"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Indice": 9,
+      "Recompensa": [
+        {
+          "Nome": {
+            "pt": "Logotipo Kingdom",
+            "es": "Logo Kingdom",
+            "default": "Kingdom Logo"
+          },
+          "Tipo": "Chaveiro",
+          "Imagens": [
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap9-1-1.png"
+          ]
+        }
+      ],
+      "Tiers": [
+        {
+          "Indice": 41,
+          "EXP Inicial": 633750,
+          "EXP Faltante": 31250,
+          "Porcentagem": 67.27,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "10 Pontos",
+                "es": "10 Points",
+                "default": "10 Points"
+              },
+              "Tipo": "Radianitas",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 42,
+          "EXP Inicial": 665000,
+          "EXP Faltante": 32000,
+          "Porcentagem": 70.59,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Joy Joia",
+                "es": "Diversión",
+                "default": "Chill-Joy"
+              },
+              "Tipo": "Card",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/42-1.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/42-2.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/42-3.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 43,
+          "EXP Inicial": 697000,
+          "EXP Faltante": 32750,
+          "Porcentagem": 73.99,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Picante",
+                "es": "Picante",
+                "default": "Spicy"
+              },
+              "Tipo": "Spray",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/43-1.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 44,
+          "EXP Inicial": 729750,
+          "EXP Faltante": 33500,
+          "Porcentagem": 77.46,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Trincado no 140",
+                "es": "140",
+                "default": "Lit for 140"
+              },
+              "Tipo": "Spray",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/44-1.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 45,
+          "EXP Inicial": 763250,
+          "EXP Faltante": 34250,
+          "Porcentagem": 81.02,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Phantom Infinito",
+                "es": "Phantom Infinito",
+                "default": "Infinity Phantom"
+              },
+              "Tipo": "Skin",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/45-1.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/45-2.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/45-3.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/45-4.png"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Indice": 10,
+      "Recompensa": [
+        {
+          "Nome": {
+            "pt": "Classic Infinito",
+            "es": "Classic Infinito",
+            "default": "Infinity Classic"
+          },
+          "Tipo": "Skin",
+          "Imagens": [
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap10-1-1.png",
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap10-1-2.png",
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap10-1-3.png",
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap10-1-4.png"
+          ]
+        },
+        {
+          "Nome": {
+            "pt": "Paradoxo Radianita",
+            "es": "Paradoja Radianita",
+            "default": "Radianite Paradox"
+          },
+          "Tipo": "Card",
+          "Imagens": [
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap10-2-1.png",
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap10-2-2.png",
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap10-2-3.png"
+          ]
+        }
+      ],
+      "Tiers": [
+        {
+          "Indice": 46,
+          "EXP Inicial": 797500,
+          "EXP Faltante": 35000,
+          "Porcentagem": 84.66,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Escolhendo minha arma",
+                "es": "Elige mi arma",
+                "default": "Choose my weapon "
+              },
+              "Tipo": "Spray",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/46-1.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 47,
+          "EXP Inicial": 832500,
+          "EXP Faltante": 35750,
+          "Porcentagem": 88.37,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Precisão Letal",
+                "es": "Precisión Letal",
+                "default": "Deadly Precision"
+              },
+              "Tipo": "Chaveiro",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/47-1.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 48,
+          "EXP Inicial": 868250,
+          "EXP Faltante": 36500,
+          "Porcentagem": 92.17,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Conquista Corporativa",
+                "es": "Control Corporativo",
+                "default": "Corporate Takeover"
+              },
+              "Tipo": "Card",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/48-1.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/48-2.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/48-3.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 49,
+          "EXP Inicial": 904750,
+          "EXP Faltante": 37250,
+          "Porcentagem": 96.04,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "10 Pontos",
+                "es": "10 Points",
+                "default": "10 Points"
+              },
+              "Tipo": "Radianitas",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 50,
+          "EXP Inicial": 942000,
+          "EXP Faltante": 38000,
+          "Porcentagem": 100,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Confronto Posto Avançado",
+                "es": "Melee Industrial",
+                "default": "Outpost Melee"
+              },
+              "Tipo": "Skin",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/50-1.png"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Epilogo": [
+    {
+      "Indice": 11,
+      "Tiers": [
+        {
+          "Indice": 1,
+          "EXP Inicial": 0,
+          "EXP Faltante": 38750,
+          "Porcentagem": 104,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Saleiro Dourado",
+                "es": "Salero Dourado",
+                "default": "Salt Shaker Gold"
+              },
+              "Tipo": "Chaveiro",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/50-1.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 2,
+          "EXP Inicial": 38750,
+          "EXP Faltante": 39500,
+          "Porcentagem": 108.14,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "10 Pontos",
+                "es": "10 Points",
+                "default": "10 Points"
+              },
+              "Tipo": "Radianitas",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 3,
+          "EXP Inicial": 78250,
+          "EXP Faltante": 40250,
+          "Porcentagem": 112.34,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "10 Pontos",
+                "es": "10 Points",
+                "default": "10 Points"
+              },
+              "Tipo": "Radianitas",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 4,
+          "EXP Inicial": 118500,
+          "EXP Faltante": 41000,
+          "Porcentagem": 116.6,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "10 Pontos",
+                "es": "10 Points",
+                "default": "10 Points"
+              },
+              "Tipo": "Radianitas",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+              ]
+            }
+          ]
+        },
+        {
+          "Indice": 5,
+          "EXP Inicial": 159500,
+          "EXP Faltante": 41750,
+          "Porcentagem": 120,
+          "Recompensa": [
+            {
+              "Nome": {
+                "pt": "Infinito Dourado",
+                "es": "Infinito Dourado",
+                "default": "Infinity Gold"
+              },
+              "Tipo": "Card",
+              "Imagens": [
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/48-1.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/48-2.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/48-3.png"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

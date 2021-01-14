@@ -28,7 +28,7 @@
             android:fontFamily="@font/muli_font_family"
             android:gravity="center"
             android:padding="16dp"
-            android:text="@string/content_second_screen"
+            android:text="@string/tutorial_conteudo_segunda_tela"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"

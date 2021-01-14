@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notification_title_1">Hey, psiu!! Time to update your pass, huh ?!</string>
+    <string name="notification_content_1">Update your pass details to stay informed!</string>
+
+    <string name="notification_title_2">Have you updated your Battle Pass today?</string>
+    <string name="notification_content_2">Update your information to have more control over your pass!</string>
+
+    <string name="notification_title_3">Its time to update your pass, huh?!</string>
+    <string name="notification_content_3">The pass is only %1$d days away!</string>
+
+    <string name="notification_title_4">Its time to update your pass, huh ?!</string>
+    <string name="notification_content_4">The pass is only %1$d days away!</string>
+
+    <string name="notification_title_5">Do you wanna play a game?</string>
+    <string name="notification_content_5_1">Wow, youre early! But, I suggest you stay updated!</string>
+    <string name="notification_content_5_2">Vish, youre a little late, my Friend! Update your pass to make up for lost time!</string>
+
+    <string name="notification_title_6">May the knife be with you!</string>
+    <string name="notification_content_6_1">Early, you are! Continue on the path of Light, Young Padawan!</string>
+    <string name="notification_content_6_2">Late, you are! Avoid the dark side of the Pass, Young Padawan!</string>
+
+    <string name="notification_title_7">Carpe diem. Enjoy today, guys!</string>
+    <string name="notification_content_7_1">Wow huh, youre in advance! But, I suggest you stay updated!</string>
+    <string name="notification_content_7_2">Jeez, you are %1$d days late! Update your pass to make up for lost time!</string>
+
+    <string name="notification_title_8">Never hate your enemies, it affects your judgment!</string>
+    <string name="notification_content_8_1">Dont stress with Bombs and Turrets at Pistol, Youre Ahead!</string>
+    <string name="notification_content_8_2">Vish, youre %1$d days late! Update your pass to make up for lost time!</string>
+</resources>

@@ -19,10 +19,9 @@
         <item name="colorControlNormal">@color/red_500</item>
         <item name="colorControlActivated">@color/red_400</item>
         <item name="colorError">@color/alert</item>
-
-
         <!-- Customize your theme here. -->
         <item name="colorOnSurface">@color/text_dark</item>
+        <item name="alertDialogTheme">@style/alertDialog</item>
     </style>
 
     <style name="Theme.ValorantPassBattle.NoActionBar">

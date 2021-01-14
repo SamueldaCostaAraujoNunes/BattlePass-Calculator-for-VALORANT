@@ -1,7 +1,8 @@
-package br.com.battlepassCalculatorValorant.ui.theme
+package br.com.battlepassCalculatorValorant.model.theme
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatDelegate
+import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.DataBase.SharedPreferences.ThemeSharedPreferences
 
 class Theme(val context: Context) {
@@ -10,7 +11,11 @@ class Theme(val context: Context) {
         AppCompatDelegate.MODE_NIGHT_YES,
         AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
     )
-    val styles = arrayOf("Light", "Dark", "System default")
+    val styles = arrayOf(
+        context.getString(R.string.tema_claro),
+        context.getString(R.string.tema_escuro),
+        context.getString(R.string.tema_padrao_do_sistema)
+    )
 
     fun checkTheme() {
         AppCompatDelegate.setDefaultNightMode(myThemes[ThemeSharedPreferences(context).darkMode])

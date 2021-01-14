@@ -4,16 +4,15 @@ import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.Historic.Historic
 import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerProperties
+import br.com.battlepassCalculatorValorant.model.Util.ValidateInputUser
 import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement
 import com.google.android.gms.ads.InterstitialAd
 import com.google.android.material.textfield.TextInputEditText
 import kotlinx.android.synthetic.main.dialog_tierinput.view.*
-import kotlinx.android.synthetic.main.dialog_title.view.*
 
 @Suppress("CAST_NEVER_SUCCEEDS")
 class DialogEditInput(context: Context, val position: Int, val historic: Historic) :
@@ -22,7 +21,6 @@ class DialogEditInput(context: Context, val position: Int, val historic: Histori
     private val passBattle = ManagerProperties.getInstance(context).passBattle
 
     private var mInterstitialAd: InterstitialAd
-    private var adv: Advertisement
     var tvTierIndex: TextInputEditText
     var tvTierExpMissing: TextInputEditText
     var mDialogView: View
@@ -31,11 +29,6 @@ class DialogEditInput(context: Context, val position: Int, val historic: Histori
     lateinit var dialog: AlertDialog
 
     init {
-        val inflater = this.layoutInflater
-
-        val titleView: View = inflater.inflate(R.layout.dialog_title, null)
-        titleView.title.text = "Tier Edit"
-
         mDialogView = LayoutInflater.from(context).inflate(R.layout.dialog_tierinput, null)
 
         tvTierIndex = mDialogView.tierinput_dialog_et_level_current
@@ -45,10 +38,18 @@ class DialogEditInput(context: Context, val position: Int, val historic: Histori
         tvTierIndex.isEnabled = false
         tvTierExpMissing.setText(tier.tierExpMissing.toString())
 
-        builder = Builder(context).setView(mDialogView).setCustomTitle(titleView)
-        adv = Advertisement(context)
-        mInterstitialAd = adv.createInterstitial()
+        builder = Builder(context)
+            .setView(mDialogView)
+//            .setCustomTitle(createTitle("Tier Edit"))
+            .setTitle(context.getString(R.string.tier_edit))
+        mInterstitialAd = Advertisement(context).createInterstitial()
     }
+
+//    private fun createTitle(title: String): View {
+//        val titleView: View = this.layoutInflater.inflate(R.layout.dialog_title, null)
+//        titleView.title.text = title
+//        return titleView
+//    }
 
     override fun show() {
         dialog = builder.show()
@@ -57,10 +58,8 @@ class DialogEditInput(context: Context, val position: Int, val historic: Histori
 
     fun setOnClickListener() {
         mDialogView.tierinput_dialog_btn_save.setOnClickListener {
-            val tierInputCurrent =
-                if (historic.isEmpty()) null else historic.last()
-            val tierCurrent = passBattle.getTier(tierInputCurrent?.tierCurrent ?: 1)
-            if (validadeTierExpMissing(tvTierExpMissing, tierCurrent?.expMissing ?: 50000)) {
+            val validador = ValidateInputUser(context, tvTierIndex, tvTierExpMissing)
+            if (validador.editTierExpMissing()) {
                 tier.tierExpMissing = tvTierExpMissing.text.toString().toInt()
                 historic.update(tier)
                 dialog.dismiss()
@@ -80,18 +79,4 @@ class DialogEditInput(context: Context, val position: Int, val historic: Histori
         }
     }
 
-    fun validadeTierExpMissing(tv: TextView, expMissing: Int): Boolean {
-        val tierStr = tv.text.toString()
-        if (tierStr == "") tv.error = "Insira o EXP faltando!"
-        if (tierStr.isNotEmpty()) {
-            if (tierStr.length <= 5) {
-                val tierInt = tierStr.toInt()
-                if ((tierInt < 0) or (tierInt > expMissing)) tv.error =
-                    "Insira um EXP entre 0 e $expMissing!"
-            } else {
-                tv.error = "Insira um EXP menor ou igual a $expMissing!"
-            }
-        }
-        return tv.error == null
-    }
 }

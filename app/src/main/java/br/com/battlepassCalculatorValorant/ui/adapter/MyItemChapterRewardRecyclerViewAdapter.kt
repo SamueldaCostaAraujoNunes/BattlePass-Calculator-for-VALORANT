@@ -9,10 +9,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.battlepassCalculatorValorant.R
+import br.com.battlepassCalculatorValorant.model.BattlePass.Chapter
+import br.com.battlepassCalculatorValorant.model.BattlePass.Reward
 import br.com.battlepassCalculatorValorant.model.ColorFromXml
 import br.com.battlepassCalculatorValorant.model.Observer.IObserver
-import br.com.battlepassCalculatorValorant.model.PassBattle.Chapter
-import br.com.battlepassCalculatorValorant.model.PassBattle.Reward
 import br.com.battlepassCalculatorValorant.ui.dialog.DialogChapter
 
 class MyItemChapterRewardRecyclerViewAdapter(
@@ -66,7 +66,7 @@ class MyItemChapterRewardRecyclerViewAdapter(
         }
 
         val contentIndex = "C" + item.index
-        val contentReward = item.reward.tipo + " " + item.reward.nome
+        val contentReward = item.reward.getTypeTranslated(context) + " " + item.reward.nome
         chapterIndexView.text = contentIndex
         chapterRewardView.text = contentReward
 

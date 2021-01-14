@@ -1,10 +1,10 @@
-package br.com.battlepassCalculatorValorant.model.PassBattle
+package br.com.battlepassCalculatorValorant.model.BattlePass
 
 import org.json.JSONObject
 
 class Tier(json: JSONObject) {
-    val index = json.get("Indice").toString().toInt()
-    val expInitial = json.get("EXP Inicial").toString().toInt()
+    var index = json.get("Indice").toString().toInt()
+    var expInitial = json.get("EXP Inicial").toString().toInt()
     val expMissing = json.get("EXP Faltante").toString().toInt()
     val totalPercentage = json.get("Porcentagem").toString().toFloat()
     val reward = arrayListOf<Reward>()

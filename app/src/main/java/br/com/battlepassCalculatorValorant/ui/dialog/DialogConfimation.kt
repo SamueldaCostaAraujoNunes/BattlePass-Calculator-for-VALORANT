@@ -11,7 +11,6 @@ import com.google.android.gms.ads.InterstitialAd
 import kotlinx.android.synthetic.main.dialog_confirmation.view.*
 import kotlinx.android.synthetic.main.dialog_tierinput.view.tierinput_dialog_btn_cancel
 import kotlinx.android.synthetic.main.dialog_tierinput.view.tierinput_dialog_btn_save
-import kotlinx.android.synthetic.main.dialog_title.view.*
 
 class DialogConfimation(context: Context, val position: Int, val historic: Historic) :
     AlertDialog(context) {
@@ -25,14 +24,15 @@ class DialogConfimation(context: Context, val position: Int, val historic: Histo
     init {
         val inflater = this.layoutInflater
 
-        val titleView: View = inflater.inflate(R.layout.dialog_title, null)
-        titleView.title.text = "Confirmacao"
         mDialogView = LayoutInflater.from(context).inflate(R.layout.dialog_confirmation, null)
 
-        mDialogView.tierinput_dialog_btn_save.text = "Deletar"
-        mDialogView.tv_confirmation.text = "Deseja deletar o Tier ${tier.tierCurrent}?"
-
-        builder = Builder(context).setView(mDialogView).setCustomTitle(titleView)
+        mDialogView.tierinput_dialog_btn_save.text = context.getString(R.string.deletar)
+        val textConfirmation = context.getString(R.string.text_delete) + " ${tier.tierCurrent}?"
+        mDialogView.tv_confirmation.text = textConfirmation
+        builder = Builder(context)
+            .setView(mDialogView)
+//            .setCustomTitle(createTitle(context.getString(R.string.confirmacao)))
+            .setTitle(context.getString(R.string.confirmacao))
         adv = Advertisement(context)
         mInterstitialAd = adv.createInterstitial()
     }
@@ -41,6 +41,12 @@ class DialogConfimation(context: Context, val position: Int, val historic: Histo
         dialog = builder.show()
         setOnClickListener(function)
     }
+
+//    private fun createTitle(title: String): View {
+//        val titleView: View = this.layoutInflater.inflate(R.layout.dialog_title, null)
+//        titleView.title.text = title
+//        return titleView
+//    }
 
     fun setOnClickListener(function: () -> Unit) {
         mDialogView.tierinput_dialog_btn_save.setOnClickListener {

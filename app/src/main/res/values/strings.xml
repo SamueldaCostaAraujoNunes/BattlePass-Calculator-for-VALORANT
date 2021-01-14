@@ -1,84 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">BattlePass Calculator for VALORANT</string>
-    <string name="title_activity_main">Valorant Main</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">Battle Pass Calculator for VALORANT</string>
+    <string name="valorant">vAlorant</string>
+    <string name="ep_ato_atual">FORMATION: ACT 1</string>
+    <string name="sufixo_nome_app">BattlePass Calculator</string>
 
-    <string name="tier_atual">Tier Atual</string>
-    <string name="exp_para_completar">EXP para Completar</string>
-    <string name="exp_inicial">EXP Inicial:</string>
-    <string name="salvar">Salvar</string>
-    <string name="cancelar">Cancelar</string>
+    <string name="tier_atual">Current Tier</string>
+    <string name="exp_para_completar">EXP to Complete</string>
+    <string name="exp_inicial">Initial EXP</string>
+    <string name="salvar">Save</string>
+    <string name="cancelar">Cancel</string>
 
-    <string name="data_inicial">Data Inicial</string>
-    <string name="progresso">% Progresso: </string>
-    <string name="total_de_xp">Total de XP: </string>
-    <string name="xp_p_dia">XP p/ Dia: </string>
-    <string name="exp_adiant_atrasado">EXP Adiant/Atrasado: </string>
+    <string name="seu_passe_de_batalha">Your battle pass</string>
+    <string name="exp_total">Total EXP</string>
+    <string name="seu_historico">Your Historic</string>
 
-    <string name="linha_do_tempo">Linha do Tempo</string>
-    <string name="data_inicial_do_ato">Data inicial do Ato: </string>
-    <string name="data_final_do_ato">Data final do Ato: </string>
-    <string name="data_finalizacao">Data de finalização: </string>
-    <string name="dia_do_passe">Dia do passe: </string>
-    <string name="dias_adiantados_atrasados">Dias adiantados/atrasados: </string>
+    <string name="feito">Done</string>
 
-    <string name="sem_classificacao">Sem Classificação</string>
-    <string name="disputa_de_spike">Disputa de Spike</string>
-    <string name="horas_por_dia">Horas por Dia</string>
-    <string name="jogos_por_dia">Jogos por Dia</string>
-    <string name="tempo_restante_horas">Tempo Restante</string>
-    <string name="jogos_restantes">Jogos Restantes</string>
-    <string name="expectativas">Expectativas</string>
-    <string name="dias_para_o_fim_do_passe">Dias para o fim do passe:</string>
-    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="progresso">Progress</string>
+    <string name="adiantado">Forward</string>
+    <string name="atrasado">Delayed</string>
+
+    <string name="data_inicial">Initial date</string>
+    <string name="progresso_porcento">"% Progress: "</string>
+    <string name="total_de_xp">"Total EXP: "</string>
+    <string name="xp_por_dia">"EXP p/ Day: "</string>
+    <string name="exp_adiantado_atrasado">"Early/Late EXP: "</string>
+
+    <string name="linha_do_tempo">Timeline</string>
+    <string name="data_inicial_do_ato">"Initial act date: "</string>
+    <string name="data_final_do_ato">"Final date of the Act: "</string>
+    <string name="data_finalizacao">"End date: "</string>
+    <string name="dia_do_passe">"Pass Day: "</string>
+    <string name="dias_adiantados_atrasados">"Early / Late Days: "</string>
+    <string name="dias_adiantados">Days Forward: </string>
+    <string name="dias_atrasados">Days Delayed: </string>
+
+    <string name="sem_classificacao">Normal</string>
+    <string name="disputa_de_spike">Spike Rush</string>
+    <string name="horas_por_dia">Hours per day</string>
+    <string name="jogos_por_dia">Games per Day</string>
+    <string name="tempo_restante_horas">Time left</string>
+    <string name="jogos_restantes">Remaining Games</string>
+    <string name="expectativas">Expectations</string>
+    <string name="dias_para_o_fim_do_passe">"Days until the pass ends: "</string>
 
     <string name="home">Home</string>
-    <string name="gr_ficos">Gráficos</string>
-    <string name="informa_es">Informações</string>
-    <string name="configura_es">Configurações</string>
-    <string name="insira_seus_dados">Insira os seus dados</string>
-    <string name="semanais">Semanais</string>
-    <string name="diarias">Diarias</string>
-    <string name="limpar_hist_rico">Limpar Histórico</string>
-    <string name="xp_por_tier">XP Por Tier</string>
+    <string name="graficos">Graphics</string>
+    <string name="informacoes">Informations</string>
+    <string name="configuracoes">Settings</string>
+    <string name="insira_seus_dados">Enter your informations</string>
+    <string name="diarias">Daily</string>
+    <string name="limpar_historico">Clean history</string>
+    <string name="xp_por_tier">EXP per Tier</string>
 
-    <string name="admob_app_id">ca-app-pub-8166893603837665~8814773378</string>
+    <string name="publicidade">Publicity</string>
+    <string name="trocar_tema">Change Theme</string>
+    <string name="porcentagem_do_passe">"Pass Percent: "</string>
+    <string name="recompensa">"Reward: "</string>
+    <string name="capitulo">"Chapter: "</string>
 
-    <string name="admob_fullscreen_ad">ca-app-pub-8166893603837665/9696610205</string>
-    <string name="admob_fullscreen_id_teste">ca-app-pub-3940256099942544/1033173712</string>
-    <string name="admob_card_id_test">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="recompensa_por_tier">Tier Reward</string>
+    <string name="recompensa_por_capitulo">Chapter Reward</string>
+    <string name="tipo">"Type: "</string>
+    <string name="editar_historico">Edit History</string>
 
-    <string name="admob_card0">ca-app-pub-8166893603837665/3605590984</string>
-    <string name="admob_card1">ca-app-pub-8166893603837665/1151055719</string>
-    <string name="admob_card2">ca-app-pub-8166893603837665/1675661719</string>
-    <string name="admob_card3">ca-app-pub-8166893603837665/4779309535</string>
-    <string name="admob_card4">ca-app-pub-8166893603837665/3985952674</string>
-    <string name="admob_card5">ca-app-pub-8166893603837665/2218587193</string>
-    <string name="admob_card6">ca-app-pub-8166893603837665/5848610943</string>
-    <string name="admob_card7">ca-app-pub-8166893603837665/5281634738</string>
-    <string name="admob_card8">ca-app-pub-8166893603837665/5281634738</string>
+    <string name="exp_de_missoes">Missions EXP</string>
+    <string name="pular">Skip</string>
+    <string name="proximo">Next</string>
 
-    <string name="publicidade">Publicidade</string>
-    <string name="trocar_tema">Trocar Tema</string>
-    <string name="exp_para_completar_">EXP para completar:</string>
-    <string name="porcentagem_do_passe">Porcentagem do Passe:</string>
-    <string name="recompensa">Recompensa: </string>
-    <string name="capitulo">Capítulo: </string>
+    <string name="tutorial_titulo">Hello, vALORaNT Player!</string>
+    <string name="tutorial_conteudo_primeira_tela">This app will help you complete the Current Battle Pass without rushing! There will be no need to login with your Riot account, just follow the steps below and has a good pass!</string>
+    <string name="tutorial_conteudo_segunda_tela">In the top left corner, click: Battle Pass</string>
+    <string name="tutorial_conteudo_terceira_tela">In the miniature icon of the reward, you will see the number of the Current Tier, in this case, the Tier 50 and just above, the amount of EXP left to complete this Tier (3100 EXP), these are the only information needed.</string>
+    <string name="semanais">Weekly</string>
+    <string name="exp_para_completar_">"EXP to complete: "</string>
 
-    <string name="recompensa_por_tier">Recompensa por tier</string>
-    <string name="recompensa_por_capitulo">Recompensa por Capítulo</string>
-    <string name="tipo">Tipo:</string>
-    <string name="editar_historico">Editar Histórico</string>
+    <string name="tema_do_app">App Theme</string>
+    <string name="tema_claro">Light</string>
+    <string name="tema_escuro">Dark</string>
+    <string name="tema_padrao_do_sistema">System Default</string>
 
-    <string name="exp_de_missoes">Exp de Missoes</string>
-    <string name="skip">Pular</string>
-    <string name="next">Prox</string>
-    <string name="GetStarted">Vamos Começar!</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="opa_jogador_de_valorant">Opa, Jogador de vALORaNT!</string>
-    <string name="first_screen_tutorial_content">Este app o ajudará a completar o Passe de Batalha Atual, sem rushar! Não será necessário qualquer tipo de login com a sua conta Riot, apenas siga os passo a seguir e um tenha um bom passe!</string>
-    <string name="content_second_screen">No canto superior esquerdo, clique em: Passe de Batalha</string>
-    <string name="third_screen_tutorial_content">No icone em miniatura da recompensa, você verá o número do Tier Atual, neste caso, o Tier 50 e logo acima, a quantidade de EXP que falta para completar este Tier (3100 EXP), essas são as únicas informações necessarias.</string>
+    <string name="confirmacao">Confirmation</string>
+    <string name="deletar">Delete</string>
+    <string name="text_delete">Do you want to delete Tier</string>
+
+
+    <string name="info_exp_missoes">Mission EXP info</string>
+    <string name="content_exp_missoes">This chart shows the amount of current EXP earned through match rewards, daily and weekly missions !! The more missions you complete, the less EXP per game you will need to complete the pass!</string>
+    <string name="exp_de_partidas">Match EXP</string>
+    <string name="missoes_diarias">Daily Missions</string>
+    <string name="missoes_semanais">Weekly Missions</string>
+
+    <string name="tudo">All</string>
+    <string name="skin">Skin</string>
+    <string name="card">Card</string>
+    <string name="chaveiro">Buddie</string>
+    <string name="spray">Spray</string>
+    <string name="titulo">Title</string>
+    <string name="radianita">Radianite</string>
+    <string name="insira_um_tier">Insert the tier!</string>
+    <string name="tier_edit">Tier Editor</string>
+    <string name="tier_intervalo">Enter a tier between %1$d and %2$d!</string>
+    <string name="insira_o_exp_faltando">Insert the missing EXP!</string>
+    <string name="exp_intervalo">Enter a EXP between %1$d and %2$d!</string>
+
+    <string name="estilo">Style</string>
+    <string name="escolha_um_tema">Choose a theme for the App</string>
+    <string name="preferencias">Preferences</string>
+    <string name="content_epilogo_off">The forecast calculations did not take into account the Pass Epilogue</string>
+    <string name="content_epilogo_on">The forecast calculations took into account the Pass Epilogue</string>
+    <string name="epilogo">Epilogue</string>
+    <string name="tier">Tier</string>
 
 </resources>

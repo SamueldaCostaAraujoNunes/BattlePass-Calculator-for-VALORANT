@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ValorantPassBattle">
-        <activity
+
+    <activity
             android:name=".ui.activity.IntroTutorial.IntroTutorialActivity"
             android:theme="@style/Theme.ValorantPassBattle.Light.NoActionBar.FullScreen"></activity>
         <activity
@@ -23,9 +24,6 @@
             android:name=".ui.notification.NotificationReceiver"
             android:enabled="true" />
 
-        <activity
-            android:name=".ui.activity.FirstInputActivity"
-            android:theme="@style/Theme.ValorantPassBattle.NoActionBar" />
         <activity
             android:name=".ui.activity.SplashScreenActivity"
             android:theme="@style/Theme.ValorantPassBattle.Light.NoActionBar.FullScreen">

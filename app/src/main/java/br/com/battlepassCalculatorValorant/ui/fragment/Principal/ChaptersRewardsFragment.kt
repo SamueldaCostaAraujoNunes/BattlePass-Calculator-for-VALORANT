@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.battlepassCalculatorValorant.R
+import br.com.battlepassCalculatorValorant.model.BattlePass.Reward
 import br.com.battlepassCalculatorValorant.model.ColorFromXml
-import br.com.battlepassCalculatorValorant.model.PassBattle.Reward
 import br.com.battlepassCalculatorValorant.model.Properties.Properties
 import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerColorFromXml
 import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerProperties
@@ -62,13 +62,21 @@ class ChaptersRewardsFragment : Fragment() {
         searchButton.setOnClickListener { search ->
             val ctw = ContextThemeWrapper(context, R.style.CustomPopupTheme)
             val menu = PopupMenu(ctw, search)
-            menu.menu.add("Tudo")
-            for (type in Reward.types) {
+
+            val opcoes = Reward.types
+            val opcoesTraduzidas = opcoes.map { Reward.getTypeTranslated(requireContext(), it) }
+
+            for (type in opcoesTraduzidas) {
                 menu.menu.add(type)
             }
             menu.show()
             menu.setOnMenuItemClickListener { item ->
-                (rv.adapter as MyItemChapterRewardRecyclerViewAdapter).filter(item.title.toString())
+                (rv.adapter as MyItemChapterRewardRecyclerViewAdapter).filter(
+                    opcoes[opcoesTraduzidas.indexOf(
+                        item.title.toString()
+                    )]
+                )
+
                 true
             }
         }

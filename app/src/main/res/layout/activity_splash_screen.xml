@@ -21,7 +21,7 @@
         android:layout_gravity="center"
         android:elevation="14dp"
         android:fontFamily="@font/valorant_font_family"
-        android:text="vAlorant"
+        android:text="@string/valorant"
         android:textColor="?attr/colorSecondary"
         android:textSize="30sp" />
 
@@ -32,7 +32,7 @@
         android:elevation="14dp"
         android:fontFamily="@font/valorant_font_family"
         android:paddingBottom="10dp"
-        android:text="EP II Ato I"
+        android:text="@string/ep_ato_atual"
         android:textColor="?attr/colorOnSecondary"
         android:textSize="27sp" />
 
@@ -42,7 +42,7 @@
         android:layout_gravity="center"
         android:elevation="14dp"
         android:fontFamily="@font/valorant_font_family"
-        android:text="BattlePass Calculator"
+        android:text="@string/sufixo_nome_app"
         android:textColor="@color/blue_300"
         android:textSize="20sp" />
 

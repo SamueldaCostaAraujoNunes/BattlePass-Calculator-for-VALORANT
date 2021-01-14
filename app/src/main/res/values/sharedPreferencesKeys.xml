@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="epilogoIsValide" translatable="false">keyEpilogoIsValide</string>
+    <string name="firstInputComplete" translatable="false">keyEpilogoIsValide</string>
+    <string name="themeStatus" translatable="false">keyThemeStatus</string>
+    <string name="editHistoric" translatable="false">editHistoric</string>
+</resources>

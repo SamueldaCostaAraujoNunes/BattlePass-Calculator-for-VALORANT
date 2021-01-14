@@ -100,7 +100,7 @@ class mProgressBarView : ConstraintLayout {
     }
 
     private fun contentUpdate() {
-        val text = "${progress} / ${progressMax} XP"
+        val text = "${progress} / ${progressMax} EXP"
         contentTextView.text = text
     }
 

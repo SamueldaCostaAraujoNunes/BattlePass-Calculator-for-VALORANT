@@ -11,6 +11,7 @@ import androidx.core.app.NotificationManagerCompat
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerProperties
 import br.com.battlepassCalculatorValorant.ui.activity.MainActivity
+import kotlin.math.absoluteValue
 
 
 class NotificationReceiver : BroadcastReceiver() {
@@ -25,42 +26,49 @@ class NotificationReceiver : BroadcastReceiver() {
 
     private fun createListNotificationContents(context: Context): List<NotificationContent> {
         val properties = ManagerProperties.getInstance(context)
+
         return listOf(
             NotificationContent(
-                "Ei Psiu!! Hora de atualizar seu passe, hein?!",
-                "Atualize os dados do passe para se manter informado!"
+                context.getString(R.string.notification_title_1),
+                context.getString(R.string.notification_content_1)
             ),
             NotificationContent(
-                "Já atualizou seu Passe de Batalha hoje?",
-                "Atualize suas informações para ter maior dominio sobre o seu passe!"
+                context.getString(R.string.notification_title_2),
+                context.getString(R.string.notification_content_2)
             ),
             NotificationContent(
-                "Já está na hora de atualizar seu passe, hein?!",
-                "Faltam apenas ${properties.daysForClosed()} dias para o passe acabar!"
+                context.getString(R.string.notification_title_3),
+                context.getString(R.string.notification_content_3, properties.daysForClosed())
             ),
             NotificationContent(
-                "Já está na hora de atualizar seu passe, hein?!",
-                "Faltam apenas ${properties.daysForClosed()} dias para o passe acabar!"
+                context.getString(R.string.notification_title_4),
+                context.getString(R.string.notification_content_4, properties.daysForClosed())
             ),
             NotificationContent(
-                "Você está afim de jogar?!",
-                if (properties.daysMissing()!! >= 0) "Uau, você está Adiantado! Mas, sugiro que se mantenha atualizado!"
-                else "Vish, você está um pouco atrasado, my Friend! Atualize o passe para recuperar o tempo perdido!"
+                context.getString(R.string.notification_title_5),
+                if (properties.daysMissing()!! >= 0) context.getString(R.string.notification_content_5_1)
+                else context.getString(R.string.notification_content_5_2)
             ),
             NotificationContent(
-                "Que a faca esteja com você!",
-                if (properties.daysMissing()!! >= 0) "Adiantado, você está! Continue no caminho da Luz, Jovem Padawan!"
-                else "Atrasado, você está! Evite o lado negro do Passe, Jovem Padawan!"
+                context.getString(R.string.notification_title_6),
+                if (properties.daysMissing()!! >= 0) context.getString(R.string.notification_content_6_1)
+                else context.getString(R.string.notification_content_6_2)
             ),
             NotificationContent(
-                "Carpe diem. Aproveitem o dia de hoje, rapazes!",
-                if (properties.daysMissing()!! >= 0) "Uau, você está Adiantado! Mas, sugiro que se mantenha atualizado!"
-                else "Vish, você está um pouco atrasado! Atualize o passe para recuperar o tempo perdido!"
+                context.getString(R.string.notification_title_7),
+                if (properties.daysMissing()!! >= 0) context.getString(R.string.notification_content_7_1)
+                else context.getString(
+                    R.string.notification_content_7_2,
+                    properties.daysMissing()!!.absoluteValue
+                )
             ),
             NotificationContent(
-                "Nunca odeie seus inimigos, isso afeta seu julgamento.!",
-                if (properties.daysMissing()!! >= 0) "Não se estresse com Bombinhos e Torretas no Pistol, Você está Adiantado!"
-                else "Vish, você está um pouco atrasado! Atualize o passe para recuperar o tempo perdido!"
+                context.getString(R.string.notification_title_8),
+                if (properties.daysMissing()!! >= 0) context.getString(R.string.notification_content_8_1)
+                else context.getString(
+                    R.string.notification_content_8_2,
+                    properties.daysMissing()!!.absoluteValue
+                )
             )
         )
     }

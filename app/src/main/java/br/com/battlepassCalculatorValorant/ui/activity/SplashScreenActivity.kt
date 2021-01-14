@@ -8,9 +8,9 @@ import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import br.com.battlepassCalculatorValorant.BuildConfig
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.model.DataBase.SharedPreferences.FirstInputSharedPreferences
+import br.com.battlepassCalculatorValorant.model.ListListener.HistoricArrayListListener
+import br.com.battlepassCalculatorValorant.model.theme.Theme
 import br.com.battlepassCalculatorValorant.ui.activity.IntroTutorial.IntroTutorialActivity
-import br.com.battlepassCalculatorValorant.ui.theme.Theme
 
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -31,9 +31,9 @@ class SplashScreenActivity : AppCompatActivity() {
     }
 
     private fun mostrarProxActivity() {
-//        val db = HistoricArrayListListener(this)
-//        val tutorial = db.isEmpty()
-        val tutorial = !FirstInputSharedPreferences(this).firstInputExists
+        val db = HistoricArrayListListener(this)
+        val tutorial = db.isEmpty()
+//        val tutorial = !FirstInputSharedPreferences(this).firstInputExists
         val intent = if (tutorial) {
             Intent(this@SplashScreenActivity, IntroTutorialActivity::class.java)
         } else {

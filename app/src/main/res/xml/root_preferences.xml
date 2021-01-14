@@ -1,0 +1,31 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/estilo">
+
+        <ListPreference
+            android:dialogTitle="@string/trocar_tema"
+            android:entries="@array/theme_preference_titles"
+            android:entryValues="@array/theme_preference_values"
+            android:key="@string/themeStatus"
+            android:summary="@string/escolha_um_tema"
+            android:title="@string/trocar_tema" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/preferencias">
+
+        <SwitchPreferenceCompat
+            app:key="@string/epilogoIsValide"
+            app:summaryOff="@string/content_epilogo_off"
+            app:summaryOn="@string/content_epilogo_on"
+            app:title="@string/epilogo" />
+
+        <Preference
+            app:key="@string/editHistoric"
+            app:title="@string/editar_historico"></Preference>
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

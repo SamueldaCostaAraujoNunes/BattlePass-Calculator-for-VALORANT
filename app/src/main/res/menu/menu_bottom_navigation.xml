@@ -12,7 +12,7 @@
         android:id="@+id/item_timeline"
         android:icon="@drawable/ic_baseline_timeline_24"
         android:fontFamily="@font/muli_font_family"
-        android:title="@string/gr_ficos" />
+        android:title="@string/graficos" />
 
     <item
         android:enabled="false"
@@ -22,12 +22,12 @@
         android:id="@+id/item_timer"
         android:fontFamily="@font/muli_font_family"
         android:icon="@drawable/ic_baseline_info_24"
-        android:title="@string/informa_es" />
+        android:title="@string/informacoes" />
 
     <item
         android:id="@+id/item_apps"
         android:fontFamily="@font/muli_font_family"
         android:icon="@drawable/ic_baseline_settings_24"
-        android:title="@string/configura_es" />
+        android:title="@string/configuracoes" />
 
 </menu>

@@ -5,10 +5,9 @@ import android.content.Context
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.model.PassBattle.Tier
+import br.com.battlepassCalculatorValorant.model.BattlePass.Tier
 import br.com.battlepassCalculatorValorant.ui.adapter.MyImageSliderAdapter
 import kotlinx.android.synthetic.main.dialog_tier.view.*
-import kotlinx.android.synthetic.main.dialog_title.view.*
 
 
 @SuppressLint("InflateParams")
@@ -16,16 +15,20 @@ class DialogTier(context: Context, tier: Tier) : AlertDialog(context) {
     var builder: Builder
 
     init {
+        val title =
+            if (tier.index > 50) context.getString(R.string.epilogo) else context.getString(R.string.tier)
+
         builder = Builder(context)
             .setView(createContent(tier))
-            .setCustomTitle(createTitle("Tier ${tier.index}"))
+//            .setCustomTitle(createTitle("Tier ${tier.index}"))
+            .setTitle(title + " " + tier.index)
     }
 
-    private fun createTitle(title: String): View {
-        val titleView: View = this.layoutInflater.inflate(R.layout.dialog_title, null)
-        titleView.title.text = title
-        return titleView
-    }
+//    private fun createTitle(title: String): View {
+//        val titleView: View = this.layoutInflater.inflate(R.layout.dialog_title, null)
+//        titleView.title.text = title
+//        return titleView
+//    }
 
     private fun createContent(tier: Tier): View {
         val mDialogView = this.layoutInflater.inflate(R.layout.dialog_tier, null)

@@ -15,7 +15,6 @@ import br.com.battlepassCalculatorValorant.model.Observer.IObserver
 import br.com.battlepassCalculatorValorant.model.Properties.Properties
 import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerProperties
 import br.com.battlepassCalculatorValorant.ui.progressBar.mProgressBarView
-import kotlinx.android.synthetic.main.dialog_title.view.*
 
 
 class ExpStatisticFragment : Fragment(), IObserver {
@@ -48,23 +47,18 @@ class ExpStatisticFragment : Fragment(), IObserver {
         btnInfo.setOnClickListener {
             val dialog = AlertDialog
                 .Builder(context, R.style.alertDialog)
-                .setCustomTitle(createTitle("Info EXP de Missoes"))
-                .setMessage(
-                    "Este gráfico mostra a quantidade de EXP atual, " +
-                            "adquirida por meio das recompensas por partida, " +
-                            "missões diárias e semanais!! Quanto mais missões realizadas, " +
-                            "menor a quantidade de EXP por partida será " +
-                            "necessária para completar o passe!"
-                )
+//                .setCustomTitle(createTitle(requireContext().getString(R.string.info_exp_missoes)))
+                .setTitle(requireContext().getString(R.string.info_exp_missoes))
+                .setMessage(requireContext().getString(R.string.content_exp_missoes))
             dialog.show()
         }
     }
 
-    private fun createTitle(title: String): View {
-        val titleView: View = this.layoutInflater.inflate(R.layout.dialog_title, null)
-        titleView.title.text = title
-        return titleView
-    }
+//    private fun createTitle(title: String): View {
+//        val titleView: View = this.layoutInflater.inflate(R.layout.dialog_title, null)
+//        titleView.title.text = title
+//        return titleView
+//    }
 
     private fun setupViews(v: View) {
         jogosNormais = v.findViewById(R.id.pb_jogos_normais)
@@ -79,7 +73,7 @@ class ExpStatisticFragment : Fragment(), IObserver {
 
     override fun update() {
         jogosNormais.setupProgress(
-            "EXP de Partidas",
+            requireContext().getString(R.string.exp_de_partidas),
             properties.expNormalGame(),
             properties.getNormalGame(),
             properties.getPercentNormalGame(),
@@ -87,14 +81,14 @@ class ExpStatisticFragment : Fragment(), IObserver {
         )
 
         missoesDiarias.setupProgress(
-            "Missões Diárias",
+            requireContext().getString(R.string.missoes_diarias),
             properties.expMissaoDiaria().toInt(),
             properties.getExpMissaoDiaria(),
             properties.getPercentMissaoDiaria(),
             getColor(R.attr.colorAccent)
         )
         missoesSemanais.setupProgress(
-            "Missões Semanais",
+            requireContext().getString(R.string.missoes_semanais),
             properties.expMissaoSemanal().toInt(),
             properties.getExpMissaoSemanal(),
             properties.getPercentMissaoSemanal(),

@@ -52,10 +52,23 @@
         <item name="android:textAppearanceSmall">@style/MyTextAppearance</item>
         <item name="android:textAppearanceMedium">@style/MyTextAppearance</item>
         <item name="android:textAppearanceLarge">@style/MyTextAppearance</item>
+        <item name="android:windowTitleStyle">@style/DialogWindowTitle_Custom</item>
     </style>
 
     <style name="MyTextAppearance" parent="TextAppearance.AppCompat">
         <item name="android:fontFamily">@font/muli_font_family</item>
         <item name="android:textSize">22sp</item>
     </style>
+
+
+    <style name="DialogWindowTitle_Custom" parent="Theme.ValorantPassBattle.NoActionBar">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textAppearance">@style/TextAppearance_DialogWindowTitle</item>
+    </style>
+
+    <style name="TextAppearance_DialogWindowTitle" parent="@android:style/TextAppearance.Holo.DialogWindowTitle">
+        <item name="android:fontFamily">@font/valorant_font_family</item>
+    </style>
+
 </resources>

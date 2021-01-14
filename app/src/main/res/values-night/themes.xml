@@ -21,5 +21,6 @@
         <item name="colorError">@color/alert</item>
         <!-- Customize your theme here. -->
         <item name="colorOnSurface">@color/text_dark</item>
+        <item name="alertDialogTheme">@style/alertDialog</item>
     </style>
 </resources>
