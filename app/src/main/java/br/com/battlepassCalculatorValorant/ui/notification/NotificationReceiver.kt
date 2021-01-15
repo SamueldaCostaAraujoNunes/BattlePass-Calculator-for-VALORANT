@@ -89,7 +89,6 @@ class NotificationReceiver : BroadcastReceiver() {
 
         return NotificationCompat.Builder(context, NotificationChannel.id)
             .setSmallIcon(R.drawable.ic_stat_name)
-//            .setLargeIcon(BitmapFactory.decodeResource(context.resources, R.drawable.ic_stat_name))
             .setStyle(bigTextNotification)
             .setColor(Color.parseColor("#ff4655"))
             .setPriority(NotificationChannel.importance)

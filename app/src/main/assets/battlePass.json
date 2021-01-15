@@ -7,7 +7,7 @@
   "Data Inicial": "12/01/2021",
   "Data Final": "01/03/2021",
   "EXP total": 980000,
-  "EXP Epilogo": 201250,
+  "EXP Epilogo": 190000,
   "EXP Missao Diaria": 192000,
   "EXP Missao Semanal": 231000,
   "Capitulos": [
@@ -1243,7 +1243,7 @@
         {
           "Indice": 1,
           "EXP Inicial": 0,
-          "EXP Faltante": 38750,
+          "EXP Faltante": 38000,
           "Porcentagem": 104,
           "Recompensa": [
             {
@@ -1254,15 +1254,15 @@
               },
               "Tipo": "Chaveiro",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/50-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/51-1.png"
               ]
             }
           ]
         },
         {
           "Indice": 2,
-          "EXP Inicial": 38750,
-          "EXP Faltante": 39500,
+          "EXP Inicial": 38000,
+          "EXP Faltante": 38000,
           "Porcentagem": 108.14,
           "Recompensa": [
             {
@@ -1280,8 +1280,8 @@
         },
         {
           "Indice": 3,
-          "EXP Inicial": 78250,
-          "EXP Faltante": 40250,
+          "EXP Inicial": 76000,
+          "EXP Faltante": 38000,
           "Porcentagem": 112.34,
           "Recompensa": [
             {
@@ -1299,8 +1299,8 @@
         },
         {
           "Indice": 4,
-          "EXP Inicial": 118500,
-          "EXP Faltante": 41000,
+          "EXP Inicial": 114000,
+          "EXP Faltante": 38000,
           "Porcentagem": 116.6,
           "Recompensa": [
             {
@@ -1318,8 +1318,8 @@
         },
         {
           "Indice": 5,
-          "EXP Inicial": 159500,
-          "EXP Faltante": 41750,
+          "EXP Inicial": 152000,
+          "EXP Faltante": 38000,
           "Porcentagem": 120,
           "Recompensa": [
             {
@@ -1330,9 +1330,9 @@
               },
               "Tipo": "Card",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/48-1.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/48-2.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/48-3.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/55-1.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/55-2.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/55-3.png"
               ]
             }
           ]
