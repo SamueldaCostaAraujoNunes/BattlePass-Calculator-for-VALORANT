@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.BattlePass.Chapter
 import br.com.battlepassCalculatorValorant.model.BattlePass.Reward
-import br.com.battlepassCalculatorValorant.model.ColorFromXml
 import br.com.battlepassCalculatorValorant.model.Observer.IObserver
+import br.com.battlepassCalculatorValorant.model.Util.ColorFromXml
 import br.com.battlepassCalculatorValorant.ui.dialog.DialogChapter
 
 class MyItemChapterRewardRecyclerViewAdapter(

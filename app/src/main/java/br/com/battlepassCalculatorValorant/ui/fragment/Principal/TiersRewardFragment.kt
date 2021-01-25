@@ -13,10 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.BattlePass.Reward
-import br.com.battlepassCalculatorValorant.model.ColorFromXml
 import br.com.battlepassCalculatorValorant.model.Properties.Properties
-import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerColorFromXml
-import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerProperties
+import br.com.battlepassCalculatorValorant.model.Singleton.ManagerProperties
 import br.com.battlepassCalculatorValorant.ui.adapter.MyItemTierRewardRecyclerViewAdapter
 
 
@@ -25,12 +23,10 @@ class TiersRewardFragment : Fragment() {
     private var columnCount = 1
     private var tierCurrent = 1
     lateinit var properties: Properties
-    lateinit var colorXML: ColorFromXml
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         properties = ManagerProperties.getInstance(requireContext())
-        colorXML = ManagerColorFromXml.getInstance(requireContext())
     }
 
     override fun onCreateView(
@@ -48,7 +44,6 @@ class TiersRewardFragment : Fragment() {
             adapter = MyItemTierRewardRecyclerViewAdapter(
                 context = requireContext(),
                 values = properties.getListTiers(),
-                colorXML = colorXML,
                 tierCurrentFun = properties::getTierCurrent
             )
             properties.historic.add(adapter as MyItemTierRewardRecyclerViewAdapter)

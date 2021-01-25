@@ -11,7 +11,7 @@ import androidx.appcompat.app.AlertDialog
 import br.com.battlepassCalculatorValorant.BuildConfig
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.Historic.UserInputsTier
-import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerHistoric
+import br.com.battlepassCalculatorValorant.model.Singleton.ManagerHistoric
 import br.com.battlepassCalculatorValorant.model.Util.ValidateInputUser
 import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement
 import br.com.battlepassCalculatorValorant.ui.notification.NotificationChannel

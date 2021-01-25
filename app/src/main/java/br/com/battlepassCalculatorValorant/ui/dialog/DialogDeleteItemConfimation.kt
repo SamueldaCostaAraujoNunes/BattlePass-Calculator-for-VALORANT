@@ -12,10 +12,10 @@ import kotlinx.android.synthetic.main.dialog_confirmation.view.*
 import kotlinx.android.synthetic.main.dialog_tierinput.view.tierinput_dialog_btn_cancel
 import kotlinx.android.synthetic.main.dialog_tierinput.view.tierinput_dialog_btn_save
 
-class DialogConfimation(context: Context, val position: Int, val historic: Historic) :
+class DialogDeleteItemConfimation(context: Context, val position: Int, val historic: Historic) :
     AlertDialog(context) {
-    private lateinit var mInterstitialAd: InterstitialAd
-    private lateinit var adv: Advertisement
+    private var mInterstitialAd: InterstitialAd
+    private var adv: Advertisement
     var mDialogView: View
     val tier = historic[position]
     var builder: AlertDialog.Builder
@@ -31,31 +31,25 @@ class DialogConfimation(context: Context, val position: Int, val historic: Histo
         mDialogView.tv_confirmation.text = textConfirmation
         builder = Builder(context)
             .setView(mDialogView)
-//            .setCustomTitle(createTitle(context.getString(R.string.confirmacao)))
             .setTitle(context.getString(R.string.confirmacao))
         adv = Advertisement(context)
         mInterstitialAd = adv.createInterstitial()
     }
 
-    fun show(function: () -> Unit) {
+    fun show(functionSave: () -> Unit, functionCancel: () -> Unit) {
         dialog = builder.show()
-        setOnClickListener(function)
+        setOnClickListener(functionSave, functionCancel)
     }
 
-//    private fun createTitle(title: String): View {
-//        val titleView: View = this.layoutInflater.inflate(R.layout.dialog_title, null)
-//        titleView.title.text = title
-//        return titleView
-//    }
-
-    fun setOnClickListener(function: () -> Unit) {
+    fun setOnClickListener(functionSave: () -> Unit, functionCancel: () -> Unit) {
         mDialogView.tierinput_dialog_btn_save.setOnClickListener {
             val listItem = historic[position]
             historic.delete(listItem.tierCurrent)
-            function()
+            functionSave()
             dialog.dismiss()
         }
         mDialogView.tierinput_dialog_btn_cancel.setOnClickListener {
+            functionCancel()
             dialog.dismiss()
         }
     }

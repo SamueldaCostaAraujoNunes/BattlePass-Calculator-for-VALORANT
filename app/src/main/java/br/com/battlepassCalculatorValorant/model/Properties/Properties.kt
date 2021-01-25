@@ -9,8 +9,8 @@ import br.com.battlepassCalculatorValorant.model.GameType.DisputaDeSpike
 import br.com.battlepassCalculatorValorant.model.GameType.GameType
 import br.com.battlepassCalculatorValorant.model.GameType.SemClassificacao
 import br.com.battlepassCalculatorValorant.model.Historic.Historic
-import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerHistoric
-import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerPassBattle
+import br.com.battlepassCalculatorValorant.model.Singleton.ManagerHistoric
+import br.com.battlepassCalculatorValorant.model.Singleton.ManagerPassBattle
 import java.util.*
 import kotlin.collections.ArrayList
 

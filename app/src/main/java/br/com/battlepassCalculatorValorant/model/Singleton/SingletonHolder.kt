@@ -1,4 +1,4 @@
-package br.com.battlepassCalculatorValorant.model.SingletonPassBattle
+package br.com.battlepassCalculatorValorant.model.Singleton
 
 open class SingletonHolder<out T : Any, in A>(creator: (A) -> T) {
     private var creator: ((A) -> T)? = creator

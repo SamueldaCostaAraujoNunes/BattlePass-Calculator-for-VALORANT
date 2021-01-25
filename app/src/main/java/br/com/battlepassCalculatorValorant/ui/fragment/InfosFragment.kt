@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.Properties.Properties
-import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerProperties
+import br.com.battlepassCalculatorValorant.model.Singleton.ManagerProperties
 import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement
 import kotlinx.android.synthetic.main.fragment_infos.*
 

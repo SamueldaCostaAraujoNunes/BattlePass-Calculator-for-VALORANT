@@ -2,7 +2,7 @@ package br.com.battlepassCalculatorValorant.model.DataBase.SharedPreferences
 
 import android.content.Context
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerSharedPreferences
+import br.com.battlepassCalculatorValorant.model.Singleton.ManagerSharedPreferences
 
 class FirstInputSharedPreferences(context: Context) {
     private val mSharedPreferences: MySharedPreferences =

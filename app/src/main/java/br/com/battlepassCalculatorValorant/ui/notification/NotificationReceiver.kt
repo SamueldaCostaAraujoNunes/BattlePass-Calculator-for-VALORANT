@@ -5,12 +5,18 @@ import android.app.TaskStackBuilder
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.graphics.Color
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerProperties
+import br.com.battlepassCalculatorValorant.model.Singleton.ManagerProperties
 import br.com.battlepassCalculatorValorant.ui.activity.MainActivity
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
+import java.io.IOException
+import java.net.URL
 import kotlin.math.absoluteValue
 
 
@@ -20,6 +26,7 @@ class NotificationReceiver : BroadcastReceiver() {
         val listNotificationContent = createListNotificationContents(context)
         val pendingIntent: PendingIntent = createIntent(context)
         val builder = builderNotification(context, pendingIntent, listNotificationContent.random())
+        applyImageUrl(builder, getUrl(context))
         val notificationManager = NotificationManagerCompat.from(context)
         notificationManager.notify(0, builder.build())
     }
@@ -83,17 +90,44 @@ class NotificationReceiver : BroadcastReceiver() {
         notificationContent: NotificationContent
     ): NotificationCompat.Builder {
 
-        val bigTextNotification = NotificationCompat.BigTextStyle()
-        bigTextNotification.bigText(notificationContent.content)
-        bigTextNotification.setBigContentTitle(notificationContent.title)
+//        val bigTextNotification = NotificationCompat.BigTextStyle()
+//        bigTextNotification.bigText(notificationContent.content)
+//        bigTextNotification.setBigContentTitle(notificationContent.title)
 
         return NotificationCompat.Builder(context, NotificationChannel.id)
             .setSmallIcon(R.drawable.ic_stat_name)
-            .setStyle(bigTextNotification)
+//            .setStyle(bigTextNotification)
+            .setContentTitle(notificationContent.title)
+            .setContentText(notificationContent.content)
             .setColor(Color.parseColor("#ff4655"))
             .setPriority(NotificationChannel.importance)
             .setContentIntent(pendingIntent)
             .setAutoCancel(true)
+    }
+
+    private fun getUrl(context: Context): String {
+        val properties = ManagerProperties.getInstance(context)
+        val tier = properties.getTierCurrent()
+        val reward = properties.passBattle.getTier(tier)!!.reward[0]
+        val url = if (reward.isCard()) reward.imagens[1] else reward.imagens[0]
+        return url
+    }
+
+    fun applyImageUrl(
+        builder: NotificationCompat.Builder,
+        imageUrl: String
+    ) = runBlocking {
+        val url = URL(imageUrl)
+        withContext(Dispatchers.IO) {
+            try {
+                val input = url.openStream()
+                BitmapFactory.decodeStream(input)
+            } catch (e: IOException) {
+                null
+            }
+        }?.let { bitmap ->
+            builder.setStyle(NotificationCompat.BigPictureStyle(builder).bigPicture(bitmap))
+        }
     }
 
     inner class NotificationContent(val title: String, val content: String)

@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.Observer.IObserver
 import br.com.battlepassCalculatorValorant.model.Properties.Properties
-import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerProperties
+import br.com.battlepassCalculatorValorant.model.Singleton.ManagerProperties
 import kotlinx.android.synthetic.main.fragment_projections.*
 
 class ProjectionsFragment : Fragment(), IObserver {

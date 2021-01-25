@@ -8,29 +8,26 @@
     android:orientation="vertical"
     tools:context=".ui.activity.Settings.EditHistoricActivity">
 
-    <!--    <androidx.appcompat.widget.Toolbar-->
-    <!--        android:layout_weight="1"-->
-    <!--        android:id="@+id/toolbar"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="?attr/actionBarSize"-->
-    <!--        android:background="?attr/colorPrimary"-->
-    <!--        app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"/>-->
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_weight="1"
         android:background="?attr/colorPrimary"
-        app:titleTextColor="@android:color/white"></androidx.appcompat.widget.Toolbar>
+        app:titleTextColor="@android:color/white">
 
-    <ListView
-        android:id="@+id/lv_edit_historic"
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_edit_historic"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:divider="@android:color/transparent"
         android:dividerHeight="14dp"
-        android:padding="14dp" />
+        android:paddingTop="8dp"
+        app:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/item_edit_historic" />
+
 
 </LinearLayout>

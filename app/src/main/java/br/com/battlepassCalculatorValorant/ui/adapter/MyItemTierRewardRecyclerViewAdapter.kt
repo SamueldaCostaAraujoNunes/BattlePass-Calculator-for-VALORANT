@@ -10,19 +10,19 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.BattlePass.Tier
-import br.com.battlepassCalculatorValorant.model.ColorFromXml
 import br.com.battlepassCalculatorValorant.model.Observer.IObserver
+import br.com.battlepassCalculatorValorant.model.Singleton.ManagerColorFromXml
 import br.com.battlepassCalculatorValorant.ui.dialog.DialogTier
 
 
 class MyItemTierRewardRecyclerViewAdapter(
     private val context: Context,
     private val values: ArrayList<Tier>,
-    private val tierCurrentFun: () -> Int,
-    private val colorXML: ColorFromXml
+    private val tierCurrentFun: () -> Int
 ) : RecyclerView.Adapter<MyItemTierRewardRecyclerViewAdapter.ViewHolder>(), IObserver {
     private var tierCurrent = 0
     private val filterValues = values.toMutableList()
+    private var colorXML = ManagerColorFromXml.getInstance(context)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         tierCurrent = tierCurrentFun()
@@ -40,17 +40,22 @@ class MyItemTierRewardRecyclerViewAdapter(
         val white = Color.parseColor(colorXML.getColor(R.attr.colorOnPrimary))
         val accent = Color.parseColor(colorXML.getColor(R.attr.colorAccent))
 
-        tierIndexView.setTextColor(white)
-        tierRewardView.setTextColor(white)
         tierRewardView.paintFlags = tierRewardView.paintFlags and Paint.STRIKE_THRU_TEXT_FLAG.inv()
 
-        if (item.index < tierCurrent) {
-            tierRewardView.paintFlags = tierRewardView.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
-            tierIndexView.setTextColor(gray)
-            tierRewardView.setTextColor(gray)
-        } else if (item.index == tierCurrent) {
-            tierIndexView.setTextColor(accent)
-            tierRewardView.setTextColor(accent)
+        when {
+            item.index < tierCurrent -> {
+                tierRewardView.paintFlags = tierRewardView.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+                tierIndexView.setTextColor(gray)
+                tierRewardView.setTextColor(gray)
+            }
+            item.index == tierCurrent -> {
+                tierIndexView.setTextColor(accent)
+                tierRewardView.setTextColor(accent)
+            }
+            else -> {
+                tierIndexView.setTextColor(white)
+                tierRewardView.setTextColor(white)
+            }
         }
 
         val markerTier = if (position < 50) "T" else "E"

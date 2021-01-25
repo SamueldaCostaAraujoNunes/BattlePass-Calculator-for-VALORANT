@@ -2,8 +2,8 @@ package br.com.battlepassCalculatorValorant.ui.activity.Chart
 
 import android.content.Context
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.model.ColorFromXml
 import br.com.battlepassCalculatorValorant.model.Observer.IObserver
+import br.com.battlepassCalculatorValorant.model.Util.ColorFromXml
 import com.github.aachartmodel.aainfographics.aachartcreator.*
 
 

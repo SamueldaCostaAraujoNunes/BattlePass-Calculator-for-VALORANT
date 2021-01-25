@@ -7,7 +7,7 @@ import android.view.View
 import androidx.appcompat.app.AlertDialog
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.Historic.Historic
-import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerProperties
+import br.com.battlepassCalculatorValorant.model.Singleton.ManagerProperties
 import br.com.battlepassCalculatorValorant.model.Util.ValidateInputUser
 import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement
 import com.google.android.gms.ads.InterstitialAd
@@ -51,12 +51,12 @@ class DialogEditInput(context: Context, val position: Int, val historic: Histori
 //        return titleView
 //    }
 
-    override fun show() {
+    fun show(functionSave: () -> Unit) {
         dialog = builder.show()
-        setOnClickListener()
+        setOnClickListener(functionSave)
     }
 
-    fun setOnClickListener() {
+    fun setOnClickListener(functionSave: () -> Unit) {
         mDialogView.tierinput_dialog_btn_save.setOnClickListener {
             val validador = ValidateInputUser(context, tvTierIndex, tvTierExpMissing)
             if (validador.editTierExpMissing()) {
@@ -64,6 +64,7 @@ class DialogEditInput(context: Context, val position: Int, val historic: Histori
                 historic.update(tier)
                 dialog.dismiss()
                 launcherAdMob()
+                functionSave()
             }
         }
         mDialogView.tierinput_dialog_btn_cancel.setOnClickListener {

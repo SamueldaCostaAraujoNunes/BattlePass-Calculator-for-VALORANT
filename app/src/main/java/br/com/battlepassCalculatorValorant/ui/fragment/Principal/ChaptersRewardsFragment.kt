@@ -13,10 +13,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.BattlePass.Reward
-import br.com.battlepassCalculatorValorant.model.ColorFromXml
 import br.com.battlepassCalculatorValorant.model.Properties.Properties
-import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerColorFromXml
-import br.com.battlepassCalculatorValorant.model.SingletonPassBattle.ManagerProperties
+import br.com.battlepassCalculatorValorant.model.Singleton.ManagerColorFromXml
+import br.com.battlepassCalculatorValorant.model.Singleton.ManagerProperties
+import br.com.battlepassCalculatorValorant.model.Util.ColorFromXml
 import br.com.battlepassCalculatorValorant.ui.adapter.MyItemChapterRewardRecyclerViewAdapter
 
 

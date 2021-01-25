@@ -1,4 +1,4 @@
-package br.com.battlepassCalculatorValorant.model
+package br.com.battlepassCalculatorValorant.model.Util
 
 import android.content.Context
 import android.content.res.TypedArray

@@ -22,5 +22,9 @@
         <!-- Customize your theme here. -->
         <item name="colorOnSurface">@color/text_dark</item>
         <item name="alertDialogTheme">@style/alertDialog</item>
+
+        <item name="android:navigationBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
 </resources>
