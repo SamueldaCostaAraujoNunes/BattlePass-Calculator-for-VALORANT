@@ -11,7 +11,7 @@ import br.com.battlepassCalculatorValorant.model.Singleton.ManagerProperties
 import br.com.battlepassCalculatorValorant.ui.activity.Chart.Chart
 import com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
 
-class ChartDayPerTierFragment : Fragment() {
+class ChartExpPerDayFragment : Fragment() {
 
     private lateinit var properties: Properties
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,15 +23,15 @@ class ChartDayPerTierFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_chart_day_per_tier, container, false)
+        return inflater.inflate(R.layout.fragment_chart_exp_per_day, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val aaChartView = requireView().findViewById<AAChartView>(R.id.aa_chart_view)
         val chart = Chart(requireContext(), aaChartView)
-        chart.setData("Tiers") { properties.historicTierPositionPerXp() }
+        chart.setData(requireContext().getString(R.string.exp_esperado)) { properties.getExpectedExpPerDay() }
+        chart.setData(requireContext().getString(R.string.exp_real)) { properties.getRealProgressPerDay() }
         chart.show()
         properties.historic.add(chart)
     }
-
 }

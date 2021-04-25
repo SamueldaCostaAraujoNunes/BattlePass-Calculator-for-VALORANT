@@ -26,9 +26,10 @@ class NotificationReceiver : BroadcastReceiver() {
         val listNotificationContent = createListNotificationContents(context)
         val pendingIntent: PendingIntent = createIntent(context)
         val builder = builderNotification(context, pendingIntent, listNotificationContent.random())
-        applyImageUrl(builder, getUrl(context))
+//        applyImageUrl(builder, getUrl(context))
         val notificationManager = NotificationManagerCompat.from(context)
         notificationManager.notify(0, builder.build())
+//        playNotificationSound(context)
     }
 
     private fun createListNotificationContents(context: Context): List<NotificationContent> {
@@ -89,19 +90,18 @@ class NotificationReceiver : BroadcastReceiver() {
         pendingIntent: PendingIntent,
         notificationContent: NotificationContent
     ): NotificationCompat.Builder {
-
-//        val bigTextNotification = NotificationCompat.BigTextStyle()
-//        bigTextNotification.bigText(notificationContent.content)
-//        bigTextNotification.setBigContentTitle(notificationContent.title)
-
+        val colorSecondary = Color.parseColor("#ff4655")
+        val pattern = longArrayOf(500, 400, 500, 400, 500)
         return NotificationCompat.Builder(context, NotificationChannel.id)
             .setSmallIcon(R.drawable.ic_stat_name)
-//            .setStyle(bigTextNotification)
             .setContentTitle(notificationContent.title)
             .setContentText(notificationContent.content)
-            .setColor(Color.parseColor("#ff4655"))
+            .setColor(colorSecondary)
+//            .setWhen(System.currentTimeMillis())
             .setPriority(NotificationChannel.importance)
             .setContentIntent(pendingIntent)
+            .setVibrate(pattern)
+            .setLights(colorSecondary, 500, 500)
             .setAutoCancel(true)
     }
 
@@ -109,11 +109,10 @@ class NotificationReceiver : BroadcastReceiver() {
         val properties = ManagerProperties.getInstance(context)
         val tier = properties.getTierCurrent()
         val reward = properties.passBattle.getTier(tier)!!.reward[0]
-        val url = if (reward.isCard()) reward.imagens[1] else reward.imagens[0]
-        return url
+        return if (reward.isCard()) reward.imagens[1] else reward.imagens[0]
     }
 
-    fun applyImageUrl(
+    private fun applyImageUrl(
         builder: NotificationCompat.Builder,
         imageUrl: String
     ) = runBlocking {
@@ -129,6 +128,19 @@ class NotificationReceiver : BroadcastReceiver() {
             builder.setStyle(NotificationCompat.BigPictureStyle(builder).bigPicture(bitmap))
         }
     }
+
+//    private fun playNotificationSound(context: Context) {
+//        try {
+//            val alarmSound = Uri.parse(
+//                ContentResolver.SCHEME_ANDROID_RESOURCE
+//                        + "://" + context.packageName + "/raw/reyna"
+//            )
+//            val r = RingtoneManager.getRingtone(context, alarmSound)
+//            r.play()
+//        } catch (e: Exception) {
+//            e.printStackTrace()
+//        }
+//    }
 
     inner class NotificationContent(val title: String, val content: String)
 }

@@ -7,7 +7,6 @@ import android.view.View
 import androidx.appcompat.app.AlertDialog
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.Historic.Historic
-import br.com.battlepassCalculatorValorant.model.Singleton.ManagerProperties
 import br.com.battlepassCalculatorValorant.model.Util.ValidateInputUser
 import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement
 import com.google.android.gms.ads.InterstitialAd
@@ -17,9 +16,6 @@ import kotlinx.android.synthetic.main.dialog_tierinput.view.*
 @Suppress("CAST_NEVER_SUCCEEDS")
 class DialogEditInput(context: Context, val position: Int, val historic: Historic) :
     AlertDialog(context) {
-
-    private val passBattle = ManagerProperties.getInstance(context).passBattle
-
     private var mInterstitialAd: InterstitialAd
     var tvTierIndex: TextInputEditText
     var tvTierExpMissing: TextInputEditText
@@ -40,16 +36,10 @@ class DialogEditInput(context: Context, val position: Int, val historic: Histori
 
         builder = Builder(context)
             .setView(mDialogView)
-//            .setCustomTitle(createTitle("Tier Edit"))
             .setTitle(context.getString(R.string.tier_edit))
         mInterstitialAd = Advertisement(context).createInterstitial()
     }
 
-//    private fun createTitle(title: String): View {
-//        val titleView: View = this.layoutInflater.inflate(R.layout.dialog_title, null)
-//        titleView.title.text = title
-//        return titleView
-//    }
 
     fun show(functionSave: () -> Unit) {
         dialog = builder.show()

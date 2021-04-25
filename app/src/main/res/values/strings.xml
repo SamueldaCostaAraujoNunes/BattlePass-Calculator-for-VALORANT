@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Battle Pass Calculator for VALORANT</string>
     <string name="valorant">vAlorant</string>
-    <string name="ep_ato_atual">FORMATION: ACT 1</string>
+    <string name="ep_ato_atual">FORMATION: ACT 2</string>
     <string name="sufixo_nome_app">BattlePass Calculator</string>
 
     <string name="tier_atual">Current Tier</string>
@@ -14,6 +14,9 @@
     <string name="seu_passe_de_batalha">Your battle pass</string>
     <string name="exp_total">Total EXP</string>
     <string name="seu_historico">Your Historic</string>
+
+    <string name="exp_esperado">Expected</string>
+    <string name="exp_real">Real</string>
 
     <string name="feito">Done</string>
 
@@ -112,5 +115,6 @@
     <string name="content_epilogo_on">The forecast calculations took into account the Pass Epilogue</string>
     <string name="epilogo">Epilogue</string>
     <string name="tier">Tier</string>
+    <string name="exp_per_day">EXP per day</string>
 
 </resources>

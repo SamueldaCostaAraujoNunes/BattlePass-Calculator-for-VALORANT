@@ -1,6 +1,7 @@
 package br.com.battlepassCalculatorValorant.ui.dialog
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import androidx.appcompat.app.AlertDialog
@@ -15,15 +16,12 @@ import kotlinx.android.synthetic.main.dialog_tierinput.view.tierinput_dialog_btn
 class DialogDeleteItemConfimation(context: Context, val position: Int, val historic: Historic) :
     AlertDialog(context) {
     private var mInterstitialAd: InterstitialAd
-    private var adv: Advertisement
     var mDialogView: View
     val tier = historic[position]
     var builder: AlertDialog.Builder
     lateinit var dialog: AlertDialog
 
     init {
-        val inflater = this.layoutInflater
-
         mDialogView = LayoutInflater.from(context).inflate(R.layout.dialog_confirmation, null)
 
         mDialogView.tierinput_dialog_btn_save.text = context.getString(R.string.deletar)
@@ -32,8 +30,7 @@ class DialogDeleteItemConfimation(context: Context, val position: Int, val histo
         builder = Builder(context)
             .setView(mDialogView)
             .setTitle(context.getString(R.string.confirmacao))
-        adv = Advertisement(context)
-        mInterstitialAd = adv.createInterstitial()
+        mInterstitialAd = Advertisement(context).createInterstitial()
     }
 
     fun show(functionSave: () -> Unit, functionCancel: () -> Unit) {
@@ -47,10 +44,19 @@ class DialogDeleteItemConfimation(context: Context, val position: Int, val histo
             historic.delete(listItem.tierCurrent)
             functionSave()
             dialog.dismiss()
+            launcherAdMob()
         }
         mDialogView.tierinput_dialog_btn_cancel.setOnClickListener {
             functionCancel()
             dialog.dismiss()
+        }
+    }
+
+    private fun launcherAdMob() {
+        if (mInterstitialAd.isLoaded) {
+            mInterstitialAd.show()
+        } else {
+            Log.d("TAG", "The interstitial wasn't loaded yet.")
         }
     }
 }

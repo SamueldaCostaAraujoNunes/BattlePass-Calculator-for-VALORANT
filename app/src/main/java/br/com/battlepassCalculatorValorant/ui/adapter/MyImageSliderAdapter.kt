@@ -17,9 +17,9 @@ internal class MyImageSliderAdapter(// Context object
 
 ) : RecyclerView.Adapter<MyImageSliderAdapter.PageHolder>() {
 
-    var imagesUrl = selectedImageUrl()
+    private var imagesUrl = selectedImageUrl()
 
-    fun selectedImageUrl(default: Int = 1): ArrayList<String> {
+    private fun selectedImageUrl(default: Int = 1): ArrayList<String> {
         return if (reward.isCard()) {
             arrayListOf(reward.imagens[default])
         } else {

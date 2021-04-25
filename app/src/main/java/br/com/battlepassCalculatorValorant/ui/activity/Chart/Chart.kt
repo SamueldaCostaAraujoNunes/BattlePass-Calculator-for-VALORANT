@@ -45,7 +45,7 @@ class Chart(val context: Context, val chartView: AAChartView) : IObserver {
 
     fun show(){
         series = ArrayList()
-        for(index in 0 until functionsSeries.size){
+        for (index in 0 until functionsSeries.size) {
             val label = labels[index]
             val function = functionsSeries[index]
             val element = createElement(label, function())
@@ -55,11 +55,10 @@ class Chart(val context: Context, val chartView: AAChartView) : IObserver {
         chartView.aa_drawChartWithChartModel(model)
     }
 
-    fun createElement(label: String, data: ArrayList<Int>): AASeriesElement {
-        val element = AASeriesElement()
+    private fun createElement(label: String, data: ArrayList<Int>): AASeriesElement {
+        return AASeriesElement()
             .name(label)
             .data(data.toArray())
-        return element
     }
 
     override fun update() {

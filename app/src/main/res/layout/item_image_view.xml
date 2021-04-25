@@ -10,6 +10,7 @@
         android:layout_gravity="center"
         android:adjustViewBounds="true"
         android:gravity="center"
+        android:maxHeight="450dp"
         android:paddingTop="8dp"
         android:scaleType="fitCenter" />
 

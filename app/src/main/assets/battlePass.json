@@ -1,37 +1,37 @@
 {
   "Nome": {
-    "pt": "FORMAÇÃO: ATO 1",
-    "es": "FORMACIÓN: ACTO 1",
-    "default": "FORMATION: ACT 1"
+    "pt": "FORMAÇÃO: ATO 2",
+    "es": "FORMACIÓN: ACTO 2",
+    "default": "FORMATION: ACT 2"
   },
-  "Data Inicial": "12/01/2021",
-  "Data Final": "01/03/2021",
+  "Data Inicial": "02/03/2021",
+  "Data Final": "26/04/2021",
   "EXP total": 980000,
   "EXP Epilogo": 190000,
-  "EXP Missao Diaria": 192000,
-  "EXP Missao Semanal": 231000,
+  "EXP Missao Diaria": 224000,
+  "EXP Missao Semanal": 336000,
   "Capitulos": [
     {
       "Indice": 1,
       "Recompensa": [
         {
           "Nome": {
-            "pt": "Phantom Diagrama",
-            "es": "Esquema de Phantom",
-            "default": "Phantom Schema"
+            "pt": "Bulldog Diagrama",
+            "es": "Esquema de Bulldog",
+            "default": "Bulldog Schema"
           },
           "Tipo": "Card",
           "Imagens": [
-            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap1-1-1.png",
-            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap1-1-2.png",
-            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap1-1-3.png"
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png"
           ]
         },
         {
           "Nome": {
-            "pt": "Wraith",
-            "es": "Wraith",
-            "default": "Wraith"
+            "pt": "Bulldog",
+            "es": "Bulldog",
+            "default": "Bulldog"
           },
           "Tipo": "Título",
           "Imagens": [
@@ -48,16 +48,13 @@
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Bulldog Infinito",
-                "es": "Bulldog Infinito",
-                "default": "Infinity Bulldog"
+                "pt": "Marshal Polyfrog",
+                "es": "Marshal Poli-rana",
+                "default": "Polyfrog Marshal"
               },
               "Tipo": "Skin",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/1-1.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/1-2.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/1-3.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/1-4.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/1-1.png"
               ]
             }
           ]
@@ -70,13 +67,13 @@
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Altas Aventuras",
-                "es": "Cuento Chinos",
-                "default": "Tall Tales"
+                "pt": "Arrasei",
+                "es": "Suelta El Micrófono",
+                "default": "Mic Drop Buddy"
               },
               "Tipo": "Chaveiro",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/2-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/2-1.png"
               ]
             }
           ]
@@ -85,7 +82,7 @@
           "Indice": 3,
           "EXP Inicial": 2000,
           "EXP Faltante": 2750,
-          "Porcentagem": 0.22,
+          "Porcentagem": 0.2,
           "Recompensa": [
             {
               "Nome": {
@@ -104,19 +101,19 @@
           "Indice": 4,
           "EXP Inicial": 4750,
           "EXP Faltante": 3500,
-          "Porcentagem": 0.50,
+          "Porcentagem": 0.48,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Infinito",
-                "es": "Infinito",
-                "default": "Infinity"
+                "pt": "Esquema VLT/R",
+                "es": "Esquema de VLT/R",
+                "default": "VLT/R Schematic"
               },
               "Tipo": "Card",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/4-1.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/4-2.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/4-3.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png"
               ]
             }
           ]
@@ -125,17 +122,20 @@
           "Indice": 5,
           "EXP Inicial": 8250,
           "EXP Faltante": 4250,
-          "Porcentagem": 0.87,
+          "Porcentagem": 0.84,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Bucky Pulverizante",
-                "es": "Bucky Aerosol",
-                "default": "Aerosol Bucky"
+                "pt": "Judge Prismática III",
+                "es": "Judge Prismática III",
+                "default": "Prism III Judge"
               },
               "Tipo": "Skin",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/5-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/5-1.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/5-2.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/5-3.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/5-4.png"
               ]
             }
           ]
@@ -147,13 +147,13 @@
       "Recompensa": [
         {
           "Nome": {
-            "pt": "Moeda Ep 2 // 1",
-            "es": "Moneda Ep 2 // 1",
-            "default": "Ep 2 // 1 Coin"
+            "pt": "Moeda Ep2//2",
+            "es": "Moneda Ep2//2",
+            "default": "Ep 2//2 Coin"
           },
           "Tipo": "Chaveiro",
           "Imagens": [
-            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap2-1-1.png"
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/cap2-1-1.png"
           ]
         }
       ],
@@ -162,17 +162,17 @@
           "Indice": 6,
           "EXP Inicial": 12500,
           "EXP Faltante": 5000,
-          "Porcentagem": 1.32,
+          "Porcentagem": 1.27,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "EZ",
-                "es": "EZ",
-                "default": "EZ"
+                "pt": "Entrada Proibida",
+                "es": "Prohibido Entrar",
+                "default": "Do Not Enter"
               },
               "Tipo": "Spray",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/6-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/6-1.png"
               ]
             }
           ]
@@ -181,17 +181,17 @@
           "Indice": 7,
           "EXP Inicial": 17500,
           "EXP Faltante": 5750,
-          "Porcentagem": 1.85,
+          "Porcentagem": 1.78,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Choco-Doguinho",
-                "es": "Chococachorro",
-                "default": "Hershey Pup"
+                "pt": "Sapinho Feliz",
+                "es": "Rana Feliz",
+                "default": "Happy Frog"
               },
               "Tipo": "Spray",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/7-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/7-1.png"
               ]
             }
           ]
@@ -200,7 +200,7 @@
           "Indice": 8,
           "EXP Inicial": 23250,
           "EXP Faltante": 6500,
-          "Porcentagem": 2.46,
+          "Porcentagem": 2.37,
           "Recompensa": [
             {
               "Nome": {
@@ -219,19 +219,19 @@
           "Indice": 9,
           "EXP Inicial": 29750,
           "EXP Faltante": 7250,
-          "Porcentagem": 3.15,
+          "Porcentagem": 3.03,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Brotinho",
-                "es": "Brotes",
-                "default": "Sproutling"
+                "pt": "Polyfrog",
+                "es": "Poli-rana",
+                "default": "Polyfrog"
               },
               "Tipo": "Card",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/9-1.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/9-2.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/9-3.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png"
               ]
             }
           ]
@@ -240,17 +240,17 @@
           "Indice": 10,
           "EXP Inicial": 37000,
           "EXP Faltante": 8000,
-          "Porcentagem": 3.92,
+          "Porcentagem": 3.77,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Ghost Posto Avançado",
-                "es": "Ghost Industrial",
-                "default": "Outpost Ghost"
+                "pt": "Stinger Cavalaria",
+                "es": "Stinger Caballería",
+                "default": "Cavalier Stinger"
               },
               "Tipo": "Skin",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/10-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/10-1.png"
               ]
             }
           ]
@@ -262,17 +262,6 @@
       "Recompensa": [
         {
           "Nome": {
-            "pt": "Azar",
-            "es": "Desafortunado",
-            "default": "Unlucky"
-          },
-          "Tipo": "Título",
-          "Imagens": [
-            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Titulo.png"
-          ]
-        },
-        {
-          "Nome": {
             "pt": "10 Pontos",
             "es": "10 Points",
             "default": "10 Points"
@@ -281,6 +270,17 @@
           "Imagens": [
             "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
           ]
+        },
+        {
+          "Nome": {
+            "pt": "Sheriff",
+            "es": "Sheriff",
+            "default": "Sheriff"
+          },
+          "Tipo": "Título",
+          "Imagens": [
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Titulo.png"
+          ]
         }
       ],
       "Tiers": [
@@ -288,19 +288,19 @@
           "Indice": 11,
           "EXP Inicial": 45000,
           "EXP Faltante": 8750,
-          "Porcentagem": 4.77,
+          "Porcentagem": 4.59,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Shorty Diagrama",
-                "es": "Esquema de Shorty",
-                "default": "Shorty Schema"
+                "pt": "Sheriff Diagrama",
+                "es": "Esquema de Sheriff",
+                "default": "Sheriff Schema"
               },
               "Tipo": "Card",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/11-1.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/11-2.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/11-3.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png"
               ]
             }
           ]
@@ -309,17 +309,17 @@
           "Indice": 12,
           "EXP Inicial": 53750,
           "EXP Faltante": 9500,
-          "Porcentagem": 5.7,
+          "Porcentagem": 5.48,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Sem Shorty",
-                "es": "No Shorty",
-                "default": "No Shorty"
+                "pt": "Me Revive, Jett!",
+                "es": "¡Revíveme, Jett!",
+                "default": "Revive me, Jett!"
               },
               "Tipo": "Spray",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/12-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/12-1.png"
               ]
             }
           ]
@@ -328,7 +328,7 @@
           "Indice": 13,
           "EXP Inicial": 63250,
           "EXP Faltante": 10250,
-          "Porcentagem": 6.71,
+          "Porcentagem": 6.45,
           "Recompensa": [
             {
               "Nome": {
@@ -347,17 +347,17 @@
           "Indice": 14,
           "EXP Inicial": 73500,
           "EXP Faltante": 11000,
-          "Porcentagem": 7.8,
+          "Porcentagem": 7.5,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Saleiro",
-                "es": "Salero",
-                "default": "Salt Shaker"
+                "pt": "Xpert Em Comunicações",
+                "es": "Comunicaciones Expertas",
+                "default": "Xpert Comms Buddy"
               },
               "Tipo": "Chaveiro",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/14-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/14-1.png"
               ]
             }
           ]
@@ -366,17 +366,17 @@
           "Indice": 15,
           "EXP Inicial": 84500,
           "EXP Faltante": 11750,
-          "Porcentagem": 8.97,
+          "Porcentagem": 8.62,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Shorty Pulverizante",
-                "es": "Shorty Aerosol",
-                "default": "Aerosol Shorty"
+                "pt": "Sheriff Polyfrog",
+                "es": "Sheriff Poli-rana",
+                "default": "Polyfrog Sheriff"
               },
               "Tipo": "Skin",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/15-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/15-1.png"
               ]
             }
           ]
@@ -388,9 +388,9 @@
       "Recompensa": [
         {
           "Nome": {
-            "pt": "Indo C",
-            "es": "Hacia C",
-            "default": "Going C"
+            "pt": "Que Vergonha!",
+            "es": "¡Qué Vergonzoso!",
+            "default": "Embarrassing!"
           },
           "Tipo": "Spray",
           "Imagens": [
@@ -403,20 +403,17 @@
           "Indice": 16,
           "EXP Inicial": 96250,
           "EXP Faltante": 12500,
-          "Porcentagem": 10.21,
+          "Porcentagem": 9.82,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Spectre Infinito",
-                "es": "Spectre Infinito",
-                "default": "Infinity Spectre"
+                "pt": "Ghost Cavalaria",
+                "es": "Ghost Caballería",
+                "default": "Cavalier Ghost"
               },
               "Tipo": "Skin",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/16-1.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/16-2.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/16-3.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/16-4.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/16-1.png"
               ]
             }
           ]
@@ -425,19 +422,19 @@
           "Indice": 17,
           "EXP Inicial": 108750,
           "EXP Faltante": 13250,
-          "Porcentagem": 11.54,
+          "Porcentagem": 11.09,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "ID de Yoru",
-                "es": "ID de Yoru",
-                "default": "Yoru ID"
+                "pt": "Id de Astra",
+                "es": "Id de Astra",
+                "default": "ID Astra"
               },
               "Tipo": "Card",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/17-1.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/17-2.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/17-3.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png"
               ]
             }
           ]
@@ -446,17 +443,17 @@
           "Indice": 18,
           "EXP Inicial": 122000,
           "EXP Faltante": 14000,
-          "Porcentagem": 12.95,
+          "Porcentagem": 12.44,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Frango Glitch",
-                "es": "CyberPollo",
-                "default": "Glitch Out Chicken"
+                "pt": "Super!",
+                "es": "¡Súper!",
+                "default": "Super!"
               },
               "Tipo": "Spray",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/18-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/18-1.png"
               ]
             }
           ]
@@ -465,7 +462,7 @@
           "Indice": 19,
           "EXP Inicial": 136000,
           "EXP Faltante": 14750,
-          "Porcentagem": 14.43,
+          "Porcentagem": 13.87,
           "Recompensa": [
             {
               "Nome": {
@@ -484,17 +481,17 @@
           "Indice": 20,
           "EXP Inicial": 150750,
           "EXP Faltante": 15500,
-          "Porcentagem": 16,
+          "Porcentagem": 15.38,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Judge Posto Avançado",
-                "es": "Judge Industrial",
-                "default": "Outpost Judge"
+                "pt": "Ares Polyfrog",
+                "es": "Ares Poli-rana",
+                "default": "Polyfrog Ares"
               },
               "Tipo": "Skin",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/20-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/20-1.png"
               ]
             }
           ]
@@ -506,15 +503,15 @@
       "Recompensa": [
         {
           "Nome": {
-            "pt": "Versus // Vitória + Derrota",
-            "es": "Versus // Victoria + Derrota",
-            "default": "Versus // Victory + Defeat"
+            "pt": "Versus // Bind + Icebox",
+            "es": "Versus // Bind + Icebox",
+            "default": "Versus // Bind + Icebox"
           },
           "Tipo": "Card",
           "Imagens": [
-            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap5-1-1.png",
-            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap5-1-2.png",
-            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap5-1-3.png"
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png"
           ]
         },
         {
@@ -534,17 +531,17 @@
           "Indice": 21,
           "EXP Inicial": 166250,
           "EXP Faltante": 16250,
-          "Porcentagem": 17.64,
+          "Porcentagem": 16.96,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Rostos pra Dar e Vender",
-                "es": "Rostros en todas partes",
-                "default": "Faces in Places"
+                "pt": "¯\\_(ツ)_/¯",
+                "es": "¯\\_(ツ)_/¯",
+                "default": "¯\\_(ツ)_/¯"
               },
               "Tipo": "Spray",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/21-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/21-1.png"
               ]
             }
           ]
@@ -553,7 +550,7 @@
           "Indice": 22,
           "EXP Inicial": 182500,
           "EXP Faltante": 17000,
-          "Porcentagem": 19.37,
+          "Porcentagem": 18.62,
           "Recompensa": [
             {
               "Nome": {
@@ -572,17 +569,17 @@
           "Indice": 23,
           "EXP Inicial": 199500,
           "EXP Faltante": 17750,
-          "Porcentagem": 21.17,
+          "Porcentagem": 20.35,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Aronguinho Lutador",
-                "es": "Cangrejo de Batalla",
-                "default": "Battle Crab"
+                "pt": "Samba, Manga",
+                "es": "Mango Tango",
+                "default": "Mango Tang"
               },
               "Tipo": "Chaveiro",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/23-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/23-1.png"
               ]
             }
           ]
@@ -591,17 +588,17 @@
           "Indice": 24,
           "EXP Inicial": 217250,
           "EXP Faltante": 18500,
-          "Porcentagem": 23.06,
+          "Porcentagem": 22.16,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Mirtilo",
-                "es": "Mora",
-                "default": "Blueberry"
+                "pt": "Xiu!",
+                "es": "¡Shhh!",
+                "default": "Shhh!"
               },
               "Tipo": "Spray",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/24-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/24-1.png"
               ]
             }
           ]
@@ -610,17 +607,17 @@
           "Indice": 25,
           "EXP Inicial": 235750,
           "EXP Faltante": 19250,
-          "Porcentagem": 25.02,
+          "Porcentagem": 24.05,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Operator Pulverizante",
-                "es": "Operator Aerosol",
-                "default": "Aerosol Operator"
+                "pt": "Vandal Cavalaria",
+                "es": "Vandal Caballería",
+                "default": "Cavalier Vandal"
               },
               "Tipo": "Skin",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/25-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/25-1.png"
               ]
             }
           ]
@@ -632,9 +629,9 @@
       "Recompensa": [
         {
           "Nome": {
-            "pt": "Fogos Lunares",
-            "es": "Cohetes Lunares",
-            "default": "Lunar Firework"
+            "pt": "Bom Garoto, Bruno",
+            "es": "Buen Chico, Bruno",
+            "default": "Good Boy, Bruno Buddy"
           },
           "Tipo": "Chaveiro",
           "Imagens": [
@@ -647,17 +644,17 @@
           "Indice": 26,
           "EXP Inicial": 255000,
           "EXP Faltante": 20000,
-          "Porcentagem": 27.07,
+          "Porcentagem": 26.02,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "<3",
-                "es": "<3",
-                "default": "<3"
+                "pt": "Isso é um Drone?",
+                "es": "¿Es un Dron?",
+                "default": "Is this a Drone?"
               },
               "Tipo": "Spray",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/26-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/26-1.png"
               ]
             }
           ]
@@ -666,7 +663,7 @@
           "Indice": 27,
           "EXP Inicial": 275000,
           "EXP Faltante": 20750,
-          "Porcentagem": 29.19,
+          "Porcentagem": 28.06,
           "Recompensa": [
             {
               "Nome": {
@@ -685,17 +682,17 @@
           "Indice": 28,
           "EXP Inicial": 295750,
           "EXP Faltante": 21500,
-          "Porcentagem": 31.39,
+          "Porcentagem": 30.17,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Hora de Dançar",
-                "es": "A bailar",
-                "default": "Make 'em dance"
+                "pt": "Nem Pensar",
+                "es": "Nop",
+                "default": "Nope"
               },
               "Tipo": "Spray",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/28-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/28-1.png"
               ]
             }
           ]
@@ -704,19 +701,19 @@
           "Indice": 29,
           "EXP Inicial": 317250,
           "EXP Faltante": 22250,
-          "Porcentagem": 33.67,
+          "Porcentagem": 32.37,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Ares Diagrama",
-                "es": "Esquema de Ares",
-                "default": "Ares Schema"
+                "pt": "Marshal Diagrama",
+                "es": "Esquema de Marshal",
+                "default": "Marshal Schema"
               },
               "Tipo": "Card",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/29-1.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/29-2.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/29-3.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png"
               ]
             }
           ]
@@ -725,17 +722,17 @@
           "Indice": 30,
           "EXP Inicial": 339500,
           "EXP Faltante": 23000,
-          "Porcentagem": 36.04,
+          "Porcentagem": 34.64,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Ares Posto Avançado",
-                "es": "Ares Industrial",
-                "default": "Outpost Ares"
+                "pt": "Bucky Cavalaria",
+                "es": "Bucky Caballería",
+                "default": "Cavalier Bucky"
               },
               "Tipo": "Skin",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/30-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/30-1.png"
               ]
             }
           ]
@@ -758,9 +755,9 @@
         },
         {
           "Nome": {
-            "pt": "Bombado",
-            "es": "Mejorado",
-            "default": "Boosted"
+            "pt": "Senta o Dedo",
+            "es": "Automática",
+            "default": "Full Auto"
           },
           "Tipo": "Título",
           "Imagens": [
@@ -773,19 +770,19 @@
           "Indice": 31,
           "EXP Inicial": 362500,
           "EXP Faltante": 23750,
-          "Porcentagem": 38.48,
+          "Porcentagem": 36.98,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Versus // Omen + Sage",
-                "es": "Versus // Omen + Sage",
-                "default": "Versus // Omen + Sage"
+                "pt": "Bom Trabalho, Paul!",
+                "es": "¡Buen Trabajo, Paul!",
+                "default": "Good Job, Paul!"
               },
               "Tipo": "Card",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/31-1.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/31-2.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/31-3.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png"
               ]
             }
           ]
@@ -794,7 +791,7 @@
           "Indice": 32,
           "EXP Inicial": 386250,
           "EXP Faltante": 24500,
-          "Porcentagem": 41,
+          "Porcentagem": 39.41,
           "Recompensa": [
             {
               "Nome": {
@@ -813,17 +810,17 @@
           "Indice": 33,
           "EXP Inicial": 410750,
           "EXP Faltante": 25250,
-          "Porcentagem": 43.60,
+          "Porcentagem": 41.91,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Herança Ancestral",
-                "es": "Herencia Ancestral",
-                "default": "Ancient Inheritance"
+                "pt": "Fã N°1",
+                "es": "Fan Nro. 1",
+                "default": "No. 1 Fan"
               },
               "Tipo": "Chaveiro",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/33-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/33-1.png"
               ]
             }
           ]
@@ -832,17 +829,17 @@
           "Indice": 34,
           "EXP Inicial": 436000,
           "EXP Faltante": 26000,
-          "Porcentagem": 46.28,
+          "Porcentagem": 44.48,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Que dó do Robozinho",
-                "es": "¡Ay, pobre robot!",
-                "default": "Alas, poor robot!"
+                "pt": "Suavão",
+                "es": "Relájate",
+                "default": "Chill Out"
               },
               "Tipo": "Spray",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/34-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/34-1.png"
               ]
             }
           ]
@@ -851,20 +848,20 @@
           "Indice": 35,
           "EXP Inicial": 462000,
           "EXP Faltante": 26750,
-          "Porcentagem": 49.04,
+          "Porcentagem": 47.14,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Guardian Infinito",
-                "es": "Guardian Infinito",
-                "default": "Infinity Guardian"
+                "pt": "Odin Prismática III",
+                "es": "Odin Prismática III",
+                "default": "Prism III Odin"
               },
               "Tipo": "Skin",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/35-1.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/35-2.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/35-3.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/35-4.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/35-1.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/35-2.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/35-3.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/35-4.png"
               ]
             }
           ]
@@ -876,9 +873,9 @@
       "Recompensa": [
         {
           "Nome": {
-            "pt": "Perigo: Radianita",
-            "es": "Peligro de Radianita",
-            "default": "Radianite Hazard"
+            "pt": "Fogo no Parquinho",
+            "es": "Contenedor en Llamas",
+            "default": "Dumpster Fire"
           },
           "Tipo": "Spray",
           "Imagens": [
@@ -891,17 +888,17 @@
           "Indice": 36,
           "EXP Inicial": 488750,
           "EXP Faltante": 27500,
-          "Porcentagem": 51.88,
+          "Porcentagem": 49.87,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Que foi aquilo?",
-                "es": "¿Qué fue eso?",
-                "default": "What was that?"
+                "pt": "/FF",
+                "es": "/FF",
+                "default": "/FF"
               },
               "Tipo": "Spray",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/36-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/36-1.png"
               ]
             }
           ]
@@ -910,17 +907,17 @@
           "Indice": 37,
           "EXP Inicial": 516250,
           "EXP Faltante": 28250,
-          "Porcentagem": 54.8,
+          "Porcentagem": 52.67,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Encare a Tundra",
-                "es": "Enfrenta la Tundra",
-                "default": "Take on the Tundra"
+                "pt": "Disputa da Spike",
+                "es": "Spike Rush",
+                "default": "Spike Rush"
               },
               "Tipo": "Chaveiro",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/37-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/37-1.png"
               ]
             }
           ]
@@ -929,19 +926,19 @@
           "Indice": 38,
           "EXP Inicial": 544500,
           "EXP Faltante": 29000,
-          "Porcentagem": 57.8,
+          "Porcentagem": 55.56,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Ponte entre Mundos",
-                "es": "Puente entre Mundos",
-                "default": "Bridge Between Worlds"
+                "pt": "Frenzy Diagrama",
+                "es": "Esquema de Frenzy",
+                "default": "Frenzy Schema"
               },
               "Tipo": "Card",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/38-1.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/38-2.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/38-3.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png"
               ]
             }
           ]
@@ -950,7 +947,7 @@
           "Indice": 39,
           "EXP Inicial": 573500,
           "EXP Faltante": 29750,
-          "Porcentagem": 60.88,
+          "Porcentagem": 58.52,
           "Recompensa": [
             {
               "Nome": {
@@ -969,17 +966,17 @@
           "Indice": 40,
           "EXP Inicial": 603250,
           "EXP Faltante": 30500,
-          "Porcentagem": 64.04,
+          "Porcentagem": 61.55,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Odin Pulverizante",
-                "es": "Odin Aerosol",
-                "default": "Aerosol Odin"
+                "pt": "Spectre Polyfrog",
+                "es": "Spectre Poli-rana",
+                "default": "Polyfrog Spectre"
               },
               "Tipo": "Skin",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/40-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/40-1.png"
               ]
             }
           ]
@@ -991,9 +988,9 @@
       "Recompensa": [
         {
           "Nome": {
-            "pt": "Logotipo Kingdom",
-            "es": "Logo Kingdom",
-            "default": "Kingdom Logo"
+            "pt": "Chapéu Lobo do Mar",
+            "es": "Viejo Lobo de Mar",
+            "default": "Old Salt"
           },
           "Tipo": "Chaveiro",
           "Imagens": [
@@ -1006,7 +1003,7 @@
           "Indice": 41,
           "EXP Inicial": 633750,
           "EXP Faltante": 31250,
-          "Porcentagem": 67.27,
+          "Porcentagem": 64.66,
           "Recompensa": [
             {
               "Nome": {
@@ -1025,19 +1022,19 @@
           "Indice": 42,
           "EXP Inicial": 665000,
           "EXP Faltante": 32000,
-          "Porcentagem": 70.59,
+          "Porcentagem": 67.85,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Joy Joia",
-                "es": "Diversión",
-                "default": "Chill-Joy"
+                "pt": "Versus // Sova + Cypher",
+                "es": "Versus // Sova + Cypher",
+                "default": "Versus // Sova + Cypher"
               },
               "Tipo": "Card",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/42-1.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/42-2.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/42-3.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png"
               ]
             }
           ]
@@ -1046,17 +1043,17 @@
           "Indice": 43,
           "EXP Inicial": 697000,
           "EXP Faltante": 32750,
-          "Porcentagem": 73.99,
+          "Porcentagem": 71.12,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Picante",
-                "es": "Picante",
-                "default": "Spicy"
+                "pt": "Meus Olhos!",
+                "es": "¡Mis Ojos!",
+                "default": "My Eyes!"
               },
               "Tipo": "Spray",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/43-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/43-1.png"
               ]
             }
           ]
@@ -1065,17 +1062,17 @@
           "Indice": 44,
           "EXP Inicial": 729750,
           "EXP Faltante": 33500,
-          "Porcentagem": 77.46,
+          "Porcentagem": 74.46,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Trincado no 140",
-                "es": "140",
-                "default": "Lit for 140"
+                "pt": "Faz Barulho!",
+                "es": "Hagan Ruido",
+                "default": "Make Some Noise"
               },
               "Tipo": "Spray",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/44-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/44-1.png"
               ]
             }
           ]
@@ -1084,20 +1081,17 @@
           "Indice": 45,
           "EXP Inicial": 763250,
           "EXP Faltante": 34250,
-          "Porcentagem": 81.02,
+          "Porcentagem": 77.88,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Phantom Infinito",
-                "es": "Phantom Infinito",
-                "default": "Infinity Phantom"
+                "pt": "Operator Cavalaria",
+                "es": "Operator Caballería",
+                "default": "Cavalier Operator"
               },
               "Tipo": "Skin",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/45-1.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/45-2.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/45-3.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/45-4.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/45-1.png"
               ]
             }
           ]
@@ -1109,29 +1103,29 @@
       "Recompensa": [
         {
           "Nome": {
-            "pt": "Classic Infinito",
-            "es": "Classic Infinito",
-            "default": "Infinity Classic"
+            "pt": "Classic Prismática III",
+            "es": "Classic Prismática III",
+            "default": "Prism III Classic"
           },
           "Tipo": "Skin",
           "Imagens": [
-            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap10-1-1.png",
-            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap10-1-2.png",
-            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap10-1-3.png",
-            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap10-1-4.png"
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/cap10-1-1.png",
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/cap10-1-2.png",
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/cap10-1-3.png",
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/cap10-1-4.png"
           ]
         },
         {
           "Nome": {
-            "pt": "Paradoxo Radianita",
-            "es": "Paradoja Radianita",
-            "default": "Radianite Paradox"
+            "pt": "Espelhos Quebrados",
+            "es": "Espejos Rotos",
+            "default": "Bronken Mirrors"
           },
           "Tipo": "Card",
           "Imagens": [
-            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap10-2-1.png",
-            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap10-2-2.png",
-            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/cap10-2-3.png"
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+            "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png"
           ]
         }
       ],
@@ -1140,17 +1134,17 @@
           "Indice": 46,
           "EXP Inicial": 797500,
           "EXP Faltante": 35000,
-          "Porcentagem": 84.66,
+          "Porcentagem": 81.37,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Escolhendo minha arma",
-                "es": "Elige mi arma",
-                "default": "Choose my weapon "
+                "pt": "Meu Ping!",
+                "es": "¡Lag!",
+                "default": "Lag!"
               },
               "Tipo": "Spray",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/46-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/46-1.png"
               ]
             }
           ]
@@ -1159,17 +1153,17 @@
           "Indice": 47,
           "EXP Inicial": 832500,
           "EXP Faltante": 35750,
-          "Porcentagem": 88.37,
+          "Porcentagem": 84.94,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Precisão Letal",
-                "es": "Precisión Letal",
-                "default": "Deadly Precision"
+                "pt": "Rango de Madruga",
+                "es": "Calorías Nocturnas",
+                "default": "Late Night Calories"
               },
               "Tipo": "Chaveiro",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/47-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/47-1.png"
               ]
             }
           ]
@@ -1178,19 +1172,19 @@
           "Indice": 48,
           "EXP Inicial": 868250,
           "EXP Faltante": 36500,
-          "Porcentagem": 92.17,
+          "Porcentagem": 88.59,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Conquista Corporativa",
-                "es": "Control Corporativo",
-                "default": "Corporate Takeover"
+                "pt": "À Deriva",
+                "es": "¿Perdidos en el Mar?",
+                "default": "Lost at Sea?"
               },
               "Tipo": "Card",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/48-1.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/48-2.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/48-3.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png"
               ]
             }
           ]
@@ -1199,7 +1193,7 @@
           "Indice": 49,
           "EXP Inicial": 904750,
           "EXP Faltante": 37250,
-          "Porcentagem": 96.04,
+          "Porcentagem": 92.32,
           "Recompensa": [
             {
               "Nome": {
@@ -1218,17 +1212,20 @@
           "Indice": 50,
           "EXP Inicial": 942000,
           "EXP Faltante": 38000,
-          "Porcentagem": 100,
+          "Porcentagem": 96.12,
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Confronto Posto Avançado",
-                "es": "Melee Industrial",
-                "default": "Outpost Melee"
+                "pt": "Machado Prismática III",
+                "es": "Hacha Prismática III",
+                "default": "Prism III Axe"
               },
               "Tipo": "Skin",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/50-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/50-1.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/50-2.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/50-3.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/50-4.png"
               ]
             }
           ]
@@ -1248,13 +1245,13 @@
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Saleiro Dourado",
-                "es": "Salero Dourado",
-                "default": "Salt Shaker Gold"
+                "pt": "Super! Dourado",
+                "es": "¡Súper! Dourado",
+                "default": "Super! Gold"
               },
-              "Tipo": "Chaveiro",
+              "Tipo": "Spray",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/51-1.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-2/51-1.png"
               ]
             }
           ]
@@ -1324,15 +1321,15 @@
           "Recompensa": [
             {
               "Nome": {
-                "pt": "Infinito Dourado",
-                "es": "Infinito Dourado",
-                "default": "Infinity Gold"
+                "pt": "Bom Trabalho, Paul",
+                "es": "¡Buen Trabajo, Paul!",
+                "default": "Good Job, Paul! Gold"
               },
               "Tipo": "Card",
               "Imagens": [
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/55-1.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/55-2.png",
-                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-1/55-3.png"
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png",
+                "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Indisponivel.png"
               ]
             }
           ]

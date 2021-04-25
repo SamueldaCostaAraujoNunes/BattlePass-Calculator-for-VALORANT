@@ -55,6 +55,36 @@
             android:layout_gravity="center" />
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardChartExpPerDay"
+            style="@style/CardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="450dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/valorant"
+                    android:hint="@string/exp_per_day"
+                    android:paddingLeft="24dp"
+                    android:paddingTop="24dp"
+                    android:paddingBottom="14dp"
+                    android:textColorHint="?attr/colorSecondary"
+                    android:textSize="20dp" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/fragmentChartExpPerDay"
+                    android:name="br.com.battlepassCalculatorValorant.ui.fragment.Principal.ChartExpPerDayFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
             android:id="@+id/cardFragmentExpMissoes"
             style="@style/CardViewStyle"
             android:layout_width="match_parent"

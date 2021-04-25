@@ -55,7 +55,7 @@ class PropriedadesFragment : Fragment() {
                         }
                         anim.duration = 210
                         anim.start()
-                    } catch (e: Exception) {
+                    } catch (e: IllegalStateException) {
                         pager.layoutParams = (pager.layoutParams as ViewGroup.LayoutParams)
                             .also { lp -> lp.height = v.measuredHeight }
                     }

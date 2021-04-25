@@ -12,6 +12,7 @@ import br.com.battlepassCalculatorValorant.model.Historic.Historic
 import br.com.battlepassCalculatorValorant.model.Singleton.ManagerHistoric
 import br.com.battlepassCalculatorValorant.model.Singleton.ManagerPassBattle
 import java.util.*
+import java.util.stream.IntStream.range
 import kotlin.collections.ArrayList
 
 class Properties(val context: Context) {
@@ -21,6 +22,29 @@ class Properties(val context: Context) {
 
     var semClassificacao: SemClassificacao = SemClassificacao()
     var disputaDeSpike: DisputaDeSpike = DisputaDeSpike()
+
+    fun getExpectedExpPerDay(): ArrayList<Int> {
+        val listOfAllExpExpectedPerDay = ArrayList<Int>()
+        listOfAllExpExpectedPerDay.add(0)
+        val totalExp = getTotalXpBattlePass()
+        val daysDurationBattlePass = daysApart(passBattle.dateFinally, passBattle.dateInit) + 1
+        val razao = totalExp / daysDurationBattlePass
+        for (day in range(1, daysDurationBattlePass)) {
+            listOfAllExpExpectedPerDay.add(day * razao)
+        }
+        return listOfAllExpExpectedPerDay
+    }
+
+    fun getRealProgressPerDay(): ArrayList<Int> {
+        val listOfAllExpExpectedPerDay = ArrayList<Int>()
+        listOfAllExpExpectedPerDay.add(0)
+        val daysDurationBattlePass = daysApart(passBattle.dateFinally, passBattle.dateInit) + 1
+        val razao = getXpPerDia()
+        for (day in range(1, daysDurationBattlePass)) {
+            listOfAllExpExpectedPerDay.add(day * razao)
+        }
+        return listOfAllExpExpectedPerDay
+    }
 
     fun getTiersPerXp(): ArrayList<Int> {
         val progressoPerTier = ArrayList<Int>()

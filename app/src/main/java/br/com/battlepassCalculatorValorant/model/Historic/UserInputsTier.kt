@@ -4,6 +4,8 @@ import java.util.*
 
 class UserInputsTier(val tierCurrent: Int, var tierExpMissing: Int) {
 
+    var date: Calendar = Calendar.getInstance()
+
     constructor(tierCurrent: Int, tierExpMissing: Int, dateNow: Calendar) : this(
         tierCurrent,
         tierExpMissing
@@ -11,5 +13,4 @@ class UserInputsTier(val tierCurrent: Int, var tierExpMissing: Int) {
         date = dateNow
     }
 
-    var date: Calendar = Calendar.getInstance()
 }

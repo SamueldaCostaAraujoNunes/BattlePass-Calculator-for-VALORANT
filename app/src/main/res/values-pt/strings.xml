@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Calculadora de passe para VALORANT</string>
     <string name="valorant">vAlorant</string>
-    <string name="ep_ato_atual">FORMACAO: ATO 1</string>
+    <string name="ep_ato_atual">FORMACAO: ATO 2</string>
     <string name="sufixo_nome_app">Calculadora do Passe de Batalha</string>
 
     <string name="tier_atual">Tier Atual</string>
@@ -111,4 +111,7 @@
     <string name="content_epilogo_on">Os calculos de previsão levaram em conta o Epílogo do Passe</string>
     <string name="epilogo">Epílogo</string>
     <string name="tier">Tier</string>
+    <string name="exp_per_day">EXP por dia</string>
+    <string name="exp_esperado">Esperado</string>
+    <string name="exp_real">Real</string>
 </resources>
