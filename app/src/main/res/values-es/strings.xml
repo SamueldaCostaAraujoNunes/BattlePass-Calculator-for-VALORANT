@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Calculadora de pases para VALORANT</string>
     <string name="valorant">vAlorant</string>
-    <string name="ep_ato_atual">FORMACION: ACTO 2</string>
+    <string name="ep_ato_atual">FORMACION: ACTO 3</string>
     <string name="sufixo_nome_app">Calculadora de Pase de Batalla</string>
 
     <string name="tier_atual">Grado actual</string>

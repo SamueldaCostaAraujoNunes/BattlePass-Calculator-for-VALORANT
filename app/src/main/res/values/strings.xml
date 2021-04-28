@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Battle Pass Calculator for VALORANT</string>
     <string name="valorant">vAlorant</string>
-    <string name="ep_ato_atual">FORMATION: ACT 2</string>
+    <string name="ep_ato_atual">FORMATION: ACT 3</string>
     <string name="sufixo_nome_app">BattlePass Calculator</string>
 
     <string name="tier_atual">Current Tier</string>

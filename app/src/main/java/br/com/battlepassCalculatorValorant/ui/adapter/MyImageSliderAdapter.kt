@@ -19,12 +19,8 @@ internal class MyImageSliderAdapter(// Context object
 
     private var imagesUrl = selectedImageUrl()
 
-    private fun selectedImageUrl(default: Int = 1): ArrayList<String> {
-        return if (reward.isCard()) {
-            arrayListOf(reward.imagens[default])
-        } else {
-            reward.imagens
-        }
+    private fun selectedImageUrl(): ArrayList<String> {
+        return reward.imagens
     }
 
     override fun onCreateViewHolder(
