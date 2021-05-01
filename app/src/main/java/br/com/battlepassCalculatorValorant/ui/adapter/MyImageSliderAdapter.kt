@@ -41,7 +41,7 @@ internal class MyImageSliderAdapter(// Context object
 
         val uri = imagesUrl[position]
         val imageView = holder.imgView
-        DowloaderImagers(context, DowloaderImagers.apng).downloadImage(
+        DowloaderImagers(context, DowloaderImagers.glide).downloadImage(
             uri,
             imageView
         )

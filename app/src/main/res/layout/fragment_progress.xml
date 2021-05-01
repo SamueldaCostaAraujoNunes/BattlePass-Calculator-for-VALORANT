@@ -1,128 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context="br.com.battlepassCalculatorValorant.ui.fragment.Propriedades.ProgressFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:paddingHorizontal="24dp"
+        android:paddingBottom="14dp">
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/total_de_xp_hint"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/valorant"
-            android:hint="@string/progresso"
-            android:paddingTop="14dp"
-            android:textColorHint="?attr/colorSecondary"
-            android:textSize="20dp" />
+            android:fontFamily="@font/muli_font_family"
+            android:hint="@string/total_de_xp"
+            android:textColorHint="?attr/colorOnSecondary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/total_de_xp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:fontFamily="@font/impact_font_family"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/total_de_xp_hint"
+            app:layout_constraintStart_toEndOf="@+id/total_de_xp_hint"
+            app:layout_constraintTop_toTopOf="@+id/total_de_xp_hint"
+            tools:text="122000 EXP" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/muli_font_family"
-                android:hint="@string/total_de_xp"
-                android:paddingTop="8dp"
-                android:paddingRight="5dp"
-                android:textColorHint="?attr/colorOnSecondary"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/total_de_xp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/impact_font_family"
-                android:paddingTop="8dp"
-                android:textColor="?attr/colorOnPrimary"
-                android:textSize="20dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/progress_porcent_hint"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:fontFamily="@font/muli_font_family"
+            android:hint="@string/progresso_porcento"
+            android:textColorHint="?attr/colorOnSecondary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/total_de_xp_hint" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/muli_font_family"
-                android:hint="@string/progresso_porcento"
-                android:paddingTop="8dp"
-                android:paddingRight="5dp"
-                android:textColorHint="?attr/colorOnSecondary"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/progress_porcent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/impact_font_family"
-                android:paddingTop="8dp"
-                android:textColor="?attr/colorOnPrimary"
-                android:textSize="20dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/progress_porcent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:fontFamily="@font/impact_font_family"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/progress_porcent_hint"
+            app:layout_constraintStart_toEndOf="@+id/progress_porcent_hint"
+            app:layout_constraintTop_toTopOf="@+id/progress_porcent_hint"
+            tools:text="10.43%" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/muli_font_family"
-                android:hint="@string/xp_por_dia"
-                android:paddingTop="8dp"
-                android:paddingRight="5dp"
-                android:textColorHint="?attr/colorOnSecondary"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/xp_p_dia"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/impact_font_family"
-                android:paddingTop="8dp"
-                android:textColor="?attr/colorOnPrimary"
-                android:textSize="20dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/xp_p_dia_hint"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:fontFamily="@font/muli_font_family"
+            android:hint="@string/xp_por_dia"
+            android:textColorHint="?attr/colorOnSecondary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progress_porcent_hint" />
 
-            <TextView
-                android:id="@+id/tag_exp_adiant_atrasado"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/muli_font_family"
-                android:hint="@string/exp_adiantado_atrasado"
-                android:paddingTop="8dp"
-                android:paddingRight="5dp"
-                android:textColorHint="?attr/colorOnSecondary"
-                android:textSize="20dp" />
+        <TextView
+            android:id="@+id/xp_p_dia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/impact_font_family"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/xp_p_dia_hint"
+            app:layout_constraintStart_toEndOf="@+id/xp_p_dia_hint"
+            app:layout_constraintTop_toTopOf="@+id/xp_p_dia_hint"
+            tools:text="40667 EXP" />
 
-            <TextView
-                android:id="@+id/exp_adiant_atrasado"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/impact_font_family"
-                android:paddingTop="8dp"
-                android:textColor="?attr/colorOnPrimary"
-                android:textSize="20dp" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/exp_adiant_atrasado_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muli_font_family"
+            android:hint="@string/exp_adiantado_atrasado"
+            android:textColorHint="?attr/colorOnSecondary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/xp_p_dia_hint" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/exp_adiant_atrasado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/impact_font_family"
+            android:textColor="?attr/colorAccent"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/exp_adiant_atrasado_hint"
+            app:layout_constraintStart_toEndOf="@+id/exp_adiant_atrasado_hint"
+            app:layout_constraintTop_toTopOf="@+id/exp_adiant_atrasado_hint"
+            tools:text="59122 EXP" />
 
-</FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

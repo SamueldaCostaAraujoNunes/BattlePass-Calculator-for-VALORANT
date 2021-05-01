@@ -7,7 +7,7 @@
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context="br.com.battlepassCalculatorValorant.ui.fragment.ChartsFragment">
+        tools:context="br.com.battlepassCalculatorValorant.ui.fragment.HomeFragment">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,15 +30,28 @@
 
             <br.com.battlepassCalculatorValorant.ui.views.CardModule
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
-                android:layout_gravity="center"
-                app:title="@string/xp_por_tier">
+                android:layout_height="450dp"
+                app:title="@string/seu_passe_de_batalha">
 
                 <androidx.fragment.app.FragmentContainerView
-                    android:id="@+id/fragmentChartExpPerTier"
+                    android:id="@+id/fragmentChart"
                     android:name="br.com.battlepassCalculatorValorant.ui.fragment.Principal.ChartExpPerTierFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
+
+            </br.com.battlepassCalculatorValorant.ui.views.CardModule>
+
+            <br.com.battlepassCalculatorValorant.ui.views.CardModule
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <fragment
+                    android:id="@+id/fragmentTierCurrent"
+                    android:name="br.com.battlepassCalculatorValorant.ui.fragment.Principal.TierCurrentFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:layout="@layout/fragment_tier_current" />
             </br.com.battlepassCalculatorValorant.ui.views.CardModule>
 
             <br.com.battlepassCalculatorValorant.ui.views.CardModule
@@ -56,28 +69,28 @@
 
             <br.com.battlepassCalculatorValorant.ui.views.CardModule
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:title="@string/exp_per_day">
+                app:isSlider="true">
 
                 <androidx.fragment.app.FragmentContainerView
-                    android:id="@+id/fragmentChartExpPerDay"
-                    android:name="br.com.battlepassCalculatorValorant.ui.fragment.Principal.ChartExpPerDayFragment"
+                    android:id="@+id/fragmentPropriets"
+                    android:name="br.com.battlepassCalculatorValorant.ui.fragment.Principal.PropriedadesFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
             </br.com.battlepassCalculatorValorant.ui.views.CardModule>
 
             <br.com.battlepassCalculatorValorant.ui.views.CardModule
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="500dp"
                 android:layout_gravity="center"
-                app:title="@string/exp_de_missoes">
+                app:isSlider="true">
 
                 <androidx.fragment.app.FragmentContainerView
-                    android:id="@+id/fragmentExpMissoes"
-                    android:name="br.com.battlepassCalculatorValorant.ui.fragment.Propriedades.ExpStatisticFragment"
+                    android:id="@+id/fragmentListTiers"
+                    android:name="br.com.battlepassCalculatorValorant.ui.fragment.Principal.RewardsFragment"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="match_parent" />
             </br.com.battlepassCalculatorValorant.ui.views.CardModule>
 
             <br.com.battlepassCalculatorValorant.ui.views.CardModule
@@ -97,6 +110,5 @@
                 android:layout_width="match_parent"
                 android:layout_height="55dp" />
         </LinearLayout>
-
     </ScrollView>
 </layout>

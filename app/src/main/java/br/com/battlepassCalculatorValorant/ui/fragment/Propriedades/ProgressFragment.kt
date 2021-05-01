@@ -43,7 +43,7 @@ class ProgressFragment : Fragment(), IObserver {
         val expAdiantadoAtrasado = properties.getExpAdiantAtrasado()
         val exp = "${expAdiantadoAtrasado.absoluteValue} EXP"
 
-        tag_exp_adiant_atrasado.hint = "EXP ${
+        exp_adiant_atrasado_hint.hint = "EXP ${
             if (expAdiantadoAtrasado >= 0)
                 requireContext().getString(R.string.adiantado) else
                 requireContext().getString(R.string.atrasado)

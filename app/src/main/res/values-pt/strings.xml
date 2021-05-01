@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Calculadora de passe para VALORANT</string>
     <string name="valorant">vAlorant</string>
-    <string name="ep_ato_atual">FORMACAO: ATO 3</string>
+    <string name="ep_ato_atual">FORMACAO:ATO 3</string>
     <string name="sufixo_nome_app">Calculadora do Passe de Batalha</string>
 
     <string name="tier_atual">Tier Atual</string>
@@ -21,19 +21,19 @@
     <string name="atrasado">Atrasado</string>
 
     <string name="data_inicial">Data Inicial</string>
-    <string name="progresso_porcento">% Progresso: </string>
-    <string name="total_de_xp">"Total de EXP: "</string>
-    <string name="xp_por_dia">"EXP p/ Dia: "</string>
-    <string name="exp_adiantado_atrasado">EXP Adiant/Atrasado: </string>
+    <string name="progresso_porcento">% Progresso:</string>
+    <string name="total_de_xp">Total de EXP:</string>
+    <string name="xp_por_dia">EXP p/ Dia:</string>
+    <string name="exp_adiantado_atrasado">EXP Adiant/Atrasado:</string>
 
     <string name="linha_do_tempo">Linha do Tempo</string>
-    <string name="data_inicial_do_ato">Data inicial do Ato: </string>
-    <string name="data_final_do_ato">Data final do Ato: </string>
-    <string name="data_finalizacao">Data de finalização: </string>
-    <string name="dia_do_passe">Dia do passe: </string>
-    <string name="dias_adiantados_atrasados">Dias adiantados/atrasados: </string>
-    <string name="dias_adiantados">Dias Adiantados: </string>
-    <string name="dias_atrasados">Dias Atrasados: </string>
+    <string name="data_inicial_do_ato">Data inicial do Ato:</string>
+    <string name="data_final_do_ato">Data final do Ato:</string>
+    <string name="data_finalizacao">Data de finalização:</string>
+    <string name="dia_do_passe">Dia do passe:</string>
+    <string name="dias_adiantados_atrasados">Dias adiantados/atrasados:</string>
+    <string name="dias_adiantados">Dias Adiantados:</string>
+    <string name="dias_atrasados">Dias Atrasados:</string>
 
     <string name="sem_classificacao">Sem Classificação</string>
     <string name="disputa_de_spike">Disputa de Spike</string>
@@ -58,8 +58,8 @@
     <string name="trocar_tema">Trocar Tema</string>
     <string name="exp_para_completar_">EXP para completar:</string>
     <string name="porcentagem_do_passe">Porcentagem do Passe:</string>
-    <string name="recompensa">Recompensa: </string>
-    <string name="capitulo">Capítulo: </string>
+    <string name="recompensa">Recompensa:</string>
+    <string name="capitulo">Capítulo:</string>
 
     <string name="recompensa_por_tier">Recompensa por tier</string>
     <string name="recompensa_por_capitulo">Recompensa por Capítulo</string>
@@ -72,7 +72,7 @@
 
     <string name="tutorial_titulo">Opa, Jogador de vALORaNT!</string>
     <string name="tutorial_conteudo_primeira_tela">Este app o ajudará a completar o Passe de Batalha Atual, sem pressa! Não será necessário qualquer tipo de login com a sua conta Riot, apenas siga os passo a seguir e um tenha um bom passe!</string>
-    <string name="tutorial_conteudo_segunda_tela">No canto superior esquerdo, clique em: Passe de Batalha</string>
+    <string name="tutorial_conteudo_segunda_tela">No canto superior esquerdo, clique em:Passe de Batalha</string>
     <string name="tutorial_conteudo_terceira_tela">No icone em miniatura da recompensa, você verá o número do Tier Atual, neste caso, o Tier 50 e logo acima, a quantidade de EXP que falta para completar este Tier (3100 EXP), essas são as únicas informações necessarias.</string>
 
     <string name="tema_do_app">Tema do App</string>

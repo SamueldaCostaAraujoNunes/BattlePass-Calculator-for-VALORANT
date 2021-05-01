@@ -5,16 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import br.com.battlepassCalculatorValorant.R
+import br.com.battlepassCalculatorValorant.databinding.FragmentHomeBinding
+import br.com.battlepassCalculatorValorant.extensions.bindingAdapters.load
 import br.com.battlepassCalculatorValorant.model.Properties.Properties
 import br.com.battlepassCalculatorValorant.model.Singleton.ManagerProperties
-import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement.Companion.BANNER
-import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement.Companion.LARGE_BANNER
-import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement.Companion.MEDIUM_RECTANGLE
-import kotlinx.android.synthetic.main.fragment_principal.*
 
-class PrincipalFragment : Fragment() {
+
+class HomeFragment : Fragment() {
     private lateinit var properties: Properties
+    private lateinit var binding: FragmentHomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         properties = ManagerProperties.getInstance(requireContext())
@@ -23,16 +22,17 @@ class PrincipalFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adContainer0.createBanner(R.string.admob_card0, BANNER)
-        adContainer1.createBanner(R.string.admob_card1, LARGE_BANNER)
-        adContainer2.createBanner(R.string.admob_card2, MEDIUM_RECTANGLE)
+        binding.adViewTop.load()
+        binding.adViewCenter.load()
+        binding.adViewBottom.load()
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_principal, container, false)
+    ): View {
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onDestroyView() {

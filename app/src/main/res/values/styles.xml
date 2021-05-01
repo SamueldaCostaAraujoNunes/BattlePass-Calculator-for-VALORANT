@@ -2,10 +2,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="CardViewStyle" parent="CardView">
-        <item name="cardCornerRadius">10dp</item>
-        <item name="cardElevation">5dp</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">4dp</item>
         <item name="cardUseCompatPadding">true</item>
         <item name="cardBackgroundColor">?attr/colorPrimary</item>
+        <item name="android:padding">4dp</item>
         <item name="android:layout_marginHorizontal" tools:targetApi="o">8dp</item>
     </style>
 

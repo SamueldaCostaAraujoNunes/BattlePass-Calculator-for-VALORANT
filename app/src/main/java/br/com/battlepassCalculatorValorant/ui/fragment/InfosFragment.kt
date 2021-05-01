@@ -5,15 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import br.com.battlepassCalculatorValorant.R
+import br.com.battlepassCalculatorValorant.databinding.FragmentInfosBinding
+import br.com.battlepassCalculatorValorant.extensions.bindingAdapters.load
 import br.com.battlepassCalculatorValorant.model.Properties.Properties
 import br.com.battlepassCalculatorValorant.model.Singleton.ManagerProperties
-import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement
-import kotlinx.android.synthetic.main.fragment_infos.*
 
 class InfosFragment : Fragment() {
 
     private lateinit var properties: Properties
+    private lateinit var binding: FragmentInfosBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,15 +23,16 @@ class InfosFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_infos, container, false)
+    ): View {
+        binding = FragmentInfosBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adContainer5.createBanner(R.string.admob_card5, Advertisement.BANNER)
-        adContainer6.createBanner(R.string.admob_card6, Advertisement.LARGE_BANNER)
-        adContainer7.createBanner(R.string.admob_card7, Advertisement.MEDIUM_RECTANGLE)
+        binding.adViewTop.load()
+        binding.adViewCenter.load()
+        binding.adViewBottom.load()
     }
 
     override fun onDestroyView() {

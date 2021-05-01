@@ -6,8 +6,8 @@ import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement
 import br.com.battlepassCalculatorValorant.ui.dialog.DialogInput
 import br.com.battlepassCalculatorValorant.ui.fragment.ChartsFragment
+import br.com.battlepassCalculatorValorant.ui.fragment.HomeFragment
 import br.com.battlepassCalculatorValorant.ui.fragment.InfosFragment
-import br.com.battlepassCalculatorValorant.ui.fragment.PrincipalFragment
 import br.com.battlepassCalculatorValorant.ui.fragment.SettingsFragment
 import com.google.android.gms.ads.InterstitialAd
 import kotlinx.android.synthetic.main.activity_main.*
@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         mInterstitialAd = InterstitialAd(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        createFragment(R.id.fragmentPrincipal, PrincipalFragment())
+        createFragment(R.id.fragmentPrincipal, HomeFragment())
         createListeners()
         initAdMob()
     }
@@ -62,11 +62,11 @@ class MainActivity : AppCompatActivity() {
             if (previousItem != nextItem) {
                 val fragment: androidx.fragment.app.Fragment =
                     when (nextItem) {
-                        R.id.item_home -> PrincipalFragment()
+                        R.id.item_home -> HomeFragment()
                         R.id.item_timeline -> ChartsFragment()
                         R.id.item_timer -> InfosFragment()
                         R.id.item_apps -> SettingsFragment()
-                        else -> PrincipalFragment()
+                        else -> HomeFragment()
                     }
                 val config = nextItem != R.id.item_apps
                 bottomNavigationView.transform(fab, config)

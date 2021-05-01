@@ -1,7 +1,7 @@
 package br.com.battlepassCalculatorValorant.model.ListListener
 
 import android.content.Context
-import br.com.battlepassCalculatorValorant.model.DataBase.SQLite.DbTierInput
+import br.com.battlepassCalculatorValorant.database.SQLite.DbTierInput
 import br.com.battlepassCalculatorValorant.model.Historic.UserInputsTier
 
 open class HistoricArrayListListener(context: Context) : ArrayListListener<UserInputsTier>() {

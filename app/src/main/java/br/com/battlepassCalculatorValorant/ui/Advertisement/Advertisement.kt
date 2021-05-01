@@ -37,7 +37,6 @@ class Advertisement(val context: Context) {
         val adRequest =
             AdRequest
                 .Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
                 .build()
         adView.loadAd(adRequest)
         adView.adListener = object : AdListener() {

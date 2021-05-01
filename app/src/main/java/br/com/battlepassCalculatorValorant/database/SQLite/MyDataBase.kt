@@ -1,4 +1,4 @@
-package br.com.battlepassCalculatorValorant.model.DataBase.SQLite
+package br.com.battlepassCalculatorValorant.database.SQLite
 
 import android.content.Context
 import android.database.sqlite.SQLiteOpenHelper

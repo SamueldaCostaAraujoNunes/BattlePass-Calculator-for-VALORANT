@@ -3,7 +3,7 @@ package br.com.battlepassCalculatorValorant.model.theme
 import android.content.Context
 import androidx.appcompat.app.AppCompatDelegate
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.model.DataBase.SharedPreferences.ThemeSharedPreferences
+import br.com.battlepassCalculatorValorant.database.SharedPreferences.ThemeSharedPreferences
 
 class Theme(val context: Context) {
     private val myThemes = arrayListOf(

@@ -1,7 +1,6 @@
-package br.com.battlepassCalculatorValorant.ui.dialog
+package br.com.battlepassCalculatorValorant.database
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import androidx.appcompat.app.AlertDialog
@@ -63,11 +62,11 @@ class DialogEditInput(context: Context, val position: Int, val historic: Histori
     }
 
     fun launcherAdMob() {
-        if (mInterstitialAd.isLoaded) {
-            mInterstitialAd.show()
-        } else {
-            Log.d("TAG", "The interstitial wasn't loaded yet.")
-        }
+//        if (mInterstitialAd.) {
+//            mInterstitialAd.show()
+//        } else {
+//            Log.d("TAG", "The interstitial wasn't loaded yet.")
+//        }
     }
 
 }

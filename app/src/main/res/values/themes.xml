@@ -26,7 +26,9 @@
         <item name="android:navigationBarColor">?attr/colorPrimaryVariant</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="mCardViewStyle">@style/CardViewStyle</item>
     </style>
+
 
     <style name="Theme.ValorantPassBattle.NoActionBar">
         <item name="windowActionBar">false</item>

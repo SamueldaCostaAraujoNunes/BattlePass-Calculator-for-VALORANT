@@ -21,7 +21,8 @@
             android:fontFamily="@font/valorant"
             android:paddingTop="4dp"
             android:textColor="?attr/colorSecondary"
-            android:textSize="20dp" />
+            android:textSize="20sp"
+            tools:text="tier 17" />
 
         <TextView
             android:id="@+id/tv_tier_rewind"
@@ -30,7 +31,8 @@
             android:fontFamily="@font/muli_font_family"
             android:paddingTop="8dp"
             android:textColor="?attr/colorOnPrimary"
-            android:textSize="20dp" />
+            android:textSize="20sp"
+            tools:text="Esquema Stinger" />
 
         <TextView
             android:id="@+id/tv_percentage_tier"
@@ -39,7 +41,8 @@
             android:fontFamily="@font/muli_font_family"
             android:paddingTop="8dp"
             android:textColor="?attr/colorOnPrimary"
-            android:textSize="20dp" />
+            android:textSize="20sp"
+            tools:text="100% Feito" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPagerMain"

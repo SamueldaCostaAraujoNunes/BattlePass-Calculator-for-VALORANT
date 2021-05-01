@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="titleName"
+            type="String" />
+
+        <variable
+            name="isSlider"
+            type="Boolean" />
+    </data>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/valorant"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="@{isSlider ? @dimen/padding_with_dots_indicator : @dimen/padding_without_dots_indicator}"
+        android:paddingBottom="14dp"
+        android:text="@{titleName}"
+        android:textColor="?attr/colorSecondary"
+        android:textSize="20sp"
+        app:visibilityIf="@{titleName != null}"
+        tools:ignore="RtlSymmetry"
+        tools:paddingTop="@dimen/padding_without_dots_indicator"
+        tools:text="@{titleName}" />
+</layout>

@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Battle Pass Calculator for VALORANT</string>
     <string name="valorant">vAlorant</string>
-    <string name="ep_ato_atual">FORMATION: ACT 3</string>
+    <string name="ep_ato_atual">FORMATION:ACT 3</string>
     <string name="sufixo_nome_app">BattlePass Calculator</string>
 
     <string name="tier_atual">Current Tier</string>
@@ -25,19 +25,19 @@
     <string name="atrasado">Delayed</string>
 
     <string name="data_inicial">Initial date</string>
-    <string name="progresso_porcento">"% Progress: "</string>
-    <string name="total_de_xp">"Total EXP: "</string>
-    <string name="xp_por_dia">"EXP p/ Day: "</string>
-    <string name="exp_adiantado_atrasado">"Early/Late EXP: "</string>
+    <string name="progresso_porcento">"% Progress:"</string>
+    <string name="total_de_xp">"Total EXP:"</string>
+    <string name="xp_por_dia">"EXP p/ Day:"</string>
+    <string name="exp_adiantado_atrasado">"Early/Late EXP:"</string>
 
     <string name="linha_do_tempo">Timeline</string>
-    <string name="data_inicial_do_ato">"Initial act date: "</string>
-    <string name="data_final_do_ato">"Final date of the Act: "</string>
-    <string name="data_finalizacao">"End date: "</string>
-    <string name="dia_do_passe">"Pass Day: "</string>
-    <string name="dias_adiantados_atrasados">"Early / Late Days: "</string>
-    <string name="dias_adiantados">Days Forward: </string>
-    <string name="dias_atrasados">Days Delayed: </string>
+    <string name="data_inicial_do_ato">"Initial act date:"</string>
+    <string name="data_final_do_ato">"Final date of the Act:"</string>
+    <string name="data_finalizacao">"End date:"</string>
+    <string name="dia_do_passe">"Pass Day:"</string>
+    <string name="dias_adiantados_atrasados">"Early / Late Days:"</string>
+    <string name="dias_adiantados">Days Forward:</string>
+    <string name="dias_atrasados">Days Delayed:</string>
 
     <string name="sem_classificacao">Normal</string>
     <string name="disputa_de_spike">Spike Rush</string>
@@ -46,7 +46,7 @@
     <string name="tempo_restante_horas">Time left</string>
     <string name="jogos_restantes">Remaining Games</string>
     <string name="expectativas">Expectations</string>
-    <string name="dias_para_o_fim_do_passe">"Days until the pass ends: "</string>
+    <string name="dias_para_o_fim_do_passe">"Days until the pass ends:"</string>
 
     <string name="home">Home</string>
     <string name="graficos">Graphics</string>
@@ -59,13 +59,13 @@
 
     <string name="publicidade">Publicity</string>
     <string name="trocar_tema">Change Theme</string>
-    <string name="porcentagem_do_passe">"Pass Percent: "</string>
-    <string name="recompensa">"Reward: "</string>
-    <string name="capitulo">"Chapter: "</string>
+    <string name="porcentagem_do_passe">"Pass Percent:"</string>
+    <string name="recompensa">"Reward:"</string>
+    <string name="capitulo">"Chapter:"</string>
 
     <string name="recompensa_por_tier">Tier Reward</string>
     <string name="recompensa_por_capitulo">Chapter Reward</string>
-    <string name="tipo">"Type: "</string>
+    <string name="tipo">"Type:"</string>
     <string name="editar_historico">Edit History</string>
 
     <string name="exp_de_missoes">Missions EXP</string>
@@ -74,10 +74,10 @@
 
     <string name="tutorial_titulo">Hello, vALORaNT Player!</string>
     <string name="tutorial_conteudo_primeira_tela">This app will help you complete the Current Battle Pass without rushing! There will be no need to login with your Riot account, just follow the steps below and has a good pass!</string>
-    <string name="tutorial_conteudo_segunda_tela">In the top left corner, click: Battle Pass</string>
+    <string name="tutorial_conteudo_segunda_tela">In the top left corner, click:Battle Pass</string>
     <string name="tutorial_conteudo_terceira_tela">In the miniature icon of the reward, you will see the number of the Current Tier, in this case, the Tier 50 and just above, the amount of EXP left to complete this Tier (3100 EXP), these are the only information needed.</string>
     <string name="semanais">Weekly</string>
-    <string name="exp_para_completar_">"EXP to complete: "</string>
+    <string name="exp_para_completar_">"EXP to complete:"</string>
 
     <string name="tema_do_app">App Theme</string>
     <string name="tema_claro">Light</string>

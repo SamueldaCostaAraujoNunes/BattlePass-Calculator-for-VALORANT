@@ -1,81 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/scrollView"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context="br.com.battlepassCalculatorValorant.ui.fragment.InfosFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingBottom="14dp">
+        tools:context="br.com.battlepassCalculatorValorant.ui.fragment.InfosFragment">
 
-        <br.com.battlepassCalculatorValorant.ui.Advertisement.AdvertisementView
-            android:id="@+id/adContainer5"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center" />
+            android:orientation="vertical"
+            android:paddingBottom="14dp">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardProgressFragment"
-            style="@style/CardViewStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            <br.com.battlepassCalculatorValorant.ui.views.CardModule
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
 
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/fragmentChart"
-                android:name="br.com.battlepassCalculatorValorant.ui.fragment.Propriedades.ProgressFragment"
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/adView_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:adSize="BANNER"
+                    app:adUnitId="@string/admob_card_id_test" />
+            </br.com.battlepassCalculatorValorant.ui.views.CardModule>
+
+            <br.com.battlepassCalculatorValorant.ui.views.CardModule
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:title="@string/progresso">
 
-        </androidx.cardview.widget.CardView>
+                <fragment
+                    android:id="@+id/fragmentChart"
+                    android:name="br.com.battlepassCalculatorValorant.ui.fragment.Propriedades.ProgressFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:layout="@layout/fragment_progress" />
+            </br.com.battlepassCalculatorValorant.ui.views.CardModule>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardTimelineFragment"
-            style="@style/CardViewStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/fragmentPropriets"
-                android:name="br.com.battlepassCalculatorValorant.ui.fragment.Propriedades.TimelineFragment"
+            <br.com.battlepassCalculatorValorant.ui.views.CardModule
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
 
-        </androidx.cardview.widget.CardView>
+                <fragment
+                    android:id="@+id/fragmentPropriets"
+                    android:name="br.com.battlepassCalculatorValorant.ui.fragment.Propriedades.TimelineFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:layout="@layout/fragment_timeline" />
+            </br.com.battlepassCalculatorValorant.ui.views.CardModule>
 
-        <br.com.battlepassCalculatorValorant.ui.Advertisement.AdvertisementView
-            android:id="@+id/adContainer6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center" />
+            <br.com.battlepassCalculatorValorant.ui.views.CardModule
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardProjectionsFragment"
-            style="@style/CardViewStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/adView_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:adSize="LARGE_BANNER"
+                    app:adUnitId="@string/admob_card_id_test" />
+            </br.com.battlepassCalculatorValorant.ui.views.CardModule>
 
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/fragmentTierCurrent"
-                android:name="br.com.battlepassCalculatorValorant.ui.fragment.Propriedades.ProjectionsFragment"
+            <br.com.battlepassCalculatorValorant.ui.views.CardModule
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
 
-        </androidx.cardview.widget.CardView>
+                <fragment
+                    android:id="@+id/fragmentTierCurrent"
+                    android:name="br.com.battlepassCalculatorValorant.ui.fragment.Propriedades.ProjectionsFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:layout="@layout/fragment_projections" />
+            </br.com.battlepassCalculatorValorant.ui.views.CardModule>
 
-        <br.com.battlepassCalculatorValorant.ui.Advertisement.AdvertisementView
-            android:id="@+id/adContainer7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center" />
+            <br.com.battlepassCalculatorValorant.ui.views.CardModule
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="55dp" />
-    </LinearLayout>
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/adView_bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:adSize="MEDIUM_RECTANGLE"
+                    app:adUnitId="@string/admob_card_id_test" />
+            </br.com.battlepassCalculatorValorant.ui.views.CardModule>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="55dp" />
+        </LinearLayout>
 
 
-</ScrollView>
+    </ScrollView>
+</layout>

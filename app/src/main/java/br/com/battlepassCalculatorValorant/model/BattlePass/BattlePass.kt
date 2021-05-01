@@ -3,7 +3,7 @@ package br.com.battlepassCalculatorValorant.model.BattlePass
 import android.annotation.SuppressLint
 import android.content.Context
 import android.icu.text.SimpleDateFormat
-import br.com.battlepassCalculatorValorant.model.DataBase.SharedPreferences.EpilogoSharedPreferences
+import br.com.battlepassCalculatorValorant.database.SharedPreferences.EpilogoSharedPreferences
 import org.json.JSONObject
 import java.util.*
 

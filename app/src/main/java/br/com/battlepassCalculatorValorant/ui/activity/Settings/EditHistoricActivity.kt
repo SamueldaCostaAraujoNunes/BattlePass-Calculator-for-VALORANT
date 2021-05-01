@@ -5,12 +5,12 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import br.com.battlepassCalculatorValorant.R
+import br.com.battlepassCalculatorValorant.database.DialogEditInput
 import br.com.battlepassCalculatorValorant.model.Historic.Historic
 import br.com.battlepassCalculatorValorant.model.Singleton.ManagerProperties
 import br.com.battlepassCalculatorValorant.ui.adapter.MyEditHistoricRecyclerViewAdapter
 import br.com.battlepassCalculatorValorant.ui.adapter.RecyclerItemClickListener
 import br.com.battlepassCalculatorValorant.ui.dialog.DialogDeleteItemConfimation
-import br.com.battlepassCalculatorValorant.ui.dialog.DialogEditInput
 import br.com.battlepassCalculatorValorant.ui.helpers.HistoricItemSwipeHelper
 import br.com.battlepassCalculatorValorant.ui.helpers.SwipedEventListener
 import kotlinx.android.synthetic.main.activity_edit_historic.*
