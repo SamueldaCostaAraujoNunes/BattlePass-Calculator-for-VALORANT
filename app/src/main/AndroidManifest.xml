@@ -14,18 +14,18 @@
         android:theme="@style/Theme.ValorantPassBattle">
 
     <activity
-            android:name=".ui.activity.IntroTutorial.IntroTutorialActivity"
-            android:theme="@style/Theme.ValorantPassBattle.Light.NoActionBar.FullScreen"></activity>
+            android:name="br.com.battlepassCalculatorValorant.ui.view.activity.IntroTutorial.IntroTutorialActivity"
+        android:theme="@style/Theme.ValorantPassBattle.Light.NoActionBar.FullScreen"></activity>
         <activity
-            android:name=".ui.activity.Settings.EditHistoricActivity"
+            android:name="br.com.battlepassCalculatorValorant.ui.view.activity.Settings.EditHistoricActivity"
             android:theme="@style/Theme.ValorantPassBattle.NoActionBar" />
 
         <receiver
-            android:name=".ui.notification.NotificationReceiver"
+            android:name="br.com.battlepassCalculatorValorant.ui.view.notification.NotificationReceiver"
             android:enabled="true" />
 
         <activity
-            android:name=".ui.activity.SplashScreenActivity"
+            android:name="br.com.battlepassCalculatorValorant.ui.view.activity.SplashScreenActivity"
             android:theme="@style/Theme.ValorantPassBattle.Light.NoActionBar.FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,7 +33,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activity.MainActivity"
+            android:name="br.com.battlepassCalculatorValorant.ui.view.activity.MainActivity"
             android:hardwareAccelerated="true"
             android:theme="@style/Theme.ValorantPassBattle.NoActionBar" />
 

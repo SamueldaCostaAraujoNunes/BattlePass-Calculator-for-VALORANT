@@ -1,180 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="br.com.battlepassCalculatorValorant.ui.fragment.Propriedades.TimelineFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="br.com.battlepassCalculatorValorant.ui.viewModel.fragment.TimelineFragmentViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:paddingHorizontal="24dp"
+        android:paddingBottom="14dp">
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/data_inicial_do_ato_text"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/valorant"
-            android:hint="@string/linha_do_tempo"
-            android:paddingTop="14dp"
-            android:textColorHint="?attr/colorSecondary"
-            android:textSize="20dp" />
+            android:fontFamily="@font/muli_font_family"
+            android:text="@string/data_inicial_do_ato"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/data_inicial_do_ato"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:fontFamily="@font/impact_font_family"
+            android:text="@{viewmodel.dataInicioAto}"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/data_inicial_do_ato_text"
+            app:layout_constraintStart_toEndOf="@+id/data_inicial_do_ato_text"
+            app:layout_constraintTop_toTopOf="@+id/data_inicial_do_ato_text"
+            tools:text="27/04/2021" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/muli_font_family"
-                android:hint="@string/data_inicial_do_ato"
-                android:paddingTop="8dp"
-                android:paddingRight="5dp"
-                android:textColorHint="?attr/colorOnSecondary"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/data_inicial_do_ato"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/impact_font_family"
-                android:paddingTop="8dp"
-                android:textColor="?attr/colorOnPrimary"
-                android:textSize="20dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/data_de_finalizacao_text"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:fontFamily="@font/muli_font_family"
+            android:text="@string/data_finalizacao"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/data_inicial_do_ato_text" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/muli_font_family"
-                android:hint="@string/data_finalizacao"
-                android:paddingTop="8dp"
-                android:paddingRight="5dp"
-                android:textColorHint="?attr/colorOnSecondary"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/data_finalizacao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/impact_font_family"
-                android:paddingTop="8dp"
-                android:textColor="?attr/colorOnPrimary"
-                android:textSize="20dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/data_finalizacao"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:fontFamily="@font/impact_font_family"
+            android:text="@{viewmodel.dataFinalizacao}"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="20sp"
+            app:adiantado="@{viewmodel.diasAdiantadoAtrasado >= 0}"
+            app:layout_constraintBottom_toBottomOf="@+id/data_de_finalizacao_text"
+            app:layout_constraintStart_toEndOf="@+id/data_de_finalizacao_text"
+            app:layout_constraintTop_toTopOf="@+id/data_de_finalizacao_text"
+            tools:text="13/06/2021"
+            tools:textColor="?attr/colorAccent" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/muli_font_family"
-                android:hint="@string/data_final_do_ato"
-                android:paddingTop="8dp"
-                android:paddingRight="5dp"
-                android:textColorHint="?attr/colorOnSecondary"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/data_final_do_ato"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/impact_font_family"
-                android:paddingTop="8dp"
-                android:textColor="?attr/colorOnPrimary"
-                android:textSize="20dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/data_final_do_ato_text"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:fontFamily="@font/muli_font_family"
+            android:text="@string/data_final_do_ato"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/data_de_finalizacao_text" />
 
-            <TextView
-                android:id="@+id/tag_dia_do_passe"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/muli_font_family"
-                android:hint="@string/dia_do_passe"
-                android:paddingTop="8dp"
-                android:paddingRight="5dp"
-                android:textColorHint="?attr/colorOnSecondary"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/dia_do_passe"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/impact_font_family"
-                android:paddingTop="8dp"
-                android:textColor="?attr/colorOnPrimary"
-                android:textSize="20dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/data_final_do_ato"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:fontFamily="@font/impact_font_family"
+            android:text="@{viewmodel.dataFinalAto}"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/data_final_do_ato_text"
+            app:layout_constraintStart_toEndOf="@+id/data_final_do_ato_text"
+            app:layout_constraintTop_toTopOf="@+id/data_final_do_ato_text"
+            tools:text="21/06/2021" />
 
-            <TextView
-                android:id="@+id/tag_dias_para_acabar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/muli_font_family"
-                android:hint="@string/dias_para_o_fim_do_passe"
-                android:paddingTop="8dp"
-                android:paddingRight="5dp"
-                android:textColorHint="?attr/colorOnSecondary"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/dias_para_acabar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/impact_font_family"
-                android:paddingTop="8dp"
-                android:textColor="?attr/colorOnPrimary"
-                android:textSize="20dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/dia_do_passe_text"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:fontFamily="@font/muli_font_family"
+            android:text="@string/dia_do_passe"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/data_final_do_ato_text" />
 
-            <TextView
-                android:id="@+id/tag_dias_adiantados_atrasados"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/muli_font_family"
-                android:hint="@string/dias_adiantados_atrasados"
-                android:paddingTop="8dp"
-                android:paddingRight="5dp"
-                android:textColorHint="?attr/colorOnSecondary"
-                android:textSize="20dp" />
+        <TextView
+            android:id="@+id/dia_do_passe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/impact_font_family"
+            android:text="@{String.valueOf(viewmodel.diaAtualDoPasse)}"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/dia_do_passe_text"
+            app:layout_constraintStart_toEndOf="@+id/dia_do_passe_text"
+            app:layout_constraintTop_toTopOf="@+id/dia_do_passe_text"
+            tools:text="5" />
 
-            <TextView
-                android:id="@+id/dias_adiantados_atrasados"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/impact_font_family"
-                android:paddingTop="8dp"
-                android:textColor="?attr/colorOnPrimary"
-                android:textSize="20dp" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/dias_para_acabar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muli_font_family"
+            android:text="@string/dias_para_o_fim_do_passe"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dia_do_passe_text" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/dias_para_acabar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/impact_font_family"
+            android:text="@{String.valueOf(viewmodel.diasParaOFimDoPasse)}"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/dias_para_acabar_text"
+            app:layout_constraintStart_toEndOf="@+id/dias_para_acabar_text"
+            app:layout_constraintTop_toTopOf="@+id/dias_para_acabar_text"
+            tools:text="51" />
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/dias_adiantados_atrasados_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muli_font_family"
+            android:text="@string/dias_adiantados_atrasados"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dias_para_acabar_text" />
+
+        <TextView
+            android:id="@+id/dias_adiantados_atrasados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/impact_font_family"
+            android:text="@{String.valueOf(viewmodel.diasAdiantadoAtrasado)}"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="20sp"
+            app:adiantado="@{viewmodel.diasAdiantadoAtrasado >= 0}"
+            app:layout_constraintBottom_toBottomOf="@+id/dias_adiantados_atrasados_text"
+            app:layout_constraintStart_toEndOf="@+id/dias_adiantados_atrasados_text"
+            app:layout_constraintTop_toTopOf="@+id/dias_adiantados_atrasados_text"
+            tools:text="8"
+            tools:textColor="?attr/colorAccent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:layout_margin="10dp"
     android:fitsSystemWindows="true"
-    tools:context="br.com.battlepassCalculatorValorant.ui.fragment.Principal.RewardsFragment">
+    tools:context=".ui.view.fragment.Principal.RewardsFragment">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/pager_rewards"

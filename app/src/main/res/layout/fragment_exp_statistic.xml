@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".ui.fragment.Propriedades.ExpStatisticFragment">
+    tools:context=".ui.view.fragment.Propriedades.ExpStatisticFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,17 +41,17 @@
                 android:tint="?attr/colorError" />
         </LinearLayout>
 
-        <br.com.battlepassCalculatorValorant.ui.progressBar.mProgressBarView
+        <br.com.battlepassCalculatorValorant.ui.view.progressBar.mProgressBarView
             android:id="@+id/pb_jogos_normais"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <br.com.battlepassCalculatorValorant.ui.progressBar.mProgressBarView
+        <br.com.battlepassCalculatorValorant.ui.view.progressBar.mProgressBarView
             android:id="@+id/pb_missoes_diarias"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <br.com.battlepassCalculatorValorant.ui.progressBar.mProgressBarView
+        <br.com.battlepassCalculatorValorant.ui.view.progressBar.mProgressBarView
             android:id="@+id/pb_missoes_semanais"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

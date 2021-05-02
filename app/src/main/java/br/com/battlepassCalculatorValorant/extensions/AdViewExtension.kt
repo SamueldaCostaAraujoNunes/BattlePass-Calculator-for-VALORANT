@@ -1,7 +1,7 @@
 package br.com.battlepassCalculatorValorant.extensions.bindingAdapters
 
 import android.view.View
-import br.com.battlepassCalculatorValorant.ui.views.CardModule
+import br.com.battlepassCalculatorValorant.ui.view.views.CardModule
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView

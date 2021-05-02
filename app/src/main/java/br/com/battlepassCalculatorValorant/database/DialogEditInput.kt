@@ -7,7 +7,7 @@ import androidx.appcompat.app.AlertDialog
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.Historic.Historic
 import br.com.battlepassCalculatorValorant.model.Util.ValidateInputUser
-import br.com.battlepassCalculatorValorant.ui.Advertisement.Advertisement
+import br.com.battlepassCalculatorValorant.ui.view.Advertisement.Advertisement
 import com.google.android.gms.ads.InterstitialAd
 import com.google.android.material.textfield.TextInputEditText
 import kotlinx.android.synthetic.main.dialog_tierinput.view.*

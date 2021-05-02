@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    tools:context=".ui.fragment.Propriedades.AdMobFragment">
+    tools:context=".ui.view.fragment.Propriedades.AdMobFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
             android:textColorHint="?attr/colorSecondary"
             android:textSize="20dp" />
 
-        <br.com.battlepassCalculatorValorant.ui.Advertisement.AdvertisementView
+        <br.com.battlepassCalculatorValorant.ui.view.Advertisement.AdvertisementView
             android:id="@+id/adContainer8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

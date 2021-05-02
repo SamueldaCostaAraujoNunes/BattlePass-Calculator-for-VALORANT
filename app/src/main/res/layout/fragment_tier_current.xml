@@ -1,28 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="br.com.battlepassCalculatorValorant.ui.fragment.Principal.TierCurrentFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="br.com.battlepassCalculatorValorant.ui.viewModel.fragment.TierCurrentFragmentViewModel" />
+
+        <variable
+            name="indicator"
+            type="com.tbuonomo.viewpagerdotsindicator.DotsIndicator" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
         android:orientation="vertical"
-        android:padding="10dp">
-
-        <TextView
-            android:id="@+id/tv_tier_index"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/valorant"
-            android:paddingTop="4dp"
-            android:textColor="?attr/colorSecondary"
-            android:textSize="20sp"
-            tools:text="tier 17" />
+        android:paddingHorizontal="24dp"
+        android:paddingBottom="14dp">
 
         <TextView
             android:id="@+id/tv_tier_rewind"
@@ -32,6 +30,9 @@
             android:paddingTop="8dp"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
+            android:text="@{viewmodel.tierName}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="Esquema Stinger" />
 
         <TextView
@@ -42,12 +43,18 @@
             android:paddingTop="8dp"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
+            android:text="@{String.valueOf(viewmodel.percentageTier) + `% ` + @string/feito}"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tier_rewind"
             tools:text="100% Feito" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPagerMain"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            app:imagesURl="@{viewmodel.imagesURL}"
+            app:indicator="@{indicator}"
+            app:layout_constraintTop_toBottomOf="@+id/tv_percentage_tier"
+            tools:layout_height="350dp" />
 
         <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
             android:id="@+id/dots_indicator_images"
@@ -60,8 +67,11 @@
             app:dotsSize="16dp"
             app:dotsSpacing="4dp"
             app:dotsWidthFactor="2.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewPagerMain"
+            app:visibilityIf="@{viewmodel.imagesURL.size() > 1}"
             app:progressMode="false"
             app:selectedDotColor="?attr/colorSecondary" />
-    </LinearLayout>
-
-</FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

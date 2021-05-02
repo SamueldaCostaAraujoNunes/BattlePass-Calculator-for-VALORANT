@@ -6,7 +6,6 @@
         <item name="cardElevation">4dp</item>
         <item name="cardUseCompatPadding">true</item>
         <item name="cardBackgroundColor">?attr/colorPrimary</item>
-        <item name="android:padding">4dp</item>
         <item name="android:layout_marginHorizontal" tools:targetApi="o">8dp</item>
     </style>
 
