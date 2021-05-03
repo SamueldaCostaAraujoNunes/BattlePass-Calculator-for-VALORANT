@@ -6,7 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AlertDialog
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.BattlePass.Tier
-import br.com.battlepassCalculatorValorant.ui.view.adapter.MyImageSliderAdapter
+import br.com.battlepassCalculatorValorant.ui.view.adapter.SliderImagesAdapter
 import kotlinx.android.synthetic.main.dialog_tier.view.*
 
 
@@ -43,7 +43,7 @@ class DialogTier(context: Context, tier: Tier) : AlertDialog(context) {
             tv_total_percentage_tier.text = totalPercentage
             tv_reward_tier.text = reward[0].nome
 
-            val mViewPagerAdapter = MyImageSliderAdapter(context, tier.reward[0].imagens)
+            val mViewPagerAdapter = SliderImagesAdapter(tier.reward[0].imagens)
             dialogViewPagerMain.adapter = mViewPagerAdapter
             indicator_image_slider.setViewPager2(dialogViewPagerMain)
         }

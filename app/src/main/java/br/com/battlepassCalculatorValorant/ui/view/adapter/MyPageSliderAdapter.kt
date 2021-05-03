@@ -16,7 +16,7 @@ class MyPageSliderAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
         mFragmentList.add(fragment)
     }
 
-    fun getItem(position: Int): Fragment? {
+    fun getItem(position: Int): Fragment {
         return mFragmentList[position]
     }
 }

@@ -7,15 +7,12 @@ import androidx.appcompat.app.AlertDialog
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.Historic.Historic
 import br.com.battlepassCalculatorValorant.model.Util.ValidateInputUser
-import br.com.battlepassCalculatorValorant.ui.view.Advertisement.Advertisement
-import com.google.android.gms.ads.InterstitialAd
 import com.google.android.material.textfield.TextInputEditText
 import kotlinx.android.synthetic.main.dialog_tierinput.view.*
 
 @Suppress("CAST_NEVER_SUCCEEDS")
 class DialogEditInput(context: Context, val position: Int, val historic: Historic) :
     AlertDialog(context) {
-    private var mInterstitialAd: InterstitialAd
     var tvTierIndex: TextInputEditText
     var tvTierExpMissing: TextInputEditText
     var mDialogView: View
@@ -36,7 +33,6 @@ class DialogEditInput(context: Context, val position: Int, val historic: Histori
         builder = Builder(context)
             .setView(mDialogView)
             .setTitle(context.getString(R.string.tier_edit))
-        mInterstitialAd = Advertisement(context).createInterstitial()
     }
 
 
@@ -52,21 +48,12 @@ class DialogEditInput(context: Context, val position: Int, val historic: Histori
                 tier.tierExpMissing = tvTierExpMissing.text.toString().toInt()
                 historic.update(tier)
                 dialog.dismiss()
-                launcherAdMob()
                 functionSave()
             }
         }
         mDialogView.tierinput_dialog_btn_cancel.setOnClickListener {
             dialog.dismiss()
         }
-    }
-
-    fun launcherAdMob() {
-//        if (mInterstitialAd.) {
-//            mInterstitialAd.show()
-//        } else {
-//            Log.d("TAG", "The interstitial wasn't loaded yet.")
-//        }
     }
 
 }

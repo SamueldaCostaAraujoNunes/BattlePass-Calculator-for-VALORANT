@@ -14,9 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="vertical"
-        android:paddingHorizontal="24dp"
-        android:paddingBottom="14dp">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/data_inicial_do_ato_text"

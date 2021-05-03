@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:id="@+id/fragmentPrincipal" />
 
-    <FabBottomNavigationView.FabBottomNavigationView
+    <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.FabBottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

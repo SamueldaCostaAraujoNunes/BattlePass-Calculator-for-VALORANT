@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="?attr/colorPrimaryDark"
     android:orientation="vertical"
-    tools:context=".ui.view.activity.Settings.EditHistoricActivity">
+    tools:context=".ui.view.activity.EditHistoricActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"

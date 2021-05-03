@@ -3,42 +3,49 @@ package br.com.battlepassCalculatorValorant.ui.view.activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.ui.view.Advertisement.Advertisement
 import br.com.battlepassCalculatorValorant.ui.view.dialog.DialogInput
-import br.com.battlepassCalculatorValorant.ui.view.fragment.ChartsFragment
-import br.com.battlepassCalculatorValorant.ui.view.fragment.HomeFragment
-import br.com.battlepassCalculatorValorant.ui.view.fragment.InfosFragment
-import br.com.battlepassCalculatorValorant.ui.view.fragment.SettingsFragment
-import com.google.android.gms.ads.InterstitialAd
+import br.com.battlepassCalculatorValorant.ui.view.fragment.BottomNavigation.ChartsFragment
+import br.com.battlepassCalculatorValorant.ui.view.fragment.BottomNavigation.HomeFragment
+import br.com.battlepassCalculatorValorant.ui.view.fragment.BottomNavigation.InfosFragment
+import br.com.battlepassCalculatorValorant.ui.view.fragment.BottomNavigation.SettingsFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 @Suppress("UNREACHABLE_CODE")
 class MainActivity : AppCompatActivity() {
-    private lateinit var mInterstitialAd: InterstitialAd
+    //    private var mInterstitialAd: InterstitialAd? = null
     private var advertisementCount: Int = 0
 
+//    private fun initAdMob() {
+//        advertisementCount = 0
+//        interstitialAdLoad(this).observe(this, Observer { res ->
+//            when (res.status) {
+//                Resource.Status.SUCCESS -> {
+//                    mInterstitialAd = res.data!!
+//                }
+//                Resource.Status.ERROR -> {
+//                    Timber.e(res.message)
+//                }
+//                Resource.Status.LOADING -> {
+//                }
+//            }
+//        })
+//    }
+//
+//    private fun launcherAdMob() {
+//        if (advertisementCount >= 3) {
+//            mInterstitialAd?.show(this)
+//        }else {
+//            advertisementCount++
+//        }
+//    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
-        mInterstitialAd = InterstitialAd(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         createFragment(R.id.fragmentPrincipal, HomeFragment())
         createListeners()
-        initAdMob()
-    }
-
-    private fun initAdMob() {
-        advertisementCount = 0
-        mInterstitialAd = Advertisement(this).createInterstitial()
-    }
-
-    private fun launcherAdMob() {
-        if (mInterstitialAd.isLoaded && advertisementCount >= 3) {
-            mInterstitialAd.show()
-            initAdMob()
-        } else {
-            advertisementCount++
-        }
+//        initAdMob()
     }
 
     override fun onResume() {
@@ -71,7 +78,7 @@ class MainActivity : AppCompatActivity() {
                 val config = nextItem != R.id.item_apps
                 bottomNavigationView.transform(fab, config)
                 createFragment(R.id.fragmentPrincipal, fragment)
-                launcherAdMob()
+//                launcherAdMob()
             }
             true
         }

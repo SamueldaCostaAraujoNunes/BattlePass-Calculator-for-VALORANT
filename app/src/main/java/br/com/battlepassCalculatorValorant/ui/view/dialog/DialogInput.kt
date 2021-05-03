@@ -5,6 +5,7 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Context.ALARM_SERVICE
 import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import androidx.appcompat.app.AlertDialog
@@ -13,17 +14,15 @@ import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.Historic.UserInputsTier
 import br.com.battlepassCalculatorValorant.model.Singleton.ManagerHistoric
 import br.com.battlepassCalculatorValorant.model.Util.ValidateInputUser
-import br.com.battlepassCalculatorValorant.ui.view.Advertisement.Advertisement
 import br.com.battlepassCalculatorValorant.ui.view.notification.NotificationChannel
 import br.com.battlepassCalculatorValorant.ui.view.notification.NotificationReceiver
-import com.google.android.gms.ads.InterstitialAd
 import com.google.android.material.textfield.TextInputEditText
 import kotlinx.android.synthetic.main.dialog_tierinput.view.*
 
 
 @Suppress("CAST_NEVER_SUCCEEDS")
 class DialogInput(context: Context) : AlertDialog(context) {
-    private var mInterstitialAd: InterstitialAd
+    //    private var mInterstitialAd: InterstitialAd
     var tvTierIndex: TextInputEditText
     var tvTierExpMissing: TextInputEditText
     var mDialogView: View
@@ -39,7 +38,7 @@ class DialogInput(context: Context) : AlertDialog(context) {
             .setView(mDialogView)
             .setTitle(context.getString(R.string.insira_seus_dados))
 
-        mInterstitialAd = Advertisement(context).createInterstitial()
+//        mInterstitialAd = Advertisement(context).createInterstitial()
         NotificationChannel(context).create()
     }
 
@@ -54,7 +53,7 @@ class DialogInput(context: Context) : AlertDialog(context) {
             if (validador.isValide()) {
                 createInputTier()
                 createNotification()
-                launcherAdMob()
+//                launcherAdMob()
                 dialog.dismiss()
             }
         }
@@ -90,9 +89,27 @@ class DialogInput(context: Context) : AlertDialog(context) {
         )
     }
 
-    fun launcherAdMob() {
-        if (mInterstitialAd.isLoaded) {
-            mInterstitialAd.show()
-        }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+//        initAdMob()
     }
+
+//    private var mInterstitialAd: InterstitialAd? = null
+//    private fun initAdMob() {
+//        interstitialAdLoad(requireActivity()).observe(context, Observer{ res ->
+//            when (res.status) {
+//                Resource.Status.SUCCESS -> {
+//                    mInterstitialAd = res.data!!
+//                }
+//                Resource.Status.ERROR -> {
+//                    Timber.e(res.message)
+//                }
+//                Resource.Status.LOADING -> {}
+//            }
+//        })
+//    }
+//
+//    private fun launcherAdMob() {
+//        mInterstitialAd?.show(requireActivity())
+//    }
 }

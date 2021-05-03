@@ -7,7 +7,7 @@
     android:background="?attr/colorPrimary"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context=".ui.view.activity.IntroTutorial.InputScreenTutorialFragment">
+    tools:context=".ui.view.fragment.IntroTutorial.InputScreenTutorialFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

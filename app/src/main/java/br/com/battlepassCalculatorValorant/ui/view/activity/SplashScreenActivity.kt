@@ -10,7 +10,6 @@ import br.com.battlepassCalculatorValorant.BuildConfig
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.ListListener.HistoricArrayListListener
 import br.com.battlepassCalculatorValorant.model.theme.Theme
-import br.com.battlepassCalculatorValorant.ui.view.activity.IntroTutorial.IntroTutorialActivity
 
 
 class SplashScreenActivity : AppCompatActivity() {

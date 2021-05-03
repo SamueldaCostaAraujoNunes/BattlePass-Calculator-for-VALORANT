@@ -30,7 +30,7 @@ class TierCurrentFragmentViewModel : ViewModel() {
 //    tv_tier_rewind.text = tierReward
 //    tv_percentage_tier.text = percentageTierText
 //
-//    val mViewPagerAdapter = MyImageSliderAdapter(requireContext(), tier.reward[0])
+//    val mViewPagerAdapter = SliderImagesAdapter(requireContext(), tier.reward[0])
 //    viewPagerMain.adapter = mViewPagerAdapter
 //    dots_indicator_images.setViewPager2(viewPagerMain)
 

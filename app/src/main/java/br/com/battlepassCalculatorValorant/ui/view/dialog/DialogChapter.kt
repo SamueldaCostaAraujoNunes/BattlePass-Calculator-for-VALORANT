@@ -5,8 +5,8 @@ import android.content.Context
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.ui.view.adapter.MyImageSliderAdapter
 import br.com.battlepassCalculatorValorant.ui.view.adapter.RewardWithParent
+import br.com.battlepassCalculatorValorant.ui.view.adapter.SliderImagesAdapter
 import kotlinx.android.synthetic.main.dialog_chapter.view.*
 import kotlinx.android.synthetic.main.dialog_tier.view.dialogViewPagerMain
 import kotlinx.android.synthetic.main.dialog_tier.view.indicator_image_slider
@@ -38,7 +38,7 @@ class DialogChapter(context: Context, chapter: RewardWithParent) : AlertDialog(c
             tv_reward_chapter.text = reward.nome
             tv_type_chapter.text = tipo
 
-            val mViewPagerAdapter = MyImageSliderAdapter(context, chapter.reward.imagens)
+            val mViewPagerAdapter = SliderImagesAdapter(chapter.reward.imagens)
             dialogViewPagerMain.adapter = mViewPagerAdapter
             indicator_image_slider.setViewPager2(dialogViewPagerMain)
         }

@@ -7,7 +7,7 @@
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".ui.view.fragment.HomeFragment">
+        tools:context=".ui.view.fragment.BottomNavigation.HomeFragment">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -15,7 +15,7 @@
             android:orientation="vertical"
             android:paddingBottom="14dp">
 
-            <br.com.battlepassCalculatorValorant.ui.view.views.CardModule
+            <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center">
@@ -24,25 +24,25 @@
                     android:id="@+id/adView_top"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:adSize="BANNER"
                     android:padding="4dp"
+                    app:adSize="BANNER"
                     app:adUnitId="@string/admob_card_id_test" />
-            </br.com.battlepassCalculatorValorant.ui.view.views.CardModule>
+            </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
 
-            <br.com.battlepassCalculatorValorant.ui.view.views.CardModule
+            <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
                 android:layout_width="match_parent"
                 android:layout_height="450dp"
                 app:title="@string/seu_passe_de_batalha">
 
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/fragmentChart"
-                    android:name="br.com.battlepassCalculatorValorant.ui.view.fragment.Principal.ChartExpPerTierFragment"
+                    android:name="br.com.battlepassCalculatorValorant.ui.view.fragment.Charts.ChartExpPerTierFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 
-            </br.com.battlepassCalculatorValorant.ui.view.views.CardModule>
+            </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
 
-            <br.com.battlepassCalculatorValorant.ui.view.views.CardModule
+            <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -50,13 +50,13 @@
 
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/fragmentTierCurrent"
-                    android:name="br.com.battlepassCalculatorValorant.ui.view.fragment.Principal.TierCurrentFragment"
+                    android:name="br.com.battlepassCalculatorValorant.ui.view.fragment.Home.TierCurrentFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     tools:layout="@layout/fragment_tier_current" />
-            </br.com.battlepassCalculatorValorant.ui.view.views.CardModule>
+            </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
 
-            <br.com.battlepassCalculatorValorant.ui.view.views.CardModule
+            <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center">
@@ -65,12 +65,12 @@
                     android:id="@+id/adView_center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:adSize="LARGE_BANNER"
                     android:padding="4dp"
+                    app:adSize="LARGE_BANNER"
                     app:adUnitId="@string/admob_card_id_test" />
-            </br.com.battlepassCalculatorValorant.ui.view.views.CardModule>
+            </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
 
-            <br.com.battlepassCalculatorValorant.ui.view.views.CardModule
+            <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -78,12 +78,14 @@
 
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/fragmentPropriets"
-                    android:name="br.com.battlepassCalculatorValorant.ui.view.fragment.Principal.PropriedadesFragment"
+                    android:name="br.com.battlepassCalculatorValorant.ui.view.fragment.Home.EstatisticasFragment"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </br.com.battlepassCalculatorValorant.ui.view.views.CardModule>
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="24dp"
+                    android:paddingBottom="14dp" />
+            </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
 
-            <br.com.battlepassCalculatorValorant.ui.view.views.CardModule
+            <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
                 android:layout_width="match_parent"
                 android:layout_height="500dp"
                 android:layout_gravity="center"
@@ -91,12 +93,12 @@
 
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/fragmentListTiers"
-                    android:name="br.com.battlepassCalculatorValorant.ui.view.fragment.Principal.RewardsFragment"
+                    android:name="br.com.battlepassCalculatorValorant.ui.view.fragment.Home.RewardsFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
-            </br.com.battlepassCalculatorValorant.ui.view.views.CardModule>
+            </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
 
-            <br.com.battlepassCalculatorValorant.ui.view.views.CardModule
+            <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center">
@@ -105,10 +107,10 @@
                     android:id="@+id/adView_bottom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:adSize="MEDIUM_RECTANGLE"
                     android:padding="4dp"
+                    app:adSize="MEDIUM_RECTANGLE"
                     app:adUnitId="@string/admob_card_id_test" />
-            </br.com.battlepassCalculatorValorant.ui.view.views.CardModule>
+            </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
 
             <View
                 android:layout_width="match_parent"

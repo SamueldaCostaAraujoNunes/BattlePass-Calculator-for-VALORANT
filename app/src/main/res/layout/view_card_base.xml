@@ -24,11 +24,12 @@
         android:paddingHorizontal="24dp"
         android:paddingTop="@{isSlider ? @dimen/padding_with_dots_indicator : @dimen/padding_without_dots_indicator}"
         android:paddingBottom="14dp"
-        android:text="@{titleName}"
         android:textColor="?attr/colorSecondary"
         android:textSize="20sp"
+        app:fadeAnimationText="@{titleName}"
         app:visibilityIf="@{titleName != null}"
         tools:ignore="RtlSymmetry"
         tools:paddingTop="@dimen/padding_without_dots_indicator"
-        tools:text="@{titleName}" />
+        tools:text="Title" />
+
 </layout>
