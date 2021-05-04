@@ -39,13 +39,13 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
 
         themePreference?.onPreferenceChangeListener =
-            OnPreferenceChangeListener { preference, newValue ->
+            OnPreferenceChangeListener { _, newValue ->
                 Theme(requireContext()).setThemeMode(newValue.toString().toInt())
                 true
             }
 
         epilogoPreference?.onPreferenceChangeListener =
-            OnPreferenceChangeListener { preference, newValue ->
+            OnPreferenceChangeListener { _, newValue ->
                 val value = newValue.toString().toBoolean()
 
                 val realValue =

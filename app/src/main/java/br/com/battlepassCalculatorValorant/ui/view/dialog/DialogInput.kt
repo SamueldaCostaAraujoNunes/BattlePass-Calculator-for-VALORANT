@@ -14,8 +14,8 @@ import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.Historic.UserInputsTier
 import br.com.battlepassCalculatorValorant.model.Singleton.ManagerHistoric
 import br.com.battlepassCalculatorValorant.model.Util.ValidateInputUser
-import br.com.battlepassCalculatorValorant.ui.view.notification.NotificationChannel
-import br.com.battlepassCalculatorValorant.ui.view.notification.NotificationReceiver
+import br.com.battlepassCalculatorValorant.notification.NotificationChannel
+import br.com.battlepassCalculatorValorant.notification.NotificationReceiver
 import com.google.android.material.textfield.TextInputEditText
 import kotlinx.android.synthetic.main.dialog_tierinput.view.*
 
@@ -69,7 +69,7 @@ class DialogInput(context: Context) : AlertDialog(context) {
         ManagerHistoric.getInstance(context).create(inputUser)
     }
 
-    fun createNotification() {
+    private fun createNotification() {
         val intent = Intent(context, NotificationReceiver::class.java)
         val pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0)
         val alarmManager = context.getSystemService(ALARM_SERVICE) as AlarmManager

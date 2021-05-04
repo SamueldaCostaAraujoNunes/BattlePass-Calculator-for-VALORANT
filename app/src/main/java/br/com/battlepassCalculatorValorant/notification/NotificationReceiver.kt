@@ -1,4 +1,4 @@
-package br.com.battlepassCalculatorValorant.ui.view.notification
+package br.com.battlepassCalculatorValorant.notification
 
 import android.app.PendingIntent
 import android.app.TaskStackBuilder
@@ -19,17 +19,14 @@ import java.io.IOException
 import java.net.URL
 import kotlin.math.absoluteValue
 
-
 class NotificationReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
         val listNotificationContent = createListNotificationContents(context)
         val pendingIntent: PendingIntent = createIntent(context)
         val builder = builderNotification(context, pendingIntent, listNotificationContent.random())
-//        applyImageUrl(builder, getUrl(context))
         val notificationManager = NotificationManagerCompat.from(context)
         notificationManager.notify(0, builder.build())
-//        playNotificationSound(context)
     }
 
     private fun createListNotificationContents(context: Context): List<NotificationContent> {
@@ -129,18 +126,6 @@ class NotificationReceiver : BroadcastReceiver() {
         }
     }
 
-//    private fun playNotificationSound(context: Context) {
-//        try {
-//            val alarmSound = Uri.parse(
-//                ContentResolver.SCHEME_ANDROID_RESOURCE
-//                        + "://" + context.packageName + "/raw/reyna"
-//            )
-//            val r = RingtoneManager.getRingtone(context, alarmSound)
-//            r.play()
-//        } catch (e: Exception) {
-//            e.printStackTrace()
-//        }
-//    }
 
     inner class NotificationContent(val title: String, val content: String)
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="br.com.battlepassCalculatorValorant">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,17 +12,19 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ValorantPassBattle">
+        android:name=".AppApplication"
+        android:theme="@style/Theme.ValorantPassBattle"
+        tools:ignore="AllowBackup">
 
-    <activity
+        <activity
             android:name="br.com.battlepassCalculatorValorant.ui.view.activity.IntroTutorialActivity"
-        android:theme="@style/Theme.ValorantPassBattle.Light.NoActionBar.FullScreen"></activity>
+            android:theme="@style/Theme.ValorantPassBattle.Light.NoActionBar.FullScreen" />
         <activity
             android:name="br.com.battlepassCalculatorValorant.ui.view.activity.EditHistoricActivity"
             android:theme="@style/Theme.ValorantPassBattle.NoActionBar" />
 
         <receiver
-            android:name="br.com.battlepassCalculatorValorant.ui.view.notification.NotificationReceiver"
+            android:name=".notification.NotificationReceiver"
             android:enabled="true" />
 
         <activity

@@ -3,14 +3,14 @@ package br.com.battlepassCalculatorValorant.model.Properties
 import android.annotation.SuppressLint
 import android.content.Context
 import android.icu.text.SimpleDateFormat
-import br.com.battlepassCalculatorValorant.model.BattlePass.Chapter
-import br.com.battlepassCalculatorValorant.model.BattlePass.Tier
 import br.com.battlepassCalculatorValorant.model.GameType.DisputaDeSpike
 import br.com.battlepassCalculatorValorant.model.GameType.GameType
 import br.com.battlepassCalculatorValorant.model.GameType.SemClassificacao
 import br.com.battlepassCalculatorValorant.model.Historic.Historic
 import br.com.battlepassCalculatorValorant.model.Singleton.ManagerHistoric
 import br.com.battlepassCalculatorValorant.model.Singleton.ManagerPassBattle
+import br.com.battlepassCalculatorValorant.model.battlePass.Chapter
+import br.com.battlepassCalculatorValorant.model.battlePass.Tier
 import java.util.*
 import java.util.stream.IntStream.range
 import kotlin.collections.ArrayList

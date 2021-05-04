@@ -1,4 +1,4 @@
-package br.com.battlepassCalculatorValorant.model.BattlePass
+package br.com.battlepassCalculatorValorant.model.battlePass
 
 import android.annotation.SuppressLint
 import android.content.Context

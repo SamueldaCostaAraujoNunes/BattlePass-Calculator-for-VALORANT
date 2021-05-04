@@ -15,8 +15,8 @@ import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.Historic.UserInputsTier
 import br.com.battlepassCalculatorValorant.model.Properties.Properties
 import br.com.battlepassCalculatorValorant.model.Util.ValidateInputUser
+import br.com.battlepassCalculatorValorant.notification.NotificationReceiver
 import br.com.battlepassCalculatorValorant.ui.view.activity.IntroTutorialActivity
-import br.com.battlepassCalculatorValorant.ui.view.notification.NotificationReceiver
 import kotlinx.android.synthetic.main.fragment_input_screen_tutorial.*
 
 class InputScreenTutorialFragment : Fragment() {

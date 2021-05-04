@@ -12,7 +12,7 @@ class ProgressFragmentViewModel : ViewModel() {
 //                while (true) {
 //                    delay(2000)
 //                    _expAdiantadoAtrasado.postValue(_expAdiantadoAtrasado.value?.plus(1))
-//                    Log.i("Counter", _expAdiantadoAtrasado.value.toString())
+//                    Timber.i("Counter", _expAdiantadoAtrasado.value.toString())
 //                }
 //            }
 //        }

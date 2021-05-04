@@ -95,7 +95,9 @@
                     android:id="@+id/fragmentListTiers"
                     android:name="br.com.battlepassCalculatorValorant.ui.view.fragment.Home.RewardsFragment"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="24dp"
+                    android:paddingBottom="14dp" />
             </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
 
             <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule

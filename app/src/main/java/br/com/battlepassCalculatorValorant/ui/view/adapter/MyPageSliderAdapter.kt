@@ -12,11 +12,11 @@ class MyPageSliderAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
         return mFragmentList[position]
     }
 
-    fun addFragment(fragment: Fragment) {
-        mFragmentList.add(fragment)
-    }
-
     fun getItem(position: Int): Fragment {
         return mFragmentList[position]
+    }
+
+    fun addFragments(fragments: List<Fragment>) {
+        mFragmentList.addAll(fragments)
     }
 }

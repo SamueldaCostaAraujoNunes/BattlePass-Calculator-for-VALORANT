@@ -1,11 +1,10 @@
-package br.com.battlepassCalculatorValorant.ui.view.notification
+package br.com.battlepassCalculatorValorant.notification
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
 import android.os.Build
 import androidx.core.content.ContextCompat
-
 
 class NotificationChannel(val context: Context) {
 

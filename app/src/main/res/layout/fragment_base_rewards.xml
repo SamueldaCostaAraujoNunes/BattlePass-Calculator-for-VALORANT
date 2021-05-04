@@ -8,7 +8,7 @@
         android:layout_height="500dp">
 
         <ImageButton
-            android:id="@+id/btn_search_chapter"
+            android:id="@+id/filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -18,12 +18,12 @@
             android:padding="14dp"
             android:src="@drawable/ic_baseline_filter_alt_24"
             android:tint="?attr/colorSecondary"
-            app:layout_constraintEnd_toEndOf="@id/recycleViewChapterRewards"
-            app:layout_constraintTop_toTopOf="@id/recycleViewChapterRewards"
+            app:layout_constraintEnd_toEndOf="@id/recycleView"
+            app:layout_constraintTop_toTopOf="@id/recycleView"
             tools:ignore="ContentDescription" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycleViewChapterRewards"
+            android:id="@+id/recycleView"
             android:name="com.example.valorantpassbattle.ui.fragment.Principal.ChaptersRewardsFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

@@ -1,3 +1,5 @@
+@file:Suppress("UNREACHABLE_CODE")
+
 package br.com.battlepassCalculatorValorant.extensions.bindingAdapters
 
 import android.animation.ValueAnimator
@@ -7,6 +9,7 @@ import androidx.databinding.BindingAdapter
 import androidx.viewpager2.widget.ViewPager2
 import br.com.battlepassCalculatorValorant.ui.view.adapter.MyPageSliderAdapter
 import br.com.battlepassCalculatorValorant.ui.view.adapter.SliderImagesAdapter
+import br.com.battlepassCalculatorValorant.ui.view.fragment.RewardsRecycler.BaseRewardsFragment
 import br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 
@@ -28,18 +31,19 @@ fun ViewPager2.setAdapterSlider(mAdapter: MyPageSliderAdapter) {
             if (viewParent is CardModule) {
                 viewParent.binding.titleName = item.toString()
             }
-            changeDimensLayoutAnimation(v)
+            if (item !is BaseRewardsFragment) {
+                changeDimensLayoutAnimation(v)
+            }
         }
 
         private fun changeDimensLayoutAnimation(v: View) {
             v.post {
                 val wMeasureSpec =
                     View.MeasureSpec.makeMeasureSpec(v.width, View.MeasureSpec.EXACTLY)
-                val hMeasureSpec =
-                    View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED)
+                val hMeasureSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED)
                 v.measure(wMeasureSpec, hMeasureSpec)
                 try {
-                    val anim = ValueAnimator.ofInt(layoutParams.height, v.measuredHeight)
+                    val anim = ValueAnimator.ofInt(layoutParams.height, v.measuredHeight + 30)
                     anim.addUpdateListener {
                         val height = it.animatedValue as Int
                         layoutParams.height = height

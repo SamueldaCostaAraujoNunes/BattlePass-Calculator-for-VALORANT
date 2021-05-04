@@ -1,10 +1,18 @@
 package br.com.battlepassCalculatorValorant.extensions.bindingAdapters
 
+import android.content.res.Resources
 import android.graphics.Color
+import android.graphics.Paint
+import android.util.TypedValue
+import android.view.View
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import android.widget.TextView
+import androidx.annotation.AttrRes
+import androidx.annotation.ColorInt
 import androidx.databinding.BindingAdapter
+import br.com.battlepassCalculatorValorant.R
+
 
 @BindingAdapter("adiantado")
 fun TextView.adiantado(sucess: Boolean) {
@@ -35,4 +43,30 @@ fun TextView.fadeAnimationText(newText: String?) {
         text = newText
     }
 
+}
+
+@BindingAdapter("position", "positionCurrent")
+fun TextView.comparableStyle(position: Int?, positionCurrent: Int?) {
+    if (position != null && positionCurrent != null) {
+        val gray = getColor(R.attr.colorOnSecondary)
+        val white = getColor(R.attr.colorOnPrimary)
+        val accent = getColor(R.attr.colorAccent)
+
+        setTextColor(white)
+        paintFlags = paintFlags and Paint.STRIKE_THRU_TEXT_FLAG.inv()
+        if (position < positionCurrent) {
+            paintFlags = paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+            setTextColor(gray)
+        } else if (position == positionCurrent) {
+            setTextColor(accent)
+        }
+    }
+}
+
+@ColorInt
+fun View.getColor(@AttrRes resId: Int): Int {
+    val typedValue = TypedValue()
+    val theme: Resources.Theme = context.theme
+    theme.resolveAttribute(resId, typedValue, true)
+    return typedValue.data
 }

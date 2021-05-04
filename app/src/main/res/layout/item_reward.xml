@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="reward"
+            type="br.com.battlepassCalculatorValorant.model.battlePass.Reward" />
+
+        <variable
+            name="itemCurrent"
+            type="int" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/item_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/impact_font_family"
+            android:gravity="center"
+            android:paddingVertical="8dp"
+            android:text="@{String.valueOf(reward.fonte) + reward.position}"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:position="@{reward.position}"
+            app:positionCurrent="@{itemCurrent}"
+            tools:text="T1" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muli_font_family"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:text="@{reward.nome}"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/item_number"
+            app:layout_constraintStart_toEndOf="@+id/item_number"
+            app:layout_constraintTop_toTopOf="@+id/item_number"
+            app:position="@{reward.position}"
+            app:positionCurrent="@{itemCurrent}"
+            tools:text="Skin Seilá Qual" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

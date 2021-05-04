@@ -23,7 +23,7 @@
 
         <Preference
             app:key="@string/editHistoric"
-            app:title="@string/editar_historico"></Preference>
+            app:title="@string/editar_historico" />
 
     </PreferenceCategory>
 

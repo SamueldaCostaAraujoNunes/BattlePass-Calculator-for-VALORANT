@@ -61,7 +61,7 @@
     <string name="trocar_tema">Change Theme</string>
     <string name="porcentagem_do_passe">"Pass Percent:"</string>
     <string name="recompensa">"Reward:"</string>
-    <string name="capitulo">"Chapter:"</string>
+    <string name="capitulo">"Chapter"</string>
 
     <string name="recompensa_por_tier">Tier Reward</string>
     <string name="recompensa_por_capitulo">Chapter Reward</string>
