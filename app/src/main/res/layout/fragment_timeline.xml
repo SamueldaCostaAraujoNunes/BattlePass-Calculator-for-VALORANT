@@ -155,7 +155,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/impact_font_family"
-            android:text="@{String.valueOf(viewmodel.diasAdiantadoAtrasado)}"
+            android:text="@{String.valueOf(Math.abs(viewmodel.diasAdiantadoAtrasado))}"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
             app:adiantado="@{viewmodel.diasAdiantadoAtrasado >= 0}"

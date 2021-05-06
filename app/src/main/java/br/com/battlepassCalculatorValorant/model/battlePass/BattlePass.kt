@@ -1,9 +1,7 @@
 package br.com.battlepassCalculatorValorant.model.battlePass
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.icu.text.SimpleDateFormat
-import br.com.battlepassCalculatorValorant.database.SharedPreferences.EpilogoSharedPreferences
 import org.json.JSONObject
 import java.util.*
 
@@ -24,16 +22,25 @@ class BattlePass(json: JSONObject, val context: Context) {
     private val _epilog = arrayListOf<Epilogo>()
     private val _tiersEpilog = arrayListOf<Tier>()
 
-    var espilogoIsValide: Boolean
-        get() = EpilogoSharedPreferences(context).considereOEpilogo
-        set(value) {
-            EpilogoSharedPreferences(context).considereOEpilogo = value
-        }
+    var espilogoIsValide: Boolean = false
+//        get() = EpilogoSharedPreferences(context).considereOEpilogo
+//        set(value) {
+//            EpilogoSharedPreferences(context).considereOEpilogo = value
+//        }
 
     val chapters: ArrayList<Chapter>
-        get() = if (espilogoIsValide) concatenate(_chapters, _epilog) else _chapters
+        get() = if (espilogoIsValide) concatenate(
+            _chapters,
+            _epilog
+        ) else _chapters
     val tiers: ArrayList<Tier>
         get() = if (espilogoIsValide) concatenate(_tiersChapters, _tiersEpilog) else _tiersChapters
+
+    val totalXp: Int
+        get() = if (espilogoIsValide)
+            expTotal + epilogoExpTotal
+        else
+            expTotal
 
     init {
         // Create array Capitulos
@@ -74,19 +81,8 @@ class BattlePass(json: JSONObject, val context: Context) {
         return null
     }
 
-    @SuppressLint("SimpleDateFormat")
-    fun getDateInit(): String {
-        val sdf = SimpleDateFormat("dd/MM/yyyy")
-        return sdf.format(dateInit.time)
-    }
 
-    @SuppressLint("SimpleDateFormat")
-    fun getDateFinally(): String {
-        val sdf = SimpleDateFormat("dd/MM/yyyy")
-        return sdf.format(dateFinally.time)
-    }
-
-    fun <T> concatenate(vararg lists: List<T>): ArrayList<T> {
+    private fun <T> concatenate(vararg lists: List<T>): ArrayList<T> {
         val result: ArrayList<T> = ArrayList()
         for (list in lists) {
             result += list

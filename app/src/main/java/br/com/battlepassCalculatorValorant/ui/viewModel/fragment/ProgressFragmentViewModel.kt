@@ -1,24 +1,21 @@
 package br.com.battlepassCalculatorValorant.ui.viewModel.fragment
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.asLiveData
+import br.com.battlepassCalculatorValorant.repository.CalculatorRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class ProgressFragmentViewModel : ViewModel() {
+@HiltViewModel
+class ProgressFragmentViewModel @Inject constructor(calculador: CalculatorRepository) :
+    ViewModel() {
 
-    private val _totalExp: MutableLiveData<Int> = MutableLiveData<Int>(0)
-    private val _porcentagemProgresso: MutableLiveData<Float> = MutableLiveData<Float>(0F)
-    private val _expPerDay: MutableLiveData<Int> = MutableLiveData<Int>(0)
-    private val _expAdiantadoAtrasado: MutableLiveData<Int> = MutableLiveData<Int>(-5)
+    val totalExp: LiveData<Int> = calculador.totalExpCurrent.asLiveData()
+    val porcentagemProgresso: LiveData<Double> = calculador.percentageTotal.asLiveData()
+    val expPerDay: LiveData<Int> = calculador.averageExpPerDay.asLiveData()
+    val expAdiantadoAtrasado: LiveData<Int> =
+        calculador.differenceBetweenTheExpectedExpWithTheCurrent.asLiveData()
 
-    val totalExp: LiveData<Int> = _totalExp
-    val porcentagemProgresso: LiveData<Float> = _porcentagemProgresso
-    val expPerDay: LiveData<Int> = _expPerDay
-    val expAdiantadoAtrasado: LiveData<Int> = _expAdiantadoAtrasado
-
-//        val totalDeXp = properties.getTotalXp().toString() + " EXP"
-//        val progressPorcent = properties.getProgressPorcent().toString() + "%"
-//        val xpPerDay = properties.getXpPerDia().toString() + " EXP"
-//        val expAdiantadoAtrasado = properties.getExpAdiantAtrasado()
 
 }

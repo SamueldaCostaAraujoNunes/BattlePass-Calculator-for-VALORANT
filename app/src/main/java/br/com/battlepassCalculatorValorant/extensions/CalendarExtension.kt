@@ -1,5 +1,6 @@
 package br.com.battlepassCalculatorValorant.extensions
 
+import android.icu.text.SimpleDateFormat
 import java.util.*
 
 fun Calendar.daysApart(other: Calendar): Int {
@@ -11,4 +12,9 @@ fun Calendar.daysApart(other: Calendar): Int {
         d1p.add(Calendar.YEAR, 1)
     }
     return days
+}
+
+fun Calendar.dateFormat(): String {
+    val sdf = SimpleDateFormat("dd/MM/yyyy", Locale("pt-BR", "Brasil"))
+    return sdf.format(time)
 }

@@ -11,5 +11,9 @@ data class UserTier(
     val id: Int = 0
 ) {
     constructor() : this(15, 0, -1)
+
+    override fun toString(): String {
+        return "UserTier ${super.toString()}:\n\tId: $id\n\tTierCurrent: $tierCurrent\n\tTierExpMissing: $tierExpMissing"
+    }
 }
 

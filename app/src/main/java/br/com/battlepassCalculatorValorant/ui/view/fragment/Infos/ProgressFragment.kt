@@ -9,7 +9,9 @@ import androidx.fragment.app.viewModels
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.databinding.FragmentProgressBinding
 import br.com.battlepassCalculatorValorant.ui.viewModel.fragment.ProgressFragmentViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ProgressFragment : Fragment() {
     private val viewModel: ProgressFragmentViewModel by viewModels()
     private lateinit var binding: FragmentProgressBinding

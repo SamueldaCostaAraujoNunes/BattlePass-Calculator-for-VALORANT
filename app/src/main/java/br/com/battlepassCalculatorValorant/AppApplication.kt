@@ -13,3 +13,4 @@ class BattlePassCalculatorApp : Application() {
         }
     }
 }
+
