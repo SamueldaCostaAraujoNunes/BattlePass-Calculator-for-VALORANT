@@ -14,9 +14,11 @@ import br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 
 @BindingAdapter("imagesURl", "indicator")
-fun ViewPager2.imagesURl(imagesURl: List<String>, indicator: DotsIndicator?) {
-    adapter = SliderImagesAdapter(imagesURl)
-    indicator?.setViewPager2(this)
+fun ViewPager2.imagesURl(imagesURl: List<String>?, indicator: DotsIndicator?) {
+    if (imagesURl != null) {
+        adapter = SliderImagesAdapter(imagesURl)
+        indicator?.setViewPager2(this)
+    }
 }
 
 fun ViewPager2.setAdapterSlider(mAdapter: MyPageSliderAdapter) {

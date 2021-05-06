@@ -75,13 +75,13 @@ class BattlePass(json: JSONObject, val context: Context) {
     }
 
     @SuppressLint("SimpleDateFormat")
-    fun getDateInit(): String? {
+    fun getDateInit(): String {
         val sdf = SimpleDateFormat("dd/MM/yyyy")
         return sdf.format(dateInit.time)
     }
 
     @SuppressLint("SimpleDateFormat")
-    fun getDateFinally(): String? {
+    fun getDateFinally(): String {
         val sdf = SimpleDateFormat("dd/MM/yyyy")
         return sdf.format(dateFinally.time)
     }

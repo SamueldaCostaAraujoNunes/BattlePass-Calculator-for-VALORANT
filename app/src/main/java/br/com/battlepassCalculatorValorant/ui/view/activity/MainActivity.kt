@@ -8,10 +8,12 @@ import br.com.battlepassCalculatorValorant.ui.view.fragment.BottomNavigation.Cha
 import br.com.battlepassCalculatorValorant.ui.view.fragment.BottomNavigation.HomeFragment
 import br.com.battlepassCalculatorValorant.ui.view.fragment.BottomNavigation.InfosFragment
 import br.com.battlepassCalculatorValorant.ui.view.fragment.BottomNavigation.SettingsFragment
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 @Suppress("UNREACHABLE_CODE")
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     //    private var mInterstitialAd: InterstitialAd? = null
     private var advertisementCount: Int = 0

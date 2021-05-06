@@ -3,6 +3,7 @@ package br.com.battlepassCalculatorValorant.model.Properties
 import android.annotation.SuppressLint
 import android.content.Context
 import android.icu.text.SimpleDateFormat
+import br.com.battlepassCalculatorValorant.extensions.daysApart
 import br.com.battlepassCalculatorValorant.model.GameType.DisputaDeSpike
 import br.com.battlepassCalculatorValorant.model.GameType.GameType
 import br.com.battlepassCalculatorValorant.model.GameType.SemClassificacao
@@ -27,7 +28,7 @@ class Properties(val context: Context) {
         val listOfAllExpExpectedPerDay = ArrayList<Int>()
         listOfAllExpExpectedPerDay.add(0)
         val totalExp = getTotalXpBattlePass()
-        val daysDurationBattlePass = daysApart(passBattle.dateFinally, passBattle.dateInit) + 1
+        val daysDurationBattlePass = passBattle.dateFinally.daysApart(passBattle.dateInit)
         val razao = totalExp / daysDurationBattlePass
         for (day in range(1, daysDurationBattlePass)) {
             listOfAllExpExpectedPerDay.add(day * razao)
@@ -38,7 +39,7 @@ class Properties(val context: Context) {
     fun getRealProgressPerDay(): ArrayList<Int> {
         val listOfAllExpExpectedPerDay = ArrayList<Int>()
         listOfAllExpExpectedPerDay.add(0)
-        val daysDurationBattlePass = daysApart(passBattle.dateFinally, passBattle.dateInit) + 1
+        val daysDurationBattlePass = passBattle.dateFinally.daysApart(passBattle.dateInit)
         val razao = getXpPerDia()
         for (day in range(1, daysDurationBattlePass)) {
             listOfAllExpExpectedPerDay.add(day * razao)
@@ -150,7 +151,7 @@ class Properties(val context: Context) {
         }
         val now = Calendar.getInstance()
         val days = daysApart(now, passBattle.dateInit) + 1
-        val daysDurationBattlePass = daysApart(passBattle.dateFinally, passBattle.dateInit) + 1
+        val daysDurationBattlePass = passBattle.dateFinally.daysApart(passBattle.dateInit)
         val xpPerDay = (getTotalXpBattlePass().toDouble() / daysDurationBattlePass)
         val xpExpected = days * xpPerDay
         return getTotalXp() - xpExpected.toInt()
@@ -244,7 +245,7 @@ class Properties(val context: Context) {
     }
 
     fun days(): Int {
-        return daysApart(passBattle.dateFinally, passBattle.dateInit) + 1
+        return passBattle.dateFinally.daysApart(passBattle.dateInit)
     }
 
     fun expMissaoDiaria(): Float {

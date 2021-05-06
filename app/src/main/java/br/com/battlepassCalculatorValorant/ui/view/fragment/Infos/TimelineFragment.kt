@@ -9,7 +9,9 @@ import androidx.fragment.app.viewModels
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.databinding.FragmentTimelineBinding
 import br.com.battlepassCalculatorValorant.ui.viewModel.fragment.TimelineFragmentViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class TimelineFragment : Fragment() {
     private val viewModel: TimelineFragmentViewModel by viewModels()
     private lateinit var binding: FragmentTimelineBinding

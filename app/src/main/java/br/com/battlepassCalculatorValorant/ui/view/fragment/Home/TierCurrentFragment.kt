@@ -6,10 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
+import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.databinding.FragmentTierCurrentBinding
+import br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
 import br.com.battlepassCalculatorValorant.ui.viewModel.fragment.TierCurrentFragmentViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class TierCurrentFragment : Fragment() {
     private val viewModel: TierCurrentFragmentViewModel by viewModels()
     private lateinit var binding: FragmentTierCurrentBinding
@@ -23,5 +27,16 @@ class TierCurrentFragment : Fragment() {
         binding.indicator = binding.dotsIndicatorImages
         binding.lifecycleOwner = this
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel.tierIndex.observe(viewLifecycleOwner, Observer { index ->
+            val cardModule = CardModule.parentIsCardmodule(view)
+            if (cardModule != null) {
+                cardModule.binding.titleName =
+                    requireContext().getString(R.string.tier) + " " + index
+            }
+        })
     }
 }

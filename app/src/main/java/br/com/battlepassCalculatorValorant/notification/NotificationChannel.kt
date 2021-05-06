@@ -10,7 +10,7 @@ class NotificationChannel(val context: Context) {
 
     companion object {
         const val name = "battlepassCalculatorValorant.notifyChannel"
-        const val description = "Channel for Battle Pass Calculator for Valorant"
+        const val description = "Channel for Battle Pass CalculatorRepository for Valorant"
         const val importance = NotificationManager.IMPORTANCE_DEFAULT
         const val id = "notifyChannel"
     }

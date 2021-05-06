@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="viewmodel"
             type="br.com.battlepassCalculatorValorant.ui.viewModel.fragment.TierCurrentFragmentViewModel" />
@@ -27,10 +26,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli_font_family"
-            android:paddingTop="8dp"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
-            android:text="@{viewmodel.tierName}"
+            android:text="@{String.valueOf(viewmodel.tierName)}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Esquema Stinger" />
@@ -40,10 +38,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli_font_family"
-            android:paddingTop="8dp"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
-            android:text="@{String.valueOf(viewmodel.percentageTier) + `% ` + @string/feito}"
+            android:text='@{String.format("%.2f", viewmodel.percentageTier) + `% ` + @string/feito}'
             app:layout_constraintTop_toBottomOf="@+id/tv_tier_rewind"
             tools:text="100% Feito" />
 
