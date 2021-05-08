@@ -1,4 +1,4 @@
-package br.com.battlepassCalculatorValorant.ui.viewModel.fragment
+package br.com.battlepassCalculatorValorant.ui.viewModel.fragment.infos
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel

@@ -15,39 +15,12 @@ import kotlinx.android.synthetic.main.activity_main.*
 @Suppress("UNREACHABLE_CODE")
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
-    //    private var mInterstitialAd: InterstitialAd? = null
-    private var advertisementCount: Int = 0
-
-//    private fun initAdMob() {
-//        advertisementCount = 0
-//        interstitialAdLoad(this).observe(this, Observer { res ->
-//            when (res.status) {
-//                Resource.Status.SUCCESS -> {
-//                    mInterstitialAd = res.data!!
-//                }
-//                Resource.Status.ERROR -> {
-//                    Timber.e(res.message)
-//                }
-//                Resource.Status.LOADING -> {
-//                }
-//            }
-//        })
-//    }
-//
-//    private fun launcherAdMob() {
-//        if (advertisementCount >= 3) {
-//            mInterstitialAd?.show(this)
-//        }else {
-//            advertisementCount++
-//        }
-//    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         createFragment(R.id.fragmentPrincipal, HomeFragment())
         createListeners()
-//        initAdMob()
     }
 
     override fun onResume() {

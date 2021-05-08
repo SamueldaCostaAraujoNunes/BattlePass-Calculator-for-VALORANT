@@ -1,75 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/CardViewStyle"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
+    <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="8dp">
+        android:layout_gravity="center">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="8dp">
+            android:layout_width="match_parent"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="14dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:fontFamily="@font/muli_font_family"
+                android:text="@string/tier_atual"
+                android:textColor="?attr/colorSecondary"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/muli_font_family"
-                    android:paddingBottom="8dp"
-                    android:text="@string/tier_atual"
-                    android:paddingRight="5dp"
-                    android:textColor="?attr/colorSecondary"
-                    android:textSize="20dp" />
-
-                <TextView
-                    android:id="@+id/tv_exp_initial_tier"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/impact_font_family"
-                    android:paddingBottom="8dp"
-                    android:textColor="?attr/colorOnPrimary"
-                    android:textSize="20dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/tv_exp_initial_tier"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:fontFamily="@font/impact_font_family"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                app:layout_constraintLeft_toRightOf="@+id/textView5"
+                app:layout_constraintTop_toTopOf="@+id/textView5" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/muli_font_family"
-                    android:paddingBottom="8dp"
-                    android:text="@string/exp_para_completar_"
-                    android:paddingRight="5dp"
-                    android:textColor="?attr/colorSecondary"
-                    android:textSize="20dp" />
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_font_family"
+                android:text="@string/exp_para_completar_"
+                android:textColor="?attr/colorSecondary"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-                <TextView
-                    android:id="@+id/tv_exp_missing_tier"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/impact_font_family"
-                    android:paddingBottom="8dp"
-                    android:textColor="?attr/colorOnPrimary"
-                    android:textSize="20dp" />
-            </LinearLayout>
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-
-</androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/tv_exp_missing_tier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/impact_font_family"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView6"
+                app:layout_constraintStart_toEndOf="@+id/textView6"
+                app:layout_constraintTop_toTopOf="@+id/textView6" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
+</layout>

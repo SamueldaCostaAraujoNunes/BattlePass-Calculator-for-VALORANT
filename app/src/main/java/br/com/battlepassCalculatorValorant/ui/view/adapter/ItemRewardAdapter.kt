@@ -7,8 +7,18 @@ import br.com.battlepassCalculatorValorant.databinding.ItemRewardBinding
 import br.com.battlepassCalculatorValorant.model.battlePass.Reward
 import br.com.battlepassCalculatorValorant.ui.view.dialog.DialogReward
 
-class ItemRewardAdapter(private var rewards: ArrayList<Reward>, private var rewardCurrent: Int) :
+class ItemRewardAdapter(private var rewards: List<Reward>, private var rewardCurrent: Int) :
     RecyclerView.Adapter<ItemRewardAdapter.ViewHolder>() {
+
+    var rewardIndex: Int
+        get() {
+            return rewardCurrent
+        }
+        set(value) {
+            rewardCurrent = value
+            notifyDataSetChanged()
+        }
+
 
     private var filterValues: ArrayList<Reward> = ArrayList(rewards)
 

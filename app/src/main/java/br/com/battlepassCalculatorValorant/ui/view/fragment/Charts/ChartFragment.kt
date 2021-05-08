@@ -5,31 +5,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import br.com.battlepassCalculatorValorant.model.Properties.Properties
-import br.com.battlepassCalculatorValorant.model.Singleton.ManagerProperties
+import androidx.fragment.app.viewModels
 import br.com.battlepassCalculatorValorant.ui.view.viewsCustom.Chart
+import br.com.battlepassCalculatorValorant.ui.viewModel.fragment.charts.ChartFragmentViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 abstract class ChartFragment : Fragment() {
-    lateinit var chart: Chart
-    lateinit var properties: Properties
-    override fun onCreate(savedInstanceState: Bundle?) {
-        properties = ManagerProperties.getInstance(requireContext())
-        super.onCreate(savedInstanceState)
-    }
+    protected val viewModel: ChartFragmentViewModel by viewModels()
+    private lateinit var chart: Chart
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         chart = Chart(requireContext())
-        setData()
-        properties.historic.add(chart)
         return chart
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    fun setData(label: String, data: List<Int>) {
+        chart.setData(label, data)
         chart.show()
     }
-
-    abstract fun setData()
 }

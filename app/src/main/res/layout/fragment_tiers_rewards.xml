@@ -32,7 +32,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:context=".ui.view.fragment.RewardsRecycler.TiersRewardFragment"
+            tools:context=".ui.view.fragment.Rewards.TiersRewardFragment"
             tools:itemCount="15"
             tools:listitem="@layout/item_reward" />
     </androidx.constraintlayout.widget.ConstraintLayout>

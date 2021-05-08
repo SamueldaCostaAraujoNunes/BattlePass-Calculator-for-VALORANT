@@ -1,10 +1,14 @@
 package br.com.battlepassCalculatorValorant.ui.view.adapter
 
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class MyPageSliderAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
-    private val mFragmentList: ArrayList<Fragment> =  ArrayList()
+class FragmentSliderAdapter : FragmentStateAdapter {
+    constructor(fragment: Fragment) : super(fragment)
+    constructor(fa: FragmentActivity) : super(fa)
+
+    private val mFragmentList: ArrayList<Fragment> = ArrayList()
 
     override fun getItemCount(): Int = mFragmentList.size
 
@@ -18,5 +22,11 @@ class MyPageSliderAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
 
     fun addFragments(fragments: List<Fragment>) {
         mFragmentList.addAll(fragments)
+    }
+
+    fun setFragmentList(list: List<Fragment>) {
+        mFragmentList.clear()
+        mFragmentList.addAll(list)
+        notifyDataSetChanged()
     }
 }

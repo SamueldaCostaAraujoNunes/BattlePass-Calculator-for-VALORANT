@@ -10,7 +10,7 @@ import androidx.lifecycle.Observer
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.databinding.FragmentTierCurrentBinding
 import br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
-import br.com.battlepassCalculatorValorant.ui.viewModel.fragment.TierCurrentFragmentViewModel
+import br.com.battlepassCalculatorValorant.ui.viewModel.fragment.home.TierCurrentFragmentViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

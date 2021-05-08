@@ -7,12 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import br.com.battlepassCalculatorValorant.databinding.FragmentPagerSliderBinding
 import br.com.battlepassCalculatorValorant.extensions.bindingAdapters.setAdapterSlider
-import br.com.battlepassCalculatorValorant.ui.view.adapter.MyPageSliderAdapter
+import br.com.battlepassCalculatorValorant.ui.view.adapter.FragmentSliderAdapter
 
 abstract class PagerSliderFragment(private var fragments: List<Fragment> = ArrayList()) :
     Fragment() {
     private lateinit var binding: FragmentPagerSliderBinding
-    private lateinit var adapter: MyPageSliderAdapter
+    private lateinit var adapter: FragmentSliderAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -20,7 +20,7 @@ abstract class PagerSliderFragment(private var fragments: List<Fragment> = Array
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentPagerSliderBinding.inflate(inflater, container, false)
-        adapter = MyPageSliderAdapter(this)
+        adapter = FragmentSliderAdapter(this)
         adapter.addFragments(fragments)
         binding.dotsIndicator.dotsClickable = false
         binding.pager.setAdapterSlider(adapter)

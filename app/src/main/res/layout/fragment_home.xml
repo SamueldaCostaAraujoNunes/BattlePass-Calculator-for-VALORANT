@@ -46,7 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:title="Tier 17">
+                tools:title="Tier 17">
 
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/fragmentTierCurrent"

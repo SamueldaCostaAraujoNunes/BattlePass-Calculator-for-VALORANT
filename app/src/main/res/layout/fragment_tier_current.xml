@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewmodel"
-            type="br.com.battlepassCalculatorValorant.ui.viewModel.fragment.TierCurrentFragmentViewModel" />
+            type="br.com.battlepassCalculatorValorant.ui.viewModel.fragment.home.TierCurrentFragmentViewModel" />
 
         <variable
             name="indicator"
@@ -28,7 +28,7 @@
             android:fontFamily="@font/muli_font_family"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
-            android:text="@{String.valueOf(viewmodel.tierName)}"
+            app:fadeAnimationText="@{String.valueOf(viewmodel.tierName)}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Esquema Stinger" />
@@ -40,7 +40,7 @@
             android:fontFamily="@font/muli_font_family"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
-            android:text='@{String.format("%.2f", viewmodel.percentageTier) + `% ` + @string/feito}'
+            app:fadeAnimationText='@{String.format("%.2f", viewmodel.percentageTier) + `% ` + @string/feito}'
             app:layout_constraintTop_toBottomOf="@+id/tv_tier_rewind"
             tools:text="100% Feito" />
 

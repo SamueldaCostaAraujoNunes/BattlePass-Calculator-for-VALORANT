@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.battlepassCalculatorValorant.databinding.ItemImageViewBinding
 
 
-class SliderImagesAdapter(private var imagesUrl: List<String>) :
-    RecyclerView.Adapter<SliderImagesAdapter.PageHolder>() {
+class ImageSliderAdapter(private var imagesUrl: List<String>) :
+    RecyclerView.Adapter<ImageSliderAdapter.PageHolder>() {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,

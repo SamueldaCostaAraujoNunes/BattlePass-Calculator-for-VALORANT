@@ -5,11 +5,9 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Paint
 import android.util.AttributeSet
-import android.util.TypedValue
-import androidx.annotation.AttrRes
-import androidx.annotation.ColorInt
 import androidx.core.animation.doOnEnd
 import br.com.battlepassCalculatorValorant.R
+import br.com.battlepassCalculatorValorant.extensions.getColorFromAttr
 import com.google.android.material.bottomappbar.BottomAppBarTopEdgeTreatment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -49,18 +47,7 @@ class FabBottomNavigationView @JvmOverloads constructor(
             setTint(context.getColorFromAttr(R.attr.colorPrimaryVariant))
             paintStyle = Paint.Style.FILL_AND_STROKE
         }
-
         background = materialShapeDrawable
-    }
-
-    @ColorInt
-    fun Context.getColorFromAttr(
-        @AttrRes attrColor: Int,
-        typedValue: TypedValue = TypedValue(),
-        resolveRefs: Boolean = true
-    ): Int {
-        theme.resolveAttribute(attrColor, typedValue, resolveRefs)
-        return typedValue.data
     }
 
     fun transform(fab: FloatingActionButton, status: Boolean) {

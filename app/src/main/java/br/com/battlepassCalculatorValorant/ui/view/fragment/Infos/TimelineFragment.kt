@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.databinding.FragmentTimelineBinding
-import br.com.battlepassCalculatorValorant.ui.viewModel.fragment.TimelineFragmentViewModel
+import br.com.battlepassCalculatorValorant.ui.viewModel.fragment.infos.TimelineFragmentViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

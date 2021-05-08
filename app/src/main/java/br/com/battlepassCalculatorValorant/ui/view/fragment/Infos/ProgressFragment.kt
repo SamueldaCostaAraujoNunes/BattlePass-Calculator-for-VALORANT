@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.databinding.FragmentProgressBinding
-import br.com.battlepassCalculatorValorant.ui.viewModel.fragment.ProgressFragmentViewModel
+import br.com.battlepassCalculatorValorant.ui.viewModel.fragment.infos.ProgressFragmentViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

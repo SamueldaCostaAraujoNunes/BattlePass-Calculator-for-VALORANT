@@ -18,7 +18,6 @@ import java.util.stream.IntStream
 import javax.inject.Inject
 import javax.inject.Singleton
 
-
 @Singleton
 class CalculatorRepository @Inject constructor(
     private val battlePass: BattlePass,
@@ -64,9 +63,9 @@ class CalculatorRepository @Inject constructor(
         (battlePass.expMissaoSemanal.toFloat() / (passDurationInDays * daysFromTheStart / 7) * (daysFromTheStart / 7))
 
 
-    private val lastUserInput: Flow<UserTier> =
-        userInputHistory.last().map { it ?: UserTier() }
-    private val allUserInput: Flow<List<UserTier>> = userInputHistory.getAll()
+    val lastUserInput: Flow<UserTier> = userInputHistory.last().map { it ?: UserTier() }
+    private val allUserInput: Flow<List<UserTier>> =
+        userInputHistory.getAll().map { if (it.isEmpty()) listOf(UserTier()) else it }
 
     val totalExpAlreadyEarned: Flow<Int> = lastUserInput.map { last ->
         val expPass = battlePass.getTier(last.tierCurrent)!!.expInitial

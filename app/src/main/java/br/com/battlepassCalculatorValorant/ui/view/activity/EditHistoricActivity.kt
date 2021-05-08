@@ -8,7 +8,7 @@ import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.database.DialogEditInput
 import br.com.battlepassCalculatorValorant.model.Historic.Historic
 import br.com.battlepassCalculatorValorant.model.Singleton.ManagerProperties
-import br.com.battlepassCalculatorValorant.ui.view.adapter.MyEditHistoricRecyclerViewAdapter
+import br.com.battlepassCalculatorValorant.ui.view.adapter.ItemUserInputAdapter
 import br.com.battlepassCalculatorValorant.ui.view.adapter.RecyclerItemClickListener
 import br.com.battlepassCalculatorValorant.ui.view.dialog.DialogDeleteItemConfimation
 import br.com.battlepassCalculatorValorant.ui.view.helpers.HistoricItemSwipeHelper
@@ -24,13 +24,12 @@ class EditHistoricActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_historic)
 
-        val adapter = MyEditHistoricRecyclerViewAdapter(this, historic)
+        val adapter = ItemUserInputAdapter(this, historic)
         rv_edit_historic.adapter = adapter
 
         // Event click item edit / delete
         rv_edit_historic.addOnItemTouchListener(
             RecyclerItemClickListener(
-                this@EditHistoricActivity,
                 rv_edit_historic,
                 object : RecyclerItemClickListener.OnItemClickListener {
                     override fun onItemClick(view: View?, position: Int) {
@@ -64,7 +63,7 @@ class EditHistoricActivity : AppCompatActivity() {
 
     private fun editItem(
         pos: Int,
-        adapter: MyEditHistoricRecyclerViewAdapter
+        adapter: ItemUserInputAdapter
     ) {
         DialogEditInput(this@EditHistoricActivity, pos, historic).show {
             adapter.notifyItemChanged(pos)
@@ -73,7 +72,7 @@ class EditHistoricActivity : AppCompatActivity() {
 
     private fun deleteItem(
         pos: Int,
-        adapter: MyEditHistoricRecyclerViewAdapter
+        adapter: ItemUserInputAdapter
     ) {
         DialogDeleteItemConfimation(this@EditHistoricActivity, pos, historic).show(
             { adapter.notifyItemRemoved(pos) },

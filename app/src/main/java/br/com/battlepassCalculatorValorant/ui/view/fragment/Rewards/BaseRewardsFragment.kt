@@ -1,4 +1,4 @@
-package br.com.battlepassCalculatorValorant.ui.view.fragment.RewardsRecycler
+package br.com.battlepassCalculatorValorant.ui.view.fragment.Rewards
 
 import android.os.Bundle
 import android.view.ContextThemeWrapper
@@ -7,15 +7,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.PopupMenu
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.Observer
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.databinding.FragmentBaseRewardsBinding
 import br.com.battlepassCalculatorValorant.model.battlePass.Reward
 import br.com.battlepassCalculatorValorant.ui.view.adapter.ItemRewardAdapter
 
 open class BaseRewardsFragment : Fragment() {
-    lateinit var binding: FragmentBaseRewardsBinding
-    protected lateinit var rewards: ArrayList<Reward>
-    protected var positionCurrent: Int = 0
+    protected lateinit var binding: FragmentBaseRewardsBinding
+    protected lateinit var rewards: List<Reward>
+    protected lateinit var positionTier: LiveData<Int>
+    protected lateinit var adapter: ItemRewardAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,11 +30,10 @@ open class BaseRewardsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        with(binding.recycleView) {
-            adapter = ItemRewardAdapter(rewards, positionCurrent)
-            layoutManager?.scrollToPosition(positionCurrent - 1)
-        }
-
+        setupRecyclerView(1)
+        positionTier.observe(viewLifecycleOwner, Observer {
+            updateRecyclerView(it)
+        })
         binding.filter.setOnClickListener { search ->
             val ctw = ContextThemeWrapper(context, R.style.CustomPopupTheme)
             val menu = PopupMenu(ctw, search)
@@ -51,6 +53,20 @@ open class BaseRewardsFragment : Fragment() {
                 )
                 true
             }
+        }
+    }
+
+    private fun setupRecyclerView(position: Int) {
+        with(binding.recycleView) {
+            adapter = ItemRewardAdapter(rewards, position)
+            layoutManager?.scrollToPosition(position - 1)
+        }
+    }
+
+    private fun updateRecyclerView(position: Int) {
+        with(binding.recycleView) {
+            (adapter as ItemRewardAdapter).rewardIndex = position
+            layoutManager?.scrollToPosition(position - 1)
         }
     }
 }

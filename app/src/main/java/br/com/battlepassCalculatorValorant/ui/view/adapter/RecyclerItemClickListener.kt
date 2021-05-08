@@ -1,6 +1,5 @@
 package br.com.battlepassCalculatorValorant.ui.view.adapter
 
-import android.content.Context
 import android.view.GestureDetector
 import android.view.GestureDetector.SimpleOnGestureListener
 import android.view.MotionEvent
@@ -10,8 +9,7 @@ import androidx.recyclerview.widget.RecyclerView.OnItemTouchListener
 
 
 class RecyclerItemClickListener(
-    context: Context?,
-    recyclerView: RecyclerView,
+    private val recyclerView: RecyclerView,
     private val mListener: OnItemClickListener?
 ) :
     OnItemTouchListener {
@@ -20,7 +18,20 @@ class RecyclerItemClickListener(
         fun onLongItemClick(view: View?, position: Int)
     }
 
-    var mGestureDetector: GestureDetector
+    private var mGestureDetector: GestureDetector =
+        GestureDetector(recyclerView.context, object : SimpleOnGestureListener() {
+            override fun onSingleTapUp(e: MotionEvent): Boolean {
+                return true
+            }
+
+            override fun onLongPress(e: MotionEvent) {
+                val child: View? = recyclerView.findChildViewUnder(e.x, e.y)
+                if (child != null && mListener != null) {
+                    mListener.onLongItemClick(child, recyclerView.getChildAdapterPosition(child))
+                }
+            }
+        })
+
     override fun onInterceptTouchEvent(view: RecyclerView, e: MotionEvent): Boolean {
         val childView: View? = view.findChildViewUnder(e.x, e.y)
         if (childView != null && mListener != null && mGestureDetector.onTouchEvent(e)) {
@@ -33,18 +44,4 @@ class RecyclerItemClickListener(
     override fun onTouchEvent(view: RecyclerView, motionEvent: MotionEvent) {}
     override fun onRequestDisallowInterceptTouchEvent(disallowIntercept: Boolean) {}
 
-    init {
-        mGestureDetector = GestureDetector(context, object : SimpleOnGestureListener() {
-            override fun onSingleTapUp(e: MotionEvent): Boolean {
-                return true
-            }
-
-            override fun onLongPress(e: MotionEvent) {
-                val child: View? = recyclerView.findChildViewUnder(e.x, e.y)
-                if (child != null && mListener != null) {
-                    mListener.onLongItemClick(child, recyclerView.getChildAdapterPosition(child))
-                }
-            }
-        })
-    }
 }
