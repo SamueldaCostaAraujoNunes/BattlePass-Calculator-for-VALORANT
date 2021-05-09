@@ -7,17 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import br.com.battlepassCalculatorValorant.databinding.FragmentChartsBinding
 import br.com.battlepassCalculatorValorant.extensions.bindingAdapters.load
-import br.com.battlepassCalculatorValorant.model.Properties.Properties
-import br.com.battlepassCalculatorValorant.model.Singleton.ManagerProperties
 
 class ChartsFragment : Fragment() {
-    private lateinit var properties: Properties
     private lateinit var binding: FragmentChartsBinding
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        properties = ManagerProperties.getInstance(requireContext())
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

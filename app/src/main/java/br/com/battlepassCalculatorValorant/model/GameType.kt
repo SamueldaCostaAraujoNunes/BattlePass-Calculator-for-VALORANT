@@ -18,3 +18,17 @@ class DisputaDeSpike : GameType() {
         duration = 0.167F
     }
 }
+
+class Disparada : GameType() {
+    init {
+        xp = 800
+        duration = 0.167F
+    }
+}
+
+class MataMata : GameType() {
+    init {
+        xp = 900
+        duration = 0.15F
+    }
+}

@@ -1,202 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TableLayout
+    <data>
+
+        <variable
+            name="previsoesJogos"
+            type="br.com.battlepassCalculatorValorant.model.PrevisoesJogos" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/et_background">
+        android:layout_height="wrap_content">
 
-        <TableRow
-            android:background="@drawable/row_background"
-            android:padding="4dp">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_tablayout"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabIndicator="@drawable/background_item_tablayout"
+            app:tabIndicatorColor="?attr/colorSecondary"
+            app:tabIndicatorGravity="stretch"
+            app:tabInlineLabel="true"
+            app:tabSelectedTextColor="?attr/colorOnPrimary"
+            app:tabTextAppearance="@style/TextAppearance_DialogWindowTitle"
+            app:tabTextColor="?attr/colorSecondary">
 
-            <TextView
+            <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:text="Disputa da Spike" />
 
-            <TextView
+            <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/muli_font_family"
-                android:gravity="center"
-                android:text="@string/sem_classificacao"
-                android:textColor="?attr/colorOnPrimary"
-                android:textSize="18sp" />
+                android:text="Sem Classificacao" />
 
-            <TextView
+            <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/muli_font_family"
-                android:gravity="center"
-                android:text="@string/disputa_de_spike"
-                android:textColor="?attr/colorOnPrimary"
-                android:textSize="18sp" />
+                android:text="Disparada" />
 
-        </TableRow>
-
-        <TableRow android:padding="4dp">
-
-            <TextView
+            <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:fontFamily="@font/muli_font_family"
-                android:gravity="center"
-                android:includeFontPadding="true"
-                android:text="@string/jogos_restantes"
-                android:textColor="?attr/colorSecondary"
-                android:textSize="16sp" />
+                android:text="Matamata" />
 
-            <TextView
-                android:id="@+id/tv_jogos_restantes_sc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:fontFamily="@font/muli_font_family"
-                android:gravity="center"
-                android:text="5"
-                android:textColor="?attr/colorOnPrimary"
-                android:textSize="16sp"
-                app:autoSizeMaxTextSize="16sp" />
 
-            <TextView
-                android:id="@+id/tv_jogos_restantes_ds"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:fontFamily="@font/muli_font_family"
-                android:gravity="center"
-                android:text="20"
-                android:textColor="?attr/colorOnPrimary"
-                android:textSize="16sp" />
+        </com.google.android.material.tabs.TabLayout>
 
-        </TableRow>
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muli_font_family"
+            android:includeFontPadding="true"
+            android:text="@{@string/dois_pontos(@string/jogos_restantes)}"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
 
-        <TableRow android:padding="4dp">
+        <TextView
+            android:id="@+id/jogos_restantes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muli_font_family"
+            android:text='@{String.format("%.2f", previsoesJogos.jogosRestantes)}'
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView7"
+            app:layout_constraintStart_toEndOf="@+id/textView7"
+            app:layout_constraintTop_toTopOf="@+id/textView7"
+            tools:text="5" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:fontFamily="@font/muli_font_family"
-                android:gravity="center"
-                android:includeFontPadding="true"
-                android:text="@string/tempo_restante_horas"
-                android:textColor="?attr/colorSecondary"
-                android:textSize="16sp" />
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muli_font_family"
+            android:includeFontPadding="true"
+            android:text="@{@string/dois_pontos(@string/tempo_restante_horas)}"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textView7"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-            <TextView
-                android:id="@+id/tv_tempo_restante_sc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:fontFamily="@font/muli_font_family"
-                android:gravity="center"
-                android:text="3:01"
-                android:textColor="?attr/colorOnPrimary"
-                android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tempo_restante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muli_font_family"
+            android:text='@{previsoesJogos.tempoRestante}'
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView8"
+            app:layout_constraintStart_toEndOf="@+id/textView8"
+            app:layout_constraintTop_toTopOf="@+id/textView8"
+            tools:text="3:01" />
 
-            <TextView
-                android:id="@+id/tv_tempo_restante_ds"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:fontFamily="@font/muli_font_family"
-                android:gravity="center"
-                android:text="2:26"
-                android:textColor="?attr/colorOnPrimary"
-                android:textSize="16sp" />
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muli_font_family"
+            android:includeFontPadding="true"
+            android:text="@{@string/dois_pontos(@string/jogos_por_dia)}"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
-        </TableRow>
+        <TextView
+            android:id="@+id/jogos_dia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muli_font_family"
+            android:text='@{String.format("%.2f", previsoesJogos.jogosPorDia)}'
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView9"
+            app:layout_constraintStart_toEndOf="@+id/textView9"
+            app:layout_constraintTop_toTopOf="@+id/textView9"
+            tools:text="1" />
 
-        <TableRow android:padding="4dp">
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muli_font_family"
+            android:includeFontPadding="true"
+            android:text="@{@string/dois_pontos(@string/horas_por_dia)}"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:fontFamily="@font/muli_font_family"
-                android:gravity="center"
-                android:includeFontPadding="true"
-                android:text="@string/jogos_por_dia"
-                android:textColor="?attr/colorSecondary"
-                android:textSize="16sp" />
+        <TextView
+            android:id="@+id/horas_por_dia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muli_font_family"
+            android:text="@{previsoesJogos.horasPorDia}"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView10"
+            app:layout_constraintStart_toEndOf="@+id/textView10"
+            app:layout_constraintTop_toTopOf="@+id/textView10"
+            tools:text="0:02" />
 
-            <TextView
-                android:id="@+id/tv_jogos_dia_sc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:fontFamily="@font/muli_font_family"
-                android:gravity="center"
-                android:text="1"
-                android:textColor="?attr/colorOnPrimary"
-                android:textSize="16sp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:id="@+id/tv_jogos_dia_ds"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:fontFamily="@font/muli_font_family"
-                android:gravity="center"
-                android:text="1"
-                android:textColor="?attr/colorOnPrimary"
-                android:textSize="16sp" />
 
-        </TableRow>
-
-        <TableRow android:padding="4dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:fontFamily="@font/muli_font_family"
-                android:gravity="center"
-                android:includeFontPadding="true"
-                android:text="@string/horas_por_dia"
-                android:textColor="?attr/colorSecondary"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/tv_horas_dia_sc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:fontFamily="@font/muli_font_family"
-                android:gravity="center"
-                android:text="0:02"
-                android:textColor="?attr/colorOnPrimary"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/tv_horas_dia_ds"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:fontFamily="@font/muli_font_family"
-                android:gravity="center"
-                android:text="0:02"
-                android:textColor="?attr/colorOnPrimary"
-                android:textSize="16sp" />
-
-        </TableRow>
-    </TableLayout>
 </layout>

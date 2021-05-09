@@ -78,13 +78,16 @@
             <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                app:title="@string/expectativas">
 
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/fragmentTierCurrent"
                     android:name="br.com.battlepassCalculatorValorant.ui.view.fragment.Infos.ProjectionsFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:paddingHorizontal="24dp"
+                    android:paddingBottom="14dp"
                     tools:layout="@layout/fragment_projections" />
             </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
 

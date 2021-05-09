@@ -4,9 +4,8 @@ import br.com.battlepassCalculatorValorant.database.room.AppDB
 import br.com.battlepassCalculatorValorant.database.room.model.UserTier
 import br.com.battlepassCalculatorValorant.extensions.dateFormat
 import br.com.battlepassCalculatorValorant.extensions.daysApart
-import br.com.battlepassCalculatorValorant.model.GameType.DisputaDeSpike
 import br.com.battlepassCalculatorValorant.model.GameType.GameType
-import br.com.battlepassCalculatorValorant.model.GameType.SemClassificacao
+import br.com.battlepassCalculatorValorant.model.PrevisoesJogos
 import br.com.battlepassCalculatorValorant.model.battlePass.BattlePass
 import br.com.battlepassCalculatorValorant.model.battlePass.Chapter
 import br.com.battlepassCalculatorValorant.model.battlePass.Tier
@@ -26,9 +25,6 @@ class CalculatorRepository @Inject constructor(
     private val userInputHistory = database.userTier
 
     private val today = Calendar.getInstance()
-
-    private val semClassificacao: SemClassificacao = SemClassificacao()
-    private val disputaDeSpike: DisputaDeSpike = DisputaDeSpike()
 
     val totalXpBattlePass: Int = battlePass.totalXp
     val listTiers: ArrayList<Tier> = battlePass.tiers
@@ -167,28 +163,31 @@ class CalculatorRepository @Inject constructor(
             }
         }
 
-    fun jogosRestantes(gameType: GameType): Flow<Float> =
-        totalExpAlreadyEarned.map {
-            val xpTotal = totalXpBattlePass
-            val xpDif = xpTotal - it
-            xpDif.toFloat() / gameType.xp
-        }
+    fun previsoesJogos(gameType: GameType): Flow<PrevisoesJogos> = totalExpAlreadyEarned.map {
+        val xpTotal = totalXpBattlePass
+        val xpDif = xpTotal - it
 
-
-    fun tempoRestante(gameType: GameType): Flow<Float> =
-        jogosRestantes(gameType).map { it * gameType.duration }
-
-    fun jogosPorDia(gameType: GameType): Flow<Int> =
-        jogosRestantes(gameType).map { (it / passDurationInDays).toInt() + 1 }
-
-
-    fun horasPorDia(gameType: GameType): Flow<Float> = jogosPorDia(gameType).map {
-        it * gameType.duration
+        val jogosRestantes = xpDif.toFloat() / gameType.xp
+        val tempoRestante = jogosRestantes * gameType.duration
+        val jogosPorDia = (tempoRestante / daysLeftUntilTheEnd)
+        val horasPorDia = jogosPorDia * gameType.duration
+        PrevisoesJogos(
+            jogosRestantes,
+            convertHours(tempoRestante),
+            jogosPorDia,
+            convertHours(horasPorDia)
+        )
     }
+
 
     val expNormalGame: Flow<Float> = totalExpAlreadyEarned.map {
         it - expDailyMissionUntilToday + expWeeklyMissionUntilToday
     }
 
+    private fun convertHours(time: Float): String {
+        val hours = time.toInt()
+        val minutes = ((time % 1) * 60).toInt()
+        return "${hours}:${minutes}"
+    }
 
 }

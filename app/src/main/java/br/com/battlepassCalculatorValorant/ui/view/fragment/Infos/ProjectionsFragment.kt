@@ -5,67 +5,51 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.model.Observer.IObserver
-import br.com.battlepassCalculatorValorant.model.Properties.Properties
-import br.com.battlepassCalculatorValorant.model.Singleton.ManagerProperties
-import kotlinx.android.synthetic.main.fragment_projections.*
+import br.com.battlepassCalculatorValorant.databinding.FragmentProjectionsBinding
+import br.com.battlepassCalculatorValorant.ui.viewModel.fragment.infos.ProjectionsFragmentViewModel
+import com.google.android.material.tabs.TabLayout
+import dagger.hilt.android.AndroidEntryPoint
 
-class ProjectionsFragment : Fragment(), IObserver {
-    private lateinit var properties: Properties
+@AndroidEntryPoint
+class ProjectionsFragment : Fragment() {
+    private val viewModel: ProjectionsFragmentViewModel by viewModels()
+    private lateinit var binding: FragmentProjectionsBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        properties = ManagerProperties.getInstance(requireContext())
-        properties.historic.add(this)
-        super.onCreate(savedInstanceState)
+    companion object {
+        const val DISPUTA_DA_SPIKE = 0
+        const val SEM_CLASSIFICACAO = 1
+        const val DISPARADA = 2
+        const val MATA_MATA = 3
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_projections, container, false)
+    ): View {
+        binding = FragmentProjectionsBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        update()
+        setListeners()
+        binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                val position = tab?.position ?: 0
+                setListeners(position)
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab?) {}
+            override fun onTabUnselected(tab: TabLayout.Tab?) {}
+        })
     }
 
-    override fun update() {
-
-        val jogosRestantesSC = properties.jogosRestantes(properties.semClassificacao)
-        val jogosRestantesDS = properties.jogosRestantes(properties.disputaDeSpike)
-
-        val tempoRestanteSC = properties.tempoRestante(properties.semClassificacao)
-        val tempoRestanteDS = properties.tempoRestante(properties.disputaDeSpike)
-
-        val jogosDiaSC = properties.jogosPorDia(properties.semClassificacao)
-        val jogosDiaDS = properties.jogosPorDia(properties.disputaDeSpike)
-
-        val horasDiasSC = properties.horasPorDia(properties.semClassificacao)
-        val horasDiasDS = properties.horasPorDia(properties.disputaDeSpike)
-
-        //Jogos Restantes
-        tv_jogos_restantes_sc.text = jogosRestantesSC.toInt().toString()
-        tv_jogos_restantes_ds.text = jogosRestantesDS.toInt().toString()
-
-        //Tempo Restante
-        tv_tempo_restante_sc.text = convertHours(tempoRestanteSC)
-        tv_tempo_restante_ds.text = convertHours(tempoRestanteDS)
-
-        //Jogos Por Dia
-        tv_jogos_dia_sc.text = jogosDiaSC.toString()
-        tv_jogos_dia_ds.text = jogosDiaDS.toString()
-
-        //Horas por dia
-        tv_horas_dia_sc.text = convertHours(horasDiasSC)
-        tv_horas_dia_ds.text = convertHours(horasDiasDS)
-    }
-
-    private fun convertHours(time: Float): String {
-        val hours = time.toInt()
-        val minutes = ((time % 1) * 60).toInt()
-        return "${hours}:${minutes} Hrs"
+    private fun setListeners(position: Int = DISPUTA_DA_SPIKE) {
+        viewModel.previsoesDosJogos(position).observe(viewLifecycleOwner, Observer {
+            binding.previsoesJogos = it
+        })
     }
 
     override fun toString(): String {
