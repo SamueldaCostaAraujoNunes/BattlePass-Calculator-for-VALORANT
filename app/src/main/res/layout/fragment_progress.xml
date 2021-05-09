@@ -21,23 +21,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli_font_family"
-            android:text="@string/total_de_xp"
+            android:text="@{@string/dois_pontos(@string/total_de_xp)}"
             android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/total_de_xp" />
 
         <TextView
             android:id="@+id/total_de_xp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/impact_font_family"
-            android:text="@{viewmodel.totalExp + ` EXP`}"
+            android:paddingStart="8dp"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
+            app:fadeAnimationText="@{viewmodel.totalExp + ` EXP`}"
             app:layout_constraintBottom_toBottomOf="@+id/total_de_xp_text"
             app:layout_constraintStart_toEndOf="@+id/total_de_xp_text"
             app:layout_constraintTop_toTopOf="@+id/total_de_xp_text"
+            tools:ignore="RtlSymmetry"
             tools:text="122000 EXP" />
 
         <TextView
@@ -45,23 +48,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli_font_family"
-            android:text="@string/progresso_porcento"
+            android:text="@{@string/dois_pontos(@string/progresso_porcento)}"
             android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/total_de_xp_text" />
+            app:layout_constraintTop_toBottomOf="@+id/total_de_xp_text"
+            tools:text="@string/progresso_porcento" />
 
         <TextView
             android:id="@+id/progress_porcent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/impact_font_family"
-            android:text='@{String.format("%.2f", viewmodel.porcentagemProgresso) + `%`}'
+            android:paddingStart="8dp"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
+            app:fadeAnimationText='@{String.format("%.2f", viewmodel.porcentagemProgresso) + `%`}'
             app:layout_constraintBottom_toBottomOf="@+id/progress_porcent_text"
             app:layout_constraintStart_toEndOf="@+id/progress_porcent_text"
             app:layout_constraintTop_toTopOf="@+id/progress_porcent_text"
+            tools:ignore="RtlSymmetry"
             tools:text="10.43 %" />
 
         <TextView
@@ -69,23 +75,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli_font_family"
-            android:text="@string/xp_por_dia"
+            android:text="@{@string/dois_pontos(@string/xp_por_dia)}"
             android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/progress_porcent_text" />
+            app:layout_constraintTop_toBottomOf="@+id/progress_porcent_text"
+            tools:text="@string/xp_por_dia" />
 
         <TextView
             android:id="@+id/xp_p_dia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/impact_font_family"
-            android:text="@{viewmodel.expPerDay + ` EXP`}"
+            android:paddingStart="8dp"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
+            app:fadeAnimationText="@{viewmodel.expPerDay + ` EXP`}"
             app:layout_constraintBottom_toBottomOf="@+id/xp_p_dia_text"
             app:layout_constraintStart_toEndOf="@+id/xp_p_dia_text"
             app:layout_constraintTop_toTopOf="@+id/xp_p_dia_text"
+            tools:ignore="RtlSymmetry"
             tools:text="40667 EXP" />
 
         <TextView
@@ -93,7 +102,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli_font_family"
-            android:text="@{`EXP ` + (viewmodel.expAdiantadoAtrasado >= 0 ? @string/adiantado : @string/atrasado) + `:`}"
+            android:text="@{@string/exp_adiantado_atrasado_dois_pontos(viewmodel.expAdiantadoAtrasado >= 0 ? @string/adiantado : @string/atrasado)}"
             android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -105,12 +114,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/impact_font_family"
-            android:text="@{Math.abs(viewmodel.expAdiantadoAtrasado) + ` EXP`}"
+            android:paddingStart="8dp"
             android:textSize="20sp"
             app:adiantado="@{viewmodel.expAdiantadoAtrasado >= 0}"
+            app:fadeAnimationText="@{Math.abs(viewmodel.expAdiantadoAtrasado) + ` EXP`}"
             app:layout_constraintBottom_toBottomOf="@+id/exp_adiant_atrasado_text"
             app:layout_constraintStart_toEndOf="@+id/exp_adiant_atrasado_text"
             app:layout_constraintTop_toTopOf="@+id/exp_adiant_atrasado_text"
+            tools:ignore="RtlSymmetry"
             tools:text="59122 EXP"
             tools:textColor="?attr/colorAccent" />
 

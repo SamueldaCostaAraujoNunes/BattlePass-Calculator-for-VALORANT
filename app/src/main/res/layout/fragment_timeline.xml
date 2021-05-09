@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewmodel"
             type="br.com.battlepassCalculatorValorant.ui.viewModel.fragment.infos.TimelineFragmentViewModel" />
@@ -18,7 +19,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli_font_family"
-            android:text="@string/data_inicial_do_ato"
+            android:text="@{@string/dois_pontos(@string/data_inicial_do_ato)}"
+            tools:text="@string/data_inicial_do_ato"
             android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -29,12 +31,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/impact_font_family"
-            android:text="@{viewmodel.dataInicioAto}"
+            android:paddingStart="8dp"
+            app:fadeAnimationText="@{viewmodel.dataInicioAto}"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/data_inicial_do_ato_text"
             app:layout_constraintStart_toEndOf="@+id/data_inicial_do_ato_text"
             app:layout_constraintTop_toTopOf="@+id/data_inicial_do_ato_text"
+            tools:ignore="RtlSymmetry"
             tools:text="27/04/2021" />
 
         <TextView
@@ -42,7 +46,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli_font_family"
-            android:text="@string/data_finalizacao"
+            android:text="@{@string/dois_pontos(@string/data_finalizacao)}"
+            tools:text="@string/data_finalizacao"
             android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -53,13 +58,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/impact_font_family"
-            android:text="@{viewmodel.dataFinalizacao}"
+            android:paddingStart="8dp"
+            app:fadeAnimationText="@{viewmodel.dataFinalizacao}"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
             app:adiantado="@{viewmodel.diasAdiantadoAtrasado >= 0}"
             app:layout_constraintBottom_toBottomOf="@+id/data_de_finalizacao_text"
             app:layout_constraintStart_toEndOf="@+id/data_de_finalizacao_text"
             app:layout_constraintTop_toTopOf="@+id/data_de_finalizacao_text"
+            tools:ignore="RtlSymmetry"
             tools:text="13/06/2021"
             tools:textColor="?attr/colorAccent" />
 
@@ -68,7 +75,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli_font_family"
-            android:text="@string/data_final_do_ato"
+            android:text="@{@string/dois_pontos(@string/data_final_do_ato)}"
+            tools:text="@string/data_final_do_ato"
             android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -79,12 +87,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/impact_font_family"
-            android:text="@{viewmodel.dataFinalAto}"
+            android:paddingStart="8dp"
+            app:fadeAnimationText="@{viewmodel.dataFinalAto}"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/data_final_do_ato_text"
             app:layout_constraintStart_toEndOf="@+id/data_final_do_ato_text"
             app:layout_constraintTop_toTopOf="@+id/data_final_do_ato_text"
+            tools:ignore="RtlSymmetry"
             tools:text="21/06/2021" />
 
         <TextView
@@ -92,7 +102,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli_font_family"
-            android:text="@string/dia_do_passe"
+            android:text="@{@string/dois_pontos(@string/dia_do_passe)}"
+            tools:text="@string/dia_do_passe"
             android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -103,12 +114,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/impact_font_family"
-            android:text="@{String.valueOf(viewmodel.diaAtualDoPasse)}"
+            android:paddingStart="8dp"
+            app:fadeAnimationText="@{String.valueOf(viewmodel.diaAtualDoPasse)}"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/dia_do_passe_text"
             app:layout_constraintStart_toEndOf="@+id/dia_do_passe_text"
             app:layout_constraintTop_toTopOf="@+id/dia_do_passe_text"
+            tools:ignore="RtlSymmetry"
             tools:text="5" />
 
         <TextView
@@ -116,7 +129,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli_font_family"
-            android:text="@string/dias_para_o_fim_do_passe"
+            android:text="@{@string/dois_pontos(@string/dias_para_o_fim_do_passe)}"
+            tools:text="@string/dias_para_o_fim_do_passe"
             android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -127,12 +141,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/impact_font_family"
-            android:text="@{String.valueOf(viewmodel.diasParaOFimDoPasse)}"
+            android:paddingStart="8dp"
+            app:fadeAnimationText="@{String.valueOf(viewmodel.diasParaOFimDoPasse)}"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/dias_para_acabar_text"
             app:layout_constraintStart_toEndOf="@+id/dias_para_acabar_text"
             app:layout_constraintTop_toTopOf="@+id/dias_para_acabar_text"
+            tools:ignore="RtlSymmetry"
             tools:text="51" />
 
         <TextView
@@ -140,26 +156,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli_font_family"
-            android:text="@{viewmodel.diasAdiantadoAtrasado >= 0 ? @string/adiantado : @string/atrasado}"
-            tools:text="@string/dias_adiantados_atrasados"
+            android:text="@{@string/dia_adiantado_atrasado_dois_pontos(viewmodel.diasAdiantadoAtrasado >= 0 ? @string/adiantado : @string/atrasado)}"
             android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dias_para_acabar_text" />
+            app:layout_constraintTop_toBottomOf="@+id/dias_para_acabar_text"
+            tools:text="@string/dias_adiantados_atrasados" />
 
         <TextView
             android:id="@+id/dias_adiantados_atrasados"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/impact_font_family"
-            android:text="@{String.valueOf(Math.abs(viewmodel.diasAdiantadoAtrasado))}"
+            android:paddingStart="8dp"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
             app:adiantado="@{viewmodel.diasAdiantadoAtrasado >= 0}"
+            app:fadeAnimationText="@{String.valueOf(Math.abs(viewmodel.diasAdiantadoAtrasado))}"
             app:layout_constraintBottom_toBottomOf="@+id/dias_adiantados_atrasados_text"
             app:layout_constraintStart_toEndOf="@+id/dias_adiantados_atrasados_text"
             app:layout_constraintTop_toTopOf="@+id/dias_adiantados_atrasados_text"
             tools:text="8"
+            tools:ignore="RtlSymmetry"
             tools:textColor="?attr/colorAccent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

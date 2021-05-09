@@ -1,7 +1,6 @@
 package br.com.battlepassCalculatorValorant.extensions.bindingAdapters
 
 import android.content.res.Resources
-import android.graphics.Color
 import android.graphics.Paint
 import android.util.TypedValue
 import android.view.View
@@ -12,14 +11,15 @@ import androidx.annotation.AttrRes
 import androidx.annotation.ColorInt
 import androidx.databinding.BindingAdapter
 import br.com.battlepassCalculatorValorant.R
+import br.com.battlepassCalculatorValorant.extensions.getColorFromAttr
 
 
 @BindingAdapter("adiantado")
 fun TextView.adiantado(sucess: Boolean) {
     if (sucess) {
-        setTextColor(Color.parseColor("#4CD964"))
+        setTextColor(context.getColorFromAttr(R.attr.colorAccent))
     } else {
-        setTextColor(Color.parseColor("#E69700"))
+        setTextColor(context.getColorFromAttr(R.attr.colorError))
     }
 }
 
@@ -44,6 +44,7 @@ fun TextView.fadeAnimationText(newText: String?) {
     }
 
 }
+
 
 @BindingAdapter("position", "positionCurrent")
 fun TextView.comparableStyle(position: Int?, positionCurrent: Int?) {

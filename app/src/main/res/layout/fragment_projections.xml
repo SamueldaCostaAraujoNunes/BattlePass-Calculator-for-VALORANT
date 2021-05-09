@@ -24,9 +24,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:tabIndicator="@drawable/background_item_tablayout"
+            app:tabIndicatorAnimationDuration="400"
+            app:tabIndicatorAnimationMode="elastic"
             app:tabIndicatorColor="?attr/colorSecondary"
             app:tabIndicatorGravity="stretch"
             app:tabInlineLabel="true"
+            app:tabPadding="4dp"
             app:tabSelectedTextColor="?attr/colorOnPrimary"
             app:tabTextAppearance="@style/TextAppearance_DialogWindowTitle"
             app:tabTextColor="?attr/colorSecondary">
@@ -64,19 +67,22 @@
             android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+            app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+            tools:text="@string/jogos_restantes" />
 
         <TextView
             android:id="@+id/jogos_restantes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli_font_family"
-            android:text='@{String.format("%.2f", previsoesJogos.jogosRestantes)}'
+            android:paddingStart="8dp"
+            app:fadeAnimationText='@{String.format("%.2f", previsoesJogos.jogosRestantes)}'
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/textView7"
             app:layout_constraintStart_toEndOf="@+id/textView7"
             app:layout_constraintTop_toTopOf="@+id/textView7"
+            tools:ignore="RtlSymmetry"
             tools:text="5" />
 
         <TextView
@@ -89,19 +95,22 @@
             android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/textView7"
-            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            tools:text="@string/tempo_restante_horas" />
 
         <TextView
             android:id="@+id/tempo_restante"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli_font_family"
-            android:text='@{previsoesJogos.tempoRestante}'
+            android:paddingStart="8dp"
+            app:fadeAnimationText='@{previsoesJogos.tempoRestante}'
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/textView8"
             app:layout_constraintStart_toEndOf="@+id/textView8"
             app:layout_constraintTop_toTopOf="@+id/textView8"
+            tools:ignore="RtlSymmetry"
             tools:text="3:01" />
 
         <TextView
@@ -114,19 +123,22 @@
             android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/textView8"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            tools:text="@string/jogos_por_dia" />
 
         <TextView
             android:id="@+id/jogos_dia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli_font_family"
-            android:text='@{String.format("%.2f", previsoesJogos.jogosPorDia)}'
+            android:paddingStart="8dp"
+            app:fadeAnimationText='@{String.format("%.2f", previsoesJogos.jogosPorDia)}'
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/textView9"
             app:layout_constraintStart_toEndOf="@+id/textView9"
             app:layout_constraintTop_toTopOf="@+id/textView9"
+            tools:ignore="RtlSymmetry"
             tools:text="1" />
 
         <TextView
@@ -139,19 +151,22 @@
             android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/textView9"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            tools:text="@string/horas_por_dia" />
 
         <TextView
             android:id="@+id/horas_por_dia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli_font_family"
-            android:text="@{previsoesJogos.horasPorDia}"
+            android:paddingStart="8dp"
+            app:fadeAnimationText="@{previsoesJogos.horasPorDia}"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/textView10"
             app:layout_constraintStart_toEndOf="@+id/textView10"
             app:layout_constraintTop_toTopOf="@+id/textView10"
+            tools:ignore="RtlSymmetry"
             tools:text="0:02" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

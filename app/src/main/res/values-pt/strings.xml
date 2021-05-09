@@ -21,19 +21,19 @@
     <string name="atrasado">Atrasado</string>
 
     <string name="data_inicial">Data Inicial</string>
-    <string name="progresso_porcento">% Progresso:</string>
-    <string name="total_de_xp">Total de EXP:</string>
-    <string name="xp_por_dia">EXP p/ Dia:</string>
-    <string name="exp_adiantado_atrasado">EXP Adiant/Atrasado:</string>
+    <string name="progresso_porcento">% Progresso</string>
+    <string name="total_de_xp">Total de EXP</string>
+    <string name="xp_por_dia">EXP p/ Dia</string>
+    <string name="exp_adiantado_atrasado">EXP Adiant/Atrasado</string>
 
     <string name="linha_do_tempo">Linha do Tempo</string>
-    <string name="data_inicial_do_ato">Data inicial do Ato:</string>
-    <string name="data_final_do_ato">Data final do Ato:</string>
-    <string name="data_finalizacao">Data de finalização:</string>
-    <string name="dia_do_passe">Dia do passe:</string>
-    <string name="dias_adiantados_atrasados">Dias adiantados/atrasados:</string>
-    <string name="dias_adiantados">Dias Adiantados:</string>
-    <string name="dias_atrasados">Dias Atrasados:</string>
+    <string name="data_inicial_do_ato">Data inicial do Ato</string>
+    <string name="data_final_do_ato">Data final do Ato</string>
+    <string name="data_finalizacao">Data de finalização</string>
+    <string name="dia_do_passe">Dia do passe</string>
+    <string name="dias_adiantados_atrasados">Dias adiantados/atrasados</string>
+    <string name="dias_adiantados">Dias Adiantados</string>
+    <string name="dias_atrasados">Dias Atrasados</string>
 
     <string name="sem_classificacao">Sem Classificação</string>
     <string name="disputa_de_spike">Disputa de Spike</string>
@@ -42,7 +42,7 @@
     <string name="tempo_restante_horas">Tempo Restante</string>
     <string name="jogos_restantes">Jogos Restantes</string>
     <string name="expectativas">Expectativas</string>
-    <string name="dias_para_o_fim_do_passe">Dias para o fim do passe:</string>
+    <string name="dias_para_o_fim_do_passe">Dias para o fim do passe</string>
 
     <string name="home">Início</string>
     <string name="graficos">Gráficos</string>
@@ -56,9 +56,9 @@
 
     <string name="publicidade">Publicidade</string>
     <string name="trocar_tema">Trocar Tema</string>
-    <string name="exp_para_completar_">EXP para completar:</string>
-    <string name="porcentagem_do_passe">Porcentagem do Passe:</string>
-    <string name="recompensa">Recompensa:</string>
+    <string name="exp_para_completar_">EXP para completar</string>
+    <string name="porcentagem_do_passe">Porcentagem do Passe</string>
+    <string name="recompensa">Recompensa</string>
     <string name="capitulo">Capítulo</string>
 
     <string name="recompensa_por_tier">Recompensa por tier</string>

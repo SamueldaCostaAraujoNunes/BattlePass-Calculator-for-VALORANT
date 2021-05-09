@@ -17,12 +17,4 @@ class TimelineFragmentViewModel @Inject constructor(calculador: CalculatorReposi
     val diasParaOFimDoPasse: Int = calculador.daysLeftUntilTheEnd
     val dataFinalizacao: LiveData<String> = calculador.finishForecast.asLiveData()
     val diasAdiantadoAtrasado: LiveData<Int> = calculador.daysMissing.asLiveData()
-
-//    val dateInit = properties.passBattle.getDateInit()
-//    val dateFinally = properties.passBattle.getDateFinally()
-//    val finishForecast = properties.finishForecast()
-//    val daysMissing = properties.daysMissing()!!
-//    val dayCurrent = properties.dayCurrent()
-//    val daysForClosed = properties.daysForClosed()
-
 }

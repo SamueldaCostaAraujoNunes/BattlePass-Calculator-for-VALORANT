@@ -169,8 +169,8 @@ class CalculatorRepository @Inject constructor(
 
         val jogosRestantes = xpDif.toFloat() / gameType.xp
         val tempoRestante = jogosRestantes * gameType.duration
-        val jogosPorDia = (tempoRestante / daysLeftUntilTheEnd)
-        val horasPorDia = jogosPorDia * gameType.duration
+        val horasPorDia = (tempoRestante / daysLeftUntilTheEnd)
+        val jogosPorDia = horasPorDia / gameType.duration
         PrevisoesJogos(
             jogosRestantes,
             convertHours(tempoRestante),
@@ -187,7 +187,21 @@ class CalculatorRepository @Inject constructor(
     private fun convertHours(time: Float): String {
         val hours = time.toInt()
         val minutes = ((time % 1) * 60).toInt()
-        return "${hours}:${minutes}"
+        return "${formatTime(hours)}:${formatTime(minutes)}"
+    }
+
+    private fun formatTime(value: Int): String {
+        return when {
+            value == 0 -> {
+                "00"
+            }
+            value < 10 -> {
+                "0$value"
+            }
+            else -> {
+                value.toString()
+            }
+        }
     }
 
 }

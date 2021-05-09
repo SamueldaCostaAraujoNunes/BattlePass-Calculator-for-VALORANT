@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="dois_pontos" translatable="false">%1$s: </string>
+    <string name="exp_adiantado_atrasado_dois_pontos" translatable="false">EXP %1$s: </string>
+    <string name="dia_adiantado_atrasado_dois_pontos" translatable="false">Dias %1$s: </string>
 </resources>

@@ -30,6 +30,7 @@ class ProjectionsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentProjectionsBinding.inflate(inflater, container, false)
+        binding.lifecycleOwner = this
         return binding.root
     }
 
