@@ -58,7 +58,7 @@ open class BaseRewardsFragment : Fragment() {
 
     private fun setupRecyclerView(position: Int) {
         with(binding.recycleView) {
-            adapter = ItemRewardAdapter(rewards, position)
+            adapter = ItemRewardAdapter(rewards, position, requireActivity().supportFragmentManager)
             layoutManager?.scrollToPosition(position - 1)
         }
     }

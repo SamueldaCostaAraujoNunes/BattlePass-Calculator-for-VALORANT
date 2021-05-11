@@ -9,6 +9,7 @@ class Reward(json: JSONObject, var position: Int, val fonte: Char) {
     var tipo = json.get("Tipo").toString()
     val imagens = arrayListOf<String>()
 
+
     companion object {
         fun getTypeTranslated(context: Context, tipo: String): String {
             val dict = mapOf(

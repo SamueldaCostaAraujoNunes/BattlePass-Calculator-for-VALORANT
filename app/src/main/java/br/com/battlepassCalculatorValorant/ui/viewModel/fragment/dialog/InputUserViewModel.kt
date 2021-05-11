@@ -4,8 +4,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.database.room.model.UserTier
+import br.com.battlepassCalculatorValorant.model.FormInput
 import br.com.battlepassCalculatorValorant.repository.CalculatorRepository
-import br.com.battlepassCalculatorValorant.ui.view.dialog.FormInput
 import br.com.battlepassCalculatorValorant.util.ViewModelString
 import dagger.hilt.android.lifecycle.HiltViewModel
 import timber.log.Timber

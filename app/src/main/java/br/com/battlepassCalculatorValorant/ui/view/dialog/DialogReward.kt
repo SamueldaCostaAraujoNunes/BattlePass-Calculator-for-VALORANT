@@ -1,32 +1,36 @@
 package br.com.battlepassCalculatorValorant.ui.view.dialog
 
-import android.content.Context
+import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
-import androidx.appcompat.app.AlertDialog
+import android.view.ViewGroup
 import br.com.battlepassCalculatorValorant.databinding.DialogRewardBinding
 import br.com.battlepassCalculatorValorant.model.battlePass.Reward
 import br.com.battlepassCalculatorValorant.ui.view.adapter.ImageSliderAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
-class DialogReward(context: Context, reward: Reward) : AlertDialog(context) {
-    private var builder: Builder
+@AndroidEntryPoint
+class DialogReward(val reward: Reward) : DialogBase() {
+    lateinit var binding: DialogRewardBinding
 
-    init {
-        builder = Builder(context)
-            .setView(createContent(reward))
-            .setTitle(Reward.getFonteTranslated(context, reward.fonte) + " " + reward.position)
+    companion object {
+        const val TAG = "tag"
     }
 
-    private fun createContent(reward: Reward): View {
-        val binding = DialogRewardBinding.inflate(layoutInflater, null)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        super.onCreateView(inflater, container, savedInstanceState)
+        binding = DialogRewardBinding.inflate(inflater, container, false)
         binding.reward = reward
+        binding.titleName =
+            Reward.getFonteTranslated(requireContext(), reward.fonte) + " " + reward.position
         val mViewPagerAdapter = ImageSliderAdapter(reward.imagens)
         binding.dialogViewPagerMain.adapter = mViewPagerAdapter
         binding.indicatorImageSlider.setViewPager2(binding.dialogViewPagerMain)
         return binding.root
-    }
-
-    override fun show() {
-        builder.show()
     }
 
 }

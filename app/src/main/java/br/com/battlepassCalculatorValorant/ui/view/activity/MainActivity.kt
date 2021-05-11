@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
     private fun createListeners() {
         createNavigationItemSelectedListener()
         fab.setOnClickListener {
-            DialogInput().show(supportFragmentManager, "Teste")
+            DialogInput().show(supportFragmentManager, DialogInput.TAG)
         }
     }
 

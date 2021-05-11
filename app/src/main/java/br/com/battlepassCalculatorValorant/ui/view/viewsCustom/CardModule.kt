@@ -58,6 +58,10 @@ class CardModule @JvmOverloads constructor(
         typedArray.recycle()
     }
 
+    fun title(value: String) {
+        binding.titleName = value
+    }
+
     override fun addView(child: View?) {
         if (child == linearLayout) {
             super.addView(child)

@@ -2,12 +2,19 @@ package br.com.battlepassCalculatorValorant.ui.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.battlepassCalculatorValorant.databinding.ItemRewardBinding
 import br.com.battlepassCalculatorValorant.model.battlePass.Reward
+import br.com.battlepassCalculatorValorant.ui.view.dialog.DialogInput
 import br.com.battlepassCalculatorValorant.ui.view.dialog.DialogReward
 
-class ItemRewardAdapter(private var rewards: List<Reward>, private var rewardCurrent: Int) :
+
+class ItemRewardAdapter(
+    private var rewards: List<Reward>,
+    private var rewardCurrent: Int,
+    private val fragmentManager: FragmentManager
+) :
     RecyclerView.Adapter<ItemRewardAdapter.ViewHolder>() {
 
     var rewardIndex: Int
@@ -32,7 +39,7 @@ class ItemRewardAdapter(private var rewards: List<Reward>, private var rewardCur
         holder.binding.reward = reward
         holder.binding.itemCurrent = rewardCurrent
         holder.itemView.setOnClickListener {
-            DialogReward(holder.itemView.context, reward).show()
+            DialogReward(reward).show(fragmentManager, DialogInput.TAG)
         }
     }
 
