@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Disable background -->
+    <item android:color="@color/grayHint" android:state_enabled="false" />
+    <!-- Enabled background -->
+    <item android:color="?attr/colorSecondaryVariant" />
+</selector>

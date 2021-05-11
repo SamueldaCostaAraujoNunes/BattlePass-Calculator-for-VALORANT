@@ -26,6 +26,6 @@ object AppModule {
     @Provides
     @Singleton
     fun battlePass(@ApplicationContext context: Context) =
-        BattlePassFactory(context).getPassBattle()
+        BattlePassFactory(context).getBattlePass()
 
 }

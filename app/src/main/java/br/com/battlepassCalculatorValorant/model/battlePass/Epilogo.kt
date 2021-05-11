@@ -4,14 +4,14 @@ import org.json.JSONObject
 
 class Epilogo(
     json: JSONObject,
-    private val sizePassBattle: Int,
-    private val expTotalPassBattle: Int
+    private val sizeBattlePass: Int,
+    private val expTotalBattlePass: Int
 ) : Chapter(json) {
     override val fonte = Reward.EPILOGO
     init {
         tiers.map {
-            it.expInitial += expTotalPassBattle
-            it.index += sizePassBattle
+            it.expInitial += expTotalBattlePass
+            it.index += sizeBattlePass
         }
     }
 }

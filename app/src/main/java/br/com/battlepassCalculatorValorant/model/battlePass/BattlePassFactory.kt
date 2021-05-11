@@ -7,7 +7,7 @@ import java.io.InputStream
 
 private const val PATH_INFOS = "battlePass.json"
 class BattlePassFactory(val context: Context) {
-    private val passBattle = BattlePass(readJson(), context)
+    private val battlePass = BattlePass(readJson(), context)
 
     private fun readJson(): JSONObject {
         return try {
@@ -19,7 +19,7 @@ class BattlePassFactory(val context: Context) {
         }
     }
 
-    fun getPassBattle(): BattlePass {
-        return passBattle
+    fun getBattlePass(): BattlePass {
+        return battlePass
     }
 }

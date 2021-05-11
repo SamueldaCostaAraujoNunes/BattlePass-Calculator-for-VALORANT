@@ -19,11 +19,10 @@ import javax.inject.Singleton
 
 @Singleton
 class CalculatorRepository @Inject constructor(
-    private val battlePass: BattlePass,
+    val battlePass: BattlePass,
     database: AppDB
 ) {
     private val userInputHistory = database.userTier
-
     private val today = Calendar.getInstance()
 
     val totalXpBattlePass: Int = battlePass.totalXp
@@ -184,6 +183,12 @@ class CalculatorRepository @Inject constructor(
         it - expDailyMissionUntilToday + expWeeklyMissionUntilToday
     }
 
+
+    suspend fun insertUserInput(userTier: UserTier) {
+        userInputHistory.insert(userTier)
+    }
+
+
     private fun convertHours(time: Float): String {
         val hours = time.toInt()
         val minutes = ((time % 1) * 60).toInt()
@@ -203,5 +208,6 @@ class CalculatorRepository @Inject constructor(
             }
         }
     }
+
 
 }

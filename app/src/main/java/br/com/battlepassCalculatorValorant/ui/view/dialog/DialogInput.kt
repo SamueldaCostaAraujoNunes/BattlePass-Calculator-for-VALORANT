@@ -1,115 +1,60 @@
 package br.com.battlepassCalculatorValorant.ui.view.dialog
 
-import android.app.AlarmManager
-import android.app.PendingIntent
-import android.content.Context
-import android.content.Context.ALARM_SERVICE
-import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import androidx.appcompat.app.AlertDialog
-import br.com.battlepassCalculatorValorant.BuildConfig
-import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.model.Historic.UserInputsTier
-import br.com.battlepassCalculatorValorant.model.Singleton.ManagerHistoric
-import br.com.battlepassCalculatorValorant.model.Util.ValidateInputUser
-import br.com.battlepassCalculatorValorant.notification.NotificationChannel
-import br.com.battlepassCalculatorValorant.notification.NotificationReceiver
-import com.google.android.material.textfield.TextInputEditText
-import kotlinx.android.synthetic.main.dialog_tierinput.view.*
+import android.view.*
+import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.viewModels
+import br.com.battlepassCalculatorValorant.databinding.DialogTierinputBinding
+import br.com.battlepassCalculatorValorant.ui.viewModel.fragment.dialog.InputUserViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers.IO
+import kotlinx.coroutines.launch
 
 
-@Suppress("CAST_NEVER_SUCCEEDS")
-class DialogInput(context: Context) : AlertDialog(context) {
-    //    private var mInterstitialAd: InterstitialAd
-    var tvTierIndex: TextInputEditText
-    var tvTierExpMissing: TextInputEditText
-    var mDialogView: View
-    var builder: Builder
-    lateinit var dialog: AlertDialog
+@AndroidEntryPoint
+class DialogInput : DialogFragment() {
+    lateinit var binding: DialogTierinputBinding
+    private val viewModel: InputUserViewModel by viewModels()
+//    private val notification = Notification(requireContext())
 
-    init {
-        mDialogView = LayoutInflater.from(context).inflate(R.layout.dialog_tierinput, null)
-        tvTierIndex = mDialogView.tierinput_dialog_et_level_current
-        tvTierExpMissing = mDialogView.tierinput_dialog_et_exp_missing
-
-        builder = Builder(context)
-            .setView(mDialogView)
-            .setTitle(context.getString(R.string.insira_seus_dados))
-
-//        mInterstitialAd = Advertisement(context).createInterstitial()
-        NotificationChannel(context).create()
-    }
-
-    override fun show() {
-        dialog = builder.show()
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog?.window?.requestFeature(Window.FEATURE_NO_TITLE)
+        dialog?.window?.setLayout(
+            WindowManager.LayoutParams.MATCH_PARENT,
+            WindowManager.LayoutParams.WRAP_CONTENT
+        )
+        binding = DialogTierinputBinding.inflate(inflater, container, false)
+        binding.viewmodel = viewModel
+        binding.lifecycleOwner = this
         setOnClickListener()
+        return binding.root
     }
 
     fun setOnClickListener() {
-        val validador = ValidateInputUser(context, tvTierIndex, tvTierExpMissing)
-        mDialogView.tierinput_dialog_btn_save.setOnClickListener {
-            if (validador.isValide()) {
-                createInputTier()
-                createNotification()
-//                launcherAdMob()
-                dialog.dismiss()
+        binding.btnSave.setOnClickListener {
+            val form = FormInput(
+                binding.tietTierCurrent.text.toString(),
+                binding.tietExpMissing.text.toString()
+            )
+            if (viewModel.validador(form)) {
+                CoroutineScope(IO).launch {
+                    viewModel.save(form)
+                }
+                dismiss()
+//                notification.create()
             }
         }
-        mDialogView.tierinput_dialog_btn_cancel.setOnClickListener {
-            dialog.dismiss()
-        }
+        binding.btnCancel.setOnClickListener { dismiss() }
     }
-
-    private fun createInputTier() {
-        val tier = tvTierIndex.text.toString().toInt()
-        val expMissing = tvTierExpMissing.text.toString().toInt()
-        val inputUser = UserInputsTier(tier, expMissing)
-        ManagerHistoric.getInstance(context).create(inputUser)
-    }
-
-    private fun createNotification() {
-        val intent = Intent(context, NotificationReceiver::class.java)
-        val pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0)
-        val alarmManager = context.getSystemService(ALARM_SERVICE) as AlarmManager
-        val timeAtButtonClick = System.currentTimeMillis()
-        val day = 1000 * 60 * 60 * 24
-        val gameDuration = 1000 * 60 * 50
-        val duration = if (BuildConfig.DEBUG) {
-            (1000 * 15).toLong()
-        } else {
-            (day - gameDuration).toLong()
-        }
-
-        alarmManager.set(
-            AlarmManager.RTC_WAKEUP,
-            timeAtButtonClick + duration,
-            pendingIntent
-        )
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-//        initAdMob()
-    }
-
-//    private var mInterstitialAd: InterstitialAd? = null
-//    private fun initAdMob() {
-//        interstitialAdLoad(requireActivity()).observe(context, Observer{ res ->
-//            when (res.status) {
-//                Resource.Status.SUCCESS -> {
-//                    mInterstitialAd = res.data!!
-//                }
-//                Resource.Status.ERROR -> {
-//                    Timber.e(res.message)
-//                }
-//                Resource.Status.LOADING -> {}
-//            }
-//        })
-//    }
-//
-//    private fun launcherAdMob() {
-//        mInterstitialAd?.show(requireActivity())
-//    }
 }
+
+data class FormInput(val tierCurrent: String, val expMissing: String)
+

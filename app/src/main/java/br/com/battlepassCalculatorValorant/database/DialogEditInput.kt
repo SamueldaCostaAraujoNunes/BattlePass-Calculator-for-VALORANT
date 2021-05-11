@@ -23,8 +23,8 @@ class DialogEditInput(context: Context, val position: Int, val historic: Histori
     init {
         mDialogView = LayoutInflater.from(context).inflate(R.layout.dialog_tierinput, null)
 
-        tvTierIndex = mDialogView.tierinput_dialog_et_level_current
-        tvTierExpMissing = mDialogView.tierinput_dialog_et_exp_missing
+        tvTierIndex = mDialogView.tiet_tier_current
+        tvTierExpMissing = mDialogView.tiet_exp_missing
 
         tvTierIndex.setText(tier.tierCurrent.toString())
         tvTierIndex.isEnabled = false
@@ -42,7 +42,7 @@ class DialogEditInput(context: Context, val position: Int, val historic: Histori
     }
 
     fun setOnClickListener(functionSave: () -> Unit) {
-        mDialogView.tierinput_dialog_btn_save.setOnClickListener {
+        mDialogView.btn_save.setOnClickListener {
             val validador = ValidateInputUser(context, tvTierIndex, tvTierExpMissing)
             if (validador.editTierExpMissing()) {
                 tier.tierExpMissing = tvTierExpMissing.text.toString().toInt()
@@ -51,7 +51,7 @@ class DialogEditInput(context: Context, val position: Int, val historic: Histori
                 functionSave()
             }
         }
-        mDialogView.tierinput_dialog_btn_cancel.setOnClickListener {
+        mDialogView.btn_cancel.setOnClickListener {
             dialog.dismiss()
         }
     }

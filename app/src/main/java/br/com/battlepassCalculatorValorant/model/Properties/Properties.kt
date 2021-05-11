@@ -19,7 +19,7 @@ import kotlin.collections.ArrayList
 class Properties(val context: Context) {
 
     val historic: Historic = ManagerHistoric.getInstance(context)
-    val passBattle = ManagerPassBattle.getInstance(context).getPassBattle()
+    val passBattle = ManagerPassBattle.getInstance(context).getBattlePass()
 
     var semClassificacao: SemClassificacao = SemClassificacao()
     var disputaDeSpike: DisputaDeSpike = DisputaDeSpike()

@@ -43,8 +43,8 @@ class InputScreenTutorialFragment : Fragment() {
     private fun buttonSaveClick() {
         val validador = ValidateInputUser(
             requireContext(),
-            tierinput_dialog_et_level_current,
-            tierinput_dialog_et_exp_missing
+            tiet_tier_current,
+            tiet_exp_missing
         )
         if (validador.isValide()) {
             createInputUser()
@@ -55,8 +55,8 @@ class InputScreenTutorialFragment : Fragment() {
     }
 
     private fun createInputUser() {
-        val tier = tierinput_dialog_et_level_current.text.toString().toInt()
-        val expMissing = tierinput_dialog_et_exp_missing.text.toString().toInt()
+        val tier = tiet_tier_current.text.toString().toInt()
+        val expMissing = tiet_exp_missing.text.toString().toInt()
         val inputUser = UserInputsTier(tier, expMissing)
         val historic = Properties(requireContext()).historic
         historic.create(inputUser)
