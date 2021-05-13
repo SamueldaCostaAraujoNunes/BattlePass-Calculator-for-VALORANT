@@ -1,15 +1,13 @@
 package br.com.battlepassCalculatorValorant.ui.view.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import br.com.battlepassCalculatorValorant.database.room.model.UserTier
 import br.com.battlepassCalculatorValorant.databinding.ItemEditHistoricBinding
-import br.com.battlepassCalculatorValorant.extensions.bindingAdapters.fadeAnimationText
-import br.com.battlepassCalculatorValorant.model.Historic.Historic
 
 
-class ItemUserInputAdapter(val context: Context, val historic: Historic) :
+class ItemUserInputAdapter(val list: List<UserTier>) :
     RecyclerView.Adapter<ItemUserInputAdapter.ViewHolder>() {
 
     inner class ViewHolder(val binding: ItemEditHistoricBinding) :
@@ -24,10 +22,8 @@ class ItemUserInputAdapter(val context: Context, val historic: Historic) :
     )
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = historic[position]
-        holder.binding.tvExpInitialTier.fadeAnimationText(item.tierCurrent.toString())
-        holder.binding.tvExpMissingTier.fadeAnimationText(item.tierExpMissing.toString())
+        holder.binding.userTier = list[position]
     }
 
-    override fun getItemCount(): Int = historic.size
+    override fun getItemCount(): Int = list.size
 }

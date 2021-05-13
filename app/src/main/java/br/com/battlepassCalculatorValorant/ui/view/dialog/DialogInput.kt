@@ -4,9 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import br.com.battlepassCalculatorValorant.databinding.DialogTierinputBinding
 import br.com.battlepassCalculatorValorant.model.FormInput
+import br.com.battlepassCalculatorValorant.ui.viewModel.activity.UIViewModel
 import br.com.battlepassCalculatorValorant.ui.viewModel.fragment.dialog.InputUserViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
@@ -22,7 +24,18 @@ class DialogInput : DialogBase() {
 
     lateinit var binding: DialogTierinputBinding
     private val viewModel: InputUserViewModel by viewModels()
+    private val uiViewModel: UIViewModel by activityViewModels()
 //    private val notification = Notification(requireContext())
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        uiViewModel.hideBottomNav()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        uiViewModel.showBottomNav()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,

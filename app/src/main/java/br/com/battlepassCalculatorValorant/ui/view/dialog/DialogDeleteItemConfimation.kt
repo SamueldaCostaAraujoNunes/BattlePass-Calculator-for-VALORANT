@@ -1,48 +1,48 @@
 package br.com.battlepassCalculatorValorant.ui.view.dialog
 
-import android.content.Context
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import androidx.appcompat.app.AlertDialog
+import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.model.Historic.Historic
-import kotlinx.android.synthetic.main.dialog_confirmation.view.*
-import kotlinx.android.synthetic.main.dialog_tierinput.view.btn_cancel
-import kotlinx.android.synthetic.main.dialog_tierinput.view.btn_save
+import br.com.battlepassCalculatorValorant.database.room.model.UserTier
+import br.com.battlepassCalculatorValorant.databinding.DialogConfirmationBinding
+import br.com.battlepassCalculatorValorant.ui.viewModel.dialog.DialogDeleteItemConfimationViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
-class DialogDeleteItemConfimation(context: Context, val position: Int, val historic: Historic) :
-    AlertDialog(context) {
-    var mDialogView: View
-    val tier = historic[position]
-    var builder: AlertDialog.Builder
-    lateinit var dialog: AlertDialog
+@AndroidEntryPoint
+class DialogDeleteItemConfimation(private val userInput: UserTier, val func: () -> Any) :
+    DialogBase() {
+    private val viewModel: DialogDeleteItemConfimationViewModel by viewModels()
+    lateinit var binding: DialogConfirmationBinding
 
-    init {
-        mDialogView = LayoutInflater.from(context).inflate(R.layout.dialog_confirmation, null)
-
-        mDialogView.btn_save.text = context.getString(R.string.deletar)
-        val textConfirmation = context.getString(R.string.text_delete) + " ${tier.tierCurrent}?"
-        mDialogView.tv_confirmation.text = textConfirmation
-        builder = Builder(context)
-            .setView(mDialogView)
-            .setTitle(context.getString(R.string.confirmacao))
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        super.onCreateView(inflater, container, savedInstanceState)
+        binding = DialogConfirmationBinding.inflate(inflater, container, false)
+        binding.mensageContent.text = getString(R.string.text_delete, userInput.tierCurrent)
+        setOnClickListener()
+        return binding.root
     }
 
-    fun show(functionSave: () -> Unit, functionCancel: () -> Unit) {
-        dialog = builder.show()
-        setOnClickListener(functionSave, functionCancel)
-    }
 
-    fun setOnClickListener(functionSave: () -> Unit, functionCancel: () -> Unit) {
-        mDialogView.btn_save.setOnClickListener {
-            val listItem = historic[position]
-            historic.delete(listItem.tierCurrent)
-            functionSave()
-            dialog.dismiss()
+    fun setOnClickListener() {
+        binding.btnSave.setOnClickListener {
+            CoroutineScope(Dispatchers.Main).launch {
+                viewModel.delete(userInput)
+            }
+            func()
+            dismiss()
         }
-        mDialogView.btn_cancel.setOnClickListener {
-            functionCancel()
-            dialog.dismiss()
+        binding.btnCancel.setOnClickListener {
+            dismiss()
         }
     }
 

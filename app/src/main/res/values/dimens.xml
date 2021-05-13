@@ -5,6 +5,5 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-    <dimen name="padding_with_dots_indicator">38dp</dimen>
-    <dimen name="padding_without_dots_indicator">24dp</dimen>
+    <dimen name="padding_cardview">24dp</dimen>
 </resources>

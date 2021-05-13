@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="userTier"
+            type="br.com.battlepassCalculatorValorant.database.room.model.UserTier" />
+    </data>
 
     <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
         android:layout_width="match_parent"
@@ -18,11 +26,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/muli_font_family"
-                android:text="@string/tier_atual"
-                android:textColor="?attr/colorSecondary"
+                android:text="@{@string/dois_pontos(@string/tier_atual)}"
+                android:textColor="?attr/colorOnSecondary"
                 android:textSize="20sp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/tier_atual" />
 
             <TextView
                 android:id="@+id/tv_exp_initial_tier"
@@ -30,21 +39,27 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/impact_font_family"
                 android:textColor="?attr/colorOnPrimary"
+                android:paddingStart="8dp"
                 android:textSize="20sp"
+                app:fadeAnimationText="@{String.valueOf(userTier.tierCurrent)}"
                 app:layout_constraintBottom_toBottomOf="@+id/textView5"
                 app:layout_constraintLeft_toRightOf="@+id/textView5"
-                app:layout_constraintTop_toTopOf="@+id/textView5" />
+                app:layout_constraintTop_toTopOf="@+id/textView5"
+                tools:ignore="RtlSymmetry"
+                tools:text="12" />
+
 
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/muli_font_family"
-                android:text="@string/exp_para_completar_"
-                android:textColor="?attr/colorSecondary"
+                android:text="@{@string/dois_pontos(@string/exp_para_completar_)}"
+                android:textColor="?attr/colorOnSecondary"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                tools:text="@string/exp_para_completar_" />
 
             <TextView
                 android:id="@+id/tv_exp_missing_tier"
@@ -52,10 +67,14 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/impact_font_family"
                 android:textColor="?attr/colorOnPrimary"
+                android:paddingStart="8dp"
                 android:textSize="20sp"
+                app:fadeAnimationText="@{String.valueOf(userTier.tierExpMissing)}"
                 app:layout_constraintBottom_toBottomOf="@+id/textView6"
                 app:layout_constraintStart_toEndOf="@+id/textView6"
-                app:layout_constraintTop_toTopOf="@+id/textView6" />
+                app:layout_constraintTop_toTopOf="@+id/textView6"
+                tools:ignore="RtlSymmetry"
+                tools:text="1000" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
 </layout>

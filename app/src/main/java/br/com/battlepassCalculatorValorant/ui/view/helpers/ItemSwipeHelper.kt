@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 
 @SuppressLint("ClickableViewAccessibility")
-class HistoricItemSwipeHelper(
+class ItemSwipeHelper(
     private val recyclerView: RecyclerView
 ) : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
 

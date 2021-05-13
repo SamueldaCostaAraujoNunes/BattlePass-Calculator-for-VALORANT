@@ -80,7 +80,7 @@
 
     <string name="confirmacao">Confirmación</string>
     <string name="deletar">Eliminar</string>
-    <string name="text_delete">¿Quieres eliminar el Grado?</string>
+    <string name="text_delete">¿Quieres eliminar el Grado %1$d?</string>
 
     <string name="info_exp_missoes">Información de EXP de la misión</string>
     <string name="exp_de_partidas">Match EXP</string>

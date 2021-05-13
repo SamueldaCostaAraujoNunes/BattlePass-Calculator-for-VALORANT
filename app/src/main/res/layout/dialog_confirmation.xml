@@ -1,48 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="?attr/colorPrimary"
-    android:orientation="vertical"
-    android:padding="10dp">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/tv_confirmation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="@font/muli_font_family"
-        android:gravity="center"
-        android:textColor="?attr/colorOnPrimary"
-        android:textSize="20dp" />
-
-    <LinearLayout
+    <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btn_cancel"
-            style="@style/mButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:backgroundTint="?attr/colorPrimaryVariant"
-            android:text="@string/cancelar"
-            android:textColor="@color/text_light" />
+        app:title="@string/confirmacao">
 
 
-        <Button
-            android:id="@+id/btn_save"
-            style="@style/mButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:backgroundTint="?attr/colorSecondaryVariant"
-            android:text="@string/salvar"
-            android:textColor="@color/text_light" />
-    </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-</LinearLayout>
+            <TextView
+                android:id="@+id/mensage_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/muli_font_family"
+                android:gravity="center"
+                android:paddingHorizontal="24dp"
+                android:paddingBottom="8dp"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Deseja realizar algo?" />
+
+
+            <Button
+                android:id="@+id/btn_cancel"
+                style="@style/mButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="?attr/colorPrimaryVariant"
+                android:text="@string/cancelar"
+                android:textColor="@color/text_light"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_save"
+                app:layout_constraintTop_toBottomOf="@+id/mensage_content" />
+
+
+            <Button
+                android:id="@+id/btn_save"
+                style="@style/mButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="?attr/colorSecondaryVariant"
+                android:colorButtonNormal="@drawable/btn_save"
+                android:text="@string/deletar"
+                android:textColor="@color/text_light"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/mensage_content"
+                app:layout_constraintTop_toBottomOf="@+id/mensage_content" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
+
+</layout>

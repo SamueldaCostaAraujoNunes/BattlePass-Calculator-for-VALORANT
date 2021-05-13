@@ -82,7 +82,7 @@
 
     <string name="confirmacao">Confirmacao</string>
     <string name="deletar">Deletar</string>
-    <string name="text_delete">Deseja deletar o Tier</string>
+    <string name="text_delete">Deseja deletar o Tier %1$d?</string>
 
     <string name="info_exp_missoes">Info EXP de Missoes</string>
     <string name="content_exp_missoes">Este gráfico mostra a quantidade de EXP atual, adquirida por meio das recompensas por partida, missões diárias e semanais!! Quanto mais missões realizadas, menor a quantidade de EXP por partida será necessária para completar o passe!</string>

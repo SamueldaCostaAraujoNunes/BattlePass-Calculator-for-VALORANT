@@ -30,7 +30,7 @@ open class BaseRewardsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setupRecyclerView(1)
+        setupRecyclerView()
         positionTier.observe(viewLifecycleOwner, Observer {
             updateRecyclerView(it)
         })
@@ -56,14 +56,14 @@ open class BaseRewardsFragment : Fragment() {
         }
     }
 
-    private fun setupRecyclerView(position: Int) {
+    private fun setupRecyclerView(position: Int = 1) {
         with(binding.recycleView) {
             adapter = ItemRewardAdapter(rewards, position, requireActivity().supportFragmentManager)
             layoutManager?.scrollToPosition(position - 1)
         }
     }
 
-    private fun updateRecyclerView(position: Int) {
+    private fun updateRecyclerView(position: Int = 1) {
         with(binding.recycleView) {
             (adapter as ItemRewardAdapter).rewardIndex = position
             layoutManager?.scrollToPosition(position - 1)

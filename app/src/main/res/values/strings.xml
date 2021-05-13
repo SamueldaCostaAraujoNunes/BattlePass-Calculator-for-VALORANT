@@ -86,7 +86,7 @@
 
     <string name="confirmacao">Confirmation</string>
     <string name="deletar">Delete</string>
-    <string name="text_delete">Do you want to delete Tier</string>
+    <string name="text_delete">Do you want to delete Tier %1$d?</string>
 
 
     <string name="info_exp_missoes">Mission EXP info</string>

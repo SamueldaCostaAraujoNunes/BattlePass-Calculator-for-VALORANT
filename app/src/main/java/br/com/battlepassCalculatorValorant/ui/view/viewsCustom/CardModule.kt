@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
-import androidx.core.view.updatePadding
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.databinding.ViewCardBaseBinding
 import br.com.battlepassCalculatorValorant.extensions.bindingAdapters.visibilityIf
@@ -41,17 +40,12 @@ class CardModule @JvmOverloads constructor(
         )
 
         val title = typedArray.getString(R.styleable.CardModule_title)
-        val slider = typedArray.getBoolean(R.styleable.CardModule_isSlider, false)
 
         binding.titleName = title
-        binding.isSlider = slider
 
         if (isInEditMode) {
             binding.title.let {
                 it.text = title
-                val scale = resources.displayMetrics.density
-                val dpAsPixels = ((if (slider) 38 else 24) * scale + 0.5f)
-                it.updatePadding(top = dpAsPixels.toInt())
                 it.visibilityIf(title != null)
             }
         }

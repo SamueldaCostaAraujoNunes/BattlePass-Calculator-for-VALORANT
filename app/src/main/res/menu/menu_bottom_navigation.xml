@@ -3,13 +3,13 @@
     android:id="@+id/menu">
 
     <item
-        android:id="@+id/item_home"
+        android:id="@+id/homeFragment"
         android:icon="@drawable/ic_baseline_home_24"
         android:fontFamily="@font/muli_font_family"
         android:title="@string/home" />
 
     <item
-        android:id="@+id/item_timeline"
+        android:id="@+id/chartsFragment"
         android:icon="@drawable/ic_baseline_timeline_24"
         android:fontFamily="@font/muli_font_family"
         android:title="@string/graficos" />
@@ -19,13 +19,13 @@
         android:title="@null" />
 
     <item
-        android:id="@+id/item_timer"
+        android:id="@+id/infosFragment"
         android:fontFamily="@font/muli_font_family"
         android:icon="@drawable/ic_baseline_info_24"
         android:title="@string/informacoes" />
 
     <item
-        android:id="@+id/item_apps"
+        android:id="@+id/settingsFragment"
         android:fontFamily="@font/muli_font_family"
         android:icon="@drawable/ic_baseline_settings_24"
         android:title="@string/configuracoes" />

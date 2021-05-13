@@ -1,63 +1,64 @@
 package br.com.battlepassCalculatorValorant.ui.view.activity
 
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.coordinatorlayout.widget.CoordinatorLayout
+import androidx.core.view.doOnLayout
+import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import br.com.battlepassCalculatorValorant.R
+import br.com.battlepassCalculatorValorant.databinding.ActivityMainBinding
 import br.com.battlepassCalculatorValorant.ui.view.dialog.DialogInput
-import br.com.battlepassCalculatorValorant.ui.view.fragment.BottomNavigation.ChartsFragment
-import br.com.battlepassCalculatorValorant.ui.view.fragment.BottomNavigation.HomeFragment
-import br.com.battlepassCalculatorValorant.ui.view.fragment.BottomNavigation.InfosFragment
-import br.com.battlepassCalculatorValorant.ui.view.fragment.BottomNavigation.SettingsFragment
+import br.com.battlepassCalculatorValorant.ui.viewModel.activity.UIViewModel
+import com.google.android.material.behavior.HideBottomViewOnScrollBehavior
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.activity_main.*
-
 
 @Suppress("UNREACHABLE_CODE")
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+    private val uiViewModel by viewModels<UIViewModel>()
+
+    private val navController
+        get() = findNavController(R.id.fragment_container)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        createFragment(R.id.fragmentPrincipal, HomeFragment())
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+
+        binding.root.doOnLayout {
+            NavigationUI.setupWithNavController(binding.bottomNav, navController)
+        }
+
+        setupObservers()
         createListeners()
     }
 
-    override fun onResume() {
-        super.onResume()
-        bottomNavigationView.selectedItemId = R.id.item_home
-    }
+    private fun setupObservers() {
+        uiViewModel.onHideBottomNav.observe(this, Observer {
+            val params = binding.bottomNav.layoutParams as CoordinatorLayout.LayoutParams
+            val behavior = params.behavior as HideBottomViewOnScrollBehavior
 
-    private fun createFragment(layout: Int, fragment: androidx.fragment.app.Fragment) {
-        supportFragmentManager.beginTransaction().replace(layout, fragment).commit()
+            if (it) {
+                binding.bottomNav.doOnLayout { view -> behavior.slideUp(view) }
+            } else {
+                binding.bottomNav.doOnLayout { view -> behavior.slideDown(view) }
+            }
+            binding.bottomNav.transform(binding.fab, it)
+        })
     }
 
     private fun createListeners() {
-        createNavigationItemSelectedListener()
-        fab.setOnClickListener {
-            DialogInput().show(supportFragmentManager, DialogInput.TAG)
+        binding.fab.setOnClickListener {
+            DialogInput().show(
+                supportFragmentManager,
+                DialogInput.TAG
+            )
         }
     }
 
-    private fun createNavigationItemSelectedListener() {
-        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
-            val previousItem = bottomNavigationView.selectedItemId
-            val nextItem = item.itemId
-            if (previousItem != nextItem) {
-                val fragment: androidx.fragment.app.Fragment =
-                    when (nextItem) {
-                        R.id.item_home -> HomeFragment()
-                        R.id.item_timeline -> ChartsFragment()
-                        R.id.item_timer -> InfosFragment()
-                        R.id.item_apps -> SettingsFragment()
-                        else -> HomeFragment()
-                    }
-                val config = nextItem != R.id.item_apps
-                bottomNavigationView.transform(fab, config)
-                createFragment(R.id.fragmentPrincipal, fragment)
-//                launcherAdMob()
-            }
-            true
-        }
-    }
+    override fun onSupportNavigateUp() = navController.navigateUp()
 }

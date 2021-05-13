@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs'
 }
 
 android {
@@ -66,9 +67,8 @@ dependencies {
     kapt "androidx.room:room-compiler:$room"
 
     //Navigation
-    def nav = "2.3.4"
-    implementation "androidx.navigation:navigation-fragment-ktx:$nav"
-    implementation "androidx.navigation:navigation-ui-ktx:$nav"
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation"
 
     // Glide
     def glide = "4.12.0"

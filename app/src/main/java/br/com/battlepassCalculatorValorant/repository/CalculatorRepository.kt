@@ -59,7 +59,7 @@ class CalculatorRepository @Inject constructor(
 
 
     val lastUserInput: Flow<UserTier> = userInputHistory.last().map { it ?: UserTier() }
-    private val allUserInput: Flow<List<UserTier>> =
+    val allUserInput: Flow<List<UserTier>> =
         userInputHistory.getAll().map { if (it.isEmpty()) listOf(UserTier()) else it }
 
     val totalExpAlreadyEarned: Flow<Int> = lastUserInput.map { last ->
@@ -186,6 +186,10 @@ class CalculatorRepository @Inject constructor(
 
     suspend fun insertUserInput(userTier: UserTier) {
         userInputHistory.insert(userTier)
+    }
+
+    suspend fun deleteUserInput(userTier: UserTier) {
+        userInputHistory.delete(userTier)
     }
 
 

@@ -1,19 +1,23 @@
 package br.com.battlepassCalculatorValorant.ui.view.fragment.BottomNavigation
 
-import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.Preference.OnPreferenceChangeListener
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreferenceCompat
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.model.Properties.Properties
 import br.com.battlepassCalculatorValorant.model.theme.Theme
-import br.com.battlepassCalculatorValorant.ui.view.activity.EditHistoricActivity
+import br.com.battlepassCalculatorValorant.ui.viewModel.fragment.bottomNavigation.SettingsFragmentViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class SettingsFragment : PreferenceFragmentCompat() {
+    private val viewModel: SettingsFragmentViewModel by viewModels()
     private val themePreference by lazy {
         findPreference<ListPreference>(getString(R.string.themeStatus))
     }
@@ -26,17 +30,20 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.root_preferences, rootKey)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         setPreferencesListeners()
     }
 
     private fun setPreferencesListeners() {
 
-        val properties = Properties(requireContext())
-        val ultimoTier =
-            if (properties.historic.isEmpty()) 0 else properties.historic.last().tierCurrent
-        if (ultimoTier > 50 && epilogoPreference?.isChecked!!) {
-            epilogoPreference?.isEnabled = false
-        }
+        viewModel.lastTier.observe(viewLifecycleOwner, { ultimoTier ->
+            if (ultimoTier.tierCurrent > 50 && epilogoPreference?.isChecked!!) {
+                epilogoPreference?.isEnabled = false
+            }
+        })
 
         themePreference?.onPreferenceChangeListener =
             OnPreferenceChangeListener { _, newValue ->
@@ -44,26 +51,29 @@ class SettingsFragment : PreferenceFragmentCompat() {
                 true
             }
 
-        epilogoPreference?.onPreferenceChangeListener =
-            OnPreferenceChangeListener { _, newValue ->
-                val value = newValue.toString().toBoolean()
+//        epilogoPreference?.onPreferenceChangeListener =
+//            OnPreferenceChangeListener { _, newValue ->
+//                val value = newValue.toString().toBoolean()
+//
+//                val realValue =
+//                    if (ultimoTier > 50) {
+//                        true
+//                    } else {
+//                        value
+//                    }
+//                properties.passBattle.espilogoIsValide = realValue
+//                if (ultimoTier > 50 && epilogoPreference?.isChecked!!) {
+//                    epilogoPreference?.isEnabled = false
+//                }
+//                properties.historic.sendUpdateEvent()
+//                true
+//            }
 
-                val realValue =
-                    if (ultimoTier > 50) {
-                        true
-                    } else {
-                        value
-                    }
-                properties.passBattle.espilogoIsValide = realValue
-                if (ultimoTier > 50 && epilogoPreference?.isChecked!!) {
-                    epilogoPreference?.isEnabled = false
-                }
-                properties.historic.sendUpdateEvent()
-                true
-            }
         editHistoric?.setOnPreferenceClickListener {
-            val intent = Intent(requireContext(), EditHistoricActivity::class.java)
-            startActivity(intent)
+            val findNavController = findNavController()
+            val direction =
+                SettingsFragmentDirections.actionSettingsFragmentToHistoricInputFragment()
+            findNavController.navigate(direction)
             true
         }
     }
