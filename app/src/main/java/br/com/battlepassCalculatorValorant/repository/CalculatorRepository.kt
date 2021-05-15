@@ -192,6 +192,9 @@ class CalculatorRepository @Inject constructor(
         userInputHistory.delete(userTier)
     }
 
+    fun getUserTierById(userTierId: Int): Flow<UserTier> =
+        userInputHistory.getUserTierById(userTierId)
+
 
     private fun convertHours(time: Float): String {
         val hours = time.toInt()

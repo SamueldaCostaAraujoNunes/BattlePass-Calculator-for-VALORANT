@@ -8,12 +8,15 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupWithNavController
 import androidx.recyclerview.widget.RecyclerView
+import br.com.battlepassCalculatorValorant.NavGraphDirections
 import br.com.battlepassCalculatorValorant.databinding.HistoricInputFragmentBinding
 import br.com.battlepassCalculatorValorant.ui.view.adapter.ItemUserInputAdapter
 import br.com.battlepassCalculatorValorant.ui.view.adapter.RecyclerItemClickListener
-import br.com.battlepassCalculatorValorant.ui.view.dialog.DialogDeleteItemConfimation
-import br.com.battlepassCalculatorValorant.ui.view.dialog.DialogInput
 import br.com.battlepassCalculatorValorant.ui.view.helpers.ItemSwipeHelper
 import br.com.battlepassCalculatorValorant.ui.view.helpers.SwipedEventListener
 import br.com.battlepassCalculatorValorant.ui.viewModel.activity.UIViewModel
@@ -26,6 +29,11 @@ class HistoricInputFragment : Fragment() {
     private val uiViewModel: UIViewModel by activityViewModels()
     private lateinit var binding: HistoricInputFragmentBinding
     private lateinit var adapter: ItemUserInputAdapter
+
+    private val navController: NavController
+        get() {
+            return findNavController()
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +51,8 @@ class HistoricInputFragment : Fragment() {
     ): View {
         binding = HistoricInputFragmentBinding.inflate(inflater, container, false)
         setupObservers()
+        val appBarConfiguration = AppBarConfiguration(navController.graph)
+        binding.toolbar.setupWithNavController(navController, appBarConfiguration)
         return binding.root
     }
 
@@ -82,18 +92,18 @@ class HistoricInputFragment : Fragment() {
     private fun editItem(
         pos: Int
     ) {
-//        DialogEditInput(this@EditHistoricActivity, pos, historic).show {
-//            adapter.notifyItemChanged(pos)
-//        }
+        val userTier = (binding.rvEditHistoric.adapter as ItemUserInputAdapter).list[pos]
+        navController.navigate(NavGraphDirections.actionGlobalDialogInput(userTier.id))
     }
 
     private fun deleteItem(
         pos: Int
     ) {
-        val adapter = (binding.rvEditHistoric.adapter as ItemUserInputAdapter)
-        DialogDeleteItemConfimation(adapter.list[pos]) { adapter.notifyItemRemoved(pos) }.show(
-            requireActivity().supportFragmentManager,
-            DialogInput.TAG
-        )
+        val userTierSelected = (binding.rvEditHistoric.adapter as ItemUserInputAdapter).list[pos]
+        val direction =
+            HistoricInputFragmentDirections.actionHistoricInputFragmentToDialogDeleteItemConfimation(
+                userTierSelected.id
+            )
+        navController.navigate(direction)
     }
 }

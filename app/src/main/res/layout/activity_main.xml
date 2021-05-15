@@ -9,7 +9,6 @@
         android:background="?attr/colorPrimaryDark"
         tools:context=".ui.view.activity.MainActivity">
 
-
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragment_container"
             android:name="androidx.navigation.fragment.NavHostFragment"

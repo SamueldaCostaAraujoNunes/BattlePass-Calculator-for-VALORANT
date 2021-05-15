@@ -9,9 +9,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import br.com.battlepassCalculatorValorant.NavGraphDirections
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.databinding.ActivityMainBinding
-import br.com.battlepassCalculatorValorant.ui.view.dialog.DialogInput
 import br.com.battlepassCalculatorValorant.ui.viewModel.activity.UIViewModel
 import com.google.android.material.behavior.HideBottomViewOnScrollBehavior
 import dagger.hilt.android.AndroidEntryPoint
@@ -28,17 +28,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-
         binding.root.doOnLayout {
             NavigationUI.setupWithNavController(binding.bottomNav, navController)
         }
-
         setupObservers()
         createListeners()
     }
 
     private fun setupObservers() {
-        uiViewModel.onHideBottomNav.observe(this, Observer {
+        uiViewModel.onHideBottomNav.observe(this, Observer<Boolean> {
             val params = binding.bottomNav.layoutParams as CoordinatorLayout.LayoutParams
             val behavior = params.behavior as HideBottomViewOnScrollBehavior
 
@@ -53,10 +51,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun createListeners() {
         binding.fab.setOnClickListener {
-            DialogInput().show(
-                supportFragmentManager,
-                DialogInput.TAG
-            )
+            navController.navigate(NavGraphDirections.actionGlobalDialogInput())
         }
     }
 

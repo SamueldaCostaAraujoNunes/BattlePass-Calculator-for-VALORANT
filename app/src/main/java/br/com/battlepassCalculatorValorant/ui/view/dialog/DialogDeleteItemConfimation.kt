@@ -5,8 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
+import androidx.navigation.fragment.navArgs
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.database.room.model.UserTier
 import br.com.battlepassCalculatorValorant.databinding.DialogConfirmationBinding
 import br.com.battlepassCalculatorValorant.ui.viewModel.dialog.DialogDeleteItemConfimationViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -15,10 +16,11 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class DialogDeleteItemConfimation(private val userInput: UserTier, val func: () -> Any) :
+class DialogDeleteItemConfimation :
     DialogBase() {
     private val viewModel: DialogDeleteItemConfimationViewModel by viewModels()
     lateinit var binding: DialogConfirmationBinding
+    private val args by navArgs<DialogDeleteItemConfimationArgs>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,23 +29,24 @@ class DialogDeleteItemConfimation(private val userInput: UserTier, val func: () 
     ): View {
         super.onCreateView(inflater, container, savedInstanceState)
         binding = DialogConfirmationBinding.inflate(inflater, container, false)
-        binding.mensageContent.text = getString(R.string.text_delete, userInput.tierCurrent)
-        setOnClickListener()
         return binding.root
     }
 
-
-    fun setOnClickListener() {
-        binding.btnSave.setOnClickListener {
-            CoroutineScope(Dispatchers.Main).launch {
-                viewModel.delete(userInput)
-            }
-            func()
-            dismiss()
-        }
-        binding.btnCancel.setOnClickListener {
-            dismiss()
-        }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel.getUserTierById(args.userTierId)
+            .observe(viewLifecycleOwner, Observer { userTier ->
+                binding.mensageContent.text = getString(R.string.text_delete, userTier.tierCurrent)
+                binding.btnSave.setOnClickListener {
+                    CoroutineScope(Dispatchers.Main).launch {
+                        viewModel.delete(userTier)
+                    }
+                    dismiss()
+                }
+                binding.btnCancel.setOnClickListener {
+                    dismiss()
+                }
+            })
     }
 
 

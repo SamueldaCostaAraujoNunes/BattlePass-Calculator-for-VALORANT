@@ -16,4 +16,7 @@ interface UserTierDao : BaseDao<UserTier> {
 
     fun getAllDistinctUntilChanged() = getAll().distinctUntilChanged()
 
+    @Query("SELECT * FROM UserTier WHERE id=:id")
+    fun getUserTierById(id: Int): Flow<UserTier>
+
 }

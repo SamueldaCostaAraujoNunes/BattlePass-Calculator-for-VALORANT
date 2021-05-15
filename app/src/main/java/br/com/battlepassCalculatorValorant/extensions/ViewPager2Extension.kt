@@ -12,6 +12,7 @@ import br.com.battlepassCalculatorValorant.ui.view.adapter.ImageSliderAdapter
 import br.com.battlepassCalculatorValorant.ui.view.fragment.Rewards.BaseRewardsFragment
 import br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+import timber.log.Timber
 
 @BindingAdapter("imagesURl", "indicator")
 fun ViewPager2.imagesURl(imagesURl: List<String>?, indicator: DotsIndicator?) {
@@ -26,16 +27,20 @@ fun ViewPager2.setAdapterSlider(mAdapter: FragmentSliderAdapter) {
     registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
         override fun onPageSelected(position: Int) {
             super.onPageSelected(position)
+            try {
+                val item = mAdapter.getItem(position)
+                val v: View = item.requireView()
+                val viewParent = CardModule.parentIsCardmodule(v)
+                if (viewParent is CardModule) {
+                    viewParent.binding.titleName = item.toString()
+                }
+                if (item !is BaseRewardsFragment) {
+                    changeDimensLayoutAnimation(v)
+                }
+            } catch (e: Exception) {
+                Timber.e(e)
+            }
 
-            val item = mAdapter.getItem(position)
-            val v: View = item.requireView()
-            val viewParent = CardModule.parentIsCardmodule(v)
-            if (viewParent is CardModule) {
-                viewParent.binding.titleName = item.toString()
-            }
-            if (item !is BaseRewardsFragment) {
-                changeDimensLayoutAnimation(v)
-            }
         }
 
         private fun changeDimensLayoutAnimation(v: View) {

@@ -26,18 +26,66 @@
         tools:layout="@xml/root_preferences">
         <action
             android:id="@+id/action_settingsFragment_to_historicInputFragment"
-            app:destination="@id/historicInputFragment" />
+            app:destination="@id/historicInputFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_settingsFragment_to_dialogChooseThemes"
+            app:destination="@id/dialogChooseThemes"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/historicInputFragment"
         android:name="br.com.battlepassCalculatorValorant.ui.view.fragment.Settings.HistoricInputFragment"
-        android:label="HistoricInputFragment">
+        android:label="HistoricInputFragment"
+        tools:layout="@layout/historic_input_fragment">
         <action
-            android:id="@+id/settingToEditFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim"
-            app:popUpTo="@id/settingsFragment" />
+            android:id="@+id/action_historicInputFragment_to_dialogDeleteItemConfimation"
+            app:destination="@id/dialogDeleteItemConfimation"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
     </fragment>
+
+    <dialog
+        android:id="@+id/dialogInput"
+        android:name="br.com.battlepassCalculatorValorant.ui.view.dialog.DialogInput"
+        android:label="DialogInput"
+        tools:layout="@layout/dialog_tierinput">
+
+        <argument
+            android:name="userTierId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+    </dialog>
+
+    <action
+        android:id="@+id/action_global_dialogInput"
+        app:destination="@id/dialogInput"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@android:anim/fade_out" />
+
+    <dialog
+        android:id="@+id/dialogDeleteItemConfimation"
+        android:name="br.com.battlepassCalculatorValorant.ui.view.dialog.DialogDeleteItemConfimation"
+        android:label="DialogDeleteItemConfimation"
+        tools:layout="@layout/dialog_confirmation">
+
+        <argument
+            android:name="userTierId"
+            app:argType="integer" />
+    </dialog>
+    <dialog
+        android:id="@+id/dialogChooseThemes"
+        android:name="br.com.battlepassCalculatorValorant.ui.view.dialog.DialogChooseThemes"
+        android:label="DialogChooseThemes"
+        tools:layout="@layout/dialog_choose_themes" />
 </navigation>

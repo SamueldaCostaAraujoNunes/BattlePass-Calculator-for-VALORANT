@@ -3,9 +3,7 @@ package br.com.battlepassCalculatorValorant.database.SharedPreferences
 import android.content.Context
 import android.content.SharedPreferences
 
-
-@Suppress("UNREACHABLE_CODE")
-open class MySharedPreferences(context: Context) {
+class MSharedPreferences(context: Context) {
     private val keySharedPreferences = "MySharedPreferencesKey"
 
     private val sharedPreferences: SharedPreferences = context.getSharedPreferences(
@@ -13,6 +11,7 @@ open class MySharedPreferences(context: Context) {
         Context.MODE_PRIVATE
     )
     private val editor = sharedPreferences.edit()
+
     // String
     fun set(key: String?, value: String?) {
         editor.putString(key, value)

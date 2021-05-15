@@ -1,7 +1,9 @@
 package br.com.battlepassCalculatorValorant.ui.viewModel.fragment.dialog
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.asLiveData
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.database.room.model.UserTier
 import br.com.battlepassCalculatorValorant.model.FormInput
@@ -16,6 +18,8 @@ class InputUserViewModel @Inject constructor(private val calculador: CalculatorR
     ViewModel() {
 
     private val last = calculador.lastUserInput
+    fun getUserTierById(userTierId: Int): LiveData<UserTier> =
+        calculador.getUserTierById(userTierId).asLiveData()
 
     val fieldTierError = MutableLiveData<ViewModelString?>()
     val fieldExpMissing = MutableLiveData<ViewModelString?>()
@@ -72,8 +76,7 @@ class InputUserViewModel @Inject constructor(private val calculador: CalculatorR
         return valido
     }
 
-    suspend fun save(form: FormInput) {
-        val userTier = UserTier(form.tierCurrent.toInt(), form.expMissing.toInt())
+    suspend fun save(userTier: UserTier) {
         Timber.i("Salvando: ${userTier}")
         calculador.insertUserInput(userTier)
     }

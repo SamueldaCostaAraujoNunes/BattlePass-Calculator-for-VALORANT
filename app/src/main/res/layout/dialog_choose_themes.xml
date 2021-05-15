@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="androidx.appcompat.app.AppCompatDelegate" />
+
+        <variable
+            name="viewModel"
+            type="br.com.battlepassCalculatorValorant.ui.viewModel.activity.UIViewModel" />
+    </data>
+
+    <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/trocar_tema">
+
+        <RadioGroup
+            android:id="@+id/radio_group_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:paddingBottom="8dp"
+            app:checkChildrenByTag="@{viewModel.themeCurrent}"
+            app:checkedChange="@{viewModel.nextTheme}">
+
+            <RadioButton
+                android:id="@+id/light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="?attr/colorSecondaryVariant"
+                android:fontFamily="@font/muli_font_family"
+                android:paddingHorizontal="8dp"
+                android:tag="@{AppCompatDelegate.MODE_NIGHT_NO}"
+                android:text="@string/tema_claro"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="?attr/colorSecondaryVariant"
+                android:fontFamily="@font/muli_font_family"
+                android:paddingHorizontal="8dp"
+                android:tag="@{AppCompatDelegate.MODE_NIGHT_YES}"
+                android:text="@string/tema_escuro"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/system_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="?attr/colorSecondaryVariant"
+                android:fontFamily="@font/muli_font_family"
+                android:paddingHorizontal="8dp"
+                android:tag="@{AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM}"
+                android:text="@string/tema_padrao_do_sistema"
+                android:textSize="20sp" />
+
+        </RadioGroup>
+
+    </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
+</layout>

@@ -1,8 +1,8 @@
 package br.com.battlepassCalculatorValorant.model.Singleton
 
 import android.content.Context
-import br.com.battlepassCalculatorValorant.database.SharedPreferences.MySharedPreferences
+import br.com.battlepassCalculatorValorant.database.SharedPreferences.MSharedPreferences
 
 class ManagerSharedPreferences {
-    companion object : SingletonHolder<MySharedPreferences, Context>(::MySharedPreferences)
+    companion object : SingletonHolder<MSharedPreferences, Context>(::MSharedPreferences)
 }

@@ -21,9 +21,13 @@ class ProgressFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentProgressBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         binding.viewmodel = viewModel
         binding.lifecycleOwner = this
-        return binding.root
     }
 
     override fun toString(): String {

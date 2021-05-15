@@ -9,14 +9,11 @@ import androidx.appcompat.app.AppCompatActivity
 import br.com.battlepassCalculatorValorant.BuildConfig
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.model.ListListener.HistoricArrayListListener
-import br.com.battlepassCalculatorValorant.model.theme.Theme
 
 
 class SplashScreenActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val theme = Theme(this)
-        theme.checkTheme()
         super.onCreate(savedInstanceState)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         window.setFlags(

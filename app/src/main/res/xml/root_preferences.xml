@@ -3,13 +3,10 @@
 
     <PreferenceCategory app:title="@string/estilo">
 
-        <ListPreference
-            android:dialogTitle="@string/trocar_tema"
-            android:entries="@array/theme_preference_titles"
-            android:entryValues="@array/theme_preference_values"
-            android:key="@string/themeStatus"
+        <Preference
             android:summary="@string/escolha_um_tema"
-            android:title="@string/trocar_tema" />
+            app:key="@string/themeStatus"
+            app:title="@string/trocar_tema" />
 
     </PreferenceCategory>
 
