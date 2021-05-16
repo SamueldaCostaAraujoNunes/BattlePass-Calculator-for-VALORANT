@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimarySurface"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".ui.view.activity.SplashScreenActivity">
+
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:elevation="14dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="14dp"
+            android:fontFamily="@font/valorant_font_family"
+            android:text="@string/valorant"
+            android:textColor="?attr/colorSecondary"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="14dp"
+            android:fontFamily="@font/valorant_font_family"
+            android:paddingBottom="10dp"
+            android:text="@string/ep_ato_atual"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="27sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="14dp"
+            android:fontFamily="@font/valorant_font_family"
+            android:text="@string/sufixo_nome_app"
+            android:textColor="@color/blue_300"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+</layout>

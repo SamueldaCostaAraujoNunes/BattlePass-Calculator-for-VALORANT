@@ -71,5 +71,10 @@
         <item name="android:fontFamily">@font/valorant_font_family</item>
     </style>
 
+    <style name="Widget.Theme.ValorantPassBattle.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
 
 </resources>

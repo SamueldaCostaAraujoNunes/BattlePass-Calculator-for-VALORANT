@@ -116,5 +116,7 @@
     <string name="epilogo">Epilogue</string>
     <string name="tier">Tier</string>
     <string name="exp_per_day">EXP per day</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 
 </resources>

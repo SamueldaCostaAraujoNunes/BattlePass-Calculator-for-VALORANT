@@ -12,12 +12,13 @@ import javax.inject.Inject
 @HiltViewModel
 class UIViewModel @Inject constructor(private val mSharedPreferences: MSharedPreferences) :
     ViewModel() {
-    private val _onHideBottomNav = MutableLiveData<Boolean>()
+    private val _onHideBottomNav = MutableLiveData<Boolean>(false)
     val onHideBottomNav: LiveData<Boolean> = _onHideBottomNav
 
     var themeCurrent: Int =
         mSharedPreferences[KEY_THEME, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM]
 
+    val fullscreen = true
 
     val nextTheme = fun(value: Int) {
         mSharedPreferences.set(KEY_THEME, value)

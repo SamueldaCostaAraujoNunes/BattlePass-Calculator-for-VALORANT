@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewmodel"
             type="br.com.battlepassCalculatorValorant.ui.viewModel.fragment.home.TierCurrentFragmentViewModel" />
@@ -59,6 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
+            android:paddingTop="14dp"
             app:dotsColor="?attr/colorPrimarySurface"
             app:dotsCornerRadius="8dp"
             app:dotsSize="16dp"
@@ -67,8 +69,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/viewPagerMain"
-            app:visibilityIf="@{viewmodel.imagesURL.size() > 1}"
             app:progressMode="false"
-            app:selectedDotColor="?attr/colorSecondary" />
+            app:selectedDotColor="?attr/colorSecondary"
+            app:visibilityIf="@{viewmodel.imagesURL.size() > 1}" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
