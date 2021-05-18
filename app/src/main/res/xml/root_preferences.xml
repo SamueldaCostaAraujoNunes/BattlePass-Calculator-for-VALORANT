@@ -1,13 +1,11 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
     <PreferenceCategory app:title="@string/estilo">
 
         <Preference
             android:summary="@string/escolha_um_tema"
             app:key="@string/themeStatus"
             app:title="@string/trocar_tema" />
-
     </PreferenceCategory>
 
     <PreferenceCategory app:title="@string/preferencias">
@@ -18,10 +16,25 @@
             app:summaryOn="@string/content_epilogo_on"
             app:title="@string/epilogo" />
 
+        <SwitchPreferenceCompat
+            app:key="Missões Diarias"
+            app:summaryOff="Ative para que os calculos levem em consideração as missões diarias"
+            app:summaryOn="Os calculos levam em consideração as missões diarias"
+            app:title="Missões Diarias" />
+
+        <SwitchPreferenceCompat
+            app:key="Missões Semanais"
+            app:summaryOff="Ative para que os calculos levem em consideração as missões semanais"
+            app:summaryOn="Os calculos levam em consideração as missões semanais"
+            app:title="Missões Semanais" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Histórico">
+
         <Preference
             app:key="@string/editHistoric"
             app:title="@string/editar_historico" />
-
     </PreferenceCategory>
 
 

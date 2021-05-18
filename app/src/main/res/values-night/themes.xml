@@ -29,8 +29,30 @@
         <item name="mCardViewStyle">@style/CardViewStyle</item>
     </style>
 
-    <style name="ThemeOverlay.ValorantPassBattle.FullscreenContainer" parent="">
-        <item name="fullscreenBackgroundColor">@color/light_blue_900</item>
-        <item name="fullscreenTextColor">@color/light_blue_A400</item>
+    <style name="Theme.ValorantPassBattle.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_launch</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.ValorantPassBattle.Light.NoActionBar.FullScreen" parent="Theme.ValorantPassBattle.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="Theme.ValorantPassBattle.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.ValorantPassBattle.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.ValorantPassBattle.Dialog.Alert" parent="ThemeOverlay.AppCompat.Dialog.Alert" />
+
+    <style name="CustomPopupTheme" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+        <item name="popupMenuStyle">@style/PopupMenu</item>
+    </style>
+
+    <style name="PopupMenu" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:popupBackground">?attr/colorPrimaryVariant</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
     </style>
 </resources>

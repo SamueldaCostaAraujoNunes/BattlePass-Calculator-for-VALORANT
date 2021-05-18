@@ -6,7 +6,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:background="?attr/colorPrimaryDark">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"

@@ -2,7 +2,7 @@ package br.com.battlepassCalculatorValorant
 
 import android.app.Application
 import androidx.appcompat.app.AppCompatDelegate
-import br.com.battlepassCalculatorValorant.database.SharedPreferences.MSharedPreferences
+import br.com.battlepassCalculatorValorant.database.sharedPreferences.MSharedPreferences
 import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 import javax.inject.Inject

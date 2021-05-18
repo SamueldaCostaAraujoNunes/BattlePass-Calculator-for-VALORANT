@@ -1,4 +1,4 @@
-package br.com.battlepassCalculatorValorant.database.SharedPreferences
+package br.com.battlepassCalculatorValorant.database.sharedPreferences
 
 import android.content.Context
 import android.content.SharedPreferences

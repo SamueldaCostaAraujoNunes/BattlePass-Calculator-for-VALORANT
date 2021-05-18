@@ -10,7 +10,6 @@ class BattlePass(json: JSONObject, val context: Context) {
     val dateInit = Calendar.getInstance()
     val dateFinally = Calendar.getInstance()
 
-    //    val name = json.get("Nome").toString()
     val name = Name().translate(json.getJSONObject("Nome"))
     val expTotal = json.get("EXP total").toString().toInt()
     val expMissaoDiaria = json.get("EXP Missao Diaria").toString().toInt()
@@ -23,10 +22,6 @@ class BattlePass(json: JSONObject, val context: Context) {
     private val _tiersEpilog = arrayListOf<Tier>()
 
     var espilogoIsValide: Boolean = false
-//        get() = EpilogoSharedPreferences(context).considereOEpilogo
-//        set(value) {
-//            EpilogoSharedPreferences(context).considereOEpilogo = value
-//        }
 
     val chapters: ArrayList<Chapter>
         get() = if (espilogoIsValide) concatenate(

@@ -12,7 +12,6 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import br.com.battlepassCalculatorValorant.BuildConfig
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.model.Historic.UserInputsTier
 import br.com.battlepassCalculatorValorant.notification.NotificationReceiver
 import br.com.battlepassCalculatorValorant.ui.view.activity.IntroTutorialActivity
 import kotlinx.android.synthetic.main.fragment_input_screen_tutorial.*
@@ -55,7 +54,7 @@ class InputScreenTutorialFragment : Fragment() {
     private fun createInputUser() {
         val tier = tiet_tier_current.text.toString().toInt()
         val expMissing = tiet_exp_missing.text.toString().toInt()
-        val inputUser = UserInputsTier(tier, expMissing)
+//        val inputUser = UserInputsTier(tier, expMissing)
 //        val historic = Properties(requireContext()).historic
 //        historic.create(inputUser)
     }

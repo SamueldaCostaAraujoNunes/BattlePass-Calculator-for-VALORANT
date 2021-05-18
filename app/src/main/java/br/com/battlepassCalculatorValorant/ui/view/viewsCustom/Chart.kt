@@ -14,7 +14,7 @@ class Chart @JvmOverloads constructor(
 
     private var aaChartView: AAChartView = AAChartView(context)
     private val model = AAChartModel()
-    private val hashMap: HashMap<String, List<Int>> = HashMap()
+    private val hashMap: HashMap<String, AASeriesElement> = HashMap()
 
     init {
         layoutParams = LayoutParams(
@@ -51,17 +51,13 @@ class Chart @JvmOverloads constructor(
     }
 
     fun setData(label: String, content: List<Int>) {
-        hashMap[label] = content
+        hashMap[label] = createElement(label, content)
+        model.series(hashMap.values.toTypedArray())
     }
 
     fun show() {
-        val series = ArrayList<AASeriesElement>()
-        for ((key, content) in hashMap) {
-            val element = createElement(key, content)
-            series.add(element)
-        }
-        model.series(series.toTypedArray())
         aaChartView.aa_drawChartWithChartModel(model)
+        aaChartView.aa_onlyRefreshTheChartDataWithChartOptionsSeriesArray(hashMap.values.toTypedArray())
     }
 
     private fun createElement(label: String, data: List<Int>): AASeriesElement {

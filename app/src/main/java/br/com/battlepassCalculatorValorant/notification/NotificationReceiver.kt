@@ -8,75 +8,72 @@ import android.content.Intent
 import android.graphics.BitmapFactory
 import android.graphics.Color
 import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationManagerCompat
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.model.Singleton.ManagerProperties
 import br.com.battlepassCalculatorValorant.ui.view.activity.MainActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import java.io.IOException
 import java.net.URL
-import kotlin.math.absoluteValue
 
 class NotificationReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
-        val listNotificationContent = createListNotificationContents(context)
-        val pendingIntent: PendingIntent = createIntent(context)
-        val builder = builderNotification(context, pendingIntent, listNotificationContent.random())
-        val notificationManager = NotificationManagerCompat.from(context)
-        notificationManager.notify(0, builder.build())
+//        val listNotificationContent = createListNotificationContents(context)
+//        val pendingIntent: PendingIntent = createIntent(context)
+//        val builder = builderNotification(context, pendingIntent, listNotificationContent.random())
+//        val notificationManager = NotificationManagerCompat.from(context)
+//        notificationManager.notify(0, builder.build())
     }
 
-    private fun createListNotificationContents(context: Context): List<NotificationContent> {
-        val properties = ManagerProperties.getInstance(context)
-
-        return listOf(
-            NotificationContent(
-                context.getString(R.string.notification_title_1),
-                context.getString(R.string.notification_content_1)
-            ),
-            NotificationContent(
-                context.getString(R.string.notification_title_2),
-                context.getString(R.string.notification_content_2)
-            ),
-            NotificationContent(
-                context.getString(R.string.notification_title_3),
-                context.getString(R.string.notification_content_3, properties.daysForClosed())
-            ),
-            NotificationContent(
-                context.getString(R.string.notification_title_4),
-                context.getString(R.string.notification_content_4, properties.daysForClosed())
-            ),
-            NotificationContent(
-                context.getString(R.string.notification_title_5),
-                if (properties.daysMissing()!! >= 0) context.getString(R.string.notification_content_5_1)
-                else context.getString(R.string.notification_content_5_2)
-            ),
-            NotificationContent(
-                context.getString(R.string.notification_title_6),
-                if (properties.daysMissing()!! >= 0) context.getString(R.string.notification_content_6_1)
-                else context.getString(R.string.notification_content_6_2)
-            ),
-            NotificationContent(
-                context.getString(R.string.notification_title_7),
-                if (properties.daysMissing()!! >= 0) context.getString(R.string.notification_content_7_1)
-                else context.getString(
-                    R.string.notification_content_7_2,
-                    properties.daysMissing()!!.absoluteValue
-                )
-            ),
-            NotificationContent(
-                context.getString(R.string.notification_title_8),
-                if (properties.daysMissing()!! >= 0) context.getString(R.string.notification_content_8_1)
-                else context.getString(
-                    R.string.notification_content_8_2,
-                    properties.daysMissing()!!.absoluteValue
-                )
-            )
-        )
-    }
+//    private fun createListNotificationContents(context: Context): List<NotificationContent> {
+//        val properties = ManagerProperties.getInstance(context)
+//
+//        return listOf(
+//            NotificationContent(
+//                context.getString(R.string.notification_title_1),
+//                context.getString(R.string.notification_content_1)
+//            ),
+//            NotificationContent(
+//                context.getString(R.string.notification_title_2),
+//                context.getString(R.string.notification_content_2)
+//            ),
+//            NotificationContent(
+//                context.getString(R.string.notification_title_3),
+//                context.getString(R.string.notification_content_3, properties.daysForClosed())
+//            ),
+//            NotificationContent(
+//                context.getString(R.string.notification_title_4),
+//                context.getString(R.string.notification_content_4, properties.daysForClosed())
+//            ),
+//            NotificationContent(
+//                context.getString(R.string.notification_title_5),
+//                if (properties.daysMissing()!! >= 0) context.getString(R.string.notification_content_5_1)
+//                else context.getString(R.string.notification_content_5_2)
+//            ),
+//            NotificationContent(
+//                context.getString(R.string.notification_title_6),
+//                if (properties.daysMissing()!! >= 0) context.getString(R.string.notification_content_6_1)
+//                else context.getString(R.string.notification_content_6_2)
+//            ),
+//            NotificationContent(
+//                context.getString(R.string.notification_title_7),
+//                if (properties.daysMissing()!! >= 0) context.getString(R.string.notification_content_7_1)
+//                else context.getString(
+//                    R.string.notification_content_7_2,
+//                    properties.daysMissing()!!.absoluteValue
+//                )
+//            ),
+//            NotificationContent(
+//                context.getString(R.string.notification_title_8),
+//                if (properties.daysMissing()!! >= 0) context.getString(R.string.notification_content_8_1)
+//                else context.getString(
+//                    R.string.notification_content_8_2,
+//                    properties.daysMissing()!!.absoluteValue
+//                )
+//            )
+//        )
+//    }
 
     private fun createIntent(context: Context) = TaskStackBuilder.create(context)
         .addNextIntent(Intent(context, MainActivity::class.java))
@@ -102,12 +99,12 @@ class NotificationReceiver : BroadcastReceiver() {
             .setAutoCancel(true)
     }
 
-    private fun getUrl(context: Context): String {
-        val properties = ManagerProperties.getInstance(context)
-        val tier = properties.getTierCurrent()
-        val reward = properties.passBattle.getTier(tier)!!.reward[0]
-        return if (reward.isCard()) reward.imagens[1] else reward.imagens[0]
-    }
+//    private fun getUrl(context: Context): String {
+//        val properties = ManagerProperties.getInstance(context)
+//        val tier = properties.getTierCurrent()
+//        val reward = properties.passBattle.getTier(tier)!!.reward[0]
+//        return if (reward.isCard()) reward.imagens[1] else reward.imagens[0]
+//    }
 
     private fun applyImageUrl(
         builder: NotificationCompat.Builder,

@@ -2,8 +2,9 @@ package br.com.battlepassCalculatorValorant.di
 
 import android.content.Context
 import androidx.room.Room
-import br.com.battlepassCalculatorValorant.database.SharedPreferences.MSharedPreferences
+import br.com.battlepassCalculatorValorant.BD_APP_NAME
 import br.com.battlepassCalculatorValorant.database.room.AppDB
+import br.com.battlepassCalculatorValorant.database.sharedPreferences.MSharedPreferences
 import br.com.battlepassCalculatorValorant.model.battlePass.BattlePass
 import br.com.battlepassCalculatorValorant.model.battlePass.BattlePassFactory
 import dagger.Module
@@ -19,7 +20,7 @@ object AppModule {
     @Provides
     @Singleton
     fun database(@ApplicationContext context: Context): AppDB {
-        return Room.databaseBuilder(context, AppDB::class.java, "valorantCalculator.db")
+        return Room.databaseBuilder(context, AppDB::class.java, BD_APP_NAME)
             .enableMultiInstanceInvalidation()
             .fallbackToDestructiveMigration()
             .build()

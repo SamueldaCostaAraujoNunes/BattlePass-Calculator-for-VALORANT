@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.database.SharedPreferences.FirstInputSharedPreferences
 import br.com.battlepassCalculatorValorant.ui.view.adapter.FragmentSliderAdapter
 import br.com.battlepassCalculatorValorant.ui.view.fragment.IntroTutorial.FirstScreenTutorialFragment
 import br.com.battlepassCalculatorValorant.ui.view.fragment.IntroTutorial.InputScreenTutorialFragment
@@ -66,7 +65,6 @@ class IntroTutorialActivity : AppCompatActivity() {
     }
 
     fun nextActivity() {
-        FirstInputSharedPreferences(this).firstInputExists = true
         startActivity(Intent(this, MainActivity::class.java))
         finish()
     }

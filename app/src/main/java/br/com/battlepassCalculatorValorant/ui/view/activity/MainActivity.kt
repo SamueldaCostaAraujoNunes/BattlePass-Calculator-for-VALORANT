@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.coordinatorlayout.widget.CoordinatorLayout
+import androidx.core.content.ContextCompat
 import androidx.core.view.doOnLayout
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         get() = findNavController(R.id.fragment_container)
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        window.setBackgroundDrawable(ContextCompat.getDrawable(this, R.color.blue_100))
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.root.doOnLayout {
@@ -54,6 +56,4 @@ class MainActivity : AppCompatActivity() {
             navController.navigate(NavGraphDirections.actionGlobalDialogInput())
         }
     }
-
-    override fun onSupportNavigateUp() = navController.navigateUp()
 }
