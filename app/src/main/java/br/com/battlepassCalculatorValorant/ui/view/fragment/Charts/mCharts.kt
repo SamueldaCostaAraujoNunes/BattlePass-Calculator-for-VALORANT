@@ -10,7 +10,9 @@ class ChartExpPerDayFragment : ChartFragment() {
         viewModel.projectionOfProgressPerDay.observe(viewLifecycleOwner, Observer {
             setData(requireContext().getString(R.string.exp_real), it)
         })
-        setData(requireContext().getString(R.string.exp_esperado), viewModel.expExpectedPerDay)
+        viewModel.expExpectedPerDay.observe(viewLifecycleOwner, Observer {
+            setData(requireContext().getString(R.string.exp_esperado), it)
+        })
     }
 }
 

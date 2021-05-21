@@ -15,7 +15,7 @@ class ChartFragmentViewModel @Inject constructor(calculador: CalculatorRepositor
     val listOfTiersCompletedByTheUser: LiveData<List<Int>> =
         calculador.listOfTiersCompletedByTheUser.asLiveData()
 
-    val expExpectedPerDay: ArrayList<Int> = calculador.expExpectedPerDay
+    val expExpectedPerDay: LiveData<ArrayList<Int>> = calculador.expExpectedPerDay.asLiveData()
     val projectionOfProgressPerDay: LiveData<List<Int>> =
         calculador.projectionOfProgressPerDay.asLiveData()
 

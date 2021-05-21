@@ -11,11 +11,12 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class DialogReward(val reward: Reward) : DialogBase() {
-    lateinit var binding: DialogRewardBinding
 
-    companion object {
-        const val TAG = "tag"
+    init {
+        TODO("Adicionar um construtor compativel com o navigation")
     }
+
+    lateinit var binding: DialogRewardBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,

@@ -1,5 +1,10 @@
 package br.com.battlepassCalculatorValorant.repository
 
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import br.com.battlepassCalculatorValorant.KEY_DAILY_MISSION
+import br.com.battlepassCalculatorValorant.KEY_EPILOGUE
+import br.com.battlepassCalculatorValorant.KEY_WEEKLY_MISSION
 import br.com.battlepassCalculatorValorant.database.room.AppDB
 import br.com.battlepassCalculatorValorant.database.room.model.UserTier
 import br.com.battlepassCalculatorValorant.extensions.dateFormat
@@ -10,6 +15,7 @@ import br.com.battlepassCalculatorValorant.model.battlePass.BattlePass
 import br.com.battlepassCalculatorValorant.model.battlePass.Chapter
 import br.com.battlepassCalculatorValorant.model.battlePass.Tier
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map
 import java.text.SimpleDateFormat
 import java.util.*
@@ -20,12 +26,33 @@ import javax.inject.Singleton
 @Singleton
 class CalculatorRepository @Inject constructor(
     val battlePass: BattlePass,
+    val dataStore: DataStore<Preferences>,
     database: AppDB
 ) {
     private val userInputHistory = database.userTier
     private val today = Calendar.getInstance()
 
-    val totalXpBattlePass: Int = battlePass.totalXp
+    val epilogue: Flow<Boolean> = dataStore.data
+        .map { pref ->
+            pref[KEY_EPILOGUE] ?: false
+        }
+
+    val dailyMission: Flow<Boolean> = dataStore.data
+        .map { pref ->
+            pref[KEY_DAILY_MISSION] ?: false
+        }
+
+    val weeklyMission: Flow<Boolean> = dataStore.data
+        .map { pref ->
+            pref[KEY_WEEKLY_MISSION] ?: false
+        }
+
+//    val totalXpBattlePass: Int = battlePass.totalXp
+
+    val totalXpBattlePass: Flow<Int> = epilogue.map {
+        battlePass.getExpTotal(it)
+    }
+
     val listTiers: ArrayList<Tier> = battlePass.tiers
     val listChapters: ArrayList<Chapter> = battlePass.chapters
 
@@ -36,9 +63,9 @@ class CalculatorRepository @Inject constructor(
     val openingDateOfTheAct: String = battlePass.dateInit.dateFormat()
     val closingDateOfTheAct: String = battlePass.dateFinally.dateFormat()
 
-    val expExpectedPerDay: ArrayList<Int> by lazy {
+    val expExpectedPerDay: Flow<ArrayList<Int>> = totalXpBattlePass.map {
         val expListForEachTier = arrayListOf(0)
-        val average = totalXpBattlePass / passDurationInDays
+        val average = it / passDurationInDays
         for (day in IntStream.range(1, passDurationInDays)) {
             expListForEachTier.add(day * average)
         }
@@ -50,13 +77,6 @@ class CalculatorRepository @Inject constructor(
         progressoPerTier.addAll(listTiers.map { it.expInitial + it.expMissing })
         progressoPerTier
     }
-
-    val expDailyMissionUntilToday: Float =
-        (battlePass.expMissaoDiaria.toFloat() / passDurationInDays) * daysFromTheStart
-
-    val expWeeklyMissionUntilToday: Float =
-        (battlePass.expMissaoSemanal.toFloat() / (passDurationInDays * daysFromTheStart / 7) * (daysFromTheStart / 7))
-
 
     val lastUserInput: Flow<UserTier> = userInputHistory.last().map { it ?: UserTier() }
     val allUserInput: Flow<List<UserTier>> =
@@ -123,25 +143,28 @@ class CalculatorRepository @Inject constructor(
         }
 
 
-    val percentageTotal: Flow<Double> = totalExpCurrent.map { expCurrent ->
-        expCurrent.toDouble() * 100 / totalXpBattlePass
-    }
+    val percentageTotal: Flow<Double> =
+        totalExpCurrent.combine(totalXpBattlePass) { xpCurrent, xpTotal ->
+            xpCurrent.toDouble() * 100 / xpTotal
+        }
 
     val differenceBetweenTheExpectedExpWithTheCurrent: Flow<Int> =
-        totalExpAlreadyEarned.map { expCurrent ->
-            val expPerDay = (totalXpBattlePass.toDouble() / passDurationInDays)
+        totalExpAlreadyEarned.combine(totalXpBattlePass) { expCurrent, xpTotal ->
+            val expPerDay = (xpTotal.toDouble() / passDurationInDays)
             val expExpected = daysFromTheStart * expPerDay
             expCurrent - expExpected.toInt()
         }
 
-    val finishForecast: Flow<String> = totalExpAlreadyEarned.map { expTotal ->
-        val xpPerDayExpected = (expTotal.toDouble() / daysFromTheStart).toInt()
-        val xpDif = totalXpBattlePass.toDouble() - expTotal.toDouble()
-        val totalDays = (xpDif / xpPerDayExpected).toInt() + 1
-        val instance = Calendar.getInstance()
-        instance.add(Calendar.DAY_OF_MONTH, totalDays)
-        instance.dateFormat()
-    }
+
+    val finishForecast: Flow<String> =
+        totalExpAlreadyEarned.combine(totalXpBattlePass) { expTotal, totalXp ->
+            val xpPerDayExpected = (expTotal.toDouble() / daysFromTheStart).toInt()
+            val xpDif = totalXp.toDouble() - expTotal.toDouble()
+            val totalDays = (xpDif / xpPerDayExpected).toInt() + 1
+            val instance = Calendar.getInstance()
+            instance.add(Calendar.DAY_OF_MONTH, totalDays)
+            instance.dateFormat()
+        }
 
     val daysMissing: Flow<Int> =
         finishForecast.map {
@@ -162,26 +185,21 @@ class CalculatorRepository @Inject constructor(
             }
         }
 
-    fun previsoesJogos(gameType: GameType): Flow<PrevisoesJogos> = totalExpAlreadyEarned.map {
-        val xpTotal = totalXpBattlePass
-        val xpDif = xpTotal - it
+    fun previsoesJogos(gameType: GameType): Flow<PrevisoesJogos> =
+        totalExpAlreadyEarned.combine(totalXpBattlePass) { xpCurrent, xpTotal ->
+            val xpDif = xpTotal - xpCurrent
 
-        val jogosRestantes = xpDif.toFloat() / gameType.xp
-        val tempoRestante = jogosRestantes * gameType.duration
-        val horasPorDia = (tempoRestante / daysLeftUntilTheEnd)
-        val jogosPorDia = horasPorDia / gameType.duration
-        PrevisoesJogos(
-            jogosRestantes,
-            convertHours(tempoRestante),
-            jogosPorDia,
-            convertHours(horasPorDia)
-        )
-    }
-
-
-    val expNormalGame: Flow<Float> = totalExpAlreadyEarned.map {
-        it - expDailyMissionUntilToday + expWeeklyMissionUntilToday
-    }
+            val jogosRestantes = xpDif.toFloat() / gameType.xp
+            val tempoRestante = jogosRestantes * gameType.duration
+            val horasPorDia = (tempoRestante / daysLeftUntilTheEnd)
+            val jogosPorDia = horasPorDia / gameType.duration
+            PrevisoesJogos(
+                jogosRestantes,
+                convertHours(tempoRestante),
+                jogosPorDia,
+                convertHours(horasPorDia)
+            )
+        }
 
 
     suspend fun insertUserInput(userTier: UserTier) {

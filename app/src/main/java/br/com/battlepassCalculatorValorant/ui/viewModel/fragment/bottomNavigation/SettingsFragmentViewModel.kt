@@ -10,7 +10,8 @@ import javax.inject.Inject
 
 
 @HiltViewModel
-class SettingsFragmentViewModel @Inject constructor(calculador: CalculatorRepository) :
+class SettingsFragmentViewModel @Inject constructor(val calculador: CalculatorRepository) :
     ViewModel() {
+
     val lastTier: LiveData<UserTier> = calculador.lastUserInput.asLiveData()
 }

@@ -2,6 +2,8 @@ package br.com.battlepassCalculatorValorant.ui.view.fragment.BottomNavigation
 
 import android.os.Bundle
 import android.view.View
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
 import androidx.fragment.app.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
@@ -9,24 +11,29 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreferenceCompat
 import br.com.battlepassCalculatorValorant.R
+import br.com.battlepassCalculatorValorant.database.dataStore.SettingsDataStore
 import br.com.battlepassCalculatorValorant.ui.viewModel.fragment.bottomNavigation.SettingsFragmentViewModel
 import dagger.hilt.android.AndroidEntryPoint
-
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class SettingsFragment : PreferenceFragmentCompat() {
+    @Inject
+    lateinit var dataStore: DataStore<Preferences>
+
     private val viewModel: SettingsFragmentViewModel by viewModels()
     private val themePreference by lazy {
         findPreference<Preference>(getString(R.string.themeStatus))
     }
     private val epilogoPreference by lazy {
-        findPreference<SwitchPreferenceCompat>(getString(R.string.epilogoIsValide))
+        findPreference<SwitchPreferenceCompat>(getString(R.string.epilogue))
     }
     private val editHistoric by lazy {
         findPreference<Preference>(getString(R.string.editHistoric))
     }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        preferenceManager.preferenceDataStore = SettingsDataStore(dataStore)
         setPreferencesFromResource(R.xml.root_preferences, rootKey)
     }
 
@@ -44,7 +51,8 @@ class SettingsFragment : PreferenceFragmentCompat() {
     private fun setPreferencesListeners() {
 
         viewModel.lastTier.observe(viewLifecycleOwner, { ultimoTier ->
-            if (ultimoTier.tierCurrent > 50 && epilogoPreference?.isChecked!!) {
+            if (ultimoTier.tierCurrent > 50) {
+                epilogoPreference?.isChecked = true
                 epilogoPreference?.isEnabled = false
             }
         })
@@ -55,29 +63,10 @@ class SettingsFragment : PreferenceFragmentCompat() {
             true
         }
 
-//        epilogoPreference?.onPreferenceChangeListener =
-//            OnPreferenceChangeListener { _, newValue ->
-//                val value = newValue.toString().toBoolean()
-//
-//                val realValue =
-//                    if (ultimoTier > 50) {
-//                        true
-//                    } else {
-//                        value
-//                    }
-//                properties.passBattle.espilogoIsValide = realValue
-//                if (ultimoTier > 50 && epilogoPreference?.isChecked!!) {
-//                    epilogoPreference?.isEnabled = false
-//                }
-//                properties.historic.sendUpdateEvent()
-//                true
-//            }
-
         editHistoric?.setOnPreferenceClickListener {
-            val findNavController = findNavController()
             val direction =
                 SettingsFragmentDirections.actionSettingsFragmentToHistoricInputFragment()
-            findNavController.navigate(direction)
+            navController.navigate(direction)
             true
         }
     }

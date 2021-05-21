@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
 
     buildFeatures {
         dataBinding true
@@ -18,7 +18,7 @@ android {
     defaultConfig {
         applicationId "br.com.samuelnunes.valorantpassbattle"
         minSdkVersion 24
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 21
         versionName "3.2.0"
 
@@ -41,6 +41,12 @@ android {
 }
 
 dependencies {
+    //Data Store
+    def dataStore = "1.0.0-beta01"
+    implementation "androidx.datastore:datastore-preferences:$dataStore"
+    implementation "androidx.datastore:datastore-preferences-rxjava2:$dataStore"
+    implementation "androidx.datastore:datastore-preferences-rxjava3:$dataStore"
+
     //Lifecycle
     def lifecycle = "2.3.1"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle"
@@ -49,7 +55,7 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 
     //Kotlin Coroutines
-    def coroutines = '1.4.1'
+    def coroutines = '1.4.3'
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines"
 
@@ -91,8 +97,8 @@ dependencies {
     // Android
     implementation 'androidx.preference:preference-ktx:1.1.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin"
-    implementation 'androidx.core:core-ktx:1.3.2'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.core:core-ktx:1.5.0'
+    implementation 'androidx.appcompat:appcompat:1.3.0'
     implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'

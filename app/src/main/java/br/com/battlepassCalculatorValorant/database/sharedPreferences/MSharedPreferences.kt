@@ -41,7 +41,7 @@ class MSharedPreferences(context: Context) {
     }
 
     // Int
-    operator fun get(key: String, default: Int = 0): Int {
-        return sharedPreferences.getInt(key, default)
+    operator fun get(key: String, defValue: Int = 0): Int {
+        return sharedPreferences.getInt(key, defValue)
     }
 }

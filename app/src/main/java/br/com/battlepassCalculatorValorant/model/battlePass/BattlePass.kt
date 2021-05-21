@@ -84,4 +84,11 @@ class BattlePass(json: JSONObject, val context: Context) {
         }
         return result
     }
+
+    fun getExpTotal(epilog: Boolean): Int {
+        return if (epilog)
+            expTotal + epilogoExpTotal
+        else
+            expTotal
+    }
 }

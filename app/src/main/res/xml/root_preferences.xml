@@ -11,19 +11,19 @@
     <PreferenceCategory app:title="@string/preferencias">
 
         <SwitchPreferenceCompat
-            app:key="@string/epilogoIsValide"
+            app:key="@string/epilogue"
             app:summaryOff="@string/content_epilogo_off"
             app:summaryOn="@string/content_epilogo_on"
             app:title="@string/epilogo" />
 
         <SwitchPreferenceCompat
-            app:key="Missões Diarias"
+            app:key="@string/dailyMission"
             app:summaryOff="Ative para que os calculos levem em consideração as missões diarias"
             app:summaryOn="Os calculos levam em consideração as missões diarias"
             app:title="Missões Diarias" />
 
         <SwitchPreferenceCompat
-            app:key="Missões Semanais"
+            app:key="@string/weeklyMission"
             app:summaryOff="Ative para que os calculos levem em consideração as missões semanais"
             app:summaryOn="Os calculos levam em consideração as missões semanais"
             app:title="Missões Semanais" />
