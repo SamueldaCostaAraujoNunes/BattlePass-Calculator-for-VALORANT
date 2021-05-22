@@ -2,8 +2,6 @@ package br.com.battlepassCalculatorValorant.ui.view.fragment.BottomNavigation
 
 import android.os.Bundle
 import android.view.View
-import androidx.datastore.core.DataStore
-import androidx.datastore.preferences.core.Preferences
 import androidx.fragment.app.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
@@ -19,7 +17,7 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class SettingsFragment : PreferenceFragmentCompat() {
     @Inject
-    lateinit var dataStore: DataStore<Preferences>
+    lateinit var settingsDataStore: SettingsDataStore
 
     private val viewModel: SettingsFragmentViewModel by viewModels()
     private val themePreference by lazy {
@@ -33,7 +31,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
     }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        preferenceManager.preferenceDataStore = SettingsDataStore(dataStore)
+        preferenceManager.preferenceDataStore = settingsDataStore
         setPreferencesFromResource(R.xml.root_preferences, rootKey)
     }
 

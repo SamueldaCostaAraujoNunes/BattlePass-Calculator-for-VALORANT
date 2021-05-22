@@ -1,4 +1,4 @@
-package br.com.battlepassCalculatorValorant.model.battlePass
+ package br.com.battlepassCalculatorValorant.model.battlePass
 
 import android.content.Context
 import android.icu.text.SimpleDateFormat
