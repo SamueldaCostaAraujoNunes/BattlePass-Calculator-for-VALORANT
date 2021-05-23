@@ -13,7 +13,8 @@ import br.com.battlepassCalculatorValorant.ui.view.dialog.DialogReward
 class ItemRewardAdapter(
     private var rewards: List<Reward>,
     private var rewardCurrent: Int,
-    private val fragmentManager: FragmentManager
+    private val fragmentManager: FragmentManager,
+    private val all: String
 ) :
     RecyclerView.Adapter<ItemRewardAdapter.ViewHolder>() {
 
@@ -45,7 +46,7 @@ class ItemRewardAdapter(
 
     fun filter(text: String) {
         filterValues.clear()
-        if (text == "Tudo") {
+        if (text == all) {
             filterValues.addAll(rewards)
         } else {
             for (item in rewards) {

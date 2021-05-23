@@ -1,18 +1,18 @@
 package br.com.battlepassCalculatorValorant.model.newBattlePass
 
 import android.content.Context
+import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.util.ObjectConverters
 import com.google.gson.GsonBuilder
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
 
-
-private const val PATH_INFOS = "novoPasse.json"
 class BattlePassManager(context: Context) {
     private val jsonStr: String =
-        context.assets.open(PATH_INFOS).bufferedReader().use { it.readText() }
-    val passe: BattlePass =
+        context.resources.openRawResource(R.raw.passe).bufferedReader().use { it.readText() }
+
+    private val passe: BattlePass =
         GsonBuilder()
             .registerTypeAdapter(LocalDate::class.java, ObjectConverters.LD_DESERIALIZER)
             .create().fromJson(jsonStr, BattlePass::class.java)

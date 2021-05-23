@@ -29,6 +29,10 @@ class CalculatorRepository @Inject constructor(
 ) {
     private val userInputHistory = database.userTier
 
+    val lastUserInput: Flow<UserTier> = userInputHistory.last().map { it ?: UserTier() }
+    val allUserInput: Flow<List<UserTier>> =
+        userInputHistory.getAll().map { if (it.isEmpty()) listOf(UserTier()) else it }
+
     private val epilogue: Flow<Boolean> = dataStore.data
         .map { pref ->
             pref[KEY_EPILOGUE] ?: false
@@ -53,6 +57,14 @@ class CalculatorRepository @Inject constructor(
 
             totalExpAteOTier - d - w
         }
+
+    val totalExpCurrent: Flow<Int> =
+        combine(lastUserInput, dailyMission, weeklyMission) { last, daily, weekly ->
+            val d = if (daily) battlePassManager.getExpMissaoDiaria() else 0
+            val w = if (weekly) battlePassManager.getExpMissaoSemanal() else 0
+            battlePassManager.totalExpAteOTier(last.tierCurrent) - last.tierExpMissing - d - w
+        }
+
 
     val listTiers: List<Reward> = battlePassManager.getTiers()
 
@@ -80,16 +92,6 @@ class CalculatorRepository @Inject constructor(
         return progressoPerTier
     }
 
-    val lastUserInput: Flow<UserTier> = userInputHistory.last().map { it ?: UserTier() }
-    val allUserInput: Flow<List<UserTier>> =
-        userInputHistory.getAll().map { if (it.isEmpty()) listOf(UserTier()) else it }
-
-    val totalExpCurrent: Flow<Int> =
-        combine(lastUserInput, dailyMission, weeklyMission) { last, daily, weekly ->
-            val d = if (daily) battlePassManager.getExpMissaoDiaria() else 0
-            val w = if (weekly) battlePassManager.getExpMissaoSemanal() else 0
-            battlePassManager.totalExpAteOTier(last.tierCurrent) - last.tierExpMissing - d - w
-        }
 
     val averageExpPerDay: Flow<Int> = totalExpCurrent.map { xpTotal ->
         (xpTotal.toDouble() / daysFromTheStart).toInt()
@@ -130,12 +132,6 @@ class CalculatorRepository @Inject constructor(
 
     val tierCurrent: Flow<Reward> =
         lastUserInput.map { battlePassManager.getTier(it.tierCurrent)!! }
-
-    val tierIndexCurrent: Flow<Int> = lastUserInput.map { it.tierCurrent }
-
-    val chapterCurrent: Flow<Int> = tierIndexCurrent.map { tierCurrent ->
-        (tierCurrent - 1) / 5 + 1
-    }
 
 
     val percentageTotal: Flow<Double> =
