@@ -5,7 +5,6 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.map
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.model.battlePass.Reward
 import br.com.battlepassCalculatorValorant.ui.viewModel.fragment.rewards.TiersRewardsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -14,11 +13,7 @@ class TiersRewards : BaseRewardsFragment() {
     private val viewModel: TiersRewardsViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val auxRewards = arrayListOf<Reward>()
-        for (tier in viewModel.tiers) {
-            auxRewards += tier.reward
-        }
-        rewards = auxRewards
+        rewards = viewModel.tiers
         positionTier = viewModel.lastTier.map { it.tierCurrent }
         super.onViewCreated(view, savedInstanceState)
     }

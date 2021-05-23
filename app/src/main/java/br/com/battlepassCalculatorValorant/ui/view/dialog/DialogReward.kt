@@ -5,16 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import br.com.battlepassCalculatorValorant.databinding.DialogRewardBinding
-import br.com.battlepassCalculatorValorant.model.battlePass.Reward
+import br.com.battlepassCalculatorValorant.model.newBattlePass.Reward
 import br.com.battlepassCalculatorValorant.ui.view.adapter.ImageSliderAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class DialogReward(val reward: Reward) : DialogBase() {
 
-    init {
-        TODO("Adicionar um construtor compativel com o navigation")
-    }
+//    init {
+//        TODO("Adicionar um construtor compativel com o navigation")
+//    }
 
     lateinit var binding: DialogRewardBinding
 
@@ -26,8 +26,7 @@ class DialogReward(val reward: Reward) : DialogBase() {
         super.onCreateView(inflater, container, savedInstanceState)
         binding = DialogRewardBinding.inflate(inflater, container, false)
         binding.reward = reward
-        binding.titleName =
-            Reward.getFonteTranslated(requireContext(), reward.fonte) + " " + reward.position
+        binding.titleName = "T" + reward.id
         val mViewPagerAdapter = ImageSliderAdapter(reward.imagens)
         binding.dialogViewPagerMain.adapter = mViewPagerAdapter
         binding.indicatorImageSlider.setViewPager2(binding.dialogViewPagerMain)

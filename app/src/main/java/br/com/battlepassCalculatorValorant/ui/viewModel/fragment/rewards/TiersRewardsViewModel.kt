@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import br.com.battlepassCalculatorValorant.database.room.model.UserTier
-import br.com.battlepassCalculatorValorant.model.battlePass.Tier
+import br.com.battlepassCalculatorValorant.model.newBattlePass.Reward
 import br.com.battlepassCalculatorValorant.repository.CalculatorRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -13,7 +13,7 @@ import javax.inject.Inject
 class TiersRewardsViewModel @Inject constructor(calculador: CalculatorRepository) :
     ViewModel() {
 
-    val tiers: ArrayList<Tier> = calculador.listTiers
+    val tiers: List<Reward> = calculador.listTiers
     val lastTier: LiveData<UserTier> = calculador.lastUserInput.asLiveData()
 
 

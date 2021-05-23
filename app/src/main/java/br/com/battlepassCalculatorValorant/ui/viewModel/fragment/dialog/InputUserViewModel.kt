@@ -39,11 +39,10 @@ class InputUserViewModel @Inject constructor(private val calculador: CalculatorR
                 valido = false
                 error = ViewModelString(R.string.insira_o_exp_faltando)
             } else {
-                val tier = calculador.battlePass.getTier(form.tierCurrent.toInt())!!
-                val expMissingInt = form.expMissing.toInt()
-
                 val expMin = 0
-                val expMax = tier.expMissing
+                val expMax =
+                    calculador.battlePassManager.expParaCompletarTier(form.tierCurrent.toInt())
+                val expMissingInt = form.expMissing.toInt()
 
                 if ((expMissingInt < expMin) or (expMissingInt > expMax)) {
                     valido = false
@@ -67,7 +66,6 @@ class InputUserViewModel @Inject constructor(private val calculador: CalculatorR
             val tierMin = 1
             val tierMax = 55
             if ((tierInt < tierMin) or (tierInt > tierMax)) {
-                R.string.tier_intervalo
                 valido = false
                 error = ViewModelString(R.string.tier_intervalo, arrayListOf(tierMin, tierMax))
             }

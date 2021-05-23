@@ -7,8 +7,7 @@ import androidx.room.Room
 import br.com.battlepassCalculatorValorant.BD_APP_NAME
 import br.com.battlepassCalculatorValorant.dataStore
 import br.com.battlepassCalculatorValorant.database.room.AppDB
-import br.com.battlepassCalculatorValorant.model.battlePass.BattlePass
-import br.com.battlepassCalculatorValorant.model.battlePass.BattlePassFactory
+import br.com.battlepassCalculatorValorant.model.newBattlePass.BattlePassManager
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -30,8 +29,9 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun battlePass(@ApplicationContext context: Context): BattlePass =
-        BattlePassFactory(context).getBattlePass()
+    fun battlePassManager(@ApplicationContext context: Context): BattlePassManager =
+        BattlePassManager(context)
+
 
     @Provides
     @Singleton

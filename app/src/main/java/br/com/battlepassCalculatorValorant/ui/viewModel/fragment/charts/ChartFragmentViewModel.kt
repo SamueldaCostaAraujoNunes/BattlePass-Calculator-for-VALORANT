@@ -11,7 +11,7 @@ import javax.inject.Inject
 class ChartFragmentViewModel @Inject constructor(calculador: CalculatorRepository) :
     ViewModel() {
 
-    val tiersPerExp: ArrayList<Int> = calculador.tiersPerExp
+    val tiersPerExp: ArrayList<Int> = calculador.tiersPerExp()
     val listOfTiersCompletedByTheUser: LiveData<List<Int>> =
         calculador.listOfTiersCompletedByTheUser.asLiveData()
 

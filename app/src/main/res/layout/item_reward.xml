@@ -7,7 +7,7 @@
 
         <variable
             name="reward"
-            type="br.com.battlepassCalculatorValorant.model.battlePass.Reward" />
+            type="br.com.battlepassCalculatorValorant.model.newBattlePass.Reward" />
 
         <variable
             name="itemCurrent"
@@ -25,13 +25,13 @@
             android:fontFamily="@font/impact_font_family"
             android:gravity="center"
             android:paddingVertical="8dp"
-            android:text="@{String.valueOf(reward.fonte) + reward.position}"
+            android:text="@{String.valueOf(reward.id)}"
             android:textAppearance="?attr/textAppearanceListItem"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:position="@{reward.position}"
+            app:position="@{reward.id}"
             app:positionCurrent="@{itemCurrent}"
             tools:text="T1" />
 
@@ -48,7 +48,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/item_number"
             app:layout_constraintStart_toEndOf="@+id/item_number"
             app:layout_constraintTop_toTopOf="@+id/item_number"
-            app:position="@{reward.position}"
+            app:position="@{reward.id}"
             app:positionCurrent="@{itemCurrent}"
             tools:text="Skin Seilá Qual" />
     </androidx.constraintlayout.widget.ConstraintLayout>
