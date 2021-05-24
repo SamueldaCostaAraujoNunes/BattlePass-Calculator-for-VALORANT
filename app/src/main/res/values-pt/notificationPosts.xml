@@ -13,21 +13,4 @@
     <string name="notification_title_4">Já está na hora de atualizar seu passe, hein?!</string>
     <string name="notification_content_4">Faltam apenas %1$d dias para o passe acabar!</string>
 
-    <string name="notification_title_5">Você está afim de jogar?!</string>
-    <string name="notification_content_5_1">Uau, você está Adiantado! Mas, sugiro que se mantenha atualizado!</string>
-    <string name="notification_content_5_2">Vish, você está um pouco atrasado, my Friend! Atualize o passe para recuperar o tempo perdido!</string>
-
-    <string name="notification_title_6">Que a faca esteja com você!</string>
-    <string name="notification_content_6_1">Adiantado, você está! Continue no caminho da Luz, Jovem Padawan!</string>
-    <string name="notification_content_6_2">Atrasado, você está! Evite o lado negro do Passe, Jovem Padawan!</string>
-
-    <string name="notification_title_7">Carpe diem. Aproveitem o dia de hoje, rapazes!</string>
-    <string name="notification_content_7_1">Uau hein, você está Adiantado! Mas, sugiro que se mantenha atualizado!</string>
-    <string name="notification_content_7_2">Eita preula, você está %1$d dias atrasado! Atualize o passe para recuperar o tempo perdido!</string>
-
-    <string name="notification_title_8">Nunca odeie seus inimigos, isso afeta seu julgamento!</string>
-    <string name="notification_content_8_1">Não se estresse com Bombinhos e Torretas no Pistol, Você está Adiantado!</string>
-    <string name="notification_content_8_2">Vish, você está %1$d dias atrasado! Atualize o passe para recuperar o tempo perdido!</string>
-
-
 </resources>

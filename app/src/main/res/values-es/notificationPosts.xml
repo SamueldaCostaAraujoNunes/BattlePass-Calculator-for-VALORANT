@@ -13,20 +13,4 @@
     <string name="notification_title_4">Es hora de actualizar tu pase, ¿eh?</string>
     <string name="notification_content_4">¡El pase está a solo %1$d días!</string>
 
-    <string name="notification_title_5">¿Estás de humor para jugar?</string>
-    <string name="notification_content_5_1">¡Vaya, llegas temprano! ¡Pero te sugiero que te mantengas actualizado!</string>
-    <string name="notification_content_5_2">¡Vish, llegas un poco tarde, amigo! ¡Actualice su pase para recuperar el tiempo perdido!</string>
-
-    <string name="notification_title_6">¡Que el cuchillo te acompañe!</string>
-    <string name="notification_content_6_1">¡Temprano, lo eres! ¡Continúa por el camino de la Luz, Joven Padawan!</string>
-    <string name="notification_content_6_2">¡Llegas tarde! ¡Evita el lado oscuro del paso, Joven Padawan!</string>
-
-    <string name="notification_title_7">Carpe Diem. ¡Disfruten hoy, chicos!</string>
-    <string name="notification_content_7_1">¡Vaya eh, estás adelantado! ¡Pero te sugiero que te mantengas actualizado!</string>
-    <string name="notification_content_7_2">¡Por Dios, llegas %1$d días tarde! ¡Actualice su pase para recuperar el tiempo perdido!</string>
-
-    <string name="notification_title_8">¡Nunca odies a tus enemigos, afecta tu juicio!</string>
-    <string name="notification_content_8_1">No te estreses con bombas y torretas en Pistol, ¡estás por delante!</string>
-    <string name="notification_content_8_2">¡Vish, llegas %1$d días tarde! ¡Actualice su pase para recuperar el tiempo perdido!</string>
-
 </resources>
