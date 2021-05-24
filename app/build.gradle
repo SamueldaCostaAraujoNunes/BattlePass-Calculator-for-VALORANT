@@ -1,7 +1,6 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'kotlin-android-extensions'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
     id 'androidx.navigation.safeargs.kotlin'
@@ -31,6 +30,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         coreLibraryDesugaringEnabled true
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -42,7 +42,6 @@ android {
 }
 
 dependencies {
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
     //Gson
     def gson = "2.8.6"
     implementation "com.google.code.gson:gson:$gson"
@@ -89,16 +88,19 @@ dependencies {
     annotationProcessor "com.github.bumptech.glide:compiler:$glide"
 
     // AdMob
-    implementation 'com.google.android.gms:play-services-ads:20.1.0'
+    def admob = "20.1.0"
+    implementation "com.google.android.gms:play-services-ads:$admob"
 
     // Dots Indicator
-    implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2'
+    def dotsIndicator = "4.1.2"
+    implementation "com.tbuonomo.andrui:viewpagerdotsindicator:$dotsIndicator"
 
     // AAChartCore
     implementation 'com.github.AAChartModel:AAChartCore-Kotlin:-SNAPSHOT'
 
     //Timber
-    implementation 'com.jakewharton.timber:timber:4.7.1'
+    def timber = "4.7.1"
+    implementation "com.jakewharton.timber:timber:$timber"
 
     // Android
     implementation 'androidx.preference:preference-ktx:1.1.1'
@@ -113,4 +115,5 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
 }

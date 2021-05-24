@@ -7,14 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import androidx.recyclerview.widget.RecyclerView
 import br.com.battlepassCalculatorValorant.NavGraphDirections
-import br.com.battlepassCalculatorValorant.databinding.HistoricInputFragmentBinding
+import br.com.battlepassCalculatorValorant.databinding.FragmentHistoricInputBinding
 import br.com.battlepassCalculatorValorant.ui.view.adapter.ItemUserInputAdapter
 import br.com.battlepassCalculatorValorant.ui.view.adapter.RecyclerItemClickListener
 import br.com.battlepassCalculatorValorant.ui.view.helpers.ItemSwipeHelper
@@ -27,7 +26,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class HistoricInputFragment : Fragment() {
     private val viewModel: HistoricInputViewModel by viewModels()
     private val uiViewModel: UIViewModel by activityViewModels()
-    private lateinit var binding: HistoricInputFragmentBinding
+    private lateinit var binding: FragmentHistoricInputBinding
     private lateinit var adapter: ItemUserInputAdapter
 
     private val navController: NavController
@@ -49,7 +48,7 @@ class HistoricInputFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = HistoricInputFragmentBinding.inflate(inflater, container, false)
+        binding = FragmentHistoricInputBinding.inflate(inflater, container, false)
         setupObservers()
         val appBarConfiguration = AppBarConfiguration(navController.graph)
         binding.toolbar.setupWithNavController(navController, appBarConfiguration)
@@ -57,12 +56,11 @@ class HistoricInputFragment : Fragment() {
     }
 
     private fun setupObservers() {
-        viewModel.allUserInput.observe(viewLifecycleOwner, Observer {
+        viewModel.allUserInput.observe(viewLifecycleOwner, {
             adapter = ItemUserInputAdapter(it)
             binding.rvEditHistoric.adapter = adapter
         })
 
-        // Event click item edit / delete
         binding.rvEditHistoric.addOnItemTouchListener(
             RecyclerItemClickListener(
                 binding.rvEditHistoric,

@@ -10,10 +10,10 @@ fun RadioGroup.checkChildrenByTag(tag: Int) {
 }
 
 @BindingAdapter("checkedChange")
-fun RadioGroup.checkedChange(function: (nextTheme: Int) -> Unit) {
+fun RadioGroup.checkedChange(function: (tag: Int) -> Unit) {
     setOnCheckedChangeListener { radioGroup, checkedId ->
         val radioButton = radioGroup.findViewById<RadioButton>(checkedId)
-        val nextTheme = radioButton.tag as Int
-        function(nextTheme)
+        val tag = radioButton.tag as Int
+        function(tag)
     }
 }
