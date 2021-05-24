@@ -24,7 +24,7 @@
             app:imageUrl="@{imageURL}"
             tools:ignore="ContentDescription"
             tools:layout_height="450dp"
-            tools:src="@drawable/error" />
+            tools:src="@drawable/img_error" />
 
     </LinearLayout>
 

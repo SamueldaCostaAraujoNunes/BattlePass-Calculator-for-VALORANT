@@ -1,4 +1,4 @@
-package br.com.battlepassCalculatorValorant.model.newBattlePass
+package br.com.battlepassCalculatorValorant.model.battlePass
 
 import android.content.Context
 import br.com.battlepassCalculatorValorant.R
@@ -75,26 +75,3 @@ class BattlePassManager(context: Context) {
     }
 
 }
-
-data class BattlePass(
-    val dateInit: LocalDate,
-    val dateFinally: LocalDate,
-    val expPrimeiroTermo: Int,
-    val expRazao: Int,
-    val missaoDiaria: ExpMissao,
-    val missaoSemanal: List<ExpMissao>,
-    val tiers: List<Reward>,
-    val capitulos: List<Reward>
-)
-
-data class ExpMissao(
-    val id: Int,
-    val exp: Int
-)
-
-data class Reward(
-    val id: Int,
-    val nome: String,
-    val tipo: String,
-    val imagens: List<String>
-)

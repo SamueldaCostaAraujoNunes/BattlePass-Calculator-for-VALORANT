@@ -9,8 +9,8 @@ import br.com.battlepassCalculatorValorant.database.room.AppDB
 import br.com.battlepassCalculatorValorant.database.room.model.UserTier
 import br.com.battlepassCalculatorValorant.model.GameType.GameType
 import br.com.battlepassCalculatorValorant.model.PrevisoesJogos
-import br.com.battlepassCalculatorValorant.model.newBattlePass.BattlePassManager
-import br.com.battlepassCalculatorValorant.model.newBattlePass.Reward
+import br.com.battlepassCalculatorValorant.model.battlePass.BattlePassManager
+import br.com.battlepassCalculatorValorant.model.battlePass.Reward
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map

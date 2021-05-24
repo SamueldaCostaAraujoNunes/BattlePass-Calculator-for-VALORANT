@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="admob_app_id" translatable="false">ca-app-pub-8166893603837665~8814773378</string>
+
+    <string name="admob_fullscreen" translatable="false">ca-app-pub-8166893603837665/9696610205</string>
+
+    <string name="admob_card_home_top" translatable="false">ca-app-pub-8166893603837665/3605590984</string>
+    <string name="admob_card_home_center" translatable="false">ca-app-pub-8166893603837665/1151055719</string>
+    <string name="admob_card_home_bottom" translatable="false">ca-app-pub-8166893603837665/1675661719</string>
+
+    <string name="admob_card_graphics_top" translatable="false">ca-app-pub-8166893603837665/4779309535</string>
+    <string name="admob_card_graphics_center" translatable="false">ca-app-pub-8166893603837665/3985952674</string>
+    <string name="admob_card_graphics_bottom" translatable="false">ca-app-pub-8166893603837665/2218587193</string>
+
+    <string name="admob_card_infos_top" translatable="false">ca-app-pub-8166893603837665/5848610943</string>
+    <string name="admob_card_infos_center" translatable="false">ca-app-pub-8166893603837665/5281634738</string>
+    <string name="admob_card_infos_bottom" translatable="false">ca-app-pub-8166893603837665/2218587193</string>
+</resources>

@@ -27,7 +27,7 @@
                     android:layout_height="wrap_content"
                     android:padding="4dp"
                     app:adSize="BANNER"
-                    app:adUnitId="@string/admob_card_id_test" />
+                    app:adUnitId="@string/admob_card_graphics_top" />
             </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
 
             <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
@@ -54,7 +54,7 @@
                     android:layout_height="wrap_content"
                     android:padding="4dp"
                     app:adSize="LARGE_BANNER"
-                    app:adUnitId="@string/admob_card_id_test" />
+                    app:adUnitId="@string/admob_card_graphics_center" />
             </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
 
             <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
@@ -81,7 +81,7 @@
                     android:layout_height="wrap_content"
                     android:padding="4dp"
                     app:adSize="MEDIUM_RECTANGLE"
-                    app:adUnitId="@string/admob_card_id_test" />
+                    app:adUnitId="@string/admob_card_graphics_bottom" />
             </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
 
             <View

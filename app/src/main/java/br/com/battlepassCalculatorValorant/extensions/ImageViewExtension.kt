@@ -14,7 +14,7 @@ import com.bumptech.glide.Glide
 @BindingAdapter("imageUrl")
 fun ImageView.loadImageURL(url: String?) {
     if (url != null) {
-        Glide.with(context).load(url).error(R.drawable.error).into(this)
+        Glide.with(context).load(url).error(R.drawable.img_error).into(this)
     }
 }
 

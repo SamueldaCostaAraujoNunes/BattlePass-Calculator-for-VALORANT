@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.databinding.FragmentBaseRewardsBinding
-import br.com.battlepassCalculatorValorant.model.newBattlePass.Reward
+import br.com.battlepassCalculatorValorant.model.battlePass.Reward
 import br.com.battlepassCalculatorValorant.ui.view.adapter.ItemRewardAdapter
 
 open class BaseRewardsFragment : Fragment() {

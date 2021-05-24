@@ -43,7 +43,7 @@
         android:id="@+id/historicInputFragment"
         android:name="br.com.battlepassCalculatorValorant.ui.view.fragment.Settings.HistoricInputFragment"
         android:label="HistoricInputFragment"
-        tools:layout="@layout/historic_input_fragment">
+        tools:layout="@layout/fragment_historic_input">
         <action
             android:id="@+id/action_historicInputFragment_to_dialogDeleteItemConfimation"
             app:destination="@id/dialogDeleteItemConfimation"

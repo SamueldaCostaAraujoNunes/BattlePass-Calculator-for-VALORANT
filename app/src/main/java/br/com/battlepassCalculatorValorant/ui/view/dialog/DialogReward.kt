@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import br.com.battlepassCalculatorValorant.databinding.DialogRewardBinding
-import br.com.battlepassCalculatorValorant.model.newBattlePass.Reward
+import br.com.battlepassCalculatorValorant.model.battlePass.Reward
 import br.com.battlepassCalculatorValorant.ui.view.adapter.ImageSliderAdapter
 import dagger.hilt.android.AndroidEntryPoint
 

@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.battlepassCalculatorValorant.databinding.ItemRewardBinding
-import br.com.battlepassCalculatorValorant.model.newBattlePass.Reward
+import br.com.battlepassCalculatorValorant.model.battlePass.Reward
 import br.com.battlepassCalculatorValorant.ui.view.dialog.DialogInput
 import br.com.battlepassCalculatorValorant.ui.view.dialog.DialogReward
 
