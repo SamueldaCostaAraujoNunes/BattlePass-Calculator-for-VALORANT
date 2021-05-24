@@ -3,11 +3,11 @@ package br.com.battlepassCalculatorValorant.ui.view.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentManager
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import br.com.battlepassCalculatorValorant.NavGraphDirections
 import br.com.battlepassCalculatorValorant.databinding.ItemRewardBinding
 import br.com.battlepassCalculatorValorant.model.battlePass.Reward
-import br.com.battlepassCalculatorValorant.ui.view.dialog.DialogInput
-import br.com.battlepassCalculatorValorant.ui.view.dialog.DialogReward
 
 
 class ItemRewardAdapter(
@@ -40,7 +40,7 @@ class ItemRewardAdapter(
         holder.binding.reward = reward
         holder.binding.itemCurrent = rewardCurrent
         holder.itemView.setOnClickListener {
-            DialogReward(reward).show(fragmentManager, DialogInput.TAG)
+            it.findNavController().navigate(NavGraphDirections.actionGlobalDialogReward(reward.id))
         }
     }
 

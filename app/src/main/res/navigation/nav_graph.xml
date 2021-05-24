@@ -88,4 +88,18 @@
         android:name="br.com.battlepassCalculatorValorant.ui.view.dialog.DialogChooseThemes"
         android:label="DialogChooseThemes"
         tools:layout="@layout/dialog_choose_themes" />
+
+    <dialog
+        android:id="@+id/dialogReward"
+        android:name="br.com.battlepassCalculatorValorant.ui.view.dialog.DialogReward"
+        android:label="DialogReward"
+        tools:layout="@layout/dialog_reward">
+
+        <argument
+            android:name="rewardId"
+            app:argType="integer" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_dialogReward"
+        app:destination="@id/dialogReward" />
 </navigation>

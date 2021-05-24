@@ -19,10 +19,6 @@ import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class DialogInput : DialogBase() {
 
-    companion object {
-        const val TAG = "tag"
-    }
-
     lateinit var binding: DialogTierinputBinding
     private val viewModel: InputUserViewModel by viewModels()
     private val args by navArgs<DialogInputArgs>()

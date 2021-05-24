@@ -65,6 +65,9 @@ class CalculatorRepository @Inject constructor(
             battlePassManager.totalExpAteOTier(last.tierCurrent) - last.tierExpMissing - d - w
         }
 
+    fun getRewardById(id: Int): Reward? {
+        return battlePassManager.getTier(id)
+    }
 
     val listTiers: List<Reward> = battlePassManager.getTiers()
 
