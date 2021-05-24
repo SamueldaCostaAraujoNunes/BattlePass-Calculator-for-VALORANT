@@ -98,6 +98,10 @@
         <argument
             android:name="rewardId"
             app:argType="integer" />
+
+        <argument
+            android:name="origin"
+            app:argType="integer" />
     </dialog>
     <action
         android:id="@+id/action_global_dialogReward"

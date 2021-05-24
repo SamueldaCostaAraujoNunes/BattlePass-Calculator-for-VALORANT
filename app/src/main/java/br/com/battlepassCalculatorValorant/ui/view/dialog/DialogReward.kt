@@ -19,10 +19,12 @@ class DialogReward : DialogBase() {
     lateinit var binding: DialogRewardBinding
     private val args by navArgs<DialogRewardArgs>()
 
-    private fun getReward(): Reward {
+    private fun getReward(): Reward? {
         val id: Int = args.rewardId
-        return viewModel.getRewardById(id)
+        return viewModel.getRewardById(id, args.origin)
     }
+
+    private fun getOriginTitle(): Int = viewModel.getTitle(args.origin)
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,11 +34,13 @@ class DialogReward : DialogBase() {
         super.onCreateView(inflater, container, savedInstanceState)
         binding = DialogRewardBinding.inflate(inflater, container, false)
         val reward = getReward()
-        binding.reward = reward
-        binding.titleName = "T" + reward.id
-        val mViewPagerAdapter = ImageSliderAdapter(reward.imagens)
-        binding.dialogViewPagerMain.adapter = mViewPagerAdapter
-        binding.indicatorImageSlider.setViewPager2(binding.dialogViewPagerMain)
+        if (reward != null) {
+            binding.reward = reward
+            binding.titleName = "${getString(getOriginTitle())} ${reward.id}"
+            val mViewPagerAdapter = ImageSliderAdapter(reward.imagens)
+            binding.dialogViewPagerMain.adapter = mViewPagerAdapter
+            binding.indicatorImageSlider.setViewPager2(binding.dialogViewPagerMain)
+        }
         return binding.root
     }
 

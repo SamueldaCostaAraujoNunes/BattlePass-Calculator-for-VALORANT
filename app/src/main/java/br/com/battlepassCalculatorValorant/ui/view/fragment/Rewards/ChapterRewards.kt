@@ -12,6 +12,11 @@ import dagger.hilt.android.AndroidEntryPoint
 class ChapterRewards : BaseRewardsFragment() {
     private val viewModel: ChapterRewardsViewModel by viewModels()
 
+//    override val origin: String by lazy {
+//        requireContext().getString(R.string.capitulo)
+//    }
+
+    override val origin: Int = CHAPTER
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         rewards = viewModel.chapters
         positionTier = viewModel.lastChapter.map { (it.tierCurrent / 5) + 1 }

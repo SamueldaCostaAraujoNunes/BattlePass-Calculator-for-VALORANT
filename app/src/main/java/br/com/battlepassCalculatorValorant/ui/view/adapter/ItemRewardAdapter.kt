@@ -2,10 +2,10 @@ package br.com.battlepassCalculatorValorant.ui.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.fragment.app.FragmentManager
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import br.com.battlepassCalculatorValorant.NavGraphDirections
+import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.databinding.ItemRewardBinding
 import br.com.battlepassCalculatorValorant.model.battlePass.Reward
 
@@ -13,11 +13,11 @@ import br.com.battlepassCalculatorValorant.model.battlePass.Reward
 class ItemRewardAdapter(
     private var rewards: List<Reward>,
     private var rewardCurrent: Int,
-    private val fragmentManager: FragmentManager,
-    private val all: String
+    private var origin: Int
 ) :
     RecyclerView.Adapter<ItemRewardAdapter.ViewHolder>() {
 
+    private lateinit var all: String
     var rewardIndex: Int
         get() {
             return rewardCurrent
@@ -31,6 +31,7 @@ class ItemRewardAdapter(
     private var filterValues: ArrayList<Reward> = ArrayList(rewards)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        all = parent.context.getString(R.string.tudo)
         val binding = ItemRewardBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
@@ -40,7 +41,8 @@ class ItemRewardAdapter(
         holder.binding.reward = reward
         holder.binding.itemCurrent = rewardCurrent
         holder.itemView.setOnClickListener {
-            it.findNavController().navigate(NavGraphDirections.actionGlobalDialogReward(reward.id))
+            it.findNavController()
+                .navigate(NavGraphDirections.actionGlobalDialogReward(reward.id, origin))
         }
     }
 

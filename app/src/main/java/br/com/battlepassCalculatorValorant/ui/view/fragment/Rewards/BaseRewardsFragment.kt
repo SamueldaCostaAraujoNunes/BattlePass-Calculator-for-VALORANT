@@ -13,11 +13,16 @@ import br.com.battlepassCalculatorValorant.databinding.FragmentBaseRewardsBindin
 import br.com.battlepassCalculatorValorant.model.battlePass.Reward
 import br.com.battlepassCalculatorValorant.ui.view.adapter.ItemRewardAdapter
 
+const val TIER = 0
+const val CHAPTER = 1
+
 open class BaseRewardsFragment : Fragment() {
     protected lateinit var binding: FragmentBaseRewardsBinding
     protected lateinit var rewards: List<Reward>
     protected lateinit var positionTier: LiveData<Int>
     protected lateinit var adapter: ItemRewardAdapter
+
+    protected open val origin = TIER
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -56,8 +61,7 @@ open class BaseRewardsFragment : Fragment() {
             adapter = ItemRewardAdapter(
                 rewards,
                 position,
-                requireActivity().supportFragmentManager,
-                requireContext().getString(R.string.tudo)
+                origin
             )
             layoutManager?.scrollToPosition(position - 1)
         }

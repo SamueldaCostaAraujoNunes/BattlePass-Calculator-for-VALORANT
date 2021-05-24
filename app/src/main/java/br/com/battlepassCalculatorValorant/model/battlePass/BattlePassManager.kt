@@ -53,6 +53,10 @@ class BattlePassManager(context: Context) {
 
     fun getTiers(): List<Reward> = passe.tiers
 
+    fun getChapter(id: Int): Reward? {
+        return passe.capitulos.find { it.id == id }
+    }
+
     fun getChapters(): List<Reward> = passe.capitulos
 
     fun expParaCompletarTier(n: Int): Int {
