@@ -1,4 +1,4 @@
-package br.com.battlepassCalculatorValorant.ui.view.viewsCustom
+package br.com.battlepassCalculatorValorant.ui.view.activity
 
 import android.os.Bundle
 import androidx.activity.viewModels

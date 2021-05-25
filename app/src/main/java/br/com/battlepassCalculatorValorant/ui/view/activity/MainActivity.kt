@@ -12,7 +12,6 @@ import androidx.navigation.ui.NavigationUI
 import br.com.battlepassCalculatorValorant.NavGraphDirections
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.databinding.ActivityMainBinding
-import br.com.battlepassCalculatorValorant.ui.view.viewsCustom.AdmobInterstitialActivity
 import br.com.battlepassCalculatorValorant.ui.viewModel.activity.UIViewModel
 import com.google.android.material.behavior.HideBottomViewOnScrollBehavior
 import dagger.hilt.android.AndroidEntryPoint
