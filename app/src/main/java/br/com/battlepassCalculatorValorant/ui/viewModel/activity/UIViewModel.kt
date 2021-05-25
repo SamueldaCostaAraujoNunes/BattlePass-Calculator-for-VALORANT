@@ -13,7 +13,6 @@ import javax.inject.Inject
 class UIViewModel @Inject constructor(private val settingsDataStore: SettingsDataStore) :
     ViewModel() {
 
-
     private val _onHideBottomNav = MutableLiveData(true)
     val onHideBottomNav: LiveData<Boolean> = _onHideBottomNav
 

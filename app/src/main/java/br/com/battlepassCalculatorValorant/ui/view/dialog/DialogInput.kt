@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
@@ -11,6 +12,7 @@ import br.com.battlepassCalculatorValorant.database.room.model.UserTier
 import br.com.battlepassCalculatorValorant.databinding.DialogTierinputBinding
 import br.com.battlepassCalculatorValorant.model.FormInput
 import br.com.battlepassCalculatorValorant.notification.Notification
+import br.com.battlepassCalculatorValorant.ui.viewModel.activity.AdmobViewModel
 import br.com.battlepassCalculatorValorant.ui.viewModel.fragment.dialog.InputUserViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
@@ -22,6 +24,7 @@ class DialogInput : DialogBase() {
 
     lateinit var binding: DialogTierinputBinding
     private val viewModel: InputUserViewModel by viewModels()
+    private val admobViewModel: AdmobViewModel by activityViewModels()
     private val args by navArgs<DialogInputArgs>()
     private var idUserInput: Int? = null
     private val notification: Notification by lazy {
@@ -70,6 +73,7 @@ class DialogInput : DialogBase() {
                 }
                 dismiss()
                 notification.create()
+                admobViewModel.showInterstitial()
             }
         }
         binding.btnCancel.setOnClickListener { dismiss() }

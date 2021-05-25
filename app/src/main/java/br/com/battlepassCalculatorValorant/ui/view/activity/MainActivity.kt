@@ -2,7 +2,6 @@ package br.com.battlepassCalculatorValorant.ui.view.activity
 
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.doOnLayout
@@ -13,13 +12,14 @@ import androidx.navigation.ui.NavigationUI
 import br.com.battlepassCalculatorValorant.NavGraphDirections
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.databinding.ActivityMainBinding
+import br.com.battlepassCalculatorValorant.ui.view.viewsCustom.AdmobInterstitialActivity
 import br.com.battlepassCalculatorValorant.ui.viewModel.activity.UIViewModel
 import com.google.android.material.behavior.HideBottomViewOnScrollBehavior
 import dagger.hilt.android.AndroidEntryPoint
 
 @Suppress("UNREACHABLE_CODE")
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class MainActivity : AdmobInterstitialActivity() {
     private lateinit var binding: ActivityMainBinding
     private val uiViewModel by viewModels<UIViewModel>()
 
@@ -38,16 +38,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupObservers() {
-        uiViewModel.onHideBottomNav.observe(this, Observer<Boolean> {
+        uiViewModel.onHideBottomNav.observe(this, Observer<Boolean> { ativo ->
             val params = binding.bottomNav.layoutParams as CoordinatorLayout.LayoutParams
             val behavior = params.behavior as HideBottomViewOnScrollBehavior
 
-            if (it) {
-                binding.bottomNav.doOnLayout { view -> behavior.slideUp(view) }
-            } else {
-                binding.bottomNav.doOnLayout { view -> behavior.slideDown(view) }
+            with(binding.bottomNav) {
+                if (ativo) {
+                    doOnLayout { view -> behavior.slideUp(view) }
+                } else {
+                    doOnLayout { view -> behavior.slideDown(view) }
+                }
+                transform(binding.fab, ativo)
             }
-            binding.bottomNav.transform(binding.fab, it)
         })
     }
 
