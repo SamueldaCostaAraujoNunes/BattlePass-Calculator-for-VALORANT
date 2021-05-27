@@ -18,19 +18,19 @@
 
         <SwitchPreferenceCompat
             app:key="@string/dailyMission"
-            app:summaryOff="Ative para que os calculos levem em consideração as missões diarias"
-            app:summaryOn="Os calculos levam em consideração as missões diarias"
-            app:title="Missões Diarias" />
+            app:summaryOff="@string/content_m_diaria_off"
+            app:summaryOn="@string/content_m_diaria_on"
+            app:title="@string/missoes_diarias" />
 
         <SwitchPreferenceCompat
             app:key="@string/weeklyMission"
-            app:summaryOff="Ative para que os calculos levem em consideração as missões semanais"
-            app:summaryOn="Os calculos levam em consideração as missões semanais"
-            app:title="Missões Semanais" />
+            app:summaryOff="@string/content_m_semanal_off"
+            app:summaryOn="@string/content_m_semanal_on"
+            app:title="@string/missoes_semanais" />
 
     </PreferenceCategory>
 
-    <PreferenceCategory app:title="Histórico">
+    <PreferenceCategory app:title="@string/seu_historico">
 
         <Preference
             app:key="@string/editHistoric"

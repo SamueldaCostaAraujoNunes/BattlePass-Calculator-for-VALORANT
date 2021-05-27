@@ -12,18 +12,18 @@
     </data>
 
     <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:title="@string/insira_seus_dados">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_tier_current"
                 style="@style/mTextInputLayout"
-                android:layout_width="match_parent"
+                android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/tier_atual"
                 android:paddingHorizontal="24dp"
@@ -54,7 +54,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_exp_missing"
                 style="@style/mTextInputLayout"
-                android:layout_width="match_parent"
+                android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/exp_para_completar"
                 android:paddingHorizontal="24dp"

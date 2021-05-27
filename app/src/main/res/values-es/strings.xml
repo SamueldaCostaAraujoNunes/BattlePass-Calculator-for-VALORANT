@@ -35,13 +35,11 @@
     <string name="dias_adiantados">Días tempranos</string>
     <string name="dias_atrasados">Días de retraso</string>
 
-    <string name="sem_classificacao">No Competitivo</string>
-    <string name="disputa_de_spike">FIebre de la Spike</string>
     <string name="horas_por_dia">Horas al día</string>
     <string name="jogos_por_dia">Juegos por día</string>
     <string name="tempo_restante_horas">Tiempo restante</string>
     <string name="jogos_restantes">Juegos restantes</string>
-    <string name="expectativas">Expectativas</string>
+    <string name="jogos">Juegos</string>
     <string name="dias_para_o_fim_do_passe">Días para pasar</string>
 
     <string name="home">Comienzo</string>
@@ -115,4 +113,14 @@
     <string name="exp_per_day">EXP al día</string>
     <string name="exp_esperado">Previsto</string>
     <string name="exp_real">Verdadero</string>
+
+    <string name="sem_classificacao">No Competitivo</string>
+    <string name="disputa_de_spike">FIebre de la Spike</string>
+    <string name="disparada">Encendido</string>
+    <string name="mata_mata">MataMata</string>
+
+    <string name="content_m_diaria_off">Activar, para que los cálculos tengan en cuenta las misiones diarias</string>
+    <string name="content_m_diaria_on">Los cálculos tienen en cuenta las misiones diarias</string>
+    <string name="content_m_semanal_off">Activar, para que los cálculos tengan en cuenta las misiones semanales</string>
+    <string name="content_m_semanal_on">Los cálculos tienen en cuenta las misiones semanales</string>
 </resources>

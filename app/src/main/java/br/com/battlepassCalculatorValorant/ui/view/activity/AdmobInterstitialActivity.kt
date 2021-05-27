@@ -20,7 +20,6 @@ open class AdmobInterstitialActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         MobileAds.initialize(this)
         loadAd()
-
         admobViewModel.admobInterstitial.observe(this, { show ->
             if (show) {
                 showInterstitial()

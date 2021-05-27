@@ -157,10 +157,14 @@ class CalculatorRepository @Inject constructor(
 
     val expectedEndDay: Flow<LocalDate> =
         totalExpCurrent.combine(totalXpBattlePass) { expTotalUsuario, expTotalPasse ->
-            val mediaDeExpPorDia = (expTotalUsuario.toDouble() / daysFromTheStart).toInt()
-            val xpDif = expTotalPasse.toDouble() - expTotalUsuario.toDouble()
-            val result = (xpDif / mediaDeExpPorDia).toLong()
-            LocalDate.now().plusDays(result)
+            if (expTotalUsuario > 0) {
+                val mediaDeExpPorDia = (expTotalUsuario.toDouble() / daysFromTheStart).toInt()
+                val xpDif = expTotalPasse.toDouble() - expTotalUsuario.toDouble()
+                val result = (xpDif / mediaDeExpPorDia).toLong()
+                LocalDate.now().plusDays(result)
+            } else {
+                battlePassManager.dateFinally
+            }
         }
 
     val daysMissing: Flow<Long> =

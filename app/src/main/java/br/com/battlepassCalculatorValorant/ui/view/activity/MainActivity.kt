@@ -6,7 +6,6 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.doOnLayout
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import br.com.battlepassCalculatorValorant.NavGraphDirections
@@ -16,7 +15,6 @@ import br.com.battlepassCalculatorValorant.ui.viewModel.activity.UIViewModel
 import com.google.android.material.behavior.HideBottomViewOnScrollBehavior
 import dagger.hilt.android.AndroidEntryPoint
 
-@Suppress("UNREACHABLE_CODE")
 @AndroidEntryPoint
 class MainActivity : AdmobInterstitialActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -37,17 +35,17 @@ class MainActivity : AdmobInterstitialActivity() {
     }
 
     private fun setupObservers() {
-        uiViewModel.onHideBottomNav.observe(this, Observer<Boolean> { ativo ->
+        uiViewModel.onHideBottomNav.observe(this, { active ->
             val params = binding.bottomNav.layoutParams as CoordinatorLayout.LayoutParams
             val behavior = params.behavior as HideBottomViewOnScrollBehavior
 
             with(binding.bottomNav) {
-                if (ativo) {
+                if (active) {
                     doOnLayout { view -> behavior.slideUp(view) }
                 } else {
                     doOnLayout { view -> behavior.slideDown(view) }
                 }
-                transform(binding.fab, ativo)
+                transform(binding.fab, active)
             }
         })
     }

@@ -39,13 +39,11 @@
     <string name="dias_adiantados">Days Forward</string>
     <string name="dias_atrasados">Days Delayed</string>
 
-    <string name="sem_classificacao">Normal</string>
-    <string name="disputa_de_spike">Spike Rush</string>
     <string name="horas_por_dia">Hours per day</string>
     <string name="jogos_por_dia">Games per Day</string>
     <string name="tempo_restante_horas">Time left</string>
     <string name="jogos_restantes">Remaining Games</string>
-    <string name="expectativas">Expectations</string>
+    <string name="jogos">Games</string>
     <string name="dias_para_o_fim_do_passe">Days until the pass ends</string>
 
     <string name="home">Home</string>
@@ -116,5 +114,15 @@
     <string name="epilogo">Epilogue</string>
     <string name="tier">Tier</string>
     <string name="exp_per_day">EXP per day</string>
+
+    <string name="sem_classificacao">Normal</string>
+    <string name="disputa_de_spike">Spike Rush</string>
+    <string name="disparada">Fired</string>
+    <string name="mata_mata">Death Match</string>
+
+    <string name="content_m_diaria_off">Activate, so that the calculations take into account the daily missions</string>
+    <string name="content_m_diaria_on">Calculations take daily missions into account</string>
+    <string name="content_m_semanal_off">Activate, so that the calculations take into account the weekly missions</string>
+    <string name="content_m_semanal_on">Calculations take weekly missions into account</string>
 
 </resources>

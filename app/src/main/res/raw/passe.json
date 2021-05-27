@@ -53,7 +53,7 @@
     {
       "id": 2,
       "nome": "Songsteel",
-      "tipo": "Chaveiro",
+      "tipo": "Buddy",
       "imagens": [
         "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Chaveiros/metalodica.png"
       ]
@@ -152,7 +152,7 @@
     {
       "id": 14,
       "nome": "Lucky Dice",
-      "tipo": "Chaveiro",
+      "tipo": "Buddy",
       "imagens": [
         "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Chaveiros/dado_da_sorte.png"
       ]
@@ -227,7 +227,7 @@
     {
       "id": 23,
       "nome": "Boba",
-      "tipo": "Chaveiro",
+      "tipo": "Buddy",
       "imagens": [
         "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Chaveiros/chazinho.png"
       ]
@@ -310,7 +310,7 @@
     {
       "id": 33,
       "nome": "Get Carried",
-      "tipo": "Chaveiro",
+      "tipo": "Buddy",
       "imagens": [
         "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Chaveiros/entra_na_mochila.png"
       ]
@@ -345,7 +345,7 @@
     {
       "id": 37,
       "nome": "Dan, the Penguin",
-      "tipo": "Chaveiro",
+      "tipo": "Buddy",
       "imagens": [
         "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Chaveiros/dan_o_pinguim.png"
       ]
@@ -425,7 +425,7 @@
     {
       "id": 47,
       "nome": "Ancient Mysteries Revealed",
-      "tipo": "Chaveiro",
+      "tipo": "Buddy",
       "imagens": [
         "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Chaveiros/misterios_ancestrais_revelados.png"
       ]
@@ -515,7 +515,7 @@
     {
       "id": 2,
       "nome": "Moeda Ep2//3",
-      "tipo": "Chaveiro",
+      "tipo": "Buddy",
       "imagens": [
         "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Chaveiros/ep_2_3.png"
       ]
@@ -555,7 +555,7 @@
     {
       "id": 6,
       "nome": "Em Segurança",
-      "tipo": "Chaveiro",
+      "tipo": "Buddy",
       "imagens": [
         "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Chaveiros/em_seguranca.png"
       ]
@@ -587,7 +587,7 @@
     {
       "id": 9,
       "nome": "Coelho da Sorte",
-      "tipo": "Chaveiro",
+      "tipo": "Buddy",
       "imagens": [
         "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Chaveiros/coelho_da_sorte.png"
       ]

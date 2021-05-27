@@ -17,7 +17,6 @@ import javax.inject.Inject
 class InputUserViewModel @Inject constructor(private val calculador: CalculatorRepository) :
     ViewModel() {
 
-    private val last = calculador.lastUserInput
     fun getUserTierById(userTierId: Int): LiveData<UserTier> =
         calculador.getUserTierById(userTierId).asLiveData()
 
@@ -63,7 +62,7 @@ class InputUserViewModel @Inject constructor(private val calculador: CalculatorR
             error = ViewModelString(R.string.insira_um_tier)
         } else {
             val tierInt = tierCurrent.toInt()
-            val tierMin = 1
+            val tierMin = 2
             val tierMax = 55
             if ((tierInt < tierMin) or (tierInt > tierMax)) {
                 valido = false
@@ -75,7 +74,7 @@ class InputUserViewModel @Inject constructor(private val calculador: CalculatorR
     }
 
     suspend fun save(userTier: UserTier) {
-        Timber.i("Salvando: ${userTier}")
+        Timber.i("Salvando: $userTier")
         calculador.insertUserInput(userTier)
     }
 

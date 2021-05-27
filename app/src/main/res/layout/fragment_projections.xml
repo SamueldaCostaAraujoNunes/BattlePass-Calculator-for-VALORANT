@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="previsoesJogos"
             type="br.com.battlepassCalculatorValorant.model.PrevisoesJogos" />
@@ -17,7 +16,8 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
+            app:tabMode="scrollable"
             android:background="@drawable/background_tablayout"
             android:elevation="4dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -31,28 +31,28 @@
             app:tabInlineLabel="true"
             app:tabPadding="4dp"
             app:tabSelectedTextColor="?attr/colorOnPrimary"
-            app:tabTextAppearance="@style/TextAppearance_DialogWindowTitle"
+            app:tabTextAppearance="@style/TextAppearanceTabLayout"
             app:tabTextColor="?attr/colorSecondary">
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Disputa da Spike" />
+                android:text="@string/disputa_de_spike" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sem Classificacao" />
+                android:text="@string/sem_classificacao" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Disparada" />
+                android:text="@string/disparada" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Matamata" />
+                android:text="@string/mata_mata" />
 
 
         </com.google.android.material.tabs.TabLayout>

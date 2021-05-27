@@ -27,7 +27,7 @@ fun TextView.adiantado(sucess: Boolean) {
 fun TextView.fadeAnimationText(newText: String?) {
     if (newText != null) {
         val anim = AlphaAnimation(1.0f, 0.0f)
-        anim.duration = 300
+        anim.duration = 210
         anim.repeatCount = 1
         anim.repeatMode = Animation.REVERSE
 

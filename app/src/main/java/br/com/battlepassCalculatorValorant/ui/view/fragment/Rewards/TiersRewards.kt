@@ -12,10 +12,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class TiersRewards : BaseRewardsFragment() {
     private val viewModel: TiersRewardsViewModel by viewModels()
 
-//    override val origin: String by lazy {
-//        requireContext().getString(R.string.tier)
-//    }
-
     override val origin: Int = TIER
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
