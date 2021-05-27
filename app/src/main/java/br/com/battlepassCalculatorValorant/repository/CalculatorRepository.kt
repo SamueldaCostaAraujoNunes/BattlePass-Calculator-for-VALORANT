@@ -6,11 +6,11 @@ import br.com.battlepassCalculatorValorant.KEY_DAILY_MISSION
 import br.com.battlepassCalculatorValorant.KEY_EPILOGUE
 import br.com.battlepassCalculatorValorant.KEY_WEEKLY_MISSION
 import br.com.battlepassCalculatorValorant.database.room.AppDB
-import br.com.battlepassCalculatorValorant.database.room.model.UserTier
+import br.com.battlepassCalculatorValorant.model.BattlePassManager
 import br.com.battlepassCalculatorValorant.model.GameType.GameType
-import br.com.battlepassCalculatorValorant.model.PrevisoesJogos
-import br.com.battlepassCalculatorValorant.model.battlePass.BattlePassManager
-import br.com.battlepassCalculatorValorant.model.battlePass.Reward
+import br.com.battlepassCalculatorValorant.model.dto.PrevisoesJogos
+import br.com.battlepassCalculatorValorant.model.dto.Reward
+import br.com.battlepassCalculatorValorant.model.dto.UserTier
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map

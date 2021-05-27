@@ -8,9 +8,9 @@ import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
-import br.com.battlepassCalculatorValorant.database.room.model.UserTier
 import br.com.battlepassCalculatorValorant.databinding.DialogTierinputBinding
-import br.com.battlepassCalculatorValorant.model.FormInput
+import br.com.battlepassCalculatorValorant.model.dto.FormInput
+import br.com.battlepassCalculatorValorant.model.dto.UserTier
 import br.com.battlepassCalculatorValorant.notification.Notification
 import br.com.battlepassCalculatorValorant.ui.viewModel.activity.AdmobViewModel
 import br.com.battlepassCalculatorValorant.ui.viewModel.fragment.dialog.InputUserViewModel

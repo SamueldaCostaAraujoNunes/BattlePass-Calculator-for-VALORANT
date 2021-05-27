@@ -2,7 +2,7 @@ package br.com.battlepassCalculatorValorant.ui.viewModel.dialog
 
 import androidx.lifecycle.ViewModel
 import br.com.battlepassCalculatorValorant.R
-import br.com.battlepassCalculatorValorant.model.battlePass.Reward
+import br.com.battlepassCalculatorValorant.model.dto.Reward
 import br.com.battlepassCalculatorValorant.repository.CalculatorRepository
 import br.com.battlepassCalculatorValorant.ui.view.fragment.Rewards.CHAPTER
 import br.com.battlepassCalculatorValorant.ui.view.fragment.Rewards.TIER

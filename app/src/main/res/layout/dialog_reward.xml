@@ -11,7 +11,7 @@
 
         <variable
             name="reward"
-            type="br.com.battlepassCalculatorValorant.model.battlePass.Reward" />
+            type="br.com.battlepassCalculatorValorant.model.dto.Reward" />
     </data>
 
     <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule

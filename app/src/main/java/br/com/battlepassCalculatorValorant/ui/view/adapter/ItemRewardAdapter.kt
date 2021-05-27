@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.battlepassCalculatorValorant.NavGraphDirections
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.databinding.ItemRewardBinding
-import br.com.battlepassCalculatorValorant.model.battlePass.Reward
+import br.com.battlepassCalculatorValorant.model.dto.Reward
 
 
 class ItemRewardAdapter(

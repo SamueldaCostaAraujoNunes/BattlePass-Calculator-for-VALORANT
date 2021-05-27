@@ -1,4 +1,4 @@
-package br.com.battlepassCalculatorValorant.model.battlePass
+package br.com.battlepassCalculatorValorant.model.dto
 
 data class Reward(
     val id: Int,

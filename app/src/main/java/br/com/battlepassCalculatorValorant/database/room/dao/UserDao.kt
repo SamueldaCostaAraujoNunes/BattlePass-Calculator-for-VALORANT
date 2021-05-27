@@ -2,7 +2,7 @@ package br.com.battlepassCalculatorValorant.database.room.dao
 
 import androidx.room.Dao
 import androidx.room.Query
-import br.com.battlepassCalculatorValorant.database.room.model.UserTier
+import br.com.battlepassCalculatorValorant.model.dto.UserTier
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.distinctUntilChanged
 

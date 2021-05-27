@@ -1,4 +1,4 @@
-package br.com.battlepassCalculatorValorant.model
+package br.com.battlepassCalculatorValorant.model.dto
 
 data class PrevisoesJogos(
     var jogosRestantes: Float = 0F,

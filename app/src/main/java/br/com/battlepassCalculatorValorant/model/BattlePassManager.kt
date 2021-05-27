@@ -1,7 +1,9 @@
-package br.com.battlepassCalculatorValorant.model.battlePass
+package br.com.battlepassCalculatorValorant.model
 
 import android.content.Context
 import br.com.battlepassCalculatorValorant.R
+import br.com.battlepassCalculatorValorant.model.dto.BattlePass
+import br.com.battlepassCalculatorValorant.model.dto.Reward
 import br.com.battlepassCalculatorValorant.util.ObjectConverters
 import com.google.gson.GsonBuilder
 import java.time.LocalDate

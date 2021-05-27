@@ -7,7 +7,7 @@
 
         <variable
             name="reward"
-            type="br.com.battlepassCalculatorValorant.model.battlePass.Reward" />
+            type="br.com.battlepassCalculatorValorant.model.dto.Reward" />
 
         <variable
             name="itemCurrent"

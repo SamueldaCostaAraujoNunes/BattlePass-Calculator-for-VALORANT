@@ -28,3 +28,4 @@ abstract class ChartFragment : Fragment() {
         chart.show()
     }
 }
+

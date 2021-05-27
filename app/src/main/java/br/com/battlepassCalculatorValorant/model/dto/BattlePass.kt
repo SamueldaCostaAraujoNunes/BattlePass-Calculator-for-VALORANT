@@ -1,4 +1,4 @@
-package br.com.battlepassCalculatorValorant.model.battlePass
+package br.com.battlepassCalculatorValorant.model.dto
 
 import java.time.LocalDate
 

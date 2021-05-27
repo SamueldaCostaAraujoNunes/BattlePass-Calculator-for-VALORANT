@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import br.com.battlepassCalculatorValorant.model.GameType.*
-import br.com.battlepassCalculatorValorant.model.PrevisoesJogos
+import br.com.battlepassCalculatorValorant.model.dto.PrevisoesJogos
 import br.com.battlepassCalculatorValorant.repository.CalculatorRepository
 import br.com.battlepassCalculatorValorant.ui.view.fragment.Infos.ProjectionsFragment.Companion.DISPARADA
 import br.com.battlepassCalculatorValorant.ui.view.fragment.Infos.ProjectionsFragment.Companion.DISPUTA_DA_SPIKE

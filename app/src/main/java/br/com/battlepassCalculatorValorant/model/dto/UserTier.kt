@@ -1,4 +1,4 @@
-package br.com.battlepassCalculatorValorant.database.room.model
+package br.com.battlepassCalculatorValorant.model.dto
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

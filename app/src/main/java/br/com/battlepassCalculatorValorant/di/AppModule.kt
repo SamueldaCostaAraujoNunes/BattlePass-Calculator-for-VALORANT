@@ -7,7 +7,7 @@ import androidx.room.Room
 import br.com.battlepassCalculatorValorant.BD_APP_NAME
 import br.com.battlepassCalculatorValorant.dataStore
 import br.com.battlepassCalculatorValorant.database.room.AppDB
-import br.com.battlepassCalculatorValorant.model.battlePass.BattlePassManager
+import br.com.battlepassCalculatorValorant.model.BattlePassManager
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

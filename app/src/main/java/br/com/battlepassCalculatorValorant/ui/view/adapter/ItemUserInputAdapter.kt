@@ -3,8 +3,8 @@ package br.com.battlepassCalculatorValorant.ui.view.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import br.com.battlepassCalculatorValorant.database.room.model.UserTier
 import br.com.battlepassCalculatorValorant.databinding.ItemEditHistoricBinding
+import br.com.battlepassCalculatorValorant.model.dto.UserTier
 
 
 class ItemUserInputAdapter(val list: List<UserTier>) :
