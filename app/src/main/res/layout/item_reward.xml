@@ -25,7 +25,7 @@
             android:fontFamily="@font/impact_font_family"
             android:gravity="center"
             android:paddingVertical="8dp"
-            android:text="@{String.valueOf(reward.id)}"
+            android:text="@{String.valueOf(reward.cap ?? reward.id)}"
             android:textAppearance="?attr/textAppearanceListItem"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"

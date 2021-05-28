@@ -36,7 +36,7 @@ class DialogReward : DialogBase() {
         val reward = getReward()
         if (reward != null) {
             binding.reward = reward
-            binding.titleName = "${getString(getOriginTitle())} ${reward.id}"
+            binding.titleName = "${getString(getOriginTitle())} ${reward.cap ?: reward.id}"
             val mViewPagerAdapter = ImageSliderAdapter(reward.imagens)
             binding.dialogViewPagerMain.adapter = mViewPagerAdapter
             binding.indicatorImageSlider.setViewPager2(binding.dialogViewPagerMain)

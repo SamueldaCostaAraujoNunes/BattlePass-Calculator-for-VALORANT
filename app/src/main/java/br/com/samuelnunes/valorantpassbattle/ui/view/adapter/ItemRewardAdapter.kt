@@ -27,7 +27,6 @@ class ItemRewardAdapter(
             notifyDataSetChanged()
         }
 
-
     private var filterValues: ArrayList<Reward> = ArrayList(rewards)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

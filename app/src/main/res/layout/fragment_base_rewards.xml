@@ -23,7 +23,7 @@
             android:id="@+id/recycleView"
             android:name="com.example.valorantpassbattle.ui.fragment.Principal.ChaptersRewardsFragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             app:layoutManager="LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
