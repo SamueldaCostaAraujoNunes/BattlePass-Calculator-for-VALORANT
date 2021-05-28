@@ -41,7 +41,6 @@
             app:itemIconTint="@drawable/menu_item_color"
             app:itemTextColor="@drawable/menu_item_color"
             app:labelVisibilityMode="labeled"
-            app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
             app:menu="@menu/menu_bottom_navigation" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton

@@ -1,7 +1,6 @@
 package br.com.battlepassCalculatorValorant.ui.view.viewsCustom
 
 import android.animation.ValueAnimator
-import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Paint
 import android.util.AttributeSet
@@ -9,15 +8,13 @@ import androidx.core.animation.doOnEnd
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.extensions.getColorFromAttr
 import com.google.android.material.bottomappbar.BottomAppBarTopEdgeTreatment
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.shape.MaterialShapeDrawable
 import com.google.android.material.shape.ShapeAppearanceModel
 
-@SuppressLint("RestrictedApi")
 class FabBottomNavigationView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
-) : BottomNavigationView(context, attrs, defStyleAttr) {
+) : HideBottomNavigation(context, attrs, defStyleAttr) {
 
     //    https://medium.com/@vadim.zhukov/easy-way-to-make-curved-bottomnavigationview-with-floatingactionbutton-12b979009e64
     private var topCurvedEdgeTreatment: BottomAppBarTopEdgeTreatment
@@ -68,12 +65,14 @@ class FabBottomNavigationView @JvmOverloads constructor(
                     }
                 }
             })
+            slideDown()
         } else {
             ValueAnimator.ofFloat(materialShapeDrawable.interpolation, 1F).apply {
                 addUpdateListener { materialShapeDrawable.interpolation = it.animatedValue as Float }
                 doOnEnd { fab.show() }
                 start()
             }
+            slideUp()
         }
     }
 }

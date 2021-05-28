@@ -2,7 +2,6 @@ package br.com.battlepassCalculatorValorant.ui.view.activity
 
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.doOnLayout
 import androidx.databinding.DataBindingUtil
@@ -12,7 +11,6 @@ import br.com.battlepassCalculatorValorant.NavGraphDirections
 import br.com.battlepassCalculatorValorant.R
 import br.com.battlepassCalculatorValorant.databinding.ActivityMainBinding
 import br.com.battlepassCalculatorValorant.ui.viewModel.activity.UIViewModel
-import com.google.android.material.behavior.HideBottomViewOnScrollBehavior
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -35,18 +33,8 @@ class MainActivity : AdmobInterstitialActivity() {
     }
 
     private fun setupObservers() {
-        uiViewModel.onHideBottomNav.observe(this, { active ->
-            val params = binding.bottomNav.layoutParams as CoordinatorLayout.LayoutParams
-            val behavior = params.behavior as HideBottomViewOnScrollBehavior
-
-            with(binding.bottomNav) {
-                if (active) {
-                    doOnLayout { view -> behavior.slideUp(view) }
-                } else {
-                    doOnLayout { view -> behavior.slideDown(view) }
-                }
-                transform(binding.fab, active)
-            }
+        uiViewModel.onHideBottomNav.observe(this, {
+            binding.bottomNav.transform(binding.fab, it)
         })
     }
 
