@@ -8,10 +8,10 @@
 
         <variable
             name="viewmodel"
-            type="br.com.battlepassCalculatorValorant.ui.viewModel.fragment.dialog.InputUserViewModel" />
+            type="br.com.samuelnunes.valorantpassbattle.ui.viewModel.fragment.dialog.InputUserViewModel" />
     </data>
 
-    <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
+    <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:title="@string/insira_seus_dados">
@@ -114,6 +114,6 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
+    </br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule>
 
 </layout>

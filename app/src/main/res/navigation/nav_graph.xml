@@ -6,22 +6,22 @@
     app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/homeFragment"
-        android:name="br.com.battlepassCalculatorValorant.ui.view.fragment.BottomNavigation.HomeFragment"
+        android:name="br.com.samuelnunes.valorantpassbattle.ui.view.fragment.BottomNavigation.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/chartsFragment"
-        android:name="br.com.battlepassCalculatorValorant.ui.view.fragment.BottomNavigation.ChartsFragment"
+        android:name="br.com.samuelnunes.valorantpassbattle.ui.view.fragment.BottomNavigation.ChartsFragment"
         android:label="ChartsFragment"
         tools:layout="@layout/fragment_charts" />
     <fragment
         android:id="@+id/infosFragment"
-        android:name="br.com.battlepassCalculatorValorant.ui.view.fragment.BottomNavigation.InfosFragment"
+        android:name="br.com.samuelnunes.valorantpassbattle.ui.view.fragment.BottomNavigation.InfosFragment"
         android:label="InfosFragment"
         tools:layout="@layout/fragment_infos" />
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="br.com.battlepassCalculatorValorant.ui.view.fragment.BottomNavigation.SettingsFragment"
+        android:name="br.com.samuelnunes.valorantpassbattle.ui.view.fragment.BottomNavigation.SettingsFragment"
         android:label="SettingsFragment"
         tools:layout="@xml/root_preferences">
         <action
@@ -41,7 +41,7 @@
     </fragment>
     <fragment
         android:id="@+id/historicInputFragment"
-        android:name="br.com.battlepassCalculatorValorant.ui.view.fragment.Settings.HistoricInputFragment"
+        android:name="br.com.samuelnunes.valorantpassbattle.ui.view.fragment.Settings.HistoricInputFragment"
         android:label="HistoricInputFragment"
         tools:layout="@layout/fragment_historic_input">
         <action
@@ -55,7 +55,7 @@
 
     <dialog
         android:id="@+id/dialogInput"
-        android:name="br.com.battlepassCalculatorValorant.ui.view.dialog.DialogInput"
+        android:name="br.com.samuelnunes.valorantpassbattle.ui.view.dialog.DialogInput"
         android:label="DialogInput"
         tools:layout="@layout/dialog_tierinput">
 
@@ -75,7 +75,7 @@
 
     <dialog
         android:id="@+id/dialogDeleteItemConfimation"
-        android:name="br.com.battlepassCalculatorValorant.ui.view.dialog.DialogDeleteItemConfimation"
+        android:name="br.com.samuelnunes.valorantpassbattle.ui.view.dialog.DialogDeleteItemConfimation"
         android:label="DialogDeleteItemConfimation"
         tools:layout="@layout/dialog_confirmation">
 
@@ -85,13 +85,13 @@
     </dialog>
     <dialog
         android:id="@+id/dialogChooseThemes"
-        android:name="br.com.battlepassCalculatorValorant.ui.view.dialog.DialogChooseThemes"
+        android:name="br.com.samuelnunes.valorantpassbattle.ui.view.dialog.DialogChooseThemes"
         android:label="DialogChooseThemes"
         tools:layout="@layout/dialog_choose_themes" />
 
     <dialog
         android:id="@+id/dialogReward"
-        android:name="br.com.battlepassCalculatorValorant.ui.view.dialog.DialogReward"
+        android:name="br.com.samuelnunes.valorantpassbattle.ui.view.dialog.DialogReward"
         android:label="DialogReward"
         tools:layout="@layout/dialog_reward">
 

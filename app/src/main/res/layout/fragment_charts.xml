@@ -16,7 +16,7 @@
             android:orientation="vertical"
             android:paddingBottom="14dp">
 
-            <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
+            <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center">
@@ -28,9 +28,9 @@
                     android:padding="4dp"
                     app:adSize="BANNER"
                     app:adUnitId="@string/admob_card_graphics_top" />
-            </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
+            </br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule>
 
-            <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
+            <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule
                 android:layout_width="match_parent"
                 android:layout_height="500dp"
                 android:layout_gravity="center"
@@ -38,12 +38,12 @@
 
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/fragmentChartExpPerTier"
-                    android:name="br.com.battlepassCalculatorValorant.ui.view.fragment.Charts.ChartExpPerTierFragment"
+                    android:name="br.com.samuelnunes.valorantpassbattle.ui.view.fragment.Charts.ChartExpPerTierFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
-            </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
+            </br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule>
 
-            <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
+            <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center">
@@ -55,9 +55,9 @@
                     android:padding="4dp"
                     app:adSize="LARGE_BANNER"
                     app:adUnitId="@string/admob_card_graphics_center" />
-            </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
+            </br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule>
 
-            <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
+            <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule
                 android:layout_width="match_parent"
                 android:layout_height="500dp"
                 android:layout_gravity="center"
@@ -65,12 +65,12 @@
 
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/fragmentChartExpPerDay"
-                    android:name="br.com.battlepassCalculatorValorant.ui.view.fragment.Charts.ChartExpPerDayFragment"
+                    android:name="br.com.samuelnunes.valorantpassbattle.ui.view.fragment.Charts.ChartExpPerDayFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
-            </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
+            </br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule>
 
-            <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
+            <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center">
@@ -82,7 +82,7 @@
                     android:padding="4dp"
                     app:adSize="MEDIUM_RECTANGLE"
                     app:adUnitId="@string/admob_card_graphics_bottom" />
-            </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
+            </br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule>
 
             <View
                 android:layout_width="match_parent"

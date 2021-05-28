@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="br.com.battlepassCalculatorValorant">
+    package="br.com.samuelnunes.valorantpassbattle">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,16 +12,16 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".BattlePassCalculatorApp"
+        android:name="br.com.samuelnunes.valorantpassbattle.BattlePassCalculatorApp"
         android:theme="@style/Theme.ValorantPassBattle"
         tools:ignore="AllowBackup">
 
         <receiver
-            android:name=".notification.NotificationReceiver"
+            android:name="br.com.samuelnunes.valorantpassbattle.notification.NotificationReceiver"
             android:enabled="true" />
 
         <activity
-            android:name="br.com.battlepassCalculatorValorant.ui.view.activity.MainActivity"
+            android:name="br.com.samuelnunes.valorantpassbattle.ui.view.activity.MainActivity"
             android:hardwareAccelerated="true"
             android:theme="@style/Theme.ValorantPassBattle.NoActionBar">
             <intent-filter>

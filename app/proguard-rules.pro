@@ -21,7 +21,7 @@
 #-renamesourcefileattribute SourceFile
 
 
--keep class br.com.battlepassCalculatorValorant.model.dto.* { *; }
+-keep class br.com.samuelnunes.valorantpassbattle.model.dto.* { *; }
 
 -assumenosideeffects class timber.log.Timber {
     public static *** v(...);

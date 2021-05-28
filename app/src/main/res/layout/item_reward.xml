@@ -7,7 +7,7 @@
 
         <variable
             name="reward"
-            type="br.com.battlepassCalculatorValorant.model.dto.Reward" />
+            type="br.com.samuelnunes.valorantpassbattle.model.dto.Reward" />
 
         <variable
             name="itemCurrent"

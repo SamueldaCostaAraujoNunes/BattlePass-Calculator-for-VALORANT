@@ -8,10 +8,10 @@
 
         <variable
             name="viewModel"
-            type="br.com.battlepassCalculatorValorant.ui.viewModel.activity.UIViewModel" />
+            type="br.com.samuelnunes.valorantpassbattle.ui.viewModel.activity.UIViewModel" />
     </data>
 
-    <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
+    <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title="@string/trocar_tema">
@@ -60,5 +60,5 @@
 
         </RadioGroup>
 
-    </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
+    </br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule>
 </layout>

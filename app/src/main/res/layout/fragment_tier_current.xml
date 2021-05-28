@@ -7,7 +7,7 @@
 
         <variable
             name="viewmodel"
-            type="br.com.battlepassCalculatorValorant.ui.viewModel.fragment.home.TierCurrentFragmentViewModel" />
+            type="br.com.samuelnunes.valorantpassbattle.ui.viewModel.fragment.home.TierCurrentFragmentViewModel" />
 
         <variable
             name="indicator"

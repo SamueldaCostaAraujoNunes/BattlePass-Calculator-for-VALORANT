@@ -3,6 +3,8 @@ buildscript {
     ext.kotlin_version = "1.5.10"
     ext.hilt = "2.35.1"
     ext.navigation = '2.3.5'
+    ext.googleServices = '4.3.8'
+    ext.crashlytics = '2.6.1'
     repositories {
         google()
         mavenCentral()
@@ -12,6 +14,8 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigation"
         classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt"
+        classpath "com.google.gms:google-services:$googleServices"
+        classpath "com.google.firebase:firebase-crashlytics-gradle:$crashlytics"
     }
 }
 

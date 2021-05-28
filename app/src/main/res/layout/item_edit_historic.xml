@@ -7,10 +7,10 @@
 
         <variable
             name="userTier"
-            type="br.com.battlepassCalculatorValorant.model.dto.UserTier" />
+            type="br.com.samuelnunes.valorantpassbattle.model.dto.UserTier" />
     </data>
 
-    <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
+    <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
@@ -76,5 +76,5 @@
                 tools:ignore="RtlSymmetry"
                 tools:text="1000" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
+    </br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule>
 </layout>

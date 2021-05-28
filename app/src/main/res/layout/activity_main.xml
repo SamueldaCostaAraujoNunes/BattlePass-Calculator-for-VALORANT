@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="br.com.battlepassCalculatorValorant.ui.viewModel.activity.UIViewModel" />
+            type="br.com.samuelnunes.valorantpassbattle.ui.viewModel.activity.UIViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -28,7 +28,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:navGraph="@navigation/nav_graph" />
 
-        <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.FabBottomNavigationView
+        <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.FabBottomNavigationView
             android:id="@+id/bottom_nav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

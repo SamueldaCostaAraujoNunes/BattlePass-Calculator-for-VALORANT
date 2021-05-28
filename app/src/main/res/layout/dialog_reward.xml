@@ -11,10 +11,10 @@
 
         <variable
             name="reward"
-            type="br.com.battlepassCalculatorValorant.model.dto.Reward" />
+            type="br.com.samuelnunes.valorantpassbattle.model.dto.Reward" />
     </data>
 
-    <br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule
+    <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title="@{titleName}"
@@ -111,6 +111,6 @@
                 app:visibilityIf="@{reward.imagens.size() > 1}" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </br.com.battlepassCalculatorValorant.ui.view.viewsCustom.CardModule>
+    </br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule>
 
 </layout>

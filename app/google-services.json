@@ -1,15 +1,16 @@
 {
   "project_info": {
     "project_number": "1023649773728",
+    "firebase_url": "https://battlepasscalculator-default-rtdb.firebaseio.com",
     "project_id": "battlepasscalculator",
     "storage_bucket": "battlepasscalculator.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1023649773728:android:59fd4d77eaf97b2feaf1c5",
+        "mobilesdk_app_id": "1:1023649773728:android:416b6da8a2ed6aaaeaf1c5",
         "android_client_info": {
-          "package_name": "br.com.battlepassCalculatorValorant"
+          "package_name": "br.com.samuelnunes.valorantpassbattle"
         }
       },
       "oauth_client": [
