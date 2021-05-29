@@ -52,7 +52,9 @@ class HistoricInputFragment : Fragment() {
         setupObservers()
         val appBarConfiguration = AppBarConfiguration(navController.graph)
         binding.toolbar.setupWithNavController(navController, appBarConfiguration)
-//        binding.toolbar.title = null
+        navController.addOnDestinationChangedListener { _, _, _ ->
+            binding.toolbar.title = ""
+        }
         return binding.root
     }
 
