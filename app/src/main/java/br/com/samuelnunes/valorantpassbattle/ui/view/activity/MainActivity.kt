@@ -30,7 +30,6 @@ class MainActivity : AdmobInterstitialActivity() {
         }
         setupObservers()
         createListeners()
-
     }
 
     private fun setupObservers() {
