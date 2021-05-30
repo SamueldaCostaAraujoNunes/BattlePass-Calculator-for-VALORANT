@@ -22,7 +22,6 @@ abstract class PagerSliderFragment(private var fragments: List<Fragment> = Array
         binding = FragmentPagerSliderBinding.inflate(inflater, container, false)
         adapter = FragmentSliderAdapter(this)
         adapter.addFragments(fragments)
-        binding.dotsIndicator.dotsClickable = false
         binding.pager.setAdapterSlider(adapter)
         binding.dotsIndicator.setViewPager2(binding.pager)
         binding.lifecycleOwner = this

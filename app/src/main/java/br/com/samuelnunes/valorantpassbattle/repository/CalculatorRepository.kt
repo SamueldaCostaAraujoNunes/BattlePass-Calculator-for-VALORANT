@@ -14,6 +14,7 @@ import br.com.samuelnunes.valorantpassbattle.model.dto.UserTier
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map
+import timber.log.Timber
 import java.time.LocalDate
 import java.time.temporal.ChronoUnit
 import java.util.*
@@ -48,21 +49,14 @@ class CalculatorRepository @Inject constructor(
             pref[KEY_WEEKLY_MISSION] ?: false
         }
 
-    private val totalXpBattlePass: Flow<Int> =
-        combine(epilogue, dailyMission, weeklyMission) { epilogue, daily, weekly ->
-            val tierMax = if (epilogue) 55 else 50
-            val totalExpAteOTier = battlePassManager.totalExpAteOTier(tierMax)
-            val d = if (daily) battlePassManager.expDiariaTotal() else 0
-            val w = if (weekly) battlePassManager.expSemanalTotal() else 0
+    private val totalXpBattlePass: Flow<Int> = epilogue.map { epilogue ->
+        val tierMax = if (epilogue) 55 else 50
+        battlePassManager.totalExpAteOTier(tierMax)
+    }
 
-            totalExpAteOTier - d - w
-        }
-
-    val totalExpCurrent: Flow<Int> =
-        combine(lastUserInput, dailyMission, weeklyMission) { last, daily, weekly ->
-            val d = if (daily) battlePassManager.getExpMissaoDiaria() else 0
-            val w = if (weekly) battlePassManager.getExpMissaoSemanal() else 0
-            battlePassManager.totalExpAteOTier(last.tierCurrent) - last.tierExpMissing - d - w
+    val expCurrent: Flow<Int> =
+        lastUserInput.map { last ->
+            battlePassManager.totalExpAteOTier(last.tierCurrent) - last.tierExpMissing
         }
 
     fun getRewardTiersById(id: Int): Reward? {
@@ -100,7 +94,7 @@ class CalculatorRepository @Inject constructor(
     }
 
 
-    val averageExpPerDay: Flow<Int> = totalExpCurrent.map { xpTotal ->
+    val averageExpPerDay: Flow<Int> = expCurrent.map { xpTotal ->
         (xpTotal.toDouble() / daysFromTheStart).toInt()
     }
 
@@ -142,12 +136,12 @@ class CalculatorRepository @Inject constructor(
 
 
     val percentageTotal: Flow<Double> =
-        totalExpCurrent.combine(totalXpBattlePass) { xpCurrent, xpTotal ->
+        expCurrent.combine(totalXpBattlePass) { xpCurrent, xpTotal ->
             xpCurrent.toDouble() * 100 / xpTotal
         }
 
     val differenceBetweenTheExpectedExpWithTheCurrent: Flow<Int> =
-        totalExpCurrent.combine(totalXpBattlePass) { expCurrent, xpTotal ->
+        expCurrent.combine(totalXpBattlePass) { expCurrent, xpTotal ->
             val expPerDay = (xpTotal.toDouble() / passDurationInDays)
             val expExpected = daysFromTheStart * expPerDay
             val result = expCurrent - expExpected.toInt()
@@ -156,16 +150,54 @@ class CalculatorRepository @Inject constructor(
 
 
     val expectedEndDay: Flow<LocalDate> =
-        totalExpCurrent.combine(totalXpBattlePass) { expTotalUsuario, expTotalPasse ->
-            if (expTotalUsuario > 0) {
-                val mediaDeExpPorDia = (expTotalUsuario.toDouble() / daysFromTheStart).toInt()
-                val xpDif = expTotalPasse.toDouble() - expTotalUsuario.toDouble()
-                val result = (xpDif / mediaDeExpPorDia).toLong()
-                LocalDate.now().plusDays(result)
+        combine(
+            expCurrent,
+            totalXpBattlePass,
+            dailyMission,
+            weeklyMission
+        ) { expTotalUsuario, expTotalPasse, daily, weekly ->
+            if (expTotalUsuario > minimoDeExpParaEsteDia(daily, weekly)) {
+                val mediaDeExpPorDia = mediaDeExpPorDia(daily, weekly, expTotalUsuario)
+                val diasAteCompletar =
+                    diasAteCompletarPasse(mediaDeExpPorDia, expTotalPasse, daily, weekly)
+                LocalDate.now().plusDays(diasAteCompletar.toLong())
             } else {
                 battlePassManager.dateFinally
             }
         }
+
+    private fun minimoDeExpParaEsteDia(daily: Boolean, weekly: Boolean): Int {
+        val minimo = 0
+        val d = if (daily) battlePassManager.getExpMissaoDiaria(daysFromTheStart) else 0
+        val w = if (weekly) battlePassManager.getExpMissaoSemanal(daysFromTheStart) else 0
+        return minimo + d + w
+    }
+
+
+    private fun diasAteCompletarPasse(
+        mediaDeExpPorDia: Int,
+        expTotalPasse: Int,
+        daily: Boolean,
+        weekly: Boolean
+    ): Int {
+        var totalExpUntilTheDay = 0
+        var day = daysFromTheStart
+        while (totalExpUntilTheDay < expTotalPasse) {
+            val expWithoutMission = mediaDeExpPorDia * day
+            val dailyMission = if (daily) battlePassManager.getExpMissaoDiaria(day) else 0
+            Timber.i("Dia: $day , DailyMission: $dailyMission")
+            val weeklyMission = if (weekly) battlePassManager.getExpMissaoSemanal(day) else 0
+            totalExpUntilTheDay = expWithoutMission + dailyMission + weeklyMission
+            day++
+        }
+        return day - daysFromTheStart
+    }
+
+    private fun mediaDeExpPorDia(daily: Boolean, weekly: Boolean, xpCurrent: Int): Int {
+        val d = if (daily) battlePassManager.getExpMissaoDiaria(daysFromTheStart) else 0
+        val w = if (weekly) battlePassManager.getExpMissaoSemanal(daysFromTheStart) else 0
+        return ((xpCurrent - d - w).toDouble() / daysFromTheStart).toInt()
+    }
 
     val daysMissing: Flow<Long> =
         expectedEndDay.map { endDay ->
@@ -182,8 +214,26 @@ class CalculatorRepository @Inject constructor(
             }
         }
 
+    private val expBattlePassWithoutMission: Flow<Int> =
+        combine(totalXpBattlePass, dailyMission, weeklyMission) { expBattlePass, daily, weekly ->
+            val d = if (daily) battlePassManager.getExpMissaoDiaria(passDurationInDays) else 0
+            val w = if (weekly) battlePassManager.getExpMissaoSemanal(passDurationInDays) else 0
+            val i = expBattlePass - d - w
+            i
+        }
+
+    private val expCurrentWithoutMission: Flow<Int> =
+        combine(expCurrent, dailyMission, weeklyMission) { expCurrent, daily, weekly ->
+            val d = if (daily) battlePassManager.getExpMissaoDiaria(daysFromTheStart) else 0
+            val w = if (weekly) battlePassManager.getExpMissaoSemanal(daysFromTheStart) else 0
+            val i = expCurrent - d - w
+            i
+        }
+
+
     fun previsoesJogos(gameType: GameType): Flow<PrevisoesJogos> =
-        totalExpCurrent.combine(totalXpBattlePass) { xpCurrent, xpTotal ->
+        combine(expCurrentWithoutMission, expBattlePassWithoutMission) { xpCurrent, xpTotal ->
+
             val xpDif = xpTotal - xpCurrent
 
             val jogosRestantes = xpDif.toFloat() / gameType.xp

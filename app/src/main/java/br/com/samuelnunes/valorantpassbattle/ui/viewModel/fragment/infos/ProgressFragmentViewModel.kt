@@ -11,7 +11,7 @@ import javax.inject.Inject
 class ProgressFragmentViewModel @Inject constructor(calculador: CalculatorRepository) :
     ViewModel() {
 
-    val totalExp: LiveData<Int> = calculador.totalExpCurrent.asLiveData()
+    val totalExp: LiveData<Int> = calculador.expCurrent.asLiveData()
     val porcentagemProgresso: LiveData<Double> = calculador.percentageTotal.asLiveData()
     val expPerDay: LiveData<Int> = calculador.averageExpPerDay.asLiveData()
     val expAdiantadoAtrasado: LiveData<Int> =

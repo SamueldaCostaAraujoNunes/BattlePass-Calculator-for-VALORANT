@@ -31,12 +31,16 @@ class BattlePassManager(context: Context) {
 
     val dateFinally = passe.dateFinally
 
-    fun getExpMissaoDiaria(): Int {
-        return daysFromTheStart * passe.missaoDiaria.exp
+    fun getExpMissaoDiaria(days: Int): Int {
+        return if (days <= passDurationInDays) {
+            days * passe.missaoDiaria.exp
+        } else {
+            days * passDurationInDays
+        }
     }
 
-    fun getExpMissaoSemanal(): Int {
-        val semanaAtual = (daysFromTheStart / 7) + 1
+    fun getExpMissaoSemanal(days: Int): Int {
+        val semanaAtual = (days / 7) + 1
         val tiers = passe.missaoSemanal.filter { it.id <= semanaAtual }
         return tiers.map { it.exp }.sum()
     }
