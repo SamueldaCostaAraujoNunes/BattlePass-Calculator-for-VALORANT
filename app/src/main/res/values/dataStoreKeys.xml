@@ -3,7 +3,7 @@
     <string name="epilogue" translatable="false">keyEpilogue</string>
     <string name="dailyMission" translatable="false">keyDailyMission</string>
     <string name="weeklyMission" translatable="false">keyWeeklyMission</string>
-    <string name="firstInputComplete" translatable="false">keyEpilogoIsValide</string>
     <string name="themeStatus" translatable="false">keyThemeStatus</string>
     <string name="editHistoric" translatable="false">editHistoric</string>
+    <string name="bugReport" translatable="false">bugReport</string>
 </resources>

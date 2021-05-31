@@ -14,6 +14,7 @@ import br.com.samuelnunes.valorantpassbattle.ui.viewModel.fragment.bottomNavigat
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
+
 @AndroidEntryPoint
 class SettingsFragment : PreferenceFragmentCompat() {
     @Inject
@@ -28,6 +29,10 @@ class SettingsFragment : PreferenceFragmentCompat() {
     }
     private val editHistoric by lazy {
         findPreference<Preference>(getString(R.string.editHistoric))
+    }
+
+    private val bugReport by lazy {
+        findPreference<Preference>(getString(R.string.bugReport))
     }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -64,6 +69,12 @@ class SettingsFragment : PreferenceFragmentCompat() {
         editHistoric?.setOnPreferenceClickListener {
             val direction =
                 SettingsFragmentDirections.actionSettingsFragmentToHistoricInputFragment()
+            navController.navigate(direction)
+            true
+        }
+
+        bugReport?.setOnPreferenceClickListener {
+            val direction = SettingsFragmentDirections.actionGlobalFormReportBug()
             navController.navigate(direction)
             true
         }

@@ -42,5 +42,12 @@
             app:title="@string/editar_historico" />
     </PreferenceCategory>
 
+    <PreferenceCategory app:title="@string/Bugs">
+
+        <Preference
+            android:icon="@drawable/ic_bug_report"
+            app:key="@string/bugReport"
+            app:title="@string/reportar_um_bug" />
+    </PreferenceCategory>
 
 </PreferenceScreen>

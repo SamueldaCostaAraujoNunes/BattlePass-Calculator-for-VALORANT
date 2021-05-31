@@ -123,4 +123,7 @@
     <string name="content_m_diaria_on">Los cálculos tienen en cuenta las misiones diarias</string>
     <string name="content_m_semanal_off">Activar, para que los cálculos tengan en cuenta las misiones semanales</string>
     <string name="content_m_semanal_on">Los cálculos tienen en cuenta las misiones semanales</string>
+    <string name="Bugs">Bugs</string>
+    <string name="reportar_um_bug">Reportar un error</string>
+    <string name="form_link">https://forms.gle/MF4s6q7WyyizyB31A</string>
 </resources>

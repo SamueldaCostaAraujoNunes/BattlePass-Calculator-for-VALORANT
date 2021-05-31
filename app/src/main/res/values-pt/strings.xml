@@ -122,4 +122,7 @@
     <string name="content_m_diaria_on">Os cálculos levam em consideração as missões diarias</string>
     <string name="content_m_semanal_off">Ative, para que os cálculos levem em consideração as missões semanais</string>
     <string name="content_m_semanal_on">Os cálculos levam em consideração as missões semanais</string>
+    <string name="Bugs">Bugs</string>
+    <string name="reportar_um_bug">Reportar um bug</string>
+    <string name="form_link">https://forms.gle/FucJurrtZMmuULiB9</string>
 </resources>

@@ -106,4 +106,12 @@
     <action
         android:id="@+id/action_global_dialogReward"
         app:destination="@id/dialogReward" />
+    <activity
+        android:id="@+id/form_report_bug"
+        app:action="android.intent.action.VIEW"
+        app:data="@string/form_link" />
+
+    <action
+        android:id="@+id/action_global_form_report_bug"
+        app:destination="@id/form_report_bug" />
 </navigation>
