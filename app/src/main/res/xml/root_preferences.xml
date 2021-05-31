@@ -5,6 +5,7 @@
         <Preference
             android:summary="@string/escolha_um_tema"
             app:key="@string/themeStatus"
+            android:icon="@drawable/ic_theme"
             app:title="@string/trocar_tema" />
     </PreferenceCategory>
 
@@ -14,18 +15,21 @@
             app:key="@string/epilogue"
             app:summaryOff="@string/content_epilogo_off"
             app:summaryOn="@string/content_epilogo_on"
+            android:icon="@drawable/ic_epilogo"
             app:title="@string/epilogo" />
 
         <SwitchPreferenceCompat
             app:key="@string/dailyMission"
             app:summaryOff="@string/content_m_diaria_off"
             app:summaryOn="@string/content_m_diaria_on"
+            android:icon="@drawable/ic_daily_mission"
             app:title="@string/missoes_diarias" />
 
         <SwitchPreferenceCompat
             app:key="@string/weeklyMission"
             app:summaryOff="@string/content_m_semanal_off"
             app:summaryOn="@string/content_m_semanal_on"
+            android:icon="@drawable/ic_weekly_mission"
             app:title="@string/missoes_semanais" />
 
     </PreferenceCategory>
@@ -34,6 +38,7 @@
 
         <Preference
             app:key="@string/editHistoric"
+            android:icon="@drawable/ic_historico"
             app:title="@string/editar_historico" />
     </PreferenceCategory>
 
