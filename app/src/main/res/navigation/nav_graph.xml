@@ -38,6 +38,10 @@
             app:exitAnim="@android:anim/slide_out_right"
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_settingsFragment_to_form_report_bug"
+            app:destination="@id/form_report_bug" />
+
     </fragment>
     <fragment
         android:id="@+id/historicInputFragment"
@@ -106,12 +110,10 @@
     <action
         android:id="@+id/action_global_dialogReward"
         app:destination="@id/dialogReward" />
+
     <activity
         android:id="@+id/form_report_bug"
         app:action="android.intent.action.VIEW"
         app:data="@string/form_link" />
 
-    <action
-        android:id="@+id/action_global_form_report_bug"
-        app:destination="@id/form_report_bug" />
 </navigation>

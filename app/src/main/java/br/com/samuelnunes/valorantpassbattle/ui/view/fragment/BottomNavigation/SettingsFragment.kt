@@ -74,7 +74,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
 
         bugReport?.setOnPreferenceClickListener {
-            val direction = SettingsFragmentDirections.actionGlobalFormReportBug()
+            val direction = SettingsFragmentDirections.actionSettingsFragmentToFormReportBug()
             navController.navigate(direction)
             true
         }

@@ -4,4 +4,4 @@ import br.com.samuelnunes.valorantpassbattle.ui.view.fragment.Rewards.ChapterRew
 import br.com.samuelnunes.valorantpassbattle.ui.view.fragment.Rewards.TiersRewards
 
 
-class RewardsFragment : PagerSliderFragment(listOf(TiersRewards(), ChapterRewards()))
+class RewardsFragment : PagerSliderFragment(listOf(TiersRewards(), ChapterRewards()), false)

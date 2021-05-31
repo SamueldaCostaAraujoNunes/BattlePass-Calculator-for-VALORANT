@@ -22,7 +22,7 @@
         android:textColor="?attr/colorSecondary"
         android:textSize="20sp"
         app:fadeAnimationText="@{titleName}"
-        app:visibilityIf="@{titleName != null}"
+        app:visibilityIf='@{titleName != null}'
         tools:ignore="RtlSymmetry"
         tools:paddingTop="@dimen/padding_cardview"
         tools:text="Title" />

@@ -9,7 +9,6 @@ import androidx.databinding.BindingAdapter
 import androidx.viewpager2.widget.ViewPager2
 import br.com.samuelnunes.valorantpassbattle.ui.view.adapter.FragmentSliderAdapter
 import br.com.samuelnunes.valorantpassbattle.ui.view.adapter.ImageSliderAdapter
-import br.com.samuelnunes.valorantpassbattle.ui.view.fragment.Rewards.BaseRewardsFragment
 import br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 import timber.log.Timber
@@ -22,19 +21,23 @@ fun ViewPager2.imagesURl(imagesURl: List<String>?, indicator: DotsIndicator?) {
     }
 }
 
-fun ViewPager2.setAdapterSlider(mAdapter: FragmentSliderAdapter) {
+fun ViewPager2.setAdapterSlider(mAdapter: FragmentSliderAdapter, adaptiveHeight: Boolean) {
     adapter = mAdapter
+    var cardModule: CardModule? = null
     registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
         override fun onPageSelected(position: Int) {
             super.onPageSelected(position)
+            Timber.i("Position: $position")
             try {
                 val item = mAdapter.getItem(position)
-                val v: View? = item.view
-                val viewParent = CardModule.parentIsCardmodule(v)
-                if (viewParent is CardModule) {
-                    viewParent.binding.titleName = item.toString()
+
+                if (cardModule == null) {
+                    cardModule = CardModule.parentIsCardmodule(item.view)
                 }
-                if (item !is BaseRewardsFragment && v != null) {
+                cardModule?.title(item.toString())
+
+                val v: View? = item.view
+                if (adaptiveHeight && v != null) {
                     changeDimensLayoutAnimation(v)
                 }
             } catch (e: Exception) {
@@ -50,7 +53,7 @@ fun ViewPager2.setAdapterSlider(mAdapter: FragmentSliderAdapter) {
                 val hMeasureSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED)
                 v.measure(wMeasureSpec, hMeasureSpec)
                 try {
-                    val anim = ValueAnimator.ofInt(layoutParams.height, v.measuredHeight + 30)
+                    val anim = ValueAnimator.ofInt(layoutParams.height, v.measuredHeight)
                     anim.addUpdateListener {
                         val height = it.animatedValue as Int
                         layoutParams.height = height

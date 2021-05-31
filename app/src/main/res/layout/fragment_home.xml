@@ -96,7 +96,7 @@
                     android:id="@+id/fragmentListTiers"
                     android:name="br.com.samuelnunes.valorantpassbattle.ui.view.fragment.Home.RewardsFragment"
                     android:layout_width="match_parent"
-                    android:layout_height="500dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginHorizontal="24dp"
                     android:layout_marginBottom="14dp" />
             </br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule>

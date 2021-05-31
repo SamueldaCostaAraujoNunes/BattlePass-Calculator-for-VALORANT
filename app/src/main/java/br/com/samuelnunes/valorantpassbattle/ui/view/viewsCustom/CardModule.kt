@@ -6,10 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import androidx.fragment.app.Fragment
 import br.com.samuelnunes.valorantpassbattle.R
 import br.com.samuelnunes.valorantpassbattle.databinding.ViewCardBaseBinding
 import br.com.samuelnunes.valorantpassbattle.extensions.bindingAdapters.visibilityIf
 import com.google.android.material.card.MaterialCardView
+import timber.log.Timber
 
 class CardModule @JvmOverloads constructor(
     context: Context,
@@ -108,9 +110,18 @@ class CardModule @JvmOverloads constructor(
         fun parentIsCardmodule(v: View?): CardModule? {
             val viewParent = v?.parent as View?
             return if (viewParent is CardModule?) {
-                return viewParent
+                viewParent
             } else {
                 parentIsCardmodule(viewParent)
+            }
+        }
+
+        fun ifParentIsCardModuleSetTitle(item: Fragment) {
+            val v: View? = item.view
+            val viewParent = parentIsCardmodule(v)
+            if (viewParent is CardModule) {
+                Timber.i("Entrou, item = $item")
+                viewParent.binding.titleName = item.toString()
             }
         }
     }

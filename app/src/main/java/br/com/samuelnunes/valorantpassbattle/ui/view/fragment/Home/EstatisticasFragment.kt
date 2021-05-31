@@ -6,5 +6,5 @@ import br.com.samuelnunes.valorantpassbattle.ui.view.fragment.Infos.TimelineFrag
 
 
 class EstatisticasFragment :
-    PagerSliderFragment(listOf(ProgressFragment(), TimelineFragment(), ProjectionsFragment()))
+    PagerSliderFragment(listOf(ProgressFragment(), TimelineFragment(), ProjectionsFragment()), true)
 

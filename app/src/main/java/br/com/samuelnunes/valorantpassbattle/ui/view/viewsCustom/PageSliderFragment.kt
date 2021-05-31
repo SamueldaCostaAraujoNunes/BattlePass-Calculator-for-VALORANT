@@ -9,7 +9,10 @@ import br.com.samuelnunes.valorantpassbattle.databinding.FragmentPagerSliderBind
 import br.com.samuelnunes.valorantpassbattle.extensions.bindingAdapters.setAdapterSlider
 import br.com.samuelnunes.valorantpassbattle.ui.view.adapter.FragmentSliderAdapter
 
-abstract class PagerSliderFragment(private var fragments: List<Fragment> = ArrayList()) :
+abstract class PagerSliderFragment(
+    private var fragments: List<Fragment> = ArrayList(),
+    private var adaptiveHeight: Boolean
+) :
     Fragment() {
     private lateinit var binding: FragmentPagerSliderBinding
     private lateinit var adapter: FragmentSliderAdapter
@@ -22,7 +25,7 @@ abstract class PagerSliderFragment(private var fragments: List<Fragment> = Array
         binding = FragmentPagerSliderBinding.inflate(inflater, container, false)
         adapter = FragmentSliderAdapter(this)
         adapter.addFragments(fragments)
-        binding.pager.setAdapterSlider(adapter)
+        binding.pager.setAdapterSlider(adapter, adaptiveHeight)
         binding.dotsIndicator.setViewPager2(binding.pager)
         binding.lifecycleOwner = this
         return binding.root
