@@ -31,6 +31,6 @@ class ProgressFragment : Fragment() {
     }
 
     override fun toString(): String {
-        return context?.getString(R.string.progresso) ?: super.toString()
+        return getString(R.string.progresso)
     }
 }

@@ -1,6 +1,4 @@
-@file:Suppress("UNREACHABLE_CODE")
-
-package br.com.samuelnunes.valorantpassbattle.extensions.bindingAdapters
+package br.com.samuelnunes.valorantpassbattle.extensions
 
 import android.animation.ValueAnimator
 import android.view.View

@@ -11,7 +11,6 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class TiersRewards : BaseRewardsFragment() {
     private val viewModel: TiersRewardsViewModel by viewModels()
-
     override val origin: Int = TIER
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -21,6 +20,6 @@ class TiersRewards : BaseRewardsFragment() {
     }
 
     override fun toString(): String {
-        return context?.getString(R.string.recompensa_por_tier) ?: super.toString()
+        return getString(R.string.recompensa_por_tier)
     }
 }

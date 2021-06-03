@@ -54,6 +54,6 @@ class ProjectionsFragment : Fragment() {
     }
 
     override fun toString(): String {
-        return context?.getString(R.string.jogos) ?: super.toString()
+        return getString(R.string.jogos)
     }
 }

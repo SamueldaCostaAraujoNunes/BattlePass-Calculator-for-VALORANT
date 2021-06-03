@@ -27,6 +27,6 @@ class TimelineFragment : Fragment() {
     }
 
     override fun toString(): String {
-        return context?.getString(R.string.linha_do_tempo) ?: super.toString()
+        return getString(R.string.linha_do_tempo)
     }
 }

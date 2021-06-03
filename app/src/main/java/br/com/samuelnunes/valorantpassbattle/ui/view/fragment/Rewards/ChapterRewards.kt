@@ -24,6 +24,6 @@ class ChapterRewards : BaseRewardsFragment() {
     }
 
     override fun toString(): String {
-        return context?.getString(R.string.recompensa_por_capitulo) ?: super.toString()
+        return getString(R.string.recompensa_por_capitulo)
     }
 }
