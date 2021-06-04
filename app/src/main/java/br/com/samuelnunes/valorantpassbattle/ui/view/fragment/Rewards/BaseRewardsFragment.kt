@@ -6,17 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.PopupMenu
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import br.com.samuelnunes.valorantpassbattle.R
 import br.com.samuelnunes.valorantpassbattle.databinding.FragmentBaseRewardsBinding
 import br.com.samuelnunes.valorantpassbattle.model.dto.Reward
 import br.com.samuelnunes.valorantpassbattle.ui.view.adapter.ItemRewardAdapter
+import br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.FragmentWithTitle
 
 const val TIER = 0
 const val CHAPTER = 1
 
-open class BaseRewardsFragment : Fragment() {
+abstract class BaseRewardsFragment : FragmentWithTitle() {
     protected lateinit var binding: FragmentBaseRewardsBinding
     protected lateinit var rewards: List<Reward>
     protected lateinit var positionTier: LiveData<Int>

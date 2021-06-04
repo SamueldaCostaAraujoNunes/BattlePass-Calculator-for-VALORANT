@@ -4,17 +4,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import br.com.samuelnunes.valorantpassbattle.R
 import br.com.samuelnunes.valorantpassbattle.databinding.FragmentProjectionsBinding
+import br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.FragmentWithTitle
 import br.com.samuelnunes.valorantpassbattle.ui.viewModel.fragment.infos.ProjectionsFragmentViewModel
 import com.google.android.material.tabs.TabLayout
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class ProjectionsFragment : Fragment() {
+class ProjectionsFragment : FragmentWithTitle() {
     private val viewModel: ProjectionsFragmentViewModel by viewModels()
     private lateinit var binding: FragmentProjectionsBinding
 
@@ -53,7 +53,7 @@ class ProjectionsFragment : Fragment() {
         })
     }
 
-    override fun toString(): String {
-        return getString(R.string.jogos)
-    }
+    override val titleResId: Int
+        get() = R.string.jogos
+
 }

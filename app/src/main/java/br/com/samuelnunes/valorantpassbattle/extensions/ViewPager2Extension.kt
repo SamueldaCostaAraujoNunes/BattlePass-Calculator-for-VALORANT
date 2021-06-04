@@ -21,19 +21,24 @@ fun ViewPager2.imagesURl(imagesURl: List<String>?, indicator: DotsIndicator?) {
 
 fun ViewPager2.setAdapterSlider(mAdapter: FragmentSliderAdapter, adaptiveHeight: Boolean) {
     adapter = mAdapter
-    var cardModule: CardModule? = null
 
     registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+        override fun onPageScrolled(
+            position: Int,
+            positionOffset: Float,
+            positionOffsetPixels: Int
+        ) {
+            super.onPageScrolled(position, positionOffset, positionOffsetPixels)
+            val item = mAdapter.getItem(position)
+            item.title.observe(item, {
+                CardModule.parentIsCardmodule(item.view)?.title(it)
+            })
+        }
+
         override fun onPageSelected(position: Int) {
             super.onPageSelected(position)
             try {
                 val item = mAdapter.getItem(position)
-
-                if (cardModule == null) {
-                    cardModule = CardModule.parentIsCardmodule(item.view)
-                }
-                cardModule?.title(item.toString())
-
                 val v: View? = item.view
                 if (adaptiveHeight && v != null) {
                     changeDimensLayoutAnimation(v)

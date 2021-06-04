@@ -4,15 +4,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import br.com.samuelnunes.valorantpassbattle.R
 import br.com.samuelnunes.valorantpassbattle.databinding.FragmentProgressBinding
+import br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.FragmentWithTitle
 import br.com.samuelnunes.valorantpassbattle.ui.viewModel.fragment.infos.ProgressFragmentViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class ProgressFragment : Fragment() {
+class ProgressFragment : FragmentWithTitle() {
     private val viewModel: ProgressFragmentViewModel by viewModels()
     private lateinit var binding: FragmentProgressBinding
 
@@ -30,7 +30,6 @@ class ProgressFragment : Fragment() {
         binding.lifecycleOwner = this
     }
 
-    override fun toString(): String {
-        return getString(R.string.progresso)
-    }
+    override val titleResId: Int
+        get() = R.string.progresso
 }

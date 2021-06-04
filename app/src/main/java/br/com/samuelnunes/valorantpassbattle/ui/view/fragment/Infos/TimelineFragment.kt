@@ -4,15 +4,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import br.com.samuelnunes.valorantpassbattle.R
 import br.com.samuelnunes.valorantpassbattle.databinding.FragmentTimelineBinding
+import br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.FragmentWithTitle
 import br.com.samuelnunes.valorantpassbattle.ui.viewModel.fragment.infos.TimelineFragmentViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class TimelineFragment : Fragment() {
+class TimelineFragment : FragmentWithTitle() {
     private val viewModel: TimelineFragmentViewModel by viewModels()
     private lateinit var binding: FragmentTimelineBinding
 
@@ -26,7 +26,7 @@ class TimelineFragment : Fragment() {
         return binding.root
     }
 
-    override fun toString(): String {
-        return getString(R.string.linha_do_tempo)
-    }
+    override val titleResId: Int
+        get() = R.string.linha_do_tempo
+
 }

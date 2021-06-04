@@ -19,7 +19,8 @@ class TiersRewards : BaseRewardsFragment() {
         super.onViewCreated(view, savedInstanceState)
     }
 
-    override fun toString(): String {
-        return getString(R.string.recompensa_por_tier)
-    }
+    override val titleResId: Int
+        get() = R.string.recompensa_por_tier
+
+
 }

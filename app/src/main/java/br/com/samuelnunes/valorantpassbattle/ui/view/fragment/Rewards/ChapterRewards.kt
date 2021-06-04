@@ -12,10 +12,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class ChapterRewards : BaseRewardsFragment() {
     private val viewModel: ChapterRewardsViewModel by viewModels()
 
-//    override val origin: String by lazy {
-//        requireContext().getString(R.string.capitulo)
-//    }
-
     override val origin: Int = CHAPTER
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         rewards = viewModel.chapters
@@ -23,9 +19,8 @@ class ChapterRewards : BaseRewardsFragment() {
         super.onViewCreated(view, savedInstanceState)
     }
 
-    override fun toString(): String {
-        return context?.getString(R.string.recompensa_por_capitulo) ?: super.toString()
-    }
+    override val titleResId: Int
+        get() = R.string.recompensa_por_capitulo
 }
 
 interface Title
