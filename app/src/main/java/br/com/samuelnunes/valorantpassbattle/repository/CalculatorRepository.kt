@@ -257,12 +257,21 @@ class CalculatorRepository @Inject constructor(
             val tempoRestante = jogosRestantes * gameType.duration
             val horasPorDia = (tempoRestante / daysLeftUntilTheEnd)
             val jogosPorDia = horasPorDia / gameType.duration
-            PrevisoesJogos(
-                jogosRestantes,
-                convertHours(tempoRestante),
-                jogosPorDia,
-                convertHours(horasPorDia)
-            )
+            if (jogosRestantes <= 0) {
+                PrevisoesJogos(
+                    0F,
+                    convertHours(0F),
+                    0F,
+                    convertHours(0F)
+                )
+            } else {
+                PrevisoesJogos(
+                    jogosRestantes,
+                    convertHours(tempoRestante),
+                    jogosPorDia,
+                    convertHours(horasPorDia)
+                )
+            }
         }
 
 

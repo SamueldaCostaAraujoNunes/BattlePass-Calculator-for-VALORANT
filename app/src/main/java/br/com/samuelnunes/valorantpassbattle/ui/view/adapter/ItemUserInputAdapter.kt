@@ -7,8 +7,12 @@ import br.com.samuelnunes.valorantpassbattle.databinding.ItemEditHistoricBinding
 import br.com.samuelnunes.valorantpassbattle.model.dto.UserTier
 
 
-class ItemUserInputAdapter(val list: List<UserTier>) :
+class ItemUserInputAdapter(val list: ArrayList<UserTier>) :
     RecyclerView.Adapter<ItemUserInputAdapter.ViewHolder>() {
+
+    init {
+        list.sortBy { it.tierCurrent }
+    }
 
     inner class ViewHolder(val binding: ItemEditHistoricBinding) :
         RecyclerView.ViewHolder(binding.root)

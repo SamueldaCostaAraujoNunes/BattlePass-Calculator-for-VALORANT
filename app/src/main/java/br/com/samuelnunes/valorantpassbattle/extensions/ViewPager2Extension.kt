@@ -22,10 +22,10 @@ fun ViewPager2.imagesURl(imagesURl: List<String>?, indicator: DotsIndicator?) {
 fun ViewPager2.setAdapterSlider(mAdapter: FragmentSliderAdapter, adaptiveHeight: Boolean) {
     adapter = mAdapter
     var cardModule: CardModule? = null
+
     registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
         override fun onPageSelected(position: Int) {
             super.onPageSelected(position)
-            Timber.i("Position: $position")
             try {
                 val item = mAdapter.getItem(position)
 

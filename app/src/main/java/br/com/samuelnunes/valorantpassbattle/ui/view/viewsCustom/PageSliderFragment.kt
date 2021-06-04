@@ -27,6 +27,7 @@ abstract class PagerSliderFragment(
         adapter.addFragments(fragments)
         binding.pager.setAdapterSlider(adapter, adaptiveHeight)
         binding.dotsIndicator.setViewPager2(binding.pager)
+        binding.dotsIndicator.dotsClickable = false
         binding.lifecycleOwner = this
         return binding.root
     }

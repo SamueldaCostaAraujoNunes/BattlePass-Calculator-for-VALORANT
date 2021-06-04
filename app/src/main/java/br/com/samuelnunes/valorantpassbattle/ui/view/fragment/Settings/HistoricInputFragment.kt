@@ -60,7 +60,7 @@ class HistoricInputFragment : Fragment() {
 
     private fun setupObservers() {
         viewModel.allUserInput.observe(viewLifecycleOwner, {
-            adapter = ItemUserInputAdapter(it)
+            adapter = ItemUserInputAdapter(ArrayList(it))
             binding.rvEditHistoric.adapter = adapter
         })
 
