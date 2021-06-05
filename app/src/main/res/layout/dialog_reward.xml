@@ -12,6 +12,11 @@
         <variable
             name="reward"
             type="br.com.samuelnunes.valorantpassbattle.model.dto.Reward" />
+
+
+        <variable
+            name="indicator"
+            type="com.tbuonomo.viewpagerdotsindicator.DotsIndicator" />
     </data>
 
     <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule
@@ -22,7 +27,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:paddingHorizontal="24dp"
             android:paddingBottom="14dp">
@@ -35,22 +40,24 @@
                 android:text="@{@string/dois_pontos(@string/recompensa)}"
                 android:textColor="?attr/colorOnSecondary"
                 android:textSize="20sp"
+                android:foregroundGravity="top"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_reward_chapter"
                 tools:text="@string/recompensa" />
 
             <TextView
                 android:id="@+id/tv_reward_chapter"
                 android:layout_width="wrap_content"
+                android:ellipsize="end"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/impact_font_family"
                 android:paddingHorizontal="8dp"
                 android:text="@{reward.nome}"
                 android:textColor="?attr/colorOnPrimary"
+                android:maxWidth="180dp"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="@+id/textView3"
                 app:layout_constraintStart_toEndOf="@+id/textView3"
-                app:layout_constraintTop_toTopOf="@+id/textView3"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:text="Walk! Don't Run" />
 
             <TextView
@@ -62,7 +69,7 @@
                 android:textColor="?attr/colorOnSecondary"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/tv_reward_chapter"
                 tools:text="@string/tipo" />
 
             <TextView
@@ -81,14 +88,16 @@
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/dialogViewPagerMain"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_marginTop="8dp"
                 android:layout_height="wrap_content"
+                app:imagesURl="@{reward.imagens}"
+                app:indicator="@{indicator}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintBottom_toTopOf="@+id/indicator_image_slider"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/tv_type_chapter"
                 tools:layout_height="300dp"
                 tools:layout_width="300dp" />
 

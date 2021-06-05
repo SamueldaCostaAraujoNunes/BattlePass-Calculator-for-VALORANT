@@ -22,11 +22,10 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:maxHeight="450dp"
-            android:maxWidth="450dp"
-            android:scaleType="fitCenter"
+            android:contentDescription="@string/recompensa"
             app:imageUrl="@{imageURL}"
-            tools:ignore="ContentDescription"
             tools:layout_height="350dp"
+            android:maxWidth="350dp"
             tools:src="@drawable/img_error" />
 
     </LinearLayout>

@@ -8,7 +8,6 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import br.com.samuelnunes.valorantpassbattle.databinding.DialogRewardBinding
 import br.com.samuelnunes.valorantpassbattle.model.dto.Reward
-import br.com.samuelnunes.valorantpassbattle.ui.view.adapter.ImageSliderAdapter
 import br.com.samuelnunes.valorantpassbattle.ui.viewModel.dialog.DialogRewardViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -38,8 +37,7 @@ class DialogReward : DialogBase() {
             binding.reward = reward
             binding.lifecycleOwner = this
             binding.titleName = "${getString(getOriginTitle())} ${reward.cap ?: reward.id}"
-            binding.dialogViewPagerMain.adapter = ImageSliderAdapter(reward.imagens)
-            binding.indicatorImageSlider.setViewPager2(binding.dialogViewPagerMain)
+            binding.indicator = binding.indicatorImageSlider
         }
         return binding.root
     }

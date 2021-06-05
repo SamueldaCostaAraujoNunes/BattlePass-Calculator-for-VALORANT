@@ -44,8 +44,6 @@ fun TextView.fadeAnimationText(newText: String?) {
     }
 
 }
-
-
 @BindingAdapter("position", "positionCurrent")
 fun TextView.comparableStyle(position: Int?, positionCurrent: Int?) {
     if (position != null && positionCurrent != null) {

@@ -13,8 +13,11 @@ import timber.log.Timber
 
 @BindingAdapter("imagesURl", "indicator")
 fun ViewPager2.imagesURl(imagesURl: List<String>?, indicator: DotsIndicator?) {
+    if (adapter == null) {
+        adapter = ImageSliderAdapter()
+    }
     if (imagesURl != null) {
-        adapter = ImageSliderAdapter(imagesURl)
+        (adapter as ImageSliderAdapter).submitList(imagesURl)
         indicator?.setViewPager2(this)
     }
 }

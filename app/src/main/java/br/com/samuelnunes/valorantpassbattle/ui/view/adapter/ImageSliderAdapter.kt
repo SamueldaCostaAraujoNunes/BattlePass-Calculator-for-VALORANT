@@ -2,18 +2,20 @@ package br.com.samuelnunes.valorantpassbattle.ui.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import br.com.samuelnunes.valorantpassbattle.databinding.ItemImageViewBinding
 
 
-class ImageSliderAdapter(private var imagesUrl: List<String>) :
-    RecyclerView.Adapter<ImageSliderAdapter.PageHolder>() {
+class ImageSliderAdapter :
+    ListAdapter<String, ImageSliderAdapter.ImageSliderViewHolder>(ImageSliderDiffCallback()) {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): PageHolder {
-        return PageHolder(
+    ): ImageSliderViewHolder {
+        return ImageSliderViewHolder(
             ItemImageViewBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
@@ -22,15 +24,26 @@ class ImageSliderAdapter(private var imagesUrl: List<String>) :
         )
     }
 
-    override fun getItemCount(): Int = imagesUrl.size
-
     override fun onBindViewHolder(
-        holder: PageHolder,
+        holder: ImageSliderViewHolder,
         position: Int
     ) {
-        holder.binding.imageURL = imagesUrl[position]
+        holder.binding.imageURL = currentList[position]
     }
 
-    inner class PageHolder(val binding: ItemImageViewBinding) :
+    inner class ImageSliderViewHolder(val binding: ItemImageViewBinding) :
         RecyclerView.ViewHolder(binding.root)
+
+}
+
+class ImageSliderDiffCallback : DiffUtil.ItemCallback<String>() {
+
+    override fun areItemsTheSame(oldItem: String, newItem: String): Boolean {
+        return oldItem == newItem
+    }
+
+    override fun areContentsTheSame(oldItem: String, newItem: String): Boolean {
+        return areItemsTheSame(oldItem, newItem)
+    }
+
 }
