@@ -59,12 +59,18 @@ android {
 dependencies {
     // Firebase
     implementation platform('com.google.firebase:firebase-bom:28.0.1')
-    implementation 'com.firebaseui:firebase-ui-storage:7.1.1'
-    implementation 'com.google.firebase:firebase-analytics-ktx'
-    implementation 'com.google.firebase:firebase-storage-ktx'
-    implementation 'com.google.firebase:firebase-crashlytics:18.0.1'
+
     implementation 'com.google.firebase:firebase-analytics:19.0.0'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    implementation 'com.firebaseui:firebase-ui-storage:7.1.1'
     implementation 'com.google.firebase:firebase-storage:20.0.0'
+    implementation 'com.google.firebase:firebase-storage-ktx'
+
+    implementation 'com.google.firebase:firebase-crashlytics:18.0.1'
+
+    implementation 'com.google.firebase:firebase-messaging:22.0.0'
+    implementation 'com.google.firebase:firebase-messaging-ktx'
 
     //Gson
     def gson = "2.8.6"
