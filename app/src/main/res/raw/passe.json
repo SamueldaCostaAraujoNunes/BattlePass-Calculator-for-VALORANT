@@ -47,7 +47,7 @@
       "nome": "Songsteel Guardian",
       "tipo": "Skin",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/metalodica/guardian.png"
+        "2-3/Skins/metalodica/guardian.png"
       ]
     },
     {
@@ -55,7 +55,7 @@
       "nome": "Songsteel",
       "tipo": "Buddy",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Chaveiros/metalodica.png"
+        "2-3/Chaveiros/metalodica.png"
       ]
     },
     {
@@ -63,7 +63,7 @@
       "nome": "10 Points",
       "tipo": "Radianitas",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+        "10%20Pontos%20de%20Radianita.png"
       ]
     },
     {
@@ -71,7 +71,7 @@
       "nome": "Songsteel",
       "tipo": "Card",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Cards/metalodica.png"
+        "2-3/Cards/metalodica.png"
       ]
     },
     {
@@ -79,7 +79,7 @@
       "nome": "Depths Bulldog",
       "tipo": "Skin",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/oceanica/bulldog.png"
+        "2-3/Skins/oceanica/bulldog.png"
       ]
     },
     {
@@ -87,7 +87,7 @@
       "nome": "Songsteel",
       "tipo": "Spray",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Sprays/metalodica.png"
+        "2-3/Sprays/metalodica.png"
       ]
     },
     {
@@ -95,7 +95,7 @@
       "nome": "Approved!",
       "tipo": "Spray",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Sprays/aprovado.png"
+        "2-3/Sprays/aprovado.png"
       ]
     },
     {
@@ -103,7 +103,7 @@
       "nome": "10 Points",
       "tipo": "Radianitas",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+        "10%20Pontos%20de%20Radianita.png"
       ]
     },
     {
@@ -111,7 +111,7 @@
       "nome": "Haven Schema",
       "tipo": "Card",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Cards/haven_diagrama.png"
+        "2-3/Cards/haven_diagrama.png"
       ]
     },
     {
@@ -119,10 +119,10 @@
       "nome": "Lightwave Sheriff",
       "tipo": "Skin",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/cintilante/sheriff/1.png",
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/cintilante/sheriff/2.png",
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/cintilante/sheriff/3.png",
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/cintilante/sheriff/4.png"
+        "2-3/Skins/cintilante/sheriff/1.png",
+        "2-3/Skins/cintilante/sheriff/2.png",
+        "2-3/Skins/cintilante/sheriff/3.png",
+        "2-3/Skins/cintilante/sheriff/4.png"
       ]
     },
     {
@@ -130,7 +130,7 @@
       "nome": "Knife Fight",
       "tipo": "Card",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Cards/briga_de_faca.png"
+        "2-3/Cards/briga_de_faca.png"
       ]
     },
     {
@@ -138,7 +138,7 @@
       "nome": "Nice Safe",
       "tipo": "Spray",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Sprays/cofre_cheio.png"
+        "2-3/Sprays/cofre_cheio.png"
       ]
     },
     {
@@ -146,7 +146,7 @@
       "nome": "10 Points",
       "tipo": "Radianitas",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+        "10%20Pontos%20de%20Radianita.png"
       ]
     },
     {
@@ -154,7 +154,7 @@
       "nome": "Lucky Dice",
       "tipo": "Buddy",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Chaveiros/dado_da_sorte.png"
+        "2-3/Chaveiros/dado_da_sorte.png"
       ]
     },
     {
@@ -162,7 +162,7 @@
       "nome": "Songsteel Classic",
       "tipo": "Skin",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/metalodica/classic.png"
+        "2-3/Skins/metalodica/classic.png"
       ]
     },
     {
@@ -170,10 +170,10 @@
       "nome": "Lightwave Bucky",
       "tipo": "Skin",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/cintilante/bucky/1.png",
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/cintilante/bucky/2.png",
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/cintilante/bucky/3.png",
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/cintilante/bucky/4.png"
+        "2-3/Skins/cintilante/bucky/1.png",
+        "2-3/Skins/cintilante/bucky/2.png",
+        "2-3/Skins/cintilante/bucky/3.png",
+        "2-3/Skins/cintilante/bucky/4.png"
       ]
     },
     {
@@ -181,7 +181,7 @@
       "nome": "Stinger Schema",
       "tipo": "Card",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Cards/stinger_diagrama.png"
+        "2-3/Cards/stinger_diagrama.png"
       ]
     },
     {
@@ -189,7 +189,7 @@
       "nome": "Without A Trace",
       "tipo": "Spray",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Sprays/sem_vestigios.png"
+        "2-3/Sprays/sem_vestigios.png"
       ]
     },
     {
@@ -197,7 +197,7 @@
       "nome": "10 Points",
       "tipo": "Radianitas",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+        "10%20Pontos%20de%20Radianita.png"
       ]
     },
     {
@@ -205,7 +205,7 @@
       "nome": "Depths Stinger",
       "tipo": "Skin",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/oceanica/stinger.png"
+        "2-3/Skins/oceanica/stinger.png"
       ]
     },
     {
@@ -213,7 +213,7 @@
       "nome": "Hang in There, Mance",
       "tipo": "Spray",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Sprays/segura_ai_mance.png"
+        "2-3/Sprays/segura_ai_mance.png"
       ]
     },
     {
@@ -221,7 +221,7 @@
       "nome": "10 Points",
       "tipo": "Radianitas",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+        "10%20Pontos%20de%20Radianita.png"
       ]
     },
     {
@@ -229,7 +229,7 @@
       "nome": "Boba",
       "tipo": "Buddy",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Chaveiros/chazinho.png"
+        "2-3/Chaveiros/chazinho.png"
       ]
     },
     {
@@ -237,7 +237,7 @@
       "nome": "300",
       "tipo": "Spray",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Sprays/300.png"
+        "2-3/Sprays/300.png"
       ]
     },
     {
@@ -245,10 +245,10 @@
       "nome": "Lightwave Phantom",
       "tipo": "Skin",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/cintilante/phantom/1.png",
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/cintilante/phantom/2.png",
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/cintilante/phantom/3.png",
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/cintilante/phantom/4.png"
+        "2-3/Skins/cintilante/phantom/1.png",
+        "2-3/Skins/cintilante/phantom/2.png",
+        "2-3/Skins/cintilante/phantom/3.png",
+        "2-3/Skins/cintilante/phantom/4.png"
       ]
     },
     {
@@ -256,7 +256,7 @@
       "nome": "Be Gone!",
       "tipo": "Spray",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Sprays/suma.png"
+        "2-3/Sprays/suma.png"
       ]
     },
     {
@@ -264,7 +264,7 @@
       "nome": "10 Points",
       "tipo": "Radianitas",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+        "10%20Pontos%20de%20Radianita.png"
       ]
     },
     {
@@ -272,7 +272,7 @@
       "nome": "Theo's Great Escape",
       "tipo": "Spray",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Sprays/janela.png"
+        "2-3/Sprays/janela.png"
       ]
     },
     {
@@ -280,7 +280,7 @@
       "nome": "Versus // Reyna + Viper",
       "tipo": "Card",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Cards/versus_reyna_viper.png"
+        "2-3/Cards/versus_reyna_viper.png"
       ]
     },
     {
@@ -288,7 +288,7 @@
       "nome": "Depths Ghost",
       "tipo": "Skin",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/oceanica/ghost.png"
+        "2-3/Skins/oceanica/ghost.png"
       ]
     },
     {
@@ -296,7 +296,7 @@
       "nome": "Mementos Pt.1",
       "tipo": "Card",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Cards/pra_guardar_na_memoria_pt_1.png"
+        "2-3/Cards/pra_guardar_na_memoria_pt_1.png"
       ]
     },
     {
@@ -304,7 +304,7 @@
       "nome": "10 Points",
       "tipo": "Radianitas",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+        "10%20Pontos%20de%20Radianita.png"
       ]
     },
     {
@@ -312,7 +312,7 @@
       "nome": "Get Carried",
       "tipo": "Buddy",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Chaveiros/entra_na_mochila.png"
+        "2-3/Chaveiros/entra_na_mochila.png"
       ]
     },
     {
@@ -320,7 +320,7 @@
       "nome": "No Odin",
       "tipo": "Spray",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Sprays/sem_odin.png"
+        "2-3/Sprays/sem_odin.png"
       ]
     },
     {
@@ -328,10 +328,10 @@
       "nome": "Lightwave Odin",
       "tipo": "Skin",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/cintilante/odin/1.png",
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/cintilante/odin/2.png",
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/cintilante/odin/3.png",
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/cintilante/odin/4.png"
+        "2-3/Skins/cintilante/odin/1.png",
+        "2-3/Skins/cintilante/odin/2.png",
+        "2-3/Skins/cintilante/odin/3.png",
+        "2-3/Skins/cintilante/odin/4.png"
       ]
     },
     {
@@ -339,7 +339,7 @@
       "nome": "This Is Also Also Fine",
       "tipo": "Spray",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Sprays/tudo_muito_bem_tambem.png"
+        "2-3/Sprays/tudo_muito_bem_tambem.png"
       ]
     },
     {
@@ -347,7 +347,7 @@
       "nome": "Dan, the Penguin",
       "tipo": "Buddy",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Chaveiros/dan_o_pinguim.png"
+        "2-3/Chaveiros/dan_o_pinguim.png"
       ]
     },
     {
@@ -355,7 +355,7 @@
       "nome": "Lanterns",
       "tipo": "Card",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Cards/lampioes.png"
+        "2-3/Cards/lampioes.png"
       ]
     },
     {
@@ -363,7 +363,7 @@
       "nome": "10 Points",
       "tipo": "Radianitas",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+        "10%20Pontos%20de%20Radianita.png"
       ]
     },
     {
@@ -371,7 +371,7 @@
       "nome": "Songsteel Marshal",
       "tipo": "Skin",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/metalodica/marshall.png"
+        "2-3/Skins/metalodica/marshall.png"
       ]
     },
     {
@@ -379,7 +379,7 @@
       "nome": "10 Points",
       "tipo": "Radianitas",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+        "10%20Pontos%20de%20Radianita.png"
       ]
     },
     {
@@ -387,7 +387,7 @@
       "nome": "Depths",
       "tipo": "Card",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Cards/oceanico.png"
+        "2-3/Cards/oceanico.png"
       ]
     },
     {
@@ -395,7 +395,7 @@
       "nome": "Walk! Don't Run",
       "tipo": "Spray",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Sprays/calma_para_de_correr.png"
+        "2-3/Sprays/calma_para_de_correr.png"
       ]
     },
     {
@@ -403,7 +403,7 @@
       "nome": "Dabbing Dan",
       "tipo": "Spray",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Sprays/dan_do_dab.png"
+        "2-3/Sprays/dan_do_dab.png"
       ]
     },
     {
@@ -411,7 +411,7 @@
       "nome": "Depths Vandal",
       "tipo": "Skin",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/oceanica/vandal.png"
+        "2-3/Skins/oceanica/vandal.png"
       ]
     },
     {
@@ -419,7 +419,7 @@
       "nome": "Bunny Hop",
       "tipo": "Spray",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Sprays/pula_pula.png"
+        "2-3/Sprays/pula_pula.png"
       ]
     },
     {
@@ -427,7 +427,7 @@
       "nome": "Ancient Mysteries Revealed",
       "tipo": "Buddy",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Chaveiros/misterios_ancestrais_revelados.png"
+        "2-3/Chaveiros/misterios_ancestrais_revelados.png"
       ]
     },
     {
@@ -435,7 +435,7 @@
       "nome": "Reboot",
       "tipo": "Card",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Cards/reinicio.png"
+        "2-3/Cards/reinicio.png"
       ]
     },
     {
@@ -443,7 +443,7 @@
       "nome": "10 Points",
       "tipo": "Radianitas",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+        "10%20Pontos%20de%20Radianita.png"
       ]
     },
     {
@@ -451,7 +451,7 @@
       "nome": "Songsteel",
       "tipo": "Skin",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/metalodica/faca.png"
+        "2-3/Skins/metalodica/faca.png"
       ]
     },
     {
@@ -459,7 +459,7 @@
       "nome": "Epilogue: Dabbing Dan",
       "tipo": "Spray",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Sprays/epilogo_dan_do_dab.png"
+        "2-3/Sprays/epilogo_dan_do_dab.png"
       ]
     },
     {
@@ -467,7 +467,7 @@
       "nome": "10 Points",
       "tipo": "Radianitas",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+        "10%20Pontos%20de%20Radianita.png"
       ]
     },
     {
@@ -475,7 +475,7 @@
       "nome": "10 Points",
       "tipo": "Radianitas",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+        "10%20Pontos%20de%20Radianita.png"
       ]
     },
     {
@@ -483,7 +483,7 @@
       "nome": "10 Points",
       "tipo": "Radianitas",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+        "10%20Pontos%20de%20Radianita.png"
       ]
     },
     {
@@ -491,7 +491,7 @@
       "nome": "Epilogue: Mementos Pt.1",
       "tipo": "Card",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Cards/epilogo_pra_guardar_na_memoria_pt_1.png"
+        "2-3/Cards/epilogo_pra_guardar_na_memoria_pt_1.png"
       ]
     }
   ],
@@ -501,7 +501,7 @@
       "nome": "Festa da Pizza do Paul",
       "tipo": "Card",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Cards/festa_da_pizza.png"
+        "2-3/Cards/festa_da_pizza.png"
       ],
       "cap": 1
     },
@@ -510,7 +510,7 @@
       "nome": "De Boa",
       "tipo": "Título",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Titulo.png"
+        "Titulo.png"
       ],
       "cap": 1
     },
@@ -519,7 +519,7 @@
       "nome": "Moeda Ep2//3",
       "tipo": "Buddy",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Chaveiros/ep_2_3.png"
+        "2-3/Chaveiros/ep_2_3.png"
       ],
       "cap": 2
     },
@@ -528,7 +528,7 @@
       "nome": "10 Points",
       "tipo": "Radianitas",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+        "10%20Pontos%20de%20Radianita.png"
       ],
       "cap": 3
     },
@@ -537,7 +537,7 @@
       "nome": "Sortudo",
       "tipo": "Título",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Titulo.png"
+        "Titulo.png"
       ],
       "cap": 3
     },
@@ -546,7 +546,7 @@
       "nome": "Lagosta?",
       "tipo": "Spray",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Sprays/lagosta.png"
+        "2-3/Sprays/lagosta.png"
       ],
       "cap": 4
     },
@@ -555,7 +555,7 @@
       "nome": "25°N, 71°O",
       "tipo": "Card",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Cards/25_n_71_o.png"
+        "2-3/Cards/25_n_71_o.png"
       ],
       "cap": 5
     },
@@ -564,7 +564,7 @@
       "nome": "Em Segurança",
       "tipo": "Buddy",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Chaveiros/em_seguranca.png"
+        "2-3/Chaveiros/em_seguranca.png"
       ],
       "cap": 6
     },
@@ -573,7 +573,7 @@
       "nome": "10 Points",
       "tipo": "Radianitas",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/10%20Pontos%20de%20Radianita.png"
+        "10%20Pontos%20de%20Radianita.png"
       ],
       "cap": 7
     },
@@ -582,7 +582,7 @@
       "nome": "O Carregador",
       "tipo": "Título",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/Titulo.png"
+        "Titulo.png"
       ],
       "cap": 7
     },
@@ -591,7 +591,7 @@
       "nome": "Comédia e Tragédia",
       "tipo": "Spray",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Sprays/comedia_e_tragedia.png"
+        "2-3/Sprays/comedia_e_tragedia.png"
       ],
       "cap": 8
     },
@@ -600,7 +600,7 @@
       "nome": "Coelho da Sorte",
       "tipo": "Buddy",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Chaveiros/coelho_da_sorte.png"
+        "2-3/Chaveiros/coelho_da_sorte.png"
       ],
       "cap": 9
     },
@@ -609,10 +609,10 @@
       "nome": "Frenzy Cintilante",
       "tipo": "Skin",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/cintilante/frenzy/1.png",
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/cintilante/frenzy/2.png",
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/cintilante/frenzy/3.png",
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Skins/cintilante/frenzy/4.png"
+        "2-3/Skins/cintilante/frenzy/1.png",
+        "2-3/Skins/cintilante/frenzy/2.png",
+        "2-3/Skins/cintilante/frenzy/3.png",
+        "2-3/Skins/cintilante/frenzy/4.png"
       ],
       "cap": 10
     },
@@ -621,7 +621,7 @@
       "nome": "Progenitura",
       "tipo": "Card",
       "imagens": [
-        "https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/ImagesOfTheThirdValorantAct/main/2-3/Cards/progenitura.png"
+        "2-3/Cards/progenitura.png"
       ],
       "cap": 10
     }
