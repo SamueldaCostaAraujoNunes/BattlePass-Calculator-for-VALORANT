@@ -69,6 +69,29 @@
             app:argType="integer" />
     </dialog>
 
+    <dialog
+        android:id="@+id/dialogNews"
+        android:name="br.com.samuelnunes.valorantpassbattle.ui.view.dialog.DialogNews"
+        android:label="DialogNews"
+        tools:layout="@layout/dialog_news">
+
+        <argument
+            android:name="title"
+            app:argType="string" />
+
+        <argument
+            android:name="content"
+            app:argType="string" />
+    </dialog>
+
+    <action
+        android:id="@+id/action_global_dialogNews"
+        app:destination="@id/dialogNews"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@android:anim/fade_out" />
+
     <action
         android:id="@+id/action_global_dialogInput"
         app:destination="@id/dialogInput"
@@ -115,5 +138,6 @@
         android:id="@+id/form_report_bug"
         app:action="android.intent.action.VIEW"
         app:data="@string/form_link" />
+
 
 </navigation>

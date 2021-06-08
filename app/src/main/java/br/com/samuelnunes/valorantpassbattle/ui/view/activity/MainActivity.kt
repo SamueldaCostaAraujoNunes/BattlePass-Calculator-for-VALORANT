@@ -32,6 +32,21 @@ class MainActivity : AdmobInterstitialActivity() {
         createListeners()
     }
 
+    override fun onStart() {
+        super.onStart()
+        mostrarDadosDaNotificacao()
+    }
+
+    private fun mostrarDadosDaNotificacao() {
+        if (intent.hasExtra("title") && intent.hasExtra("content")) {
+            val title = intent.getStringExtra("title")
+            val content = intent.getStringExtra("content")
+            if (title != null && content != null) {
+                navController.navigate(NavGraphDirections.actionGlobalDialogNews(title, content))
+            }
+        }
+    }
+
     private fun setupObservers() {
         uiViewModel.onHideBottomNav.observe(this, {
             binding.bottomNav.transform(binding.fab, it)
