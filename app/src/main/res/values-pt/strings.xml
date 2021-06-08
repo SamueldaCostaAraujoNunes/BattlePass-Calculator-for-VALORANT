@@ -57,10 +57,10 @@
     <string name="exp_para_completar_">EXP para completar</string>
     <string name="porcentagem_do_passe">Porcentagem do Passe</string>
     <string name="recompensa">Recompensa</string>
-    <string name="capitulo">Capítulo</string>
+    <string name="capitulo">Capitulo</string>
 
     <string name="recompensa_por_tier">Recompensa por tier</string>
-    <string name="recompensa_por_capitulo">Recompensa por Capítulo</string>
+    <string name="recompensa_por_capitulo">Recompensa por Capitulo</string>
     <string name="tipo">Tipo</string>
     <string name="editar_historico">Editar Histórico</string>
 
@@ -117,6 +117,8 @@
     <string name="disputa_de_spike">Disputa da Spike</string>
     <string name="disparada">Disparada</string>
     <string name="mata_mata">MataMata</string>
+    <string name="replicacao">Replicacao</string>
+    <string name="batalhanevada">Batalha Nevada</string>
 
     <string name="content_m_diaria_off">Ative, para que os cálculos levem em consideração as missões diarias</string>
     <string name="content_m_diaria_on">Os cálculos levam em consideração as missões diarias</string>

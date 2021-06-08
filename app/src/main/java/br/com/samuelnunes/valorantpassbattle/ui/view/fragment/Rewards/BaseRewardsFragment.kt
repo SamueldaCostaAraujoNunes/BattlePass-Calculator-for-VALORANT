@@ -63,14 +63,14 @@ abstract class BaseRewardsFragment : FragmentWithTitle() {
                 position,
                 origin
             )
-            layoutManager?.scrollToPosition(position - 1)
+            layoutManager?.scrollToPosition(position + 5)
         }
     }
 
     private fun updateRecyclerView(position: Int = 1) {
         with(binding.recycleView) {
             (adapter as ItemRewardAdapter).rewardIndex = position
-            layoutManager?.scrollToPosition(position - 1)
+            layoutManager?.scrollToPosition(position + 5)
         }
     }
 }

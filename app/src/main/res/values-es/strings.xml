@@ -58,7 +58,7 @@
     <string name="recompensa">Recompensa</string>
 
     <string name="recompensa_por_tier">Recompensa del Grado</string>
-    <string name="recompensa_por_capitulo">Recompensa del Capítulo</string>
+    <string name="recompensa_por_capitulo">Recompensa del Capitulo</string>
     <string name="tipo">Tipo</string>
     <string name="editar_historico">Editar historial</string>
 
@@ -93,7 +93,7 @@
     <string name="radianita">Radianite</string>
 
     <string name="semanais">Semanario</string>
-    <string name="capitulo">"Capítulo"</string>
+    <string name="capitulo">"Capitulo"</string>
     <string name="content_exp_missoes">¡Esta tabla muestra la cantidad de EXP actual obtenida a través de recompensas de partidos, misiones diarias y semanales! ¡Cuantas más misiones completes, menos EXP por juego necesitarás para completar el pase!</string>
     <string name="missoes_semanais">Misiones Semanales</string>
 
@@ -118,6 +118,8 @@
     <string name="disputa_de_spike">FIebre de la Spike</string>
     <string name="disparada">Encendido</string>
     <string name="mata_mata">MataMata</string>
+    <string name="replicacao">Replication</string>
+    <string name="batalhanevada">Pelea de bolas de nieve</string>
 
     <string name="content_m_diaria_off">Activar, para que los cálculos tengan en cuenta las misiones diarias</string>
     <string name="content_m_diaria_on">Los cálculos tienen en cuenta las misiones diarias</string>

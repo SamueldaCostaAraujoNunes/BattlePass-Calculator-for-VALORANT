@@ -117,8 +117,10 @@
 
     <string name="sem_classificacao">Normal</string>
     <string name="disputa_de_spike">Spike Rush</string>
-    <string name="disparada">Fired</string>
+    <string name="disparada">Escalation</string>
     <string name="mata_mata">Death Match</string>
+    <string name="replicacao">Replication</string>
+    <string name="batalhanevada">Snowball Fight</string>
 
     <string name="content_m_diaria_off">Activate, so that the calculations take into account the daily missions</string>
     <string name="content_m_diaria_on">Calculations take daily missions into account</string>
@@ -127,5 +129,4 @@
     <string name="Bugs">Bugs</string>
     <string name="reportar_um_bug">Report a bug</string>
     <string name="form_link">https://forms.gle/SVpqR1PdR79fra969</string>
-
 </resources>

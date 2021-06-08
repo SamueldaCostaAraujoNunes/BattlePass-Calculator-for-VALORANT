@@ -1,34 +1,37 @@
 package br.com.samuelnunes.valorantpassbattle.model.GameType
 
-open class GameType {
-    open var xp = 0
-    open var duration = 0F
+abstract class GameType {
+    abstract var xp: Int
+    abstract var duration: Float
 }
 
 class SemClassificacao : GameType() {
-    init {
-        xp = 4000
-        duration = 0.584F
-    }
+    override var xp: Int = 4000
+    override var duration: Float = 0.584F
 }
 
 class DisputaDeSpike : GameType() {
-    init {
-        xp = 1000
-        duration = 0.167F
-    }
-}
-
-class Disparada : GameType() {
-    init {
-        xp = 800
-        duration = 0.167F
-    }
+    override var xp: Int = 1000
+    override var duration: Float = 0.167F
 }
 
 class MataMata : GameType() {
-    init {
-        xp = 900
-        duration = 0.15F
-    }
+    override var xp: Int = 900
+    override var duration: Float = 0.15F
 }
+
+class Disparada : GameType() {
+    override var xp: Int = 800
+    override var duration: Float = 0.167F
+}
+
+class Replicacao : GameType() {
+    override var xp: Int = 1700
+    override var duration: Float = 0.25F
+}
+
+class BatalhaNevada : GameType() {
+    override var xp: Int = 825
+    override var duration: Float = 0.1F
+}
+

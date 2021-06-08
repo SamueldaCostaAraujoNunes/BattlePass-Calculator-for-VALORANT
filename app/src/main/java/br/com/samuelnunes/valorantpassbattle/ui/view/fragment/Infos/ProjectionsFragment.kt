@@ -23,6 +23,8 @@ class ProjectionsFragment : FragmentWithTitle() {
         const val SEM_CLASSIFICACAO = 1
         const val DISPARADA = 2
         const val MATA_MATA = 3
+        const val REPLICACAO = 4
+        const val BATALHA_NEVADA = 5
     }
 
     override fun onCreateView(

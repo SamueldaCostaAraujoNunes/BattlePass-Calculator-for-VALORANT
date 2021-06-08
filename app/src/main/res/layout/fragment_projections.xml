@@ -30,6 +30,7 @@
             app:tabIndicatorGravity="stretch"
             app:tabInlineLabel="true"
             app:tabPadding="4dp"
+            app:tabIconTint="@drawable/icon_selected"
             app:tabSelectedTextColor="?attr/colorOnPrimary"
             app:tabTextAppearance="@style/TextAppearanceTabLayout"
             app:tabTextColor="?attr/colorSecondary">
@@ -37,22 +38,38 @@
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:icon="@drawable/ic_disputadespike"
                 android:text="@string/disputa_de_spike" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:icon="@drawable/ic_normal"
                 android:text="@string/sem_classificacao" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:icon="@drawable/ic_disparada"
                 android:text="@string/disparada" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:icon="@drawable/ic_matamata"
                 android:text="@string/mata_mata" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_replicacao"
+                android:text="@string/replicacao" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_batalhanevada"
+                android:text="@string/batalhanevada" />
 
 
         </com.google.android.material.tabs.TabLayout>
