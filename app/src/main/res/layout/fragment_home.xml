@@ -71,35 +71,19 @@
                     app:adUnitId="@string/admob_card_home_center" />
             </br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule>
 
-            <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentPropriets"
+                android:name="br.com.samuelnunes.valorantpassbattle.ui.view.fragment.Home.EstatisticasFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                tools:title="Propriedades">
+                android:layout_gravity="center" />
 
-                <androidx.fragment.app.FragmentContainerView
-                    android:id="@+id/fragmentPropriets"
-                    android:name="br.com.samuelnunes.valorantpassbattle.ui.view.fragment.Home.EstatisticasFragment"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginHorizontal="24dp"
-                    android:layout_marginBottom="14dp" />
-            </br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule>
-
-            <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentListTiers"
+                android:name="br.com.samuelnunes.valorantpassbattle.ui.view.fragment.Home.RewardsFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                tools:title="Lista de Tiers">
-
-                <androidx.fragment.app.FragmentContainerView
-                    android:id="@+id/fragmentListTiers"
-                    android:name="br.com.samuelnunes.valorantpassbattle.ui.view.fragment.Home.RewardsFragment"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="24dp"
-                    android:layout_marginBottom="14dp" />
-            </br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule>
+                android:layout_gravity="center" />
 
             <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule
                 android:layout_width="wrap_content"
