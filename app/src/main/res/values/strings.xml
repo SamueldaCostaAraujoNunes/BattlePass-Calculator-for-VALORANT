@@ -128,5 +128,10 @@
     <string name="content_m_semanal_on">Calculations take weekly missions into account</string>
     <string name="Bugs">Bugs</string>
     <string name="reportar_um_bug">Report a bug</string>
-    <string name="form_link">https://forms.gle/SVpqR1PdR79fra969</string>
+
+    <string name="hint_informe_o_bug">Inform the BUG!</string>
+    <string name="helper_bug">Report here the Bug that is happening!</string>
+    <string name="hint_alguma_ideia">Any idea?</string>
+    <string name="helper_idea">If you have any ideas to improve the app, leave it here!</string>
+    <string name="enviar">Submit</string>
 </resources>

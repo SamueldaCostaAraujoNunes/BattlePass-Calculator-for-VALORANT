@@ -154,14 +154,6 @@ class CalculatorRepository @Inject constructor(
             xpCurrent.toDouble() * 100 / xpTotal
         }
 
-//    val differenceBetweenTheExpectedExpWithTheCurrent: Flow<Int> =
-//        combine(expCurrentWithoutMission, totalXpBattlePass) { expCurrent, xpTotal ->
-//            val expPerDay = (xpTotal.toDouble() / passDurationInDays)
-//            val expExpected = daysFromTheStart * expPerDay
-//            val result = expCurrent - expExpected.toInt()
-//            result
-//        }
-
     val expectedEndDay: Flow<LocalDate> =
         combine(
             expCurrent,

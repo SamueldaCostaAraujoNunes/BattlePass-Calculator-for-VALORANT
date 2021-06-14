@@ -45,12 +45,8 @@ class BattlePassManager(context: Context) {
         return tiers.map { it.exp }.sum()
     }
 
-    fun expDiariaTotal(): Int {
-        return passDurationInDays * passe.missaoDiaria.exp
-    }
-
-    fun expSemanalTotal(): Int {
-        return passe.missaoSemanal.map { it.exp }.sum()
+    fun getIdBattlePass(): String {
+        return passe.id
     }
 
     fun getTier(id: Int): Reward? {

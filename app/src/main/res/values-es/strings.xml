@@ -127,5 +127,10 @@
     <string name="content_m_semanal_on">Los cálculos tienen en cuenta las misiones semanales</string>
     <string name="Bugs">Bugs</string>
     <string name="reportar_um_bug">Reportar un error</string>
-    <string name="form_link">https://forms.gle/MF4s6q7WyyizyB31A</string>
+
+    <string name="hint_informe_o_bug">¡Informar al ERROR!</string>
+    <string name="helper_bug">¡Informe aquí el error que está sucediendo!</string>
+    <string name="hint_alguma_ideia">¿Alguna idea?</string>
+    <string name="helper_idea">Si tienes alguna idea para mejorar la aplicación, ¡déjala aquí!</string>
+    <string name="enviar">Enviar</string>
 </resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="version_app" translatable="false">entry.1060417860</string>
+    <string name="device_model" translatable="false">entry.1524423313</string>
+    <string name="language" translatable="false">entry.1434494351</string>
+    <string name="battlepass_id" translatable="false">entry.553997305</string>
+    <string name="bug" translatable="false">entry.1604489917</string>
+    <string name="idea" translatable="false">entry.1678491767</string>
+</resources>

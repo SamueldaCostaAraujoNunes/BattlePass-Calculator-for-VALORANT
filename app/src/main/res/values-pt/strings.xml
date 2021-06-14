@@ -120,11 +120,16 @@
     <string name="replicacao">Replicacao</string>
     <string name="batalhanevada">Batalha Nevada</string>
 
-    <string name="content_m_diaria_off">Ative, para que os cálculos levem em consideração as missões diarias</string>
+    <string name="content_m_diaria_off">Ative para que os cálculos levem em consideração as missões diarias</string>
     <string name="content_m_diaria_on">Os cálculos levam em consideração as missões diarias</string>
-    <string name="content_m_semanal_off">Ative, para que os cálculos levem em consideração as missões semanais</string>
+    <string name="content_m_semanal_off">Ative para que os cálculos levem em consideração as missões semanais</string>
     <string name="content_m_semanal_on">Os cálculos levam em consideração as missões semanais</string>
     <string name="Bugs">Bugs</string>
     <string name="reportar_um_bug">Reportar um bug</string>
-    <string name="form_link">https://forms.gle/FucJurrtZMmuULiB9</string>
+
+    <string name="hint_informe_o_bug">Informe o BUG!</string>
+    <string name="helper_bug">Relate aqui o Bug que está acontecendo!</string>
+    <string name="hint_alguma_ideia">Alguma Ideia?</string>
+    <string name="helper_idea">Caso, tenha alguma ideia para melhorar o app, deixe-a aqui!</string>
+    <string name="enviar">Enviar</string>
 </resources>

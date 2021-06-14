@@ -25,102 +25,107 @@
         app:title="@{titleName}"
         tools:title="Tier 6">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingHorizontal="24dp"
-            android:paddingBottom="14dp">
+            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/muli_font_family"
-                android:text="@{@string/dois_pontos(@string/recompensa)}"
-                android:textColor="?attr/colorOnSecondary"
-                android:textSize="20sp"
-                android:foregroundGravity="top"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tv_reward_chapter"
-                tools:text="@string/recompensa" />
-
-            <TextView
-                android:id="@+id/tv_reward_chapter"
-                android:layout_width="wrap_content"
-                android:ellipsize="end"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/impact_font_family"
-                android:paddingHorizontal="8dp"
-                android:text="@{reward.nome}"
-                android:textColor="?attr/colorOnPrimary"
-                android:maxWidth="180dp"
-                android:textSize="20sp"
-                app:layout_constraintStart_toEndOf="@+id/textView3"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="Walk! Don't Run" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/muli_font_family"
-                android:text="@{@string/dois_pontos(@string/tipo)}"
-                android:textColor="?attr/colorOnSecondary"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_reward_chapter"
-                tools:text="@string/tipo" />
-
-            <TextView
-                android:id="@+id/tv_type_chapter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/impact_font_family"
-                android:paddingHorizontal="8dp"
-                android:text="@{reward.tipo}"
-                android:textColor="?attr/colorOnPrimary"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="@+id/textView4"
-                app:layout_constraintStart_toEndOf="@+id/textView4"
-                app:layout_constraintTop_toTopOf="@+id/textView4"
-                tools:text="Spray" />
-
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/dialogViewPagerMain"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_marginTop="8dp"
                 android:layout_height="wrap_content"
-                app:imagesURl="@{reward.imagens}"
-                app:indicator="@{indicator}"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/indicator_image_slider"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_type_chapter"
-                tools:layout_height="300dp"
-                tools:layout_width="300dp" />
+                android:orientation="vertical"
+                android:paddingHorizontal="24dp"
+                android:paddingBottom="14dp">
 
-            <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
-                android:id="@+id/indicator_image_slider"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:paddingTop="8dp"
-                app:dotsColor="?attr/colorPrimarySurface"
-                app:dotsCornerRadius="8dp"
-                app:dotsSize="16dp"
-                app:dotsSpacing="4dp"
-                app:dotsWidthFactor="2.5"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:progressMode="false"
-                app:selectedDotColor="?attr/colorSecondary"
-                app:visibilityIf="@{reward.imagens.size() > 1}" />
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli_font_family"
+                    android:foregroundGravity="top"
+                    android:text="@{@string/dois_pontos(@string/recompensa)}"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_reward_chapter"
+                    tools:text="@string/recompensa" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/tv_reward_chapter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/impact_font_family"
+                    android:maxWidth="180dp"
+                    android:paddingHorizontal="8dp"
+                    android:text="@{reward.nome}"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toEndOf="@+id/textView3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Walk! Don't Run" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli_font_family"
+                    android:text="@{@string/dois_pontos(@string/tipo)}"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_reward_chapter"
+                    tools:text="@string/tipo" />
+
+                <TextView
+                    android:id="@+id/tv_type_chapter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/impact_font_family"
+                    android:paddingHorizontal="8dp"
+                    android:text="@{reward.tipo}"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView4"
+                    app:layout_constraintStart_toEndOf="@+id/textView4"
+                    app:layout_constraintTop_toTopOf="@+id/textView4"
+                    tools:text="Spray" />
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/dialogViewPagerMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:imagesURl="@{reward.imagens}"
+                    app:indicator="@{indicator}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/indicator_image_slider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_type_chapter"
+                    tools:layout_height="300dp"
+                    tools:layout_width="300dp" />
+
+                <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                    android:id="@+id/indicator_image_slider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="8dp"
+                    app:dotsColor="?attr/colorPrimarySurface"
+                    app:dotsCornerRadius="8dp"
+                    app:dotsSize="16dp"
+                    app:dotsSpacing="4dp"
+                    app:dotsWidthFactor="2.5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:progressMode="false"
+                    app:selectedDotColor="?attr/colorSecondary"
+                    app:visibilityIf="@{reward.imagens.size() > 1}" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
     </br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule>
 
 </layout>

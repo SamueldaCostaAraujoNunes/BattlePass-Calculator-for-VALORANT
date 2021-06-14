@@ -3,6 +3,7 @@ package br.com.samuelnunes.valorantpassbattle.model.dto
 import java.time.LocalDate
 
 data class BattlePass(
+    val id: String,
     val dateInit: LocalDate,
     val dateFinally: LocalDate,
     val expPrimeiroTermo: Int,

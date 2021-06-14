@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:title="@string/reportar_um_bug">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_bugs"
+                    style="@style/mTextInputLayout"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_informe_o_bug"
+                    android:paddingHorizontal="24dp"
+                    android:paddingBottom="8dp"
+                    android:theme="@style/EditTextThemeOverlay"
+                    app:helperText="@string/helper_bug"
+                    app:helperTextEnabled="true"
+                    app:helperTextTextColor="?attr/colorOnPrimary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_bugs"
+                        style="@style/mEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="number"
+                        android:background="@drawable/et_background"
+                        android:inputType="textMultiLine"
+                        android:textColor="?attr/colorOnPrimary"
+                        android:textColorHighlight="?attr/colorSecondary"
+                        android:textColorHint="?attr/colorPrimaryDark"
+                        android:textColorLink="?attr/colorSecondary" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_ideas"
+                    style="@style/mTextInputLayout"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_alguma_ideia"
+                    android:paddingHorizontal="24dp"
+                    android:paddingBottom="8dp"
+                    android:theme="@style/EditTextThemeOverlay"
+                    app:helperText="@string/helper_idea"
+                    app:helperTextEnabled="true"
+                    app:helperTextTextColor="?attr/colorOnPrimary"
+                    app:layout_constraintEnd_toEndOf="@+id/til_bugs"
+                    app:layout_constraintStart_toStartOf="@+id/til_bugs"
+                    app:layout_constraintTop_toBottomOf="@+id/til_bugs">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_ideas"
+                        style="@style/mEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="number"
+                        android:background="@drawable/et_background"
+                        android:inputType="textMultiLine"
+                        android:textColor="?attr/colorOnPrimary"
+                        android:textColorHighlight="?attr/colorSecondary"
+                        android:textColorHint="?attr/colorPrimaryDark"
+                        android:textColorLink="?attr/colorSecondary" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    style="@style/mButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="?attr/colorPrimaryVariant"
+                    android:text="@string/cancelar"
+                    android:textColor="@color/text_light"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_save"
+                    app:layout_constraintTop_toBottomOf="@+id/til_ideas" />
+
+                <Button
+                    android:id="@+id/btn_save"
+                    style="@style/mButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="?attr/colorSecondaryVariant"
+                    android:colorButtonNormal="@drawable/btn_save"
+                    android:text="@string/enviar"
+                    android:textColor="@color/text_light"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/til_ideas"
+                    app:layout_constraintTop_toBottomOf="@+id/til_ideas" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule>
+</layout>

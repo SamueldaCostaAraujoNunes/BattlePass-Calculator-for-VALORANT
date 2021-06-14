@@ -38,9 +38,6 @@
             app:exitAnim="@android:anim/slide_out_right"
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right" />
-        <action
-            android:id="@+id/action_settingsFragment_to_form_report_bug"
-            app:destination="@id/form_report_bug" />
 
     </fragment>
     <fragment
@@ -134,10 +131,14 @@
         android:id="@+id/action_global_dialogReward"
         app:destination="@id/dialogReward" />
 
-    <activity
-        android:id="@+id/form_report_bug"
-        app:action="android.intent.action.VIEW"
-        app:data="@string/form_link" />
+    <action
+        android:id="@+id/action_global_dialogFormReportBugs"
+        app:destination="@id/dialogFormReportBugs" />
+    <dialog
+        android:id="@+id/dialogFormReportBugs"
+        android:name="br.com.samuelnunes.valorantpassbattle.ui.view.dialog.DialogFormReportBugs"
+        android:label="DialogFormReportBugs"
+        tools:layout="@layout/dialog_form_report_bugs" />
 
 
 </navigation>
