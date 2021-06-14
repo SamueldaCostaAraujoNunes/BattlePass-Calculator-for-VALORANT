@@ -123,7 +123,7 @@ dependencies {
     kapt  "com.github.bumptech.glide:compiler:$glide"
 
     // AdMob
-    def admob = "20.1.0"
+    def admob = "20.2.0"
     implementation "com.google.android.gms:play-services-ads:$admob"
 
     // Dots Indicator
