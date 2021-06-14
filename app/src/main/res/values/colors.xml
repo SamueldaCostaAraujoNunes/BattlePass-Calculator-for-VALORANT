@@ -53,4 +53,7 @@
     <color name="mGray">#908FA3</color>
     <color name="grayHint">#9E9E9E</color>
     <color name="black_overlay">#66000000</color>
+
+    <color name="icon_solid">#f7f7f7</color>
+    <color name="icon_transparent">#83ffffff</color>
 </resources>
