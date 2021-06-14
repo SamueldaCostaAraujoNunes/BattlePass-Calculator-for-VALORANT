@@ -5,7 +5,7 @@ import android.graphics.drawable.ColorDrawable
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import br.com.samuelnunes.valorantpassbattle.R
-import br.com.samuelnunes.valorantpassbattle.util.GlideApp
+import br.com.samuelnunes.valorantpassbattle.util.myGlide.GlideApp
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.transition.DrawableCrossFadeFactory
 import com.google.firebase.ktx.Firebase
