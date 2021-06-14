@@ -24,6 +24,14 @@
         android:name="br.com.samuelnunes.valorantpassbattle.ui.view.fragment.BottomNavigation.SettingsFragment"
         android:label="SettingsFragment"
         tools:layout="@xml/root_preferences">
+
+        <action
+            android:id="@+id/action_settingsFragment_to_dialogFormReportBugs"
+            app:destination="@id/dialogFormReportBugs"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_settingsFragment_to_historicInputFragment"
             app:destination="@id/historicInputFragment"
@@ -131,9 +139,6 @@
         android:id="@+id/action_global_dialogReward"
         app:destination="@id/dialogReward" />
 
-    <action
-        android:id="@+id/action_global_dialogFormReportBugs"
-        app:destination="@id/dialogFormReportBugs" />
     <dialog
         android:id="@+id/dialogFormReportBugs"
         android:name="br.com.samuelnunes.valorantpassbattle.ui.view.dialog.DialogFormReportBugs"
