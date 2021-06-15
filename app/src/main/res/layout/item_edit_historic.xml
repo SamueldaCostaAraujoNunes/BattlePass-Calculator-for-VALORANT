@@ -54,12 +54,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/muli_font_family"
-                android:text="@{@string/dois_pontos(@string/exp_para_completar_)}"
+                android:text="@{@string/dois_pontos(@string/exp_atual)}"
                 android:textColor="?attr/colorOnSecondary"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView5"
-                tools:text="@string/exp_para_completar_" />
+                tools:text="@string/exp_atual" />
 
             <TextView
                 android:id="@+id/tv_exp_missing_tier"
@@ -69,7 +69,7 @@
                 android:textColor="?attr/colorOnPrimary"
                 android:paddingStart="8dp"
                 android:textSize="20sp"
-                app:fadeAnimationText="@{String.valueOf(userTier.tierExpMissing)}"
+                app:fadeAnimationText="@{String.valueOf(userTier.expCurrent)}"
                 app:layout_constraintBottom_toBottomOf="@+id/textView6"
                 app:layout_constraintStart_toEndOf="@+id/textView6"
                 app:layout_constraintTop_toTopOf="@+id/textView6"

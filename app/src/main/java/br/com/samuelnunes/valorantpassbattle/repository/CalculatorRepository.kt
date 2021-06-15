@@ -55,7 +55,7 @@ class CalculatorRepository @Inject constructor(
 
     val expCurrent: Flow<Int> =
         lastUserInput.map { last ->
-            battlePassManager.totalExpAteOTier(last.tierCurrent) - last.tierExpMissing
+            battlePassManager.totalExpAteOTier(last.tierCurrent - 1) + last.expCurrent
         }
     private val expBattlePassWithoutMission: Flow<Int> =
         combine(totalXpBattlePass, dailyMission, weeklyMission) { expBattlePass, daily, weekly ->
@@ -233,9 +233,9 @@ class CalculatorRepository @Inject constructor(
         lastUserInput.map { tierUser ->
             val total = battlePassManager.expParaCompletarTier(tierUser.tierCurrent)
             if (total != 0) {
-                (total - tierUser.tierExpMissing).toDouble() * 100 / total
+                tierUser.expCurrent.toDouble() * 100 / total
             } else {
-                100.toDouble()
+                0.toDouble()
             }
         }
 

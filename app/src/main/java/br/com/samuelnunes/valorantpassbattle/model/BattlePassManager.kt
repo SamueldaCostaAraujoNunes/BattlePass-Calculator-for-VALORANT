@@ -63,9 +63,10 @@ class BattlePassManager(context: Context) {
 
     fun expParaCompletarTier(n: Int): Int {
         return when (n) {
-            in 2..56 -> {
+            in 2..50 -> {
                 2000 + (n - 2) * 750
             }
+            in 51..56 -> 36500
             else -> {
                 0
             }

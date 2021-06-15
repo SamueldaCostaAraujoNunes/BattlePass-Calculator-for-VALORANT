@@ -34,14 +34,14 @@ class InputUserViewModel @Inject constructor(private val calculador: CalculatorR
         var valido = true
         var error: ViewModelString? = null
         if (validadorTier) {
-            if (form.expMissing.isEmpty()) {
+            if (form.expCurrent.isEmpty()) {
                 valido = false
                 error = ViewModelString(R.string.insira_o_exp_faltando)
             } else {
                 val expMin = 0
                 val expMax =
                     calculador.battlePassManager.expParaCompletarTier(form.tierCurrent.toInt())
-                val expMissingInt = form.expMissing.toInt()
+                val expMissingInt = form.expCurrent.toInt()
 
                 if ((expMissingInt < expMin) or (expMissingInt > expMax)) {
                     valido = false

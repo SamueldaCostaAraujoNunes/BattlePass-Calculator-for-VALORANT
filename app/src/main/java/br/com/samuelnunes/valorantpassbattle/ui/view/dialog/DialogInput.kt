@@ -50,7 +50,7 @@ class DialogInput : DialogBase() {
         if (id != -1) {
             viewModel.getUserTierById(id).observe(viewLifecycleOwner, Observer {
                 binding.tietTierCurrent.setText(it.tierCurrent.toString())
-                binding.tietExpMissing.setText(it.tierExpMissing.toString())
+                binding.tietExpMissing.setText(it.expCurrent.toString())
                 this.idUserInput = id
             })
         }
@@ -64,9 +64,9 @@ class DialogInput : DialogBase() {
             )
             if (viewModel.validador(form)) {
                 val userTier = if (idUserInput != null) {
-                    UserTier(form.tierCurrent.toInt(), form.expMissing.toInt(), idUserInput!!)
+                    UserTier(form.tierCurrent.toInt(), form.expCurrent.toInt(), idUserInput!!)
                 } else {
-                    UserTier(form.tierCurrent.toInt(), form.expMissing.toInt())
+                    UserTier(form.tierCurrent.toInt(), form.expCurrent.toInt())
                 }
                 CoroutineScope(IO).launch {
                     viewModel.save(userTier)

@@ -6,7 +6,7 @@
     <string name="sufixo_nome_app">BattlePass Calculator</string>
 
     <string name="tier_atual">Current Tier</string>
-    <string name="exp_para_completar">EXP to Complete</string>
+    <string name="exp_atual">Current EXP</string>
     <string name="exp_inicial">Initial EXP</string>
     <string name="salvar">Save</string>
     <string name="cancelar">Cancel</string>

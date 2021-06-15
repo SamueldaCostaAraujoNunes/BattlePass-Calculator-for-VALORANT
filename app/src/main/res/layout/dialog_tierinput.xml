@@ -56,7 +56,7 @@
                 style="@style/mTextInputLayout"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/exp_para_completar"
+                android:hint="@string/exp_atual"
                 android:paddingHorizontal="24dp"
                 android:paddingBottom="8dp"
                 android:theme="@style/EditTextThemeOverlay"

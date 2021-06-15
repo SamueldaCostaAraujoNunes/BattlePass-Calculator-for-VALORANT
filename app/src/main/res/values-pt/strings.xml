@@ -5,7 +5,7 @@
     <string name="sufixo_nome_app">Calculadora do Passe de Batalha</string>
 
     <string name="tier_atual">Tier Atual</string>
-    <string name="exp_para_completar">EXP para Completar</string>
+    <string name="exp_atual">EXP Atual</string>
     <string name="exp_inicial">EXP Inicial</string>
     <string name="salvar">Salvar</string>
     <string name="cancelar">Cancelar</string>
