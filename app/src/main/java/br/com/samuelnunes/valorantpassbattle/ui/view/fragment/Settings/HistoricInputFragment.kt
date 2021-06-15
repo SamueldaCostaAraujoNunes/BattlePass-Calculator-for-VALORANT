@@ -21,6 +21,7 @@ import br.com.samuelnunes.valorantpassbattle.ui.view.helpers.SwipedEventListener
 import br.com.samuelnunes.valorantpassbattle.ui.viewModel.activity.UIViewModel
 import br.com.samuelnunes.valorantpassbattle.ui.viewModel.fragment.settings.HistoricInputViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import timber.log.Timber
 
 @AndroidEntryPoint
 class HistoricInputFragment : Fragment() {
@@ -101,10 +102,14 @@ class HistoricInputFragment : Fragment() {
         pos: Int
     ) {
         val userTierSelected = (binding.rvEditHistoric.adapter as ItemUserInputAdapter).list[pos]
-        val direction =
-            HistoricInputFragmentDirections.actionHistoricInputFragmentToDialogDeleteItemConfimation(
-                userTierSelected.id
-            )
-        navController.navigate(direction)
+        try {
+            val direction =
+                HistoricInputFragmentDirections.actionHistoricInputFragmentToDialogDeleteItemConfimation(
+                    userTierSelected.id
+                )
+            navController.navigate(direction)
+        } catch (e: Exception) {
+            Timber.e(e)
+        }
     }
 }
