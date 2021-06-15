@@ -26,5 +26,6 @@ fun ImageView.loadImageURL(url: String?) {
             .transition(drawableTransitionOptions)
             .fitCenter()
             .into(this)
+
     }
 }

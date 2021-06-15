@@ -21,11 +21,9 @@
             android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:maxHeight="450dp"
             android:contentDescription="@string/recompensa"
             app:imageUrl="@{imageURL}"
             tools:layout_height="350dp"
-            android:maxWidth="350dp"
             tools:src="@drawable/img_error" />
 
     </LinearLayout>
