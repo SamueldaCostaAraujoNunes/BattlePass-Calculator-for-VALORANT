@@ -7,7 +7,6 @@ import br.com.samuelnunes.valorantpassbattle.model.dto.Reward
 import br.com.samuelnunes.valorantpassbattle.util.ObjectConverters
 import com.google.gson.GsonBuilder
 import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
 
 class BattlePassManager(context: Context) {
@@ -20,15 +19,12 @@ class BattlePassManager(context: Context) {
             .create().fromJson(jsonStr, BattlePass::class.java)
 
     private val today: LocalDate = LocalDate.now()
-    val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
     val passDurationInDays: Int =
         ChronoUnit.DAYS.between(passe.dateInit, passe.dateFinally).toInt() + 1
     val daysFromTheStart: Int = ChronoUnit.DAYS.between(passe.dateInit, today).toInt()
     val daysLeftUntilTheEnd: Int = ChronoUnit.DAYS.between(today, passe.dateFinally).toInt() + 1
 
-    val openingDateOfTheAct: String = passe.dateInit.format(formatter)
-    val closingDateOfTheAct: String = passe.dateFinally.format(formatter)
-
+    val dateInit = passe.dateInit
     val dateFinally = passe.dateFinally
 
     fun getExpMissaoDiaria(days: Int): Int {

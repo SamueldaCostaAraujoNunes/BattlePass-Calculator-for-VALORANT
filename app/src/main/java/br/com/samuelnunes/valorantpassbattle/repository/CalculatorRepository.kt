@@ -15,6 +15,8 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map
 import java.time.LocalDate
+import java.time.LocalTime
+import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
 import java.util.*
 import java.util.stream.IntStream
@@ -89,8 +91,8 @@ class CalculatorRepository @Inject constructor(
     val daysFromTheStart: Int = battlePassManager.daysFromTheStart
     val daysLeftUntilTheEnd: Int = battlePassManager.daysLeftUntilTheEnd
 
-    val openingDateOfTheAct: String = battlePassManager.openingDateOfTheAct
-    val closingDateOfTheAct: String = battlePassManager.closingDateOfTheAct
+    val openingDateOfTheAct: LocalDate = battlePassManager.dateInit
+    val closingDateOfTheAct: LocalDate = battlePassManager.dateFinally
 
     val expExpectedPerDay: Flow<ArrayList<Int>> = totalXpBattlePass.map {
         val expListForEachTier = arrayListOf(0)
@@ -277,21 +279,8 @@ class CalculatorRepository @Inject constructor(
     private fun convertHours(time: Float): String {
         val hours = time.toInt()
         val minutes = ((time % 1) * 60).toInt()
-        return "${formatTime(hours)}:${formatTime(minutes)}"
-    }
-
-    private fun formatTime(value: Int): String {
-        return when {
-            value == 0 -> {
-                "00"
-            }
-            value < 10 -> {
-                "0$value"
-            }
-            else -> {
-                value.toString()
-            }
-        }
+        val localTime = LocalTime.of(hours, minutes)
+        return localTime.format(DateTimeFormatter.ofPattern("HH:mm"))
     }
 }
 
