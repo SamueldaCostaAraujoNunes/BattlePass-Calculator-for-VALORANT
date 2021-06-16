@@ -15,8 +15,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map
 import java.time.LocalDate
-import java.time.LocalTime
-import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
 import java.util.*
 import java.util.stream.IntStream
@@ -279,8 +277,21 @@ class CalculatorRepository @Inject constructor(
     private fun convertHours(time: Float): String {
         val hours = time.toInt()
         val minutes = ((time % 1) * 60).toInt()
-        val localTime = LocalTime.of(hours, minutes)
-        return localTime.format(DateTimeFormatter.ofPattern("HH:mm"))
+        return "${formatTime(hours)}:${formatTime(minutes)}"
+    }
+
+    private fun formatTime(value: Int): String {
+        return when {
+            value == 0 -> {
+                "00"
+            }
+            value < 10 -> {
+                "0$value"
+            }
+            else -> {
+                value.toString()
+            }
+        }
     }
 }
 

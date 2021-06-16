@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <import type="java.time.format.FormatStyle" />
+
         <variable
             name="viewmodel"
             type="br.com.samuelnunes.valorantpassbattle.ui.viewModel.fragment.infos.TimelineFragmentViewModel" />
@@ -20,11 +22,11 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli_font_family"
             android:text="@{@string/dois_pontos(@string/data_inicial_do_ato)}"
-            tools:text="@string/data_inicial_do_ato"
             android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/data_inicial_do_ato" />
 
         <TextView
             android:id="@+id/data_inicial_do_ato"
@@ -32,13 +34,13 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/impact_font_family"
             android:paddingStart="8dp"
-            app:localDate="@{viewmodel.dataInicioAto}"
-            app:localDateFormat="@{FormatStyle.SHORT}"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/data_inicial_do_ato_text"
             app:layout_constraintStart_toEndOf="@+id/data_inicial_do_ato_text"
             app:layout_constraintTop_toTopOf="@+id/data_inicial_do_ato_text"
+            app:localDate="@{viewmodel.dataInicioAto}"
+            app:localDateFormat="@{FormatStyle.LONG}"
             tools:ignore="RtlSymmetry"
             tools:text="27/04/2021" />
 
@@ -48,11 +50,11 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli_font_family"
             android:text="@{@string/dois_pontos(@string/data_finalizacao)}"
-            tools:text="@string/data_finalizacao"
             android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/data_inicial_do_ato_text" />
+            app:layout_constraintTop_toBottomOf="@+id/data_inicial_do_ato_text"
+            tools:text="@string/data_finalizacao" />
 
         <TextView
             android:id="@+id/data_finalizacao"
@@ -60,14 +62,14 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/impact_font_family"
             android:paddingStart="8dp"
-            app:localDate="@{viewmodel.dataFinalizacao}"
-            app:localDateFormat="@{FormatStyle.SHORT}"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
             app:adiantado="@{viewmodel.diasAdiantadoAtrasado >= 0}"
             app:layout_constraintBottom_toBottomOf="@+id/data_de_finalizacao_text"
             app:layout_constraintStart_toEndOf="@+id/data_de_finalizacao_text"
             app:layout_constraintTop_toTopOf="@+id/data_de_finalizacao_text"
+            app:localDate="@{viewmodel.dataFinalizacao}"
+            app:localDateFormat="@{FormatStyle.LONG}"
             tools:ignore="RtlSymmetry"
             tools:text="13/06/2021"
             tools:textColor="?attr/colorAccent" />
@@ -78,11 +80,11 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli_font_family"
             android:text="@{@string/dois_pontos(@string/data_final_do_ato)}"
-            tools:text="@string/data_final_do_ato"
             android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/data_de_finalizacao_text" />
+            app:layout_constraintTop_toBottomOf="@+id/data_de_finalizacao_text"
+            tools:text="@string/data_final_do_ato" />
 
         <TextView
             android:id="@+id/data_final_do_ato"
@@ -90,13 +92,13 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/impact_font_family"
             android:paddingStart="8dp"
-            app:localDate="@{viewmodel.dataFinalAto}"
-            app:localDateFormat="@{FormatStyle.SHORT}"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/data_final_do_ato_text"
             app:layout_constraintStart_toEndOf="@+id/data_final_do_ato_text"
             app:layout_constraintTop_toTopOf="@+id/data_final_do_ato_text"
+            app:localDate="@{viewmodel.dataFinalAto}"
+            app:localDateFormat="@{FormatStyle.LONG}"
             tools:ignore="RtlSymmetry"
             tools:text="21/06/2021" />
 
@@ -106,11 +108,11 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli_font_family"
             android:text="@{@string/dois_pontos(@string/dia_do_passe)}"
-            tools:text="@string/dia_do_passe"
             android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/data_final_do_ato_text" />
+            app:layout_constraintTop_toBottomOf="@+id/data_final_do_ato_text"
+            tools:text="@string/dia_do_passe" />
 
         <TextView
             android:id="@+id/dia_do_passe"
@@ -118,9 +120,9 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/impact_font_family"
             android:paddingStart="8dp"
-            app:fadeAnimationText="@{String.valueOf(viewmodel.diaAtualDoPasse)}"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
+            app:fadeAnimationText="@{String.valueOf(viewmodel.diaAtualDoPasse)}"
             app:layout_constraintBottom_toBottomOf="@+id/dia_do_passe_text"
             app:layout_constraintStart_toEndOf="@+id/dia_do_passe_text"
             app:layout_constraintTop_toTopOf="@+id/dia_do_passe_text"
@@ -133,11 +135,11 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/muli_font_family"
             android:text="@{@string/dois_pontos(@string/dias_para_o_fim_do_passe)}"
-            tools:text="@string/dias_para_o_fim_do_passe"
             android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dia_do_passe_text" />
+            app:layout_constraintTop_toBottomOf="@+id/dia_do_passe_text"
+            tools:text="@string/dias_para_o_fim_do_passe" />
 
         <TextView
             android:id="@+id/dias_para_acabar"
@@ -145,9 +147,9 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/impact_font_family"
             android:paddingStart="8dp"
-            app:fadeAnimationText="@{String.valueOf(viewmodel.diasParaOFimDoPasse)}"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
+            app:fadeAnimationText="@{String.valueOf(viewmodel.diasParaOFimDoPasse)}"
             app:layout_constraintBottom_toBottomOf="@+id/dias_para_acabar_text"
             app:layout_constraintStart_toEndOf="@+id/dias_para_acabar_text"
             app:layout_constraintTop_toTopOf="@+id/dias_para_acabar_text"
@@ -179,8 +181,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/dias_adiantados_atrasados_text"
             app:layout_constraintStart_toEndOf="@+id/dias_adiantados_atrasados_text"
             app:layout_constraintTop_toTopOf="@+id/dias_adiantados_atrasados_text"
-            tools:text="8"
             tools:ignore="RtlSymmetry"
+            tools:text="8"
             tools:textColor="?attr/colorAccent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

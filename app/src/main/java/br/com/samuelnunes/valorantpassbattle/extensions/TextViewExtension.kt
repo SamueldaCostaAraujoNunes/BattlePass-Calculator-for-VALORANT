@@ -1,17 +1,15 @@
 package br.com.samuelnunes.valorantpassbattle.extensions.bindingAdapters
 
-import android.content.res.Resources
 import android.graphics.Paint
-import android.util.TypedValue
-import android.view.View
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import android.widget.TextView
-import androidx.annotation.AttrRes
-import androidx.annotation.ColorInt
 import androidx.databinding.BindingAdapter
 import br.com.samuelnunes.valorantpassbattle.R
+import br.com.samuelnunes.valorantpassbattle.extensions.formatterLocale
 import br.com.samuelnunes.valorantpassbattle.extensions.getColorFromAttr
+import java.time.LocalDate
+import java.time.format.FormatStyle
 
 
 @BindingAdapter("adiantado")
@@ -42,8 +40,15 @@ fun TextView.fadeAnimationText(newText: String?) {
     } else {
         text = newText
     }
-
 }
+
+@BindingAdapter(value = ["localDate", "localDateFormat"], requireAll = false)
+fun TextView.localDate(localDate: LocalDate?, formatStyle: FormatStyle? = FormatStyle.MEDIUM) {
+    if (localDate != null && formatStyle != null) {
+        fadeAnimationText(localDate.formatterLocale(context, formatStyle))
+    }
+}
+
 @BindingAdapter("position", "positionCurrent")
 fun TextView.comparableStyle(position: Int?, positionCurrent: Int?) {
     if (position != null && positionCurrent != null) {
@@ -60,12 +65,4 @@ fun TextView.comparableStyle(position: Int?, positionCurrent: Int?) {
             setTextColor(accent)
         }
     }
-}
-
-@ColorInt
-fun View.getColor(@AttrRes resId: Int): Int {
-    val typedValue = TypedValue()
-    val theme: Resources.Theme = context.theme
-    theme.resolveAttribute(resId, typedValue, true)
-    return typedValue.data
 }
