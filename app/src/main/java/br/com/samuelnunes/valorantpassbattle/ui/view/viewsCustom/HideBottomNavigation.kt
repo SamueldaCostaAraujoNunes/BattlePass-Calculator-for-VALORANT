@@ -61,7 +61,7 @@ open class HideBottomNavigation @JvmOverloads constructor(
     }
 
     companion object {
-        protected const val ENTER_ANIMATION_DURATION = 250
+        protected const val ENTER_ANIMATION_DURATION = 400
         protected const val EXIT_ANIMATION_DURATION = 400
         private const val STATE_DOWN = 1
         private const val STATE_UP = 2

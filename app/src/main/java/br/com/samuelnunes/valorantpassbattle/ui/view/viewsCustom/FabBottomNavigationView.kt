@@ -22,7 +22,7 @@ class FabBottomNavigationView @JvmOverloads constructor(
     private var fabSize = 0F
     private var fabCradleMargin = 0F
     private var fabCradleRoundedCornerRadius = 0F
-    var cradleVerticalOffset = 0F
+    private var cradleVerticalOffset = 0F
 
     init {
         val ta =
@@ -53,26 +53,22 @@ class FabBottomNavigationView @JvmOverloads constructor(
     }
 
     fun transform(fab: FloatingActionButton, status: Boolean) {
-        if (!status) {
-            fab.hide(object : FloatingActionButton.OnVisibilityChangedListener() {
-                override fun onHidden(fab: FloatingActionButton?) {
-                    super.onHidden(fab)
-                    ValueAnimator.ofFloat(materialShapeDrawable.interpolation, 0F).apply {
-                        addUpdateListener {
-                            materialShapeDrawable.interpolation = it.animatedValue as Float
-                        }
-                        start()
-                    }
-                }
-            })
-            slideDown()
-        } else {
+        if (status) {
             ValueAnimator.ofFloat(materialShapeDrawable.interpolation, 1F).apply {
-                addUpdateListener { materialShapeDrawable.interpolation = it.animatedValue as Float }
-                doOnEnd { fab.show() }
+                doOnEnd {
+                    fab.show()
+                    slideUp()
+                }
                 start()
             }
-            slideUp()
+        } else {
+            ValueAnimator.ofFloat(materialShapeDrawable.interpolation, 0F).apply {
+                doOnEnd {
+                    fab.hide()
+                    slideDown()
+                }
+                start()
+            }
         }
     }
 }

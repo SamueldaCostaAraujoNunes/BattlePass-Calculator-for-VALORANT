@@ -35,10 +35,10 @@
         <action
             android:id="@+id/action_settingsFragment_to_historicInputFragment"
             app:destination="@id/historicInputFragment"
-            app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right"
-            app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right" />
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
         <action
             android:id="@+id/action_settingsFragment_to_dialogChooseThemes"
             app:destination="@id/dialogChooseThemes"
