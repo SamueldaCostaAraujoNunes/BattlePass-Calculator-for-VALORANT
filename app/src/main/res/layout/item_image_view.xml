@@ -15,16 +15,18 @@
         android:layout_height="match_parent"
         android:gravity="center">
 
-        <ImageView
+        <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.ElevationImageView
             android:id="@+id/imageViewMain"
             android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content"
             android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            app:clipShadow="false"
+            app:compatEvelation="30dp"
+            app:isTranslucent="false"
+            android:layout_height="wrap_content"
             android:contentDescription="@string/recompensa"
             app:imageUrl="@{imageURL}"
-            tools:layout_height="350dp"
-            tools:src="@drawable/img_error" />
+            tools:src="@drawable/ic_sheriff" />
 
     </LinearLayout>
 

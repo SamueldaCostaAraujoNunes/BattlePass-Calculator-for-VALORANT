@@ -16,7 +16,6 @@ class FabBottomNavigationView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : HideBottomNavigation(context, attrs, defStyleAttr) {
 
-    //    https://medium.com/@vadim.zhukov/easy-way-to-make-curved-bottomnavigationview-with-floatingactionbutton-12b979009e64
     private var topCurvedEdgeTreatment: BottomAppBarTopEdgeTreatment
     private var materialShapeDrawable: MaterialShapeDrawable
     private var fabSize = 0F

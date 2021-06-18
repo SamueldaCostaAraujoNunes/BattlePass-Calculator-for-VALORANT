@@ -47,12 +47,24 @@
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPagerMain"
+            android:maxHeight="450dp"
+            android:visibility="visible"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_percentage_tier"
             app:imagesURl="@{viewmodel.imagesURL}"
             app:indicator="@{indicator}"
-            app:layout_constraintTop_toBottomOf="@+id/tv_percentage_tier"
-            tools:layout_height="350dp" />
+            tools:visibility="gone" />
+
+        <include
+            android:id="@+id/viewPagerMainTools"
+            layout="@layout/item_image_view"
+            android:visibility="gone"
+            tools:layout_constraintTop_toBottomOf="@+id/tv_percentage_tier"
+            tools:layout_height="wrap_content"
+            tools:layout_width="wrap_content"
+            tools:maxHeight="450dp"
+            tools:visibility="visible" />
 
         <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
             android:id="@+id/dots_indicator_images"
@@ -69,6 +81,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/viewPagerMain"
+            tools:layout_constraintTop_toBottomOf="@+id/viewPagerMainTools"
             app:progressMode="false"
             app:selectedDotColor="?attr/colorSecondary"
             app:visibilityIf="@{viewmodel.imagesURL.size() > 1}" />
