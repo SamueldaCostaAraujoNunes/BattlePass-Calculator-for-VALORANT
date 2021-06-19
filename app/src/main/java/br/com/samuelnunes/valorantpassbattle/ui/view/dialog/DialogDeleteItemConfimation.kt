@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
-import br.com.samuelnunes.valorantpassbattle.R
 import br.com.samuelnunes.valorantpassbattle.databinding.DialogConfirmationBinding
 import br.com.samuelnunes.valorantpassbattle.ui.viewModel.dialog.DialogDeleteItemConfimationViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -36,7 +35,7 @@ class DialogDeleteItemConfimation :
         super.onViewCreated(view, savedInstanceState)
         viewModel.getUserTierById(args.userTierId)
             .observe(viewLifecycleOwner, Observer { userTier ->
-                binding.mensageContent.text = getString(R.string.text_delete, userTier.tierCurrent)
+                binding.tier = userTier.tierCurrent
                 binding.btnSave.setOnClickListener {
                     CoroutineScope(Dispatchers.Main).launch {
                         viewModel.delete(userTier)

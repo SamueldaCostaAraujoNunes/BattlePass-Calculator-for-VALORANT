@@ -1,5 +1,6 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
     <PreferenceCategory app:title="@string/estilo">
 
         <Preference
@@ -49,5 +50,7 @@
             app:key="@string/bugReport"
             app:title="@string/reportar_um_bug" />
     </PreferenceCategory>
-
+    <PreferenceCategory>
+        <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.PreferenceSpace />
+    </PreferenceCategory>
 </PreferenceScreen>

@@ -3,11 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="tier"
+            type="Integer" />
+    </data>
+
+
     <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title="@string/confirmacao">
-
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -20,6 +27,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/muli_font_family"
                 android:gravity="center"
+                android:text="@{@string/text_delete(tier)}"
                 android:paddingHorizontal="24dp"
                 android:paddingBottom="8dp"
                 android:textColor="?attr/colorOnPrimary"
@@ -27,7 +35,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="Deseja realizar algo?" />
+                tools:text="@string/text_delete" />
 
 
             <Button
