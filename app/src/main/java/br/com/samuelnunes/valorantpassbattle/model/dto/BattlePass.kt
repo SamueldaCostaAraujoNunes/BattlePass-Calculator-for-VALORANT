@@ -6,6 +6,7 @@ data class BattlePass(
     val id: String,
     val dateInit: LocalDate,
     val dateFinally: LocalDate,
+    val expEpilogo: Int,
     val expPrimeiroTermo: Int,
     val expRazao: Int,
     val missaoDiaria: ExpMissao,

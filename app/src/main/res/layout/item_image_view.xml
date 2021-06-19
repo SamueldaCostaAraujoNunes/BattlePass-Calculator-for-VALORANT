@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="imageURL"
             type="String" />
@@ -17,13 +16,14 @@
 
         <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.ElevationImageView
             android:id="@+id/imageViewMain"
+            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:padding="6dp"
             android:adjustViewBounds="true"
             android:layout_gravity="center"
             app:clipShadow="false"
             app:compatEvelation="30dp"
             app:isTranslucent="false"
-            android:layout_height="wrap_content"
             android:contentDescription="@string/recompensa"
             app:imageUrl="@{imageURL}"
             tools:src="@drawable/ic_sheriff" />

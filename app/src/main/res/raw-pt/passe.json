@@ -2,6 +2,7 @@
   "id": "3.1",
   "dateInit": "27/04/2021",
   "dateFinally": "21/06/2021",
+  "expEpilogo": 36500,
   "expPrimeiroTermo": 2000,
   "expRazao": 750,
   "missaoDiaria": {
@@ -9,6 +10,10 @@
     "exp": 4000
   },
   "missaoSemanal": [
+    {
+      "id": 0,
+      "exp": 0
+    },
     {
       "id": 1,
       "exp": 38400

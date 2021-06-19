@@ -19,24 +19,24 @@ class BattlePassManager(context: Context) {
             .create().fromJson(jsonStr, BattlePass::class.java)
 
     private val today: LocalDate = LocalDate.now()
-    val passDurationInDays: Int =
-        ChronoUnit.DAYS.between(passe.dateInit, passe.dateFinally).toInt() + 1
-    val daysFromTheStart: Int = ChronoUnit.DAYS.between(passe.dateInit, today).toInt()
-    val daysLeftUntilTheEnd: Int = ChronoUnit.DAYS.between(today, passe.dateFinally).toInt() + 1
+    val dateInit: LocalDate = passe.dateInit
+    val dateFinally: LocalDate = passe.dateFinally
 
-    val dateInit = passe.dateInit
-    val dateFinally = passe.dateFinally
+    val passDurationInDays: Int = ChronoUnit.DAYS.between(dateInit, dateFinally).toInt()
+    val daysFromTheStart: Int = ChronoUnit.DAYS.between(dateInit, today).toInt()
+    val daysLeftUntilTheEnd: Int = ChronoUnit.DAYS.between(today, dateFinally).toInt()
+
 
     fun getExpMissaoDiaria(days: Int): Int {
-        return if (days <= passDurationInDays) {
+        return if (days < passDurationInDays) {
             days * passe.missaoDiaria.exp
         } else {
-            days * passDurationInDays
+            passDurationInDays * passe.missaoDiaria.exp
         }
     }
 
     fun getExpMissaoSemanal(days: Int): Int {
-        val semanaAtual = (days / 7) + 1
+        val semanaAtual = (days / 7)
         val tiers = passe.missaoSemanal.filter { it.id <= semanaAtual }
         return tiers.map { it.exp }.sum()
     }
@@ -62,7 +62,7 @@ class BattlePassManager(context: Context) {
             in 2..50 -> {
                 passe.expPrimeiroTermo + (n - 2) * passe.expRazao
             }
-            in 51..56 -> 36500
+            in 51..56 -> passe.expEpilogo
             else -> {
                 0
             }
