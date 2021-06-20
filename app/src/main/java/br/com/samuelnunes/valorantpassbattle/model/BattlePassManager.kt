@@ -38,7 +38,8 @@ class BattlePassManager(context: Context) {
     fun getExpMissaoSemanal(days: Int): Int {
         val semanaAtual = (days / 7)
         val tiers = passe.missaoSemanal.filter { it.id <= semanaAtual }
-        return tiers.map { it.exp }.sum()
+        val sum = tiers.map { it.exp }.sum()
+        return sum
     }
 
     fun getIdBattlePass(): String {

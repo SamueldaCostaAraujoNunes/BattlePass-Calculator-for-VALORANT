@@ -50,7 +50,5 @@
             app:key="@string/bugReport"
             app:title="@string/reportar_um_bug" />
     </PreferenceCategory>
-    <PreferenceCategory>
-        <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.PreferenceSpace />
-    </PreferenceCategory>
+    <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.PreferenceSpace />
 </PreferenceScreen>

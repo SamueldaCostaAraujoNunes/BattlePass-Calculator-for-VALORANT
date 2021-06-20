@@ -1,8 +1,7 @@
 {
   "id": "3.1",
-  "dateInit": "27/04/2021",
-  "dateFinally": "21/06/2021",
-  "expEpilogo": 36500,
+  "dateInit": "22/06/2021",
+  "dateFinally": "16/08/2021",
   "expPrimeiroTermo": 2000,
   "expRazao": 750,
   "missaoDiaria": {
@@ -10,10 +9,6 @@
     "exp": 4000
   },
   "missaoSemanal": [
-    {
-      "id": 0,
-      "exp": 0
-    },
     {
       "id": 1,
       "exp": 38400
@@ -50,7 +45,7 @@
   "tiers": [
     {
       "id": 1,
-      "nome": "K/TAC Sheriff",
+      "nome": "Sheriff K/TAC",
       "tipo": "Skin",
       "imagens": [
         "3-1/Skins/KTAC/sheriff.svg"
@@ -74,7 +69,7 @@
     },
     {
       "id": 4,
-      "nome": "Feel The Rush",
+      "nome": "Sente a Adrenalina",
       "tipo": "Card",
       "imagens": [
         "3-1/Cards/4.svg"
@@ -82,7 +77,7 @@
     },
     {
       "id": 5,
-      "nome": "Jigsaw Ares",
+      "nome": "Ares Quebra-Cabeça",
       "tipo": "Skin",
       "imagens": [
         "3-1/Skins/Jigsaw/Ares/astra.svg",
@@ -93,7 +88,7 @@
     },
     {
       "id": 6,
-      "nome": "Pump Action",
+      "nome": "Ação de Bomba",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/15.svg"
@@ -101,7 +96,7 @@
     },
     {
       "id": 7,
-      "nome": "Cracked",
+      "nome": "Rachado",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/4.svg"
@@ -117,7 +112,7 @@
     },
     {
       "id": 9,
-      "nome": "Naked Op",
+      "nome": "Op Raiz",
       "tipo": "Card",
       "imagens": [
         "3-1/Cards/7.svg"
@@ -125,7 +120,7 @@
     },
     {
       "id": 10,
-      "nome": "Monarch Shorty",
+      "nome": "Shorty Monarquia",
       "tipo": "Skin",
       "imagens": [
         "3-1/Skins/Monarch/short.svg"
@@ -133,7 +128,7 @@
     },
     {
       "id": 11,
-      "nome": "Save",
+      "nome": "Poupança",
       "tipo": "Card",
       "imagens": [
         "3-1/Cards/9.svg"
@@ -141,7 +136,7 @@
     },
     {
       "id": 12,
-      "nome": "Max Money",
+      "nome": "Ryyyca",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/8.svg"
@@ -157,7 +152,7 @@
     },
     {
       "id": 14,
-      "nome": "One Direction",
+      "nome": "Segura o W",
       "tipo": "Chaveiro",
       "imagens": [
         "3-1/Buddys/6.svg"
@@ -165,7 +160,7 @@
     },
     {
       "id": 15,
-      "nome": "Jigsaw Judge",
+      "nome": "Judge Quebra-Cabeça",
       "tipo": "Skin",
       "imagens": [
         "3-1/Skins/Jigsaw/Judge/astra.svg",
@@ -176,7 +171,7 @@
     },
     {
       "id": 16,
-      "nome": "Monarch Bucky",
+      "nome": "Bucky Monarquia",
       "tipo": "Skin",
       "imagens": [
         "3-1/Skins/Monarch/bucky.svg"
@@ -184,7 +179,7 @@
     },
     {
       "id": 17,
-      "nome": "Force",
+      "nome": "Força",
       "tipo": "Card",
       "imagens": [
         "3-1/Cards/5.svg"
@@ -192,7 +187,7 @@
     },
     {
       "id": 18,
-      "nome": "Sova Says Sorry",
+      "nome": "Sovado",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/12.svg"
@@ -208,7 +203,7 @@
     },
     {
       "id": 20,
-      "nome": "K/TAC Bulldog",
+      "nome": "Bulldog K/TAC",
       "tipo": "Skin",
       "imagens": [
         "3-1/Skins/KTAC/bulldog.svg"
@@ -216,7 +211,7 @@
     },
     {
       "id": 21,
-      "nome": "KillJoy! I Choose You!",
+      "nome": "KillJoy!Eu Escolho Você!",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/6.svg"
@@ -232,7 +227,7 @@
     },
     {
       "id": 23,
-      "nome": "Rubber Ducky",
+      "nome": "Patinho de Borracha",
       "tipo": "Chaveiro",
       "imagens": [
         "3-1/Buddys/7.svg"
@@ -240,7 +235,7 @@
     },
     {
       "id": 24,
-      "nome": "HardStuck",
+      "nome": "Afundado",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/2.svg"
@@ -248,7 +243,7 @@
     },
     {
       "id": 25,
-      "nome": "K/TAC Vandal",
+      "nome": "Vandal K/TAC",
       "tipo": "Skin",
       "imagens": [
         "3-1/Skins/KTAC/vandal.svg"
@@ -256,7 +251,7 @@
     },
     {
       "id": 26,
-      "nome": "No Pen!",
+      "nome": "Sem Caneta!",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/10.svg"
@@ -272,7 +267,7 @@
     },
     {
       "id": 28,
-      "nome": "Surprised Penguin",
+      "nome": "Pinguim Surpreso",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/13.svg"
@@ -280,7 +275,7 @@
     },
     {
       "id": 29,
-      "nome": "KAY/O Id",
+      "nome": "Id de KAY/O",
       "tipo": "Card",
       "imagens": [
         "3-1/Cards/12.svg"
@@ -288,7 +283,7 @@
     },
     {
       "id": 30,
-      "nome": "Monarch Frenzy",
+      "nome": "Frenzy Monarquia",
       "tipo": "Skin",
       "imagens": [
         "3-1/Skins/Monarch/frenzy.svg"
@@ -296,7 +291,7 @@
     },
     {
       "id": 31,
-      "nome": "Best for Last",
+      "nome": "Melhor por Último",
       "tipo": "Card",
       "imagens": [
         "3-1/Cards/1.svg"
@@ -312,7 +307,7 @@
     },
     {
       "id": 33,
-      "nome": "Caught",
+      "nome": "Pesquei",
       "tipo": "Chaveiro",
       "imagens": [
         "3-1/Buddys/1.svg"
@@ -320,7 +315,7 @@
     },
     {
       "id": 34,
-      "nome": "No Guardian",
+      "nome": "Sem Guardian",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/9.svg"
@@ -328,7 +323,7 @@
     },
     {
       "id": 35,
-      "nome": "Jigsaw Guardian",
+      "nome": "Guardian Quebra-Cabeça",
       "tipo": "Skin",
       "imagens": [
         "3-1/Skins/Jigsaw/Guardian/astra.svg",
@@ -339,7 +334,7 @@
     },
     {
       "id": 36,
-      "nome": "Sand Sculpture",
+      "nome": "Escultura de Areia",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/11.svg"
@@ -347,7 +342,7 @@
     },
     {
       "id": 37,
-      "nome": "Island Dreams",
+      "nome": "Ilha dos Sonhos",
       "tipo": "Chaveiro",
       "imagens": [
         "3-1/Buddys/4.svg"
@@ -355,7 +350,7 @@
     },
     {
       "id": 38,
-      "nome": "Roti Boatie",
+      "nome": "Lojinha de Roti",
       "tipo": "Card",
       "imagens": [
         "3-1/Cards/8.svg"
@@ -371,7 +366,7 @@
     },
     {
       "id": 40,
-      "nome": "Monarch Marshal",
+      "nome": "Marshal Monarquia",
       "tipo": "Skin",
       "imagens": [
         "3-1/Skins/Monarch/marshall.svg"
@@ -387,7 +382,7 @@
     },
     {
       "id": 42,
-      "nome": "Testing Grounds",
+      "nome": "Campo de Testes",
       "tipo": "Card",
       "imagens": [
         "3-1/Cards/11.svg"
@@ -395,7 +390,7 @@
     },
     {
       "id": 43,
-      "nome": "Clutch or Kick",
+      "nome": "Clutch ou Vaza",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/3.svg",
@@ -404,7 +399,7 @@
     },
     {
       "id": 44,
-      "nome": "Too Heavy",
+      "nome": "Pesado Demais",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/14.svg"
@@ -412,7 +407,7 @@
     },
     {
       "id": 45,
-      "nome": "K/TAC Operator",
+      "nome": "Operator K/TAC",
       "tipo": "Skin",
       "imagens": [
         "3-1/Skins/KTAC/operator.svg"
@@ -420,7 +415,7 @@
     },
     {
       "id": 46,
-      "nome": "Sand Of Time",
+      "nome": "Areias do Tempo",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/1.svg"
@@ -428,7 +423,7 @@
     },
     {
       "id": 47,
-      "nome": "Salmon Nigiri",
+      "nome": "Niguiri Salmão",
       "tipo": "Chaveiro",
       "imagens": [
         "3-1/Buddys/8.svg"
@@ -436,7 +431,7 @@
     },
     {
       "id": 48,
-      "nome": "From the Ashes",
+      "nome": "Das Cinzas",
       "tipo": "Card",
       "imagens": [
         "3-1/Cards/13.svg"
@@ -452,7 +447,7 @@
     },
     {
       "id": 50,
-      "nome": "K/TAC Blade",
+      "nome": "Lâmina K/TAC",
       "tipo": "Skin",
       "imagens": [
         "3-1/Skins/KTAC/espada.svg"
@@ -460,7 +455,7 @@
     },
     {
       "id": 51,
-      "nome": "Epilogue: Cracked",
+      "nome": "Epílogo: Rachado",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/5.svg"
@@ -492,7 +487,7 @@
     },
     {
       "id": 55,
-      "nome": "Epilogue: Naked Op",
+      "nome": "Epílogo: Op Raiz",
       "tipo": "Card",
       "imagens": [
         "3-1/Cards/6.svg"
@@ -502,7 +497,7 @@
   "capitulos": [
     {
       "id": 1,
-      "nome": "Snowbirds",
+      "nome": "Pássaros Das Neves",
       "tipo": "Card",
       "imagens": [
         "3-1/Cards/10.svg"
@@ -511,7 +506,7 @@
     },
     {
       "id": 2,
-      "nome": "Cracked",
+      "nome": "Rachado",
       "tipo": "Título",
       "imagens": [
         "Titulo.svg"
@@ -529,7 +524,7 @@
     },
     {
       "id": 4,
-      "nome": "10 Points",
+      "nome": "10 Pontos",
       "tipo": "Radianitas",
       "imagens": [
         "10 Pontos de Radianita.svg"
@@ -538,7 +533,7 @@
     },
     {
       "id": 5,
-      "nome": "No Breaks",
+      "nome": "Sem Freio",
       "tipo": "Título",
       "imagens": [
         "Titulo.svg"
@@ -547,7 +542,7 @@
     },
     {
       "id": 6,
-      "nome": "Greatly Increased?",
+      "nome": "Aumentou Muito?",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/17.svg"
@@ -556,7 +551,7 @@
     },
     {
       "id": 7,
-      "nome": "Dropoff",
+      "nome": "Decida",
       "tipo": "Card",
       "imagens": [
         "3-1/Cards/3.svg"
@@ -565,7 +560,7 @@
     },
     {
       "id": 8,
-      "nome": "10 Points",
+      "nome": "10 Pontos",
       "tipo": "Radianitas",
       "imagens": [
         "10 Pontos de Radianita.svg"
@@ -574,7 +569,7 @@
     },
     {
       "id": 9,
-      "nome": "Icy Crate",
+      "nome": "Caixote Gélido",
       "tipo": "Chaveiro",
       "imagens": [
         "3-1/Buddys/3.svg"
@@ -583,7 +578,7 @@
     },
     {
       "id": 10,
-      "nome": "10 Points",
+      "nome": "10 Pontos",
       "tipo": "Radianitas",
       "imagens": [
         "10 Pontos de Radianita.svg"
@@ -592,7 +587,7 @@
     },
     {
       "id": 11,
-      "nome": "Salty",
+      "nome": "Esquentadinho",
       "tipo": "Título",
       "imagens": [
         "Titulo.svg"
@@ -601,7 +596,7 @@
     },
     {
       "id": 12,
-      "nome": "Greatly Decreased?",
+      "nome": "Caiu Muito?",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/16.svg"
@@ -610,7 +605,7 @@
     },
     {
       "id": 13,
-      "nome": "The Key to Ancient Mysteries",
+      "nome": "Chave dos Mistérios Ancestrais",
       "tipo": "Chaveiro",
       "imagens": [
         "3-1/Buddys/9.svg"
@@ -619,7 +614,7 @@
     },
     {
       "id": 14,
-      "nome": "Jigsaw Ghost",
+      "nome": "Ghost Quebra-Cabeça",
       "tipo": "Skin",
       "imagens": [
         "3-1/Skins/Jigsaw/Ghost/astra.svg",
@@ -631,7 +626,7 @@
     },
     {
       "id": 15,
-      "nome": "Cosmic Connections",
+      "nome": "Conexões Cósmicas",
       "tipo": "Card",
       "imagens": [
         "3-1/Cards/2.svg"

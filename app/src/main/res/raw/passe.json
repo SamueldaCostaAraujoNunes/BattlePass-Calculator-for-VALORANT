@@ -1,7 +1,8 @@
 {
-  "id": "2.3",
-  "dateInit": "27/04/2021",
-  "dateFinally": "21/06/2021",
+  "id": "3.1",
+  "dateInit": "22/06/2021",
+  "dateFinally": "16/08/2021",
+  "expEpilogo": 36500,
   "expPrimeiroTermo": 2000,
   "expRazao": 750,
   "missaoDiaria": {
@@ -9,6 +10,10 @@
     "exp": 4000
   },
   "missaoSemanal": [
+    {
+      "id": 0,
+      "exp": 0
+    },
     {
       "id": 1,
       "exp": 38400
@@ -45,584 +50,591 @@
   "tiers": [
     {
       "id": 1,
-      "nome": "Songsteel Guardian",
+      "nome": "K/TAC Sheriff",
       "tipo": "Skin",
       "imagens": [
-        "2-3/Skins/metalodica/guardian.png"
+        "3-1/Skins/KTAC/sheriff.svg"
       ]
     },
     {
       "id": 2,
-      "nome": "Songsteel",
+      "nome": "K/TAC",
       "tipo": "Buddy",
       "imagens": [
-        "2-3/Chaveiros/metalodica.png"
+        "3-1/Buddys/5.svg"
       ]
     },
     {
       "id": 3,
       "nome": "10 Points",
-      "tipo": "Radianitas",
+      "tipo": "Radianites",
       "imagens": [
-        "10%20Pontos%20de%20Radianita.png"
+        "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 4,
-      "nome": "Songsteel",
+      "nome": "Feel The Rush",
       "tipo": "Card",
       "imagens": [
-        "2-3/Cards/metalodica.png"
+        "3-1/Cards/4.svg"
       ]
     },
     {
       "id": 5,
-      "nome": "Depths Bulldog",
+      "nome": "Jigsaw Ares",
       "tipo": "Skin",
       "imagens": [
-        "2-3/Skins/oceanica/bulldog.png"
+        "3-1/Skins/Jigsaw/Ares/astra.svg",
+        "3-1/Skins/Jigsaw/Ares/killjoy.svg",
+        "3-1/Skins/Jigsaw/Ares/skye.svg",
+        "3-1/Skins/Jigsaw/Ares/yoru.svg"
       ]
     },
     {
       "id": 6,
-      "nome": "Songsteel",
+      "nome": "Pump Action",
       "tipo": "Spray",
       "imagens": [
-        "2-3/Sprays/metalodica.png"
+        "3-1/Sprays/15.svg"
       ]
     },
     {
       "id": 7,
-      "nome": "Approved!",
+      "nome": "Cracked",
       "tipo": "Spray",
       "imagens": [
-        "2-3/Sprays/aprovado.png"
+        "3-1/Sprays/4.svg"
       ]
     },
     {
       "id": 8,
       "nome": "10 Points",
-      "tipo": "Radianitas",
+      "tipo": "Radianites",
       "imagens": [
-        "10%20Pontos%20de%20Radianita.png"
+        "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 9,
-      "nome": "Haven Schema",
+      "nome": "Naked Op",
       "tipo": "Card",
       "imagens": [
-        "2-3/Cards/haven_diagrama.png"
+        "3-1/Cards/7.svg"
       ]
     },
     {
       "id": 10,
-      "nome": "Lightwave Sheriff",
+      "nome": "Monarch Shorty",
       "tipo": "Skin",
       "imagens": [
-        "2-3/Skins/cintilante/sheriff/1.png",
-        "2-3/Skins/cintilante/sheriff/2.png",
-        "2-3/Skins/cintilante/sheriff/3.png",
-        "2-3/Skins/cintilante/sheriff/4.png"
+        "3-1/Skins/Monarch/short.svg"
       ]
     },
     {
       "id": 11,
-      "nome": "Knife Fight",
+      "nome": "Save",
       "tipo": "Card",
       "imagens": [
-        "2-3/Cards/briga_de_faca.png"
+        "3-1/Cards/9.svg"
       ]
     },
     {
       "id": 12,
-      "nome": "Nice Safe",
+      "nome": "Max Money",
       "tipo": "Spray",
       "imagens": [
-        "2-3/Sprays/cofre_cheio.png"
+        "3-1/Sprays/8.svg"
       ]
     },
     {
       "id": 13,
       "nome": "10 Points",
-      "tipo": "Radianitas",
+      "tipo": "Radianites",
       "imagens": [
-        "10%20Pontos%20de%20Radianita.png"
+        "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 14,
-      "nome": "Lucky Dice",
+      "nome": "One Direction",
       "tipo": "Buddy",
       "imagens": [
-        "2-3/Chaveiros/dado_da_sorte.png"
+        "3-1/Buddys/6.svg"
       ]
     },
     {
       "id": 15,
-      "nome": "Songsteel Classic",
+      "nome": "Jigsaw Judge",
       "tipo": "Skin",
       "imagens": [
-        "2-3/Skins/metalodica/classic.png"
+        "3-1/Skins/Jigsaw/Judge/astra.svg",
+        "3-1/Skins/Jigsaw/Judge/killjoy.svg",
+        "3-1/Skins/Jigsaw/Judge/skye.svg",
+        "3-1/Skins/Jigsaw/Judge/yoru.svg"
       ]
     },
     {
       "id": 16,
-      "nome": "Lightwave Bucky",
+      "nome": "Monarch Bucky",
       "tipo": "Skin",
       "imagens": [
-        "2-3/Skins/cintilante/bucky/1.png",
-        "2-3/Skins/cintilante/bucky/2.png",
-        "2-3/Skins/cintilante/bucky/3.png",
-        "2-3/Skins/cintilante/bucky/4.png"
+        "3-1/Skins/Monarch/bucky.svg"
       ]
     },
     {
       "id": 17,
-      "nome": "Stinger Schema",
+      "nome": "Force",
       "tipo": "Card",
       "imagens": [
-        "2-3/Cards/stinger_diagrama.png"
+        "3-1/Cards/5.svg"
       ]
     },
     {
       "id": 18,
-      "nome": "Without A Trace",
+      "nome": "Sova Says Sorry",
       "tipo": "Spray",
       "imagens": [
-        "2-3/Sprays/sem_vestigios.png"
+        "3-1/Sprays/12.svg"
       ]
     },
     {
       "id": 19,
       "nome": "10 Points",
-      "tipo": "Radianitas",
+      "tipo": "Radianites",
       "imagens": [
-        "10%20Pontos%20de%20Radianita.png"
+        "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 20,
-      "nome": "Depths Stinger",
+      "nome": "K/TAC Bulldog",
       "tipo": "Skin",
       "imagens": [
-        "2-3/Skins/oceanica/stinger.png"
+        "3-1/Skins/KTAC/bulldog.svg"
       ]
     },
     {
       "id": 21,
-      "nome": "Hang in There, Mance",
+      "nome": "KillJoy! I Choose You!",
       "tipo": "Spray",
       "imagens": [
-        "2-3/Sprays/segura_ai_mance.png"
+        "3-1/Sprays/6.svg"
       ]
     },
     {
       "id": 22,
       "nome": "10 Points",
-      "tipo": "Radianitas",
+      "tipo": "Radianites",
       "imagens": [
-        "10%20Pontos%20de%20Radianita.png"
+        "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 23,
-      "nome": "Boba",
+      "nome": "Rubber Ducky",
       "tipo": "Buddy",
       "imagens": [
-        "2-3/Chaveiros/chazinho.png"
+        "3-1/Buddys/7.svg"
       ]
     },
     {
       "id": 24,
-      "nome": "300",
+      "nome": "HardStuck",
       "tipo": "Spray",
       "imagens": [
-        "2-3/Sprays/300.png"
+        "3-1/Sprays/2.svg"
       ]
     },
     {
       "id": 25,
-      "nome": "Lightwave Phantom",
+      "nome": "K/TAC Vandal",
       "tipo": "Skin",
       "imagens": [
-        "2-3/Skins/cintilante/phantom/1.png",
-        "2-3/Skins/cintilante/phantom/2.png",
-        "2-3/Skins/cintilante/phantom/3.png",
-        "2-3/Skins/cintilante/phantom/4.png"
+        "3-1/Skins/KTAC/vandal.svg"
       ]
     },
     {
       "id": 26,
-      "nome": "Be Gone!",
+      "nome": "No Pen!",
       "tipo": "Spray",
       "imagens": [
-        "2-3/Sprays/suma.png"
+        "3-1/Sprays/10.svg"
       ]
     },
     {
       "id": 27,
       "nome": "10 Points",
-      "tipo": "Radianitas",
+      "tipo": "Radianites",
       "imagens": [
-        "10%20Pontos%20de%20Radianita.png"
+        "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 28,
-      "nome": "Theo's Great Escape",
+      "nome": "Surprised Penguin",
       "tipo": "Spray",
       "imagens": [
-        "2-3/Sprays/janela.png"
+        "3-1/Sprays/13.svg"
       ]
     },
     {
       "id": 29,
-      "nome": "Versus // Reyna + Viper",
+      "nome": "KAY/O Id",
       "tipo": "Card",
       "imagens": [
-        "2-3/Cards/versus_reyna_viper.png"
+        "3-1/Cards/12.svg"
       ]
     },
     {
       "id": 30,
-      "nome": "Depths Ghost",
+      "nome": "Monarch Frenzy",
       "tipo": "Skin",
       "imagens": [
-        "2-3/Skins/oceanica/ghost.png"
+        "3-1/Skins/Monarch/frenzy.svg"
       ]
     },
     {
       "id": 31,
-      "nome": "Mementos Pt.1",
+      "nome": "Best for Last",
       "tipo": "Card",
       "imagens": [
-        "2-3/Cards/pra_guardar_na_memoria_pt_1.png"
+        "3-1/Cards/1.svg"
       ]
     },
     {
       "id": 32,
       "nome": "10 Points",
-      "tipo": "Radianitas",
+      "tipo": "Radianites",
       "imagens": [
-        "10%20Pontos%20de%20Radianita.png"
+        "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 33,
-      "nome": "Get Carried",
+      "nome": "Caught",
       "tipo": "Buddy",
       "imagens": [
-        "2-3/Chaveiros/entra_na_mochila.png"
+        "3-1/Buddys/1.svg"
       ]
     },
     {
       "id": 34,
-      "nome": "No Odin",
+      "nome": "No Guardian",
       "tipo": "Spray",
       "imagens": [
-        "2-3/Sprays/sem_odin.png"
+        "3-1/Sprays/9.svg"
       ]
     },
     {
       "id": 35,
-      "nome": "Lightwave Odin",
+      "nome": "Jigsaw Guardian",
       "tipo": "Skin",
       "imagens": [
-        "2-3/Skins/cintilante/odin/1.png",
-        "2-3/Skins/cintilante/odin/2.png",
-        "2-3/Skins/cintilante/odin/3.png",
-        "2-3/Skins/cintilante/odin/4.png"
+        "3-1/Skins/Jigsaw/Guardian/astra.svg",
+        "3-1/Skins/Jigsaw/Guardian/killjoy.svg",
+        "3-1/Skins/Jigsaw/Guardian/skye.svg",
+        "3-1/Skins/Jigsaw/Guardian/yoru.svg"
       ]
     },
     {
       "id": 36,
-      "nome": "This Is Also Also Fine",
+      "nome": "Sand Sculpture",
       "tipo": "Spray",
       "imagens": [
-        "2-3/Sprays/tudo_muito_bem_tambem.png"
+        "3-1/Sprays/11.svg"
       ]
     },
     {
       "id": 37,
-      "nome": "Dan, the Penguin",
+      "nome": "Island Dreams",
       "tipo": "Buddy",
       "imagens": [
-        "2-3/Chaveiros/dan_o_pinguim.png"
+        "3-1/Buddys/4.svg"
       ]
     },
     {
       "id": 38,
-      "nome": "Lanterns",
+      "nome": "Roti Boatie",
       "tipo": "Card",
       "imagens": [
-        "2-3/Cards/lampioes.png"
+        "3-1/Cards/8.svg"
       ]
     },
     {
       "id": 39,
       "nome": "10 Points",
-      "tipo": "Radianitas",
+      "tipo": "Radianites",
       "imagens": [
-        "10%20Pontos%20de%20Radianita.png"
+        "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 40,
-      "nome": "Songsteel Marshal",
+      "nome": "Monarch Marshal",
       "tipo": "Skin",
       "imagens": [
-        "2-3/Skins/metalodica/marshall.png"
+        "3-1/Skins/Monarch/marshall.svg"
       ]
     },
     {
       "id": 41,
       "nome": "10 Points",
-      "tipo": "Radianitas",
+      "tipo": "Radianites",
       "imagens": [
-        "10%20Pontos%20de%20Radianita.png"
+        "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 42,
-      "nome": "Depths",
+      "nome": "Testing Grounds",
       "tipo": "Card",
       "imagens": [
-        "2-3/Cards/oceanico.png"
+        "3-1/Cards/11.svg"
       ]
     },
     {
       "id": 43,
-      "nome": "Walk! Don't Run",
+      "nome": "Clutch or Kick",
       "tipo": "Spray",
       "imagens": [
-        "2-3/Sprays/calma_para_de_correr.png"
+        "3-1/Sprays/3.svg",
+        "3-1/Sprays/7.svg"
       ]
     },
     {
       "id": 44,
-      "nome": "Dabbing Dan",
+      "nome": "Too Heavy",
       "tipo": "Spray",
       "imagens": [
-        "2-3/Sprays/dan_do_dab.png"
+        "3-1/Sprays/14.svg"
       ]
     },
     {
       "id": 45,
-      "nome": "Depths Vandal",
+      "nome": "K/TAC Operator",
       "tipo": "Skin",
       "imagens": [
-        "2-3/Skins/oceanica/vandal.png"
+        "3-1/Skins/KTAC/operator.svg"
       ]
     },
     {
       "id": 46,
-      "nome": "Bunny Hop",
+      "nome": "Sand Of Time",
       "tipo": "Spray",
       "imagens": [
-        "2-3/Sprays/pula_pula.png"
+        "3-1/Sprays/1.svg"
       ]
     },
     {
       "id": 47,
-      "nome": "Ancient Mysteries Revealed",
+      "nome": "Salmon Nigiri",
       "tipo": "Buddy",
       "imagens": [
-        "2-3/Chaveiros/misterios_ancestrais_revelados.png"
+        "3-1/Buddys/8.svg"
       ]
     },
     {
       "id": 48,
-      "nome": "Reboot",
+      "nome": "From the Ashes",
       "tipo": "Card",
       "imagens": [
-        "2-3/Cards/reinicio.png"
+        "3-1/Cards/13.svg"
       ]
     },
     {
       "id": 49,
       "nome": "10 Points",
-      "tipo": "Radianitas",
+      "tipo": "Radianites",
       "imagens": [
-        "10%20Pontos%20de%20Radianita.png"
+        "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 50,
-      "nome": "Songsteel",
+      "nome": "K/TAC Blade",
       "tipo": "Skin",
       "imagens": [
-        "2-3/Skins/metalodica/faca.png"
+        "3-1/Skins/KTAC/espada.svg"
       ]
     },
     {
       "id": 51,
-      "nome": "Epilogue: Dabbing Dan",
+      "nome": "Epilogue: Cracked",
       "tipo": "Spray",
       "imagens": [
-        "2-3/Sprays/epilogo_dan_do_dab.png"
+        "3-1/Sprays/5.svg"
       ]
     },
     {
       "id": 52,
       "nome": "10 Points",
-      "tipo": "Radianitas",
+      "tipo": "Radianites",
       "imagens": [
-        "10%20Pontos%20de%20Radianita.png"
+        "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 53,
       "nome": "10 Points",
-      "tipo": "Radianitas",
+      "tipo": "Radianites",
       "imagens": [
-        "10%20Pontos%20de%20Radianita.png"
+        "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 54,
       "nome": "10 Points",
-      "tipo": "Radianitas",
+      "tipo": "Radianites",
       "imagens": [
-        "10%20Pontos%20de%20Radianita.png"
+        "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 55,
-      "nome": "Epilogue: Mementos Pt.1",
+      "nome": "Epilogue: Naked Op",
       "tipo": "Card",
       "imagens": [
-        "2-3/Cards/epilogo_pra_guardar_na_memoria_pt_1.png"
+        "3-1/Cards/6.svg"
       ]
     }
   ],
   "capitulos": [
     {
       "id": 1,
-      "nome": "Festa da Pizza do Paul",
+      "nome": "Snowbirds",
       "tipo": "Card",
       "imagens": [
-        "2-3/Cards/festa_da_pizza.png"
+        "3-1/Cards/10.svg"
       ],
       "cap": 1
     },
     {
       "id": 2,
-      "nome": "De Boa",
-      "tipo": "Título",
+      "nome": "Cracked",
+      "tipo": "Title",
       "imagens": [
-        "Titulo.png"
+        "Titulo.svg"
       ],
       "cap": 1
     },
     {
       "id": 3,
-      "nome": "Moeda Ep2//3",
+      "nome": "Coin Ep3//1",
       "tipo": "Buddy",
       "imagens": [
-        "2-3/Chaveiros/ep_2_3.png"
+        "3-1/Buddys/2.svg"
       ],
       "cap": 2
     },
     {
       "id": 4,
       "nome": "10 Points",
-      "tipo": "Radianitas",
+      "tipo": "Radianites",
       "imagens": [
-        "10%20Pontos%20de%20Radianita.png"
+        "10 Pontos de Radianita.svg"
       ],
       "cap": 3
     },
     {
       "id": 5,
-      "nome": "Sortudo",
-      "tipo": "Título",
+      "nome": "No Breaks",
+      "tipo": "Title",
       "imagens": [
-        "Titulo.png"
+        "Titulo.svg"
       ],
       "cap": 3
     },
     {
       "id": 6,
-      "nome": "Lagosta?",
+      "nome": "Greatly Increased?",
       "tipo": "Spray",
       "imagens": [
-        "2-3/Sprays/lagosta.png"
+        "3-1/Sprays/17.svg"
       ],
       "cap": 4
     },
     {
       "id": 7,
-      "nome": "25°N, 71°O",
+      "nome": "Dropoff",
       "tipo": "Card",
       "imagens": [
-        "2-3/Cards/25_n_71_o.png"
+        "3-1/Cards/3.svg"
       ],
       "cap": 5
     },
     {
       "id": 8,
-      "nome": "Em Segurança",
+      "nome": "10 Points",
+      "tipo": "Radianites",
+      "imagens": [
+        "10 Pontos de Radianita.svg"
+      ],
+      "cap": 5
+    },
+    {
+      "id": 9,
+      "nome": "Icy Crate",
       "tipo": "Buddy",
       "imagens": [
-        "2-3/Chaveiros/em_seguranca.png"
+        "3-1/Buddys/3.svg"
       ],
       "cap": 6
     },
     {
-      "id": 9,
-      "nome": "10 Points",
-      "tipo": "Radianitas",
-      "imagens": [
-        "10%20Pontos%20de%20Radianita.png"
-      ],
-      "cap": 7
-    },
-    {
       "id": 10,
-      "nome": "O Carregador",
-      "tipo": "Título",
+      "nome": "10 Points",
+      "tipo": "Radianites",
       "imagens": [
-        "Titulo.png"
+        "10 Pontos de Radianita.svg"
       ],
       "cap": 7
     },
     {
       "id": 11,
-      "nome": "Comédia e Tragédia",
+      "nome": "Salty",
+      "tipo": "Title",
+      "imagens": [
+        "Titulo.svg"
+      ],
+      "cap": 7
+    },
+    {
+      "id": 12,
+      "nome": "Greatly Decreased?",
       "tipo": "Spray",
       "imagens": [
-        "2-3/Sprays/comedia_e_tragedia.png"
+        "3-1/Sprays/16.svg"
       ],
       "cap": 8
     },
     {
-      "id": 12,
-      "nome": "Coelho da Sorte",
+      "id": 13,
+      "nome": "The Key to Ancient Mysteries",
       "tipo": "Buddy",
       "imagens": [
-        "2-3/Chaveiros/coelho_da_sorte.png"
+        "3-1/Buddys/9.svg"
       ],
       "cap": 9
     },
     {
-      "id": 13,
-      "nome": "Frenzy Cintilante",
+      "id": 14,
+      "nome": "Jigsaw Ghost",
       "tipo": "Skin",
       "imagens": [
-        "2-3/Skins/cintilante/frenzy/1.png",
-        "2-3/Skins/cintilante/frenzy/2.png",
-        "2-3/Skins/cintilante/frenzy/3.png",
-        "2-3/Skins/cintilante/frenzy/4.png"
+        "3-1/Skins/Jigsaw/Ghost/astra.svg",
+        "3-1/Skins/Jigsaw/Ghost/killjoy.svg",
+        "3-1/Skins/Jigsaw/Ghost/skye.svg",
+        "3-1/Skins/Jigsaw/Ghost/yoru.svg"
       ],
       "cap": 10
     },
     {
-      "id": 14,
-      "nome": "Progenitura",
+      "id": 15,
+      "nome": "Cosmic Connections",
       "tipo": "Card",
       "imagens": [
-        "2-3/Cards/progenitura.png"
+        "3-1/Cards/2.svg"
       ],
       "cap": 10
     }

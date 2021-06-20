@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import br.com.samuelnunes.valorantpassbattle.databinding.FragmentInfosBinding
-import br.com.samuelnunes.valorantpassbattle.extensions.bindingAdapters.load
+import br.com.samuelnunes.valorantpassbattle.extensions.load
 
 class InfosFragment : Fragment() {
 
