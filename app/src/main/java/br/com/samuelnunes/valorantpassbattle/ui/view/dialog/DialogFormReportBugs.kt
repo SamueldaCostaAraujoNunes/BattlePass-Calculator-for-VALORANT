@@ -5,19 +5,24 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import br.com.samuelnunes.valorantpassbattle.R
 import br.com.samuelnunes.valorantpassbattle.databinding.DialogFormReportBugsBinding
 import br.com.samuelnunes.valorantpassbattle.extensions.capitalize
 import br.com.samuelnunes.valorantpassbattle.model.dto.FormQuestion
+import br.com.samuelnunes.valorantpassbattle.ui.viewModel.activity.UIViewModel
 import br.com.samuelnunes.valorantpassbattle.ui.viewModel.dialog.DialogFormReportBugsViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 import java.util.*
 
 
 @AndroidEntryPoint
 class DialogFormReportBugs : DialogBase() {
     lateinit var binding: DialogFormReportBugsBinding
+    private val uiViewModel: UIViewModel by activityViewModels()
     private val viewModel: DialogFormReportBugsViewModel by viewModels()
 
     override fun onCreateView(
@@ -37,36 +42,39 @@ class DialogFormReportBugs : DialogBase() {
             if (binding.tietBugs.text.toString().isNotEmpty() ||
                 binding.tietIdeas.text.toString().isNotEmpty()
             ) {
-                viewModel.submitAnswers(
-                    listOf(
-                        FormQuestion(
-                            getVersionName(),
-                            getString(R.string.version_app)
-                        ),
-                        FormQuestion(
-                            getDeviceName(),
-                            getString(R.string.device_model)
-                        ),
-                        FormQuestion(
-                            getLanguage(),
-                            getString(R.string.language)
-                        ),
-                        FormQuestion(
-                            getIdBattlePass(),
-                            getString(R.string.battlepass_id)
-                        ),
-                        FormQuestion(
-                            binding.tietBugs.text.toString(),
-                            getString(R.string.bug)
-                        ),
-                        FormQuestion(
-                            binding.tietIdeas.text.toString(),
-                            getString(R.string.idea)
-                        ),
+                lifecycleScope.launch {
+                    viewModel.submitAnswers(
+                        listOf(
+                            FormQuestion(
+                                getVersionName(),
+                                getString(R.string.version_app)
+                            ),
+                            FormQuestion(
+                                getDeviceName(),
+                                getString(R.string.device_model)
+                            ),
+                            FormQuestion(
+                                getLanguage(),
+                                getString(R.string.language)
+                            ),
+                            FormQuestion(
+                                getIdBattlePass(),
+                                getString(R.string.battlepass_id)
+                            ),
+                            FormQuestion(
+                                binding.tietBugs.text.toString(),
+                                getString(R.string.bug)
+                            ),
+                            FormQuestion(
+                                binding.tietIdeas.text.toString(),
+                                getString(R.string.idea)
+                            )
+                        )
                     )
-                )
+                }
             }
             dismiss()
+            uiViewModel.sendNewMensageSnackbar(getString(R.string.feedback))
         }
         binding.btnCancel.setOnClickListener { dismiss() }
     }

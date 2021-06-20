@@ -11,11 +11,11 @@ import javax.inject.Inject
 class DialogFormReportBugsViewModel @Inject constructor(
     private val repository: FormsRepository
 ) : ViewModel() {
-    fun submitAnswers(answers: List<FormQuestion>) {
+    suspend fun submitAnswers(answers: List<FormQuestion>) {
         repository.submitAnswers(answers)
     }
 
     fun getIdBattlePass(): String {
-        return repository.battlePassManager.getIdBattlePass()
+        return repository.getIdBattlePass()
     }
 }

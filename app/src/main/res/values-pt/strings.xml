@@ -132,4 +132,5 @@
     <string name="hint_alguma_ideia">Alguma Ideia?</string>
     <string name="helper_idea">Caso, tenha alguma ideia para melhorar o app, deixe-a aqui!</string>
     <string name="enviar">Enviar</string>
+    <string name="feedback">Obrigado pelo FeedBack!</string>
 </resources>

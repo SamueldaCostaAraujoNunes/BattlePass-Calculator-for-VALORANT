@@ -134,4 +134,5 @@
     <string name="hint_alguma_ideia">Any idea?</string>
     <string name="helper_idea">If you have any ideas to improve the app, leave it here!</string>
     <string name="enviar">Submit</string>
+    <string name="feedback">Thanks for the feedback!</string>
 </resources>

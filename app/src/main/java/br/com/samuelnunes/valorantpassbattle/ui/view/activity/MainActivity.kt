@@ -1,5 +1,6 @@
 package br.com.samuelnunes.valorantpassbattle.ui.view.activity
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
@@ -10,7 +11,12 @@ import androidx.navigation.ui.NavigationUI
 import br.com.samuelnunes.valorantpassbattle.NavGraphDirections
 import br.com.samuelnunes.valorantpassbattle.R
 import br.com.samuelnunes.valorantpassbattle.databinding.ActivityMainBinding
+import br.com.samuelnunes.valorantpassbattle.extensions.getColorFromAttr
+import br.com.samuelnunes.valorantpassbattle.extensions.setFontFamily
 import br.com.samuelnunes.valorantpassbattle.ui.viewModel.activity.UIViewModel
+import com.google.android.material.snackbar.Snackbar
+import com.google.android.material.snackbar.Snackbar.LENGTH_SHORT
+import com.google.android.material.snackbar.Snackbar.make
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -51,6 +57,21 @@ class MainActivity : AdmobInterstitialActivity() {
         uiViewModel.onHideBottomNav.observe(this, {
             binding.bottomNav.transform(binding.fab, it)
         })
+
+        uiViewModel.mostrarMensagemNaSnackbar.observe(this, { mensagem ->
+            if (mensagem.isNotEmpty()) {
+                snackbarFactory(mensagem).show()
+            }
+        })
+    }
+
+    @SuppressLint("ShowToast")
+    private fun snackbarFactory(texto: String, duracao: Int = LENGTH_SHORT): Snackbar {
+        return make(binding.root, texto, duracao)
+            .setAnchorView(binding.fab)
+            .setBackgroundTint(getColorFromAttr(R.attr.colorSecondary))
+            .setTextColor(getColorFromAttr(R.attr.colorOnPrimary))
+            .setFontFamily(R.font.valorant_font_family)
     }
 
     private fun createListeners() {
