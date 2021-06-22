@@ -16,18 +16,19 @@ open class AdmobInterstitialActivity : AppCompatActivity() {
     private var mInterstitialAd: InterstitialAd? = null
     private var mAdIsLoading: Boolean = false
 
+    abstract class AdShowListener {
+        abstract fun onSucess()
+        abstract fun onFailed()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         MobileAds.initialize(this)
         loadAd()
-        admobViewModel.admobInterstitial.observe(this, { show ->
-            if (show) {
-                showInterstitial()
-            }
-        })
+        admobViewModel.admobInterstitial.observe(this, { showInterstitial(it) })
     }
 
-    private fun showInterstitial() {
+    private fun showInterstitial(listener: AdShowListener) {
         if (mInterstitialAd != null) {
             mInterstitialAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
                 override fun onAdDismissedFullScreenContent() {
@@ -39,14 +40,17 @@ open class AdmobInterstitialActivity : AppCompatActivity() {
                 override fun onAdFailedToShowFullScreenContent(adError: AdError?) {
                     Timber.e("Ad failed to show.")
                     mInterstitialAd = null
+                    listener.onFailed()
                 }
 
                 override fun onAdShowedFullScreenContent() {
                     Timber.d("Ad showed fullscreen content.")
+                    listener.onSucess()
                 }
             }
             mInterstitialAd?.show(this)
         } else {
+            listener.onFailed()
             loadAd()
         }
     }
@@ -54,7 +58,6 @@ open class AdmobInterstitialActivity : AppCompatActivity() {
     private fun loadAd() {
         if (!mAdIsLoading && mInterstitialAd == null) {
             mAdIsLoading = true
-            admobViewModel.loadInterstitial()
             val adRequest = AdRequest.Builder().build()
 
             InterstitialAd.load(

@@ -134,4 +134,5 @@
     <string name="helper_idea">Si tienes alguna idea para mejorar la aplicación, ¡déjala aquí!</string>
     <string name="enviar">Enviar</string>
     <string name="feedback">¡Gracias por la respuesta!</string>
+    <string name="sem_internet">Sin acceso a Internet</string>
 </resources>

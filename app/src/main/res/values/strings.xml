@@ -135,4 +135,5 @@
     <string name="helper_idea">If you have any ideas to improve the app, leave it here!</string>
     <string name="enviar">Submit</string>
     <string name="feedback">Thanks for the feedback!</string>
+    <string name="sem_internet">No internet access</string>
 </resources>
