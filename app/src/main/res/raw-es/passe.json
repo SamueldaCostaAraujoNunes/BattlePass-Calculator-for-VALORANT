@@ -1,7 +1,7 @@
 {
   "id": "3.1",
   "dateInit": "22/06/2021",
-  "dateFinally": "15/08/2021",
+  "dateFinally": "23/08/2021",
   "expEpilogo": 36500,
   "expPrimeiroTermo": 2000,
   "expRazao": 750,
@@ -12,7 +12,7 @@
   "missaoSemanal": [
     {
       "id": 1,
-      "exp": 38400
+      "exp": 15600
     },
     {
       "id": 2,
@@ -20,7 +20,7 @@
     },
     {
       "id": 3,
-      "exp": 46080
+      "exp": 38400
     },
     {
       "id": 4,
@@ -28,7 +28,7 @@
     },
     {
       "id": 5,
-      "exp": 49920
+      "exp": 46080
     },
     {
       "id": 6,
@@ -36,10 +36,14 @@
     },
     {
       "id": 7,
-      "exp": 57600
+      "exp": 49920
     },
     {
       "id": 8,
+      "exp": 57600
+    },
+    {
+      "id": 9,
       "exp": 57600
     }
   ],
@@ -55,30 +59,30 @@
     {
       "id": 2,
       "nome": "K/TAC",
-      "tipo": "Chaveiro",
+      "tipo": "Buddy",
       "imagens": [
         "3-1/Buddys/5.svg"
       ]
     },
     {
       "id": 3,
-      "nome": "10 Pontos",
-      "tipo": "Radianitas",
+      "nome": "10 Points",
+      "tipo": "Radianite",
       "imagens": [
         "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 4,
-      "nome": "Sente a Adrenalina",
-      "tipo": "Card",
+      "nome": "Siente la Adrenalina",
+      "tipo": "Tarjeta",
       "imagens": [
         "3-1/Cards/4.svg"
       ]
     },
     {
       "id": 5,
-      "nome": "Ares Quebra-Cabeça",
+      "nome": "Ares Jigsaw",
       "tipo": "Skin",
       "imagens": [
         "3-1/Skins/Jigsaw/Ares/astra.svg",
@@ -89,7 +93,7 @@
     },
     {
       "id": 6,
-      "nome": "Ação de Bomba",
+      "nome": "Acción de Recarga",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/15.svg"
@@ -97,7 +101,7 @@
     },
     {
       "id": 7,
-      "nome": "Rachado",
+      "nome": "Reventado",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/4.svg"
@@ -105,23 +109,23 @@
     },
     {
       "id": 8,
-      "nome": "10 Pontos",
-      "tipo": "Radianitas",
+      "nome": "10 Points",
+      "tipo": "Radianite",
       "imagens": [
         "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 9,
-      "nome": "Op Raiz",
-      "tipo": "Card",
+      "nome": "Op Al Desnudo",
+      "tipo": "Tarjeta",
       "imagens": [
         "3-1/Cards/7.svg"
       ]
     },
     {
       "id": 10,
-      "nome": "Shorty Monarquia",
+      "nome": "Shorty Monarca",
       "tipo": "Skin",
       "imagens": [
         "3-1/Skins/Monarch/short.svg"
@@ -129,15 +133,15 @@
     },
     {
       "id": 11,
-      "nome": "Poupança",
-      "tipo": "Card",
+      "nome": "Ahorra",
+      "tipo": "Tarjeta",
       "imagens": [
         "3-1/Cards/9.svg"
       ]
     },
     {
       "id": 12,
-      "nome": "Ryyyca",
+      "nome": "Dinero a Tope",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/8.svg"
@@ -145,23 +149,23 @@
     },
     {
       "id": 13,
-      "nome": "10 Pontos",
-      "tipo": "Radianitas",
+      "nome": "10 Points",
+      "tipo": "Radianite",
       "imagens": [
         "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 14,
-      "nome": "Segura o W",
-      "tipo": "Chaveiro",
+      "nome": "Una Sola Dirección",
+      "tipo": "Buddy",
       "imagens": [
         "3-1/Buddys/6.svg"
       ]
     },
     {
       "id": 15,
-      "nome": "Judge Quebra-Cabeça",
+      "nome": "Judge Jigsaw",
       "tipo": "Skin",
       "imagens": [
         "3-1/Skins/Jigsaw/Judge/astra.svg",
@@ -172,7 +176,7 @@
     },
     {
       "id": 16,
-      "nome": "Bucky Monarquia",
+      "nome": "Bucky Monarca",
       "tipo": "Skin",
       "imagens": [
         "3-1/Skins/Monarch/bucky.svg"
@@ -180,15 +184,15 @@
     },
     {
       "id": 17,
-      "nome": "Força",
-      "tipo": "Card",
+      "nome": "Fuerza",
+      "tipo": "Tarjeta",
       "imagens": [
         "3-1/Cards/5.svg"
       ]
     },
     {
       "id": 18,
-      "nome": "Sovado",
+      "nome": "Sova Pide Perdón",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/12.svg"
@@ -196,8 +200,8 @@
     },
     {
       "id": 19,
-      "nome": "10 Pontos",
-      "tipo": "Radianitas",
+      "nome": "10 Points",
+      "tipo": "Radianite",
       "imagens": [
         "10 Pontos de Radianita.svg"
       ]
@@ -212,7 +216,7 @@
     },
     {
       "id": 21,
-      "nome": "KillJoy!Eu Escolho Você!",
+      "nome": "¡KillJoy! ¡Yo Te Elijo!",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/6.svg"
@@ -220,23 +224,23 @@
     },
     {
       "id": 22,
-      "nome": "10 Pontos",
-      "tipo": "Radianitas",
+      "nome": "10 Points",
+      "tipo": "Radianite",
       "imagens": [
         "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 23,
-      "nome": "Patinho de Borracha",
-      "tipo": "Chaveiro",
+      "nome": "Patito de Goma",
+      "tipo": "Buddy",
       "imagens": [
         "3-1/Buddys/7.svg"
       ]
     },
     {
       "id": 24,
-      "nome": "Afundado",
+      "nome": "Atascado",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/2.svg"
@@ -252,7 +256,7 @@
     },
     {
       "id": 26,
-      "nome": "Sem Caneta!",
+      "nome": "¡No Pen!",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/10.svg"
@@ -260,15 +264,15 @@
     },
     {
       "id": 27,
-      "nome": "10 Pontos",
-      "tipo": "Radianitas",
+      "nome": "10 Points",
+      "tipo": "Radianite",
       "imagens": [
         "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 28,
-      "nome": "Pinguim Surpreso",
+      "nome": "Pinguinito Sorprendido",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/13.svg"
@@ -277,14 +281,14 @@
     {
       "id": 29,
       "nome": "Id de KAY/O",
-      "tipo": "Card",
+      "tipo": "Tarjeta",
       "imagens": [
         "3-1/Cards/12.svg"
       ]
     },
     {
       "id": 30,
-      "nome": "Frenzy Monarquia",
+      "nome": "Frenzy Monarca",
       "tipo": "Skin",
       "imagens": [
         "3-1/Skins/Monarch/frenzy.svg"
@@ -292,31 +296,31 @@
     },
     {
       "id": 31,
-      "nome": "Melhor por Último",
-      "tipo": "Card",
+      "nome": "Esquema: Lo Mejor Para El Último",
+      "tipo": "Tarjeta",
       "imagens": [
         "3-1/Cards/1.svg"
       ]
     },
     {
       "id": 32,
-      "nome": "10 Pontos",
-      "tipo": "Radianitas",
+      "nome": "10 Points",
+      "tipo": "Radianite",
       "imagens": [
         "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 33,
-      "nome": "Pesquei",
-      "tipo": "Chaveiro",
+      "nome": "Atrapado",
+      "tipo": "Buddy",
       "imagens": [
         "3-1/Buddys/1.svg"
       ]
     },
     {
       "id": 34,
-      "nome": "Sem Guardian",
+      "nome": "Prohibida La Guardian",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/9.svg"
@@ -324,7 +328,7 @@
     },
     {
       "id": 35,
-      "nome": "Guardian Quebra-Cabeça",
+      "nome": "Guardian Jigsaw",
       "tipo": "Skin",
       "imagens": [
         "3-1/Skins/Jigsaw/Guardian/astra.svg",
@@ -335,7 +339,7 @@
     },
     {
       "id": 36,
-      "nome": "Escultura de Areia",
+      "nome": "Escultura de Arena",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/11.svg"
@@ -343,31 +347,31 @@
     },
     {
       "id": 37,
-      "nome": "Ilha dos Sonhos",
-      "tipo": "Chaveiro",
+      "nome": "Sueños Isleños",
+      "tipo": "Buddy",
       "imagens": [
         "3-1/Buddys/4.svg"
       ]
     },
     {
       "id": 38,
-      "nome": "Lojinha de Roti",
-      "tipo": "Card",
+      "nome": "Roti Boatie",
+      "tipo": "Tarjeta",
       "imagens": [
         "3-1/Cards/8.svg"
       ]
     },
     {
       "id": 39,
-      "nome": "10 Pontos",
-      "tipo": "Radianitas",
+      "nome": "10 Points",
+      "tipo": "Radianite",
       "imagens": [
         "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 40,
-      "nome": "Marshal Monarquia",
+      "nome": "Marshal Monarca",
       "tipo": "Skin",
       "imagens": [
         "3-1/Skins/Monarch/marshall.svg"
@@ -375,23 +379,23 @@
     },
     {
       "id": 41,
-      "nome": "10 Pontos",
-      "tipo": "Radianitas",
+      "nome": "10 Points",
+      "tipo": "Radianite",
       "imagens": [
         "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 42,
-      "nome": "Campo de Testes",
-      "tipo": "Card",
+      "nome": "Campos de Práctica",
+      "tipo": "Tarjeta",
       "imagens": [
         "3-1/Cards/11.svg"
       ]
     },
     {
       "id": 43,
-      "nome": "Clutch ou Vaza",
+      "nome": "Clutch o Fuera",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/3.svg",
@@ -400,7 +404,7 @@
     },
     {
       "id": 44,
-      "nome": "Pesado Demais",
+      "nome": "Muy Pesado",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/14.svg"
@@ -416,7 +420,7 @@
     },
     {
       "id": 46,
-      "nome": "Areias do Tempo",
+      "nome": "Arenas Del Tiempo",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/1.svg"
@@ -424,31 +428,31 @@
     },
     {
       "id": 47,
-      "nome": "Niguiri Salmão",
-      "tipo": "Chaveiro",
+      "nome": "Niguiri de Salmón",
+      "tipo": "Buddy",
       "imagens": [
         "3-1/Buddys/8.svg"
       ]
     },
     {
       "id": 48,
-      "nome": "Das Cinzas",
-      "tipo": "Card",
+      "nome": "De Las Cenizas",
+      "tipo": "Tarjeta",
       "imagens": [
         "3-1/Cards/13.svg"
       ]
     },
     {
       "id": 49,
-      "nome": "10 Pontos",
-      "tipo": "Radianitas",
+      "nome": "10 Points",
+      "tipo": "Radianite",
       "imagens": [
         "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 50,
-      "nome": "Lâmina K/TAC",
+      "nome": "Cuchilla K/TAC",
       "tipo": "Skin",
       "imagens": [
         "3-1/Skins/KTAC/espada.svg"
@@ -456,7 +460,7 @@
     },
     {
       "id": 51,
-      "nome": "Epílogo: Rachado",
+      "nome": "Epílogo: Reventado",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/5.svg"
@@ -464,32 +468,32 @@
     },
     {
       "id": 52,
-      "nome": "10 Pontos",
-      "tipo": "Radianitas",
+      "nome": "10 Points",
+      "tipo": "Radianite",
       "imagens": [
         "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 53,
-      "nome": "10 Pontos",
-      "tipo": "Radianitas",
+      "nome": "10 Points",
+      "tipo": "Radianite",
       "imagens": [
         "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 54,
-      "nome": "10 Pontos",
-      "tipo": "Radianitas",
+      "nome": "10 Points",
+      "tipo": "Radianite",
       "imagens": [
         "10 Pontos de Radianita.svg"
       ]
     },
     {
       "id": 55,
-      "nome": "Epílogo: Op Raiz",
-      "tipo": "Card",
+      "nome": "Epílogo: Op Al Desnudo",
+      "tipo": "Tarjeta",
       "imagens": [
         "3-1/Cards/6.svg"
       ]
@@ -498,8 +502,8 @@
   "capitulos": [
     {
       "id": 1,
-      "nome": "Pássaros Das Neves",
-      "tipo": "Card",
+      "nome": "Aves de Nieve",
+      "tipo": "Tarjeta",
       "imagens": [
         "3-1/Cards/10.svg"
       ],
@@ -507,7 +511,7 @@
     },
     {
       "id": 2,
-      "nome": "Rachado",
+      "nome": "Reventado",
       "tipo": "Título",
       "imagens": [
         "Titulo.svg"
@@ -516,8 +520,8 @@
     },
     {
       "id": 3,
-      "nome": "Moeda Ep3//1",
-      "tipo": "Chaveiro",
+      "nome": "Moneda Ep 3//1",
+      "tipo": "Buddy",
       "imagens": [
         "3-1/Buddys/2.svg"
       ],
@@ -525,8 +529,8 @@
     },
     {
       "id": 4,
-      "nome": "10 Pontos",
-      "tipo": "Radianitas",
+      "nome": "10 Points",
+      "tipo": "Radianite",
       "imagens": [
         "10 Pontos de Radianita.svg"
       ],
@@ -534,7 +538,7 @@
     },
     {
       "id": 5,
-      "nome": "Sem Freio",
+      "nome": "Sin Frenos",
       "tipo": "Título",
       "imagens": [
         "Titulo.svg"
@@ -543,7 +547,7 @@
     },
     {
       "id": 6,
-      "nome": "Aumentou Muito?",
+      "nome": "¿Muy Aumentado?",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/17.svg"
@@ -552,8 +556,8 @@
     },
     {
       "id": 7,
-      "nome": "Decida",
-      "tipo": "Card",
+      "nome": "Aterrizaje",
+      "tipo": "Tarjeta",
       "imagens": [
         "3-1/Cards/3.svg"
       ],
@@ -561,8 +565,8 @@
     },
     {
       "id": 8,
-      "nome": "10 Pontos",
-      "tipo": "Radianitas",
+      "nome": "10 Points",
+      "tipo": "Radianite",
       "imagens": [
         "10 Pontos de Radianita.svg"
       ],
@@ -570,8 +574,8 @@
     },
     {
       "id": 9,
-      "nome": "Caixote Gélido",
-      "tipo": "Chaveiro",
+      "nome": "Caja Helada",
+      "tipo": "Buddy",
       "imagens": [
         "3-1/Buddys/3.svg"
       ],
@@ -579,8 +583,8 @@
     },
     {
       "id": 10,
-      "nome": "10 Pontos",
-      "tipo": "Radianitas",
+      "nome": "10 Points",
+      "tipo": "Radianite",
       "imagens": [
         "10 Pontos de Radianita.svg"
       ],
@@ -588,7 +592,7 @@
     },
     {
       "id": 11,
-      "nome": "Esquentadinho",
+      "nome": "Salty",
       "tipo": "Título",
       "imagens": [
         "Titulo.svg"
@@ -597,7 +601,7 @@
     },
     {
       "id": 12,
-      "nome": "Caiu Muito?",
+      "nome": "¿Muy Reducido?",
       "tipo": "Spray",
       "imagens": [
         "3-1/Sprays/16.svg"
@@ -606,8 +610,8 @@
     },
     {
       "id": 13,
-      "nome": "Chave dos Mistérios Ancestrais",
-      "tipo": "Chaveiro",
+      "nome": "La Llave de Misterios Antiguos",
+      "tipo": "Buddy",
       "imagens": [
         "3-1/Buddys/9.svg"
       ],
@@ -615,7 +619,7 @@
     },
     {
       "id": 14,
-      "nome": "Ghost Quebra-Cabeça",
+      "nome": "Ghost Jigsaw",
       "tipo": "Skin",
       "imagens": [
         "3-1/Skins/Jigsaw/Ghost/astra.svg",
@@ -627,8 +631,8 @@
     },
     {
       "id": 15,
-      "nome": "Conexões Cósmicas",
-      "tipo": "Card",
+      "nome": "Conexiones Cósmicas",
+      "tipo": "Tarjeta",
       "imagens": [
         "3-1/Cards/2.svg"
       ],

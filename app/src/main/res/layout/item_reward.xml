@@ -31,7 +31,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:position="@{reward.id}"
+            app:position="@{reward.cap ?? reward.id}"
             app:positionCurrent="@{itemCurrent}"
             tools:text="T1" />
 
@@ -48,7 +48,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/item_number"
             app:layout_constraintStart_toEndOf="@+id/item_number"
             app:layout_constraintTop_toTopOf="@+id/item_number"
-            app:position="@{reward.id}"
+            app:position="@{reward.cap ?? reward.id}"
             app:positionCurrent="@{itemCurrent}"
             tools:text="Skin Seilá Qual" />
     </androidx.constraintlayout.widget.ConstraintLayout>
