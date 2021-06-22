@@ -18,9 +18,9 @@ class BattlePassManager(context: Context) {
             .registerTypeAdapter(LocalDate::class.java, ObjectConverters.LD_DESERIALIZER)
             .create().fromJson(jsonStr, BattlePass::class.java)
 
-    private val today: LocalDate = LocalDate.now()
+    private val today: LocalDate = LocalDate.now().plusDays(1)
     val dateInit: LocalDate = passe.dateInit
-    val dateFinally: LocalDate = passe.dateFinally
+    val dateFinally: LocalDate = passe.dateFinally.plusDays(1)
 
     val passDurationInDays: Int = ChronoUnit.DAYS.between(dateInit, dateFinally).toInt()
     val daysFromTheStart: Int = ChronoUnit.DAYS.between(dateInit, today).toInt()
@@ -38,8 +38,7 @@ class BattlePassManager(context: Context) {
     fun getExpMissaoSemanal(days: Int): Int {
         val semanaAtual = (days / 7)
         val tiers = passe.missaoSemanal.filter { it.id <= semanaAtual }
-        val sum = tiers.map { it.exp }.sum()
-        return sum
+        return tiers.map { it.exp }.sum()
     }
 
     fun getIdBattlePass(): String {

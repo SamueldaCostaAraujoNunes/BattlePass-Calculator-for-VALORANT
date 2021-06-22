@@ -95,21 +95,25 @@ class HistoricInputFragment : Fragment() {
         pos: Int
     ) {
         val userTier = (binding.rvEditHistoric.adapter as ItemUserInputAdapter).list[pos]
-        navController.navigate(NavGraphDirections.actionGlobalDialogInput(userTier.id))
+        if (userTier.id != -1) {
+            navController.navigate(NavGraphDirections.actionGlobalDialogInput(userTier.id))
+        }
     }
 
     private fun deleteItem(
         pos: Int
     ) {
-        val userTierSelected = (binding.rvEditHistoric.adapter as ItemUserInputAdapter).list[pos]
-        try {
-            val direction =
-                HistoricInputFragmentDirections.actionHistoricInputFragmentToDialogDeleteItemConfimation(
-                    userTierSelected.id
-                )
-            navController.navigate(direction)
-        } catch (e: Exception) {
-            Timber.e(e)
+        val userTier = (binding.rvEditHistoric.adapter as ItemUserInputAdapter).list[pos]
+        if (userTier.id != -1) {
+            try {
+                val direction =
+                    HistoricInputFragmentDirections.actionHistoricInputFragmentToDialogDeleteItemConfimation(
+                        userTier.id
+                    )
+                navController.navigate(direction)
+            } catch (e: Exception) {
+                Timber.e(e)
+            }
         }
     }
 }

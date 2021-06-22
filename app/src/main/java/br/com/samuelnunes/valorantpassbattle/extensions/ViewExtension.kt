@@ -1,11 +1,10 @@
 package br.com.samuelnunes.valorantpassbattle.extensions.bindingAdapters
 
-import android.content.res.Resources
-import android.util.TypedValue
 import android.view.View
 import androidx.annotation.AttrRes
 import androidx.annotation.ColorInt
 import androidx.databinding.BindingAdapter
+import br.com.samuelnunes.valorantpassbattle.extensions.getColorFromAttr
 
 @BindingAdapter("visibilityIf")
 fun View.visibilityIf(isVisible: Boolean = true) {
@@ -14,8 +13,5 @@ fun View.visibilityIf(isVisible: Boolean = true) {
 
 @ColorInt
 fun View.getColor(@AttrRes resId: Int): Int {
-    val typedValue = TypedValue()
-    val theme: Resources.Theme = context.theme
-    theme.resolveAttribute(resId, typedValue, true)
-    return typedValue.data
+    return context.getColorFromAttr(resId)
 }

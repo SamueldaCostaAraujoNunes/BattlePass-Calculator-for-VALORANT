@@ -1,7 +1,8 @@
 {
   "id": "3.1",
   "dateInit": "22/06/2021",
-  "dateFinally": "16/08/2021",
+  "dateFinally": "15/08/2021",
+  "expEpilogo": 36500,
   "expPrimeiroTermo": 2000,
   "expRazao": 750,
   "missaoDiaria": {

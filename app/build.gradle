@@ -20,8 +20,8 @@ android {
         applicationId "br.com.samuelnunes.valorantpassbattle"
         minSdkVersion 24
         targetSdkVersion 30
-        versionCode 22
-        versionName "4.0.0 Phoenix"
+        versionCode 23
+        versionName "4.1.0 Phoenix"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
