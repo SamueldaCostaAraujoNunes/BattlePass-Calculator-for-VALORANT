@@ -1,7 +1,10 @@
 package br.com.samuelnunes.valorantpassbattle.model
 
 import android.content.Context
+import android.telephony.TelephonyManager
 import br.com.samuelnunes.valorantpassbattle.R
+import br.com.samuelnunes.valorantpassbattle.extensions.addOneDay
+import br.com.samuelnunes.valorantpassbattle.extensions.locale
 import br.com.samuelnunes.valorantpassbattle.model.dto.BattlePass
 import br.com.samuelnunes.valorantpassbattle.model.dto.Reward
 import br.com.samuelnunes.valorantpassbattle.util.ObjectConverters
@@ -9,7 +12,8 @@ import com.google.gson.GsonBuilder
 import java.time.LocalDate
 import java.time.temporal.ChronoUnit
 
-class BattlePassManager(context: Context) {
+
+class BattlePassManager(val context: Context) {
     private val jsonStr: String =
         context.resources.openRawResource(R.raw.passe).bufferedReader().use { it.readText() }
 
@@ -18,14 +22,24 @@ class BattlePassManager(context: Context) {
             .registerTypeAdapter(LocalDate::class.java, ObjectConverters.LD_DESERIALIZER)
             .create().fromJson(jsonStr, BattlePass::class.java)
 
-    private val today: LocalDate = LocalDate.now().plusDays(1)
-    val dateInit: LocalDate = passe.dateInit
-    val dateFinally: LocalDate = passe.dateFinally.plusDays(1)
+    private val today: LocalDate = LocalDate.now().plusDays(1).addOneDay(isEuUser())
+    val dateInit: LocalDate = passe.dateInit.addOneDay(isEuUser())
+    val dateFinally: LocalDate = passe.dateFinally.plusDays(1).addOneDay(isEuUser())
 
     val passDurationInDays: Int = ChronoUnit.DAYS.between(dateInit, dateFinally).toInt()
     val daysFromTheStart: Int = ChronoUnit.DAYS.between(dateInit, today).toInt()
     val daysLeftUntilTheEnd: Int = ChronoUnit.DAYS.between(today, dateFinally).toInt()
 
+    fun isEuUser(): Boolean {
+        val tm = context.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
+        val country = (tm.simCountryIso ?: context.locale.country).uppercase()
+        val euCountries = listOf(
+            "BE", "EL", "LT", "PT", "BG", "ES", "LU", "RO", "CZ", "FR", "HU", "SI", "DK", "HR",
+            "MT", "SK", "DE", "IT", "NL", "FI", "EE", "CY", "AT", "SE", "IE", "LV", "PL", "UK",
+            "CH", "NO", "IS", "LI"
+        )
+        return euCountries.contains(country)
+    }
 
     fun getExpMissaoDiaria(days: Int): Int {
         return if (days < passDurationInDays) {

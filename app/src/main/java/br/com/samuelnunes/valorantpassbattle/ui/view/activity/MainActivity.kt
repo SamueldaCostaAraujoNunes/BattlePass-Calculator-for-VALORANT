@@ -14,10 +14,13 @@ import br.com.samuelnunes.valorantpassbattle.databinding.ActivityMainBinding
 import br.com.samuelnunes.valorantpassbattle.extensions.getColorFromAttr
 import br.com.samuelnunes.valorantpassbattle.extensions.setFontFamily
 import br.com.samuelnunes.valorantpassbattle.ui.viewModel.activity.UIViewModel
+import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.snackbar.Snackbar.LENGTH_SHORT
 import com.google.android.material.snackbar.Snackbar.make
+import com.google.firebase.messaging.FirebaseMessaging
 import dagger.hilt.android.AndroidEntryPoint
+import timber.log.Timber
 
 @AndroidEntryPoint
 class MainActivity : AdmobInterstitialActivity() {
@@ -36,6 +39,15 @@ class MainActivity : AdmobInterstitialActivity() {
         }
         setupObservers()
         createListeners()
+
+        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
+            if (!task.isSuccessful) {
+                Timber.w(task.exception)
+                return@OnCompleteListener
+            }
+            val token = task.result
+            Timber.d(token)
+        })
     }
 
     override fun onStart() {
