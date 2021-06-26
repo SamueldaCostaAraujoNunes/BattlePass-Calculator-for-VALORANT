@@ -3,7 +3,7 @@ package br.com.samuelnunes.valorantpassbattle.model
 import android.content.Context
 import android.telephony.TelephonyManager
 import br.com.samuelnunes.valorantpassbattle.R
-import br.com.samuelnunes.valorantpassbattle.extensions.addOneDay
+import br.com.samuelnunes.valorantpassbattle.extensions.addOneDayIf
 import br.com.samuelnunes.valorantpassbattle.extensions.locale
 import br.com.samuelnunes.valorantpassbattle.model.dto.BattlePass
 import br.com.samuelnunes.valorantpassbattle.model.dto.Reward
@@ -22,9 +22,9 @@ class BattlePassManager(val context: Context) {
             .registerTypeAdapter(LocalDate::class.java, ObjectConverters.LD_DESERIALIZER)
             .create().fromJson(jsonStr, BattlePass::class.java)
 
-    private val today: LocalDate = LocalDate.now().plusDays(1).addOneDay(isEuUser())
-    val dateInit: LocalDate = passe.dateInit.addOneDay(isEuUser())
-    val dateFinally: LocalDate = passe.dateFinally.plusDays(1).addOneDay(isEuUser())
+    private val today: LocalDate = LocalDate.now().plusDays(1).addOneDayIf(isEuUser())
+    val dateInit: LocalDate = passe.dateInit.addOneDayIf(isEuUser())
+    val dateFinally: LocalDate = passe.dateFinally.plusDays(1).addOneDayIf(isEuUser())
 
     val passDurationInDays: Int = ChronoUnit.DAYS.between(dateInit, dateFinally).toInt()
     val daysFromTheStart: Int = ChronoUnit.DAYS.between(dateInit, today).toInt()

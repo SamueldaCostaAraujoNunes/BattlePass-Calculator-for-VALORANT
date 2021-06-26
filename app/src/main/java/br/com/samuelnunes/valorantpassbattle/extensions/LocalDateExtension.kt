@@ -17,7 +17,7 @@ fun LocalDate.formatterLocale(
     return zdt.format(pattern)
 }
 
-fun LocalDate.addOneDay(condicao: Boolean): LocalDate {
+fun LocalDate.addOneDayIf(condicao: Boolean): LocalDate {
     return if (condicao) {
         this.plusDays(1)
     } else {
