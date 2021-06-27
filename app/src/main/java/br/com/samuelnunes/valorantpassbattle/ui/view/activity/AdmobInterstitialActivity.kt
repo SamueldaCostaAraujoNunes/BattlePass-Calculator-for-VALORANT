@@ -2,7 +2,6 @@ package br.com.samuelnunes.valorantpassbattle.ui.view.activity
 
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
 import br.com.samuelnunes.valorantpassbattle.R
 import br.com.samuelnunes.valorantpassbattle.ui.viewModel.activity.AdmobViewModel
 import com.google.android.gms.ads.*
@@ -10,25 +9,19 @@ import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import timber.log.Timber
 
-open class AdmobInterstitialActivity : AppCompatActivity() {
+abstract class AdmobInterstitialActivity : BaseActivity() {
     private val admobViewModel by viewModels<AdmobViewModel>()
-
     private var mInterstitialAd: InterstitialAd? = null
     private var mAdIsLoading: Boolean = false
-
-    abstract class AdShowListener {
-        abstract fun onSucess()
-        abstract fun onFailed()
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         MobileAds.initialize(this)
         loadAd()
-        admobViewModel.admobInterstitial.observe(this, { showInterstitial(it) })
+        admobViewModel.admobInterstitial.observe(this, { showInterstitial() })
     }
 
-    private fun showInterstitial(listener: AdShowListener) {
+    private fun showInterstitial() {
         if (mInterstitialAd != null) {
             mInterstitialAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
                 override fun onAdDismissedFullScreenContent() {
@@ -40,17 +33,17 @@ open class AdmobInterstitialActivity : AppCompatActivity() {
                 override fun onAdFailedToShowFullScreenContent(adError: AdError?) {
                     Timber.e("Ad failed to show.")
                     mInterstitialAd = null
-                    listener.onFailed()
+                    onFailed()
                 }
 
                 override fun onAdShowedFullScreenContent() {
                     Timber.d("Ad showed fullscreen content.")
-                    listener.onSucess()
+                    onSucess()
                 }
             }
             mInterstitialAd?.show(this)
         } else {
-            listener.onFailed()
+            onFailed()
             loadAd()
         }
     }
@@ -62,7 +55,8 @@ open class AdmobInterstitialActivity : AppCompatActivity() {
 
             InterstitialAd.load(
                 this,
-                getString(R.string.admob_fullscreen), adRequest,
+                getString(R.string.admob_fullscreen),
+                adRequest,
                 object : InterstitialAdLoadCallback() {
                     override fun onAdFailedToLoad(adError: LoadAdError) {
                         mInterstitialAd = null
@@ -80,5 +74,8 @@ open class AdmobInterstitialActivity : AppCompatActivity() {
             )
         }
     }
+
+    fun onSucess() = admobViewModel.onSucess?.let { it() }
+    fun onFailed() = admobViewModel.onFailed?.let { it() }
 
 }

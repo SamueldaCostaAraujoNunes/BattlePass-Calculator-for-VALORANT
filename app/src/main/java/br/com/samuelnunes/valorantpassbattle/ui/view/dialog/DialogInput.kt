@@ -13,9 +13,7 @@ import br.com.samuelnunes.valorantpassbattle.databinding.DialogTierinputBinding
 import br.com.samuelnunes.valorantpassbattle.model.dto.FormInput
 import br.com.samuelnunes.valorantpassbattle.model.dto.UserTier
 import br.com.samuelnunes.valorantpassbattle.notification.Notification
-import br.com.samuelnunes.valorantpassbattle.ui.view.activity.AdmobInterstitialActivity
 import br.com.samuelnunes.valorantpassbattle.ui.viewModel.activity.AdmobViewModel
-import br.com.samuelnunes.valorantpassbattle.ui.viewModel.activity.UIViewModel
 import br.com.samuelnunes.valorantpassbattle.ui.viewModel.fragment.dialog.InputUserViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
@@ -27,7 +25,6 @@ class DialogInput : DialogBase() {
 
     lateinit var binding: DialogTierinputBinding
     private val viewModel: InputUserViewModel by viewModels()
-    private val uiViewModel: UIViewModel by activityViewModels()
     private val admobViewModel: AdmobViewModel by activityViewModels()
     private val args by navArgs<DialogInputArgs>()
     private var idUserInput: Int? = null
@@ -72,26 +69,29 @@ class DialogInput : DialogBase() {
                 } else {
                     UserTier(form.tierCurrent.toInt(), form.expCurrent.toInt())
                 }
-
-                admobViewModel.showInterstitial(object :
-                    AdmobInterstitialActivity.AdShowListener() {
-                    override fun onSucess() {
-                        CoroutineScope(IO).launch {
-                            viewModel.save(userTier)
-                        }
-                        notification.create()
-                        dismiss()
+                admobViewModel.onSucess = {
+                    CoroutineScope(IO).launch {
+                        viewModel.save(userTier)
                     }
+                    notification.create()
+                    dismiss()
+                }
 
-                    override fun onFailed() {
-                        uiViewModel.sendNewMensageSnackbar(getString(R.string.sem_internet))
-                        dismiss()
-                    }
-                })
+                admobViewModel.onFailed = {
+                    showSnack(getString(R.string.sem_internet))
+                    dismiss()
+                }
+
+                admobViewModel.showInterstitial()
             }
         }
         binding.btnCancel.setOnClickListener { dismiss() }
     }
 
+    override fun onDestroy() {
+        admobViewModel.onSucess = null
+        admobViewModel.onFailed = null
+        super.onDestroy()
+    }
 }
 

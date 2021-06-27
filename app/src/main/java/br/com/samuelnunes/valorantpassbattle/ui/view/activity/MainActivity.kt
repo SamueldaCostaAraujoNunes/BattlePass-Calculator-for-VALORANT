@@ -16,7 +16,6 @@ import br.com.samuelnunes.valorantpassbattle.extensions.setFontFamily
 import br.com.samuelnunes.valorantpassbattle.ui.viewModel.activity.UIViewModel
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.snackbar.Snackbar.LENGTH_SHORT
 import com.google.android.material.snackbar.Snackbar.make
 import com.google.firebase.messaging.FirebaseMessaging
 import dagger.hilt.android.AndroidEntryPoint
@@ -39,7 +38,10 @@ class MainActivity : AdmobInterstitialActivity() {
         }
         setupObservers()
         createListeners()
+//        getToken()
+    }
 
+    private fun getToken() {
         FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
             if (!task.isSuccessful) {
                 Timber.w(task.exception)
@@ -48,6 +50,15 @@ class MainActivity : AdmobInterstitialActivity() {
             val token = task.result
             Timber.d(token)
         })
+    }
+
+    @SuppressLint("ShowToast")
+    override fun getSnackInstance(string: String, duration: Int): Snackbar {
+        return make(binding.root, string, duration)
+            .setAnchorView(binding.fab)
+            .setBackgroundTint(getColorFromAttr(R.attr.colorSecondary))
+            .setTextColor(getColorFromAttr(R.attr.colorOnPrimary))
+            .setFontFamily(R.font.valorant_font_family)
     }
 
     override fun onStart() {
@@ -69,21 +80,6 @@ class MainActivity : AdmobInterstitialActivity() {
         uiViewModel.onHideBottomNav.observe(this, {
             binding.bottomNav.transform(binding.fab, it)
         })
-
-        uiViewModel.mostrarMensagemNaSnackbar.observe(this, { mensagem ->
-            if (mensagem.isNotEmpty()) {
-                snackbarFactory(mensagem).show()
-            }
-        })
-    }
-
-    @SuppressLint("ShowToast")
-    private fun snackbarFactory(texto: String, duracao: Int = LENGTH_SHORT): Snackbar {
-        return make(binding.root, texto, duracao)
-            .setAnchorView(binding.fab)
-            .setBackgroundTint(getColorFromAttr(R.attr.colorSecondary))
-            .setTextColor(getColorFromAttr(R.attr.colorOnPrimary))
-            .setFontFamily(R.font.valorant_font_family)
     }
 
     private fun createListeners() {

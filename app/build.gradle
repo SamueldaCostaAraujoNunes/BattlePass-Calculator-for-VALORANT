@@ -20,8 +20,8 @@ android {
         applicationId "br.com.samuelnunes.valorantpassbattle"
         minSdkVersion 24
         targetSdkVersion 30
-        versionCode 23
-        versionName "4.1.0 Phoenix"
+        versionCode 25
+        versionName "4.1.2"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -82,7 +82,7 @@ dependencies {
     implementation "com.google.code.gson:gson:$gson"
 
     //Data Store
-    def dataStore = "1.0.0-beta01"
+    def dataStore = "1.0.0-beta02"
     implementation "androidx.datastore:datastore-preferences:$dataStore"
     implementation "androidx.datastore:datastore-preferences-rxjava2:$dataStore"
     implementation "androidx.datastore:datastore-preferences-rxjava3:$dataStore"
