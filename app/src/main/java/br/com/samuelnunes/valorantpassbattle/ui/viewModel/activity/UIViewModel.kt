@@ -12,10 +12,6 @@ import javax.inject.Inject
 @HiltViewModel
 class UIViewModel @Inject constructor(private val settingsDataStore: SettingsDataStore) :
     ViewModel() {
-
-    private val mensagemSnackbar: MutableLiveData<String> = MutableLiveData<String>()
-    val mostrarMensagemNaSnackbar: LiveData<String> = mensagemSnackbar
-
     private val _onHideBottomNav = MutableLiveData(true)
     val onHideBottomNav: LiveData<Boolean> = _onHideBottomNav
 
@@ -35,9 +31,4 @@ class UIViewModel @Inject constructor(private val settingsDataStore: SettingsDat
     fun showBottomNav() {
         _onHideBottomNav.value = true
     }
-
-    fun sendNewMensageSnackbar(mensage: String) {
-        mensagemSnackbar.value = mensage
-    }
-
 }

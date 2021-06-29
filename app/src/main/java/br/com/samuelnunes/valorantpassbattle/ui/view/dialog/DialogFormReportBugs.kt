@@ -74,7 +74,7 @@ class DialogFormReportBugs : DialogBase() {
                 }
             }
             dismiss()
-            uiViewModel.sendNewMensageSnackbar(getString(R.string.feedback))
+            showSnack(getString(R.string.feedback))
         }
         binding.btnCancel.setOnClickListener { dismiss() }
     }
