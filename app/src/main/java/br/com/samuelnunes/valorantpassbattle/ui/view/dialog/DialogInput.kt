@@ -8,7 +8,6 @@ import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
-import br.com.samuelnunes.valorantpassbattle.R
 import br.com.samuelnunes.valorantpassbattle.databinding.DialogTierinputBinding
 import br.com.samuelnunes.valorantpassbattle.model.dto.FormInput
 import br.com.samuelnunes.valorantpassbattle.model.dto.UserTier
@@ -19,6 +18,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
+import timber.log.Timber
 
 @AndroidEntryPoint
 class DialogInput : DialogBase() {
@@ -78,7 +78,11 @@ class DialogInput : DialogBase() {
                 }
 
                 admobViewModel.onFailed = {
-                    showSnack(getString(R.string.sem_internet))
+                    Timber.e("AdBlock é foda, viu?!")
+                    CoroutineScope(IO).launch {
+                        viewModel.save(userTier)
+                    }
+                    notification.create()
                     dismiss()
                 }
 

@@ -31,7 +31,9 @@ abstract class AdmobInterstitialActivity : BaseActivity() {
                 }
 
                 override fun onAdFailedToShowFullScreenContent(adError: AdError?) {
-                    Timber.e("Ad failed to show.")
+                    val error = "domain: ${adError?.domain}, code: ${adError?.code}, " +
+                            "message: Ad failed to show. ${adError?.message}"
+                    Timber.e(error)
                     mInterstitialAd = null
                     onFailed()
                 }
