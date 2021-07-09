@@ -47,6 +47,12 @@
 
     <style name="Theme.ValorantPassBattle.Dialog.Alert" parent="ThemeOverlay.AppCompat.Dialog.Alert" />
 
+    <style name="Theme.ValorantPassBattle.Design.BottomSheetDialog" parent="Theme.ValorantPassBattle.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>
+        <item name="bottomSheetStyle">@style/Widget.Design.BottomSheet.Modal</item>
+    </style>
+
     <style name="CustomPopupTheme" parent="ThemeOverlay.AppCompat.Dark">
         <item name="android:popupMenuStyle">@style/PopupMenu</item>
         <item name="popupMenuStyle">@style/PopupMenu</item>

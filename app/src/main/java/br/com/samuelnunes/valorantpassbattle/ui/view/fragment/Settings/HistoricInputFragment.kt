@@ -50,6 +50,8 @@ class HistoricInputFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentHistoricInputBinding.inflate(inflater, container, false)
+        adapter = ItemUserInputAdapter()
+        binding.rvEditHistoric.adapter = adapter
         setupObservers()
         val appBarConfiguration = AppBarConfiguration(navController.graph)
         binding.toolbar.setupWithNavController(navController, appBarConfiguration)
@@ -61,8 +63,7 @@ class HistoricInputFragment : Fragment() {
 
     private fun setupObservers() {
         viewModel.allUserInput.observe(viewLifecycleOwner, {
-            adapter = ItemUserInputAdapter(ArrayList(it))
-            binding.rvEditHistoric.adapter = adapter
+            adapter.submitList(it)
         })
 
         binding.rvEditHistoric.addOnItemTouchListener(
@@ -94,7 +95,7 @@ class HistoricInputFragment : Fragment() {
     private fun editItem(
         pos: Int
     ) {
-        val userTier = (binding.rvEditHistoric.adapter as ItemUserInputAdapter).list[pos]
+        val userTier = adapter.currentList[pos]
         if (userTier.id != -1) {
             navController.navigate(NavGraphDirections.actionGlobalDialogInput(userTier.id))
         }
@@ -103,7 +104,7 @@ class HistoricInputFragment : Fragment() {
     private fun deleteItem(
         pos: Int
     ) {
-        val userTier = (binding.rvEditHistoric.adapter as ItemUserInputAdapter).list[pos]
+        val userTier = adapter.currentList[pos]
         if (userTier.id != -1) {
             try {
                 val direction =

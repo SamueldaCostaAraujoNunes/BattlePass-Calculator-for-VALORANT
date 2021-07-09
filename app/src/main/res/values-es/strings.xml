@@ -135,4 +135,6 @@
     <string name="enviar">Enviar</string>
     <string name="feedback">¡Gracias por la respuesta!</string>
     <string name="sem_internet">Sin acceso a Internet</string>
+    <string name="infos">Infos</string>
+    <string name="dev">Desenvolvedor</string>
 </resources>

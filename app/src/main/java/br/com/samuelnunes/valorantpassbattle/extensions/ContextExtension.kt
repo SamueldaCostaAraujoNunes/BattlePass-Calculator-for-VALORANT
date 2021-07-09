@@ -1,9 +1,12 @@
 package br.com.samuelnunes.valorantpassbattle.extensions
 
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Context
 import android.util.TypedValue
 import androidx.annotation.AttrRes
 import androidx.annotation.ColorInt
+import androidx.core.content.ContextCompat
 import java.util.*
 
 @ColorInt
@@ -26,3 +29,8 @@ fun Context.getColorHexFromAttr(
 
 val Context.locale: Locale
     get() = resources.configuration.locales[0]
+
+fun Context.copyToClipboard(text: CharSequence) {
+    val clipboard = ContextCompat.getSystemService(this, ClipboardManager::class.java)
+    clipboard?.setPrimaryClip(ClipData.newPlainText("", text))
+}

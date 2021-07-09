@@ -11,6 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import br.com.samuelnunes.valorantpassbattle.R
 import br.com.samuelnunes.valorantpassbattle.databinding.DialogFormReportBugsBinding
 import br.com.samuelnunes.valorantpassbattle.extensions.capitalize
+import br.com.samuelnunes.valorantpassbattle.extensions.showSnack
 import br.com.samuelnunes.valorantpassbattle.model.dto.FormQuestion
 import br.com.samuelnunes.valorantpassbattle.ui.viewModel.activity.UIViewModel
 import br.com.samuelnunes.valorantpassbattle.ui.viewModel.dialog.DialogFormReportBugsViewModel

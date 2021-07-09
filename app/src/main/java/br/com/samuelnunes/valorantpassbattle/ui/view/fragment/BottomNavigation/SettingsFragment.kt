@@ -1,7 +1,6 @@
 package br.com.samuelnunes.valorantpassbattle.ui.view.fragment.BottomNavigation
 
 import android.os.Bundle
-import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
@@ -10,6 +9,7 @@ import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreferenceCompat
 import br.com.samuelnunes.valorantpassbattle.R
 import br.com.samuelnunes.valorantpassbattle.database.dataStore.SettingsDataStore
+import br.com.samuelnunes.valorantpassbattle.ui.view.fragment.Settings.DeveloperInfosFragment
 import br.com.samuelnunes.valorantpassbattle.ui.viewModel.fragment.bottomNavigation.SettingsFragmentViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -35,13 +35,17 @@ class SettingsFragment : PreferenceFragmentCompat() {
         findPreference<Preference>(getString(R.string.bugReport))
     }
 
+    private val infoDev by lazy {
+        findPreference<Preference>(getString(R.string.infosDeveloper))
+    }
+
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         preferenceManager.preferenceDataStore = settingsDataStore
         setPreferencesFromResource(R.xml.root_preferences, rootKey)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun onResume() {
+        super.onResume()
         setPreferencesListeners()
     }
 
@@ -49,7 +53,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
         get() {
             return findNavController()
         }
-
 
     private fun setPreferencesListeners() {
 
@@ -77,6 +80,12 @@ class SettingsFragment : PreferenceFragmentCompat() {
             val direction =
                 SettingsFragmentDirections.actionSettingsFragmentToDialogFormReportBugs()
             navController.navigate(direction)
+            true
+        }
+
+        infoDev?.setOnPreferenceClickListener {
+            val bottomSheetFragment = DeveloperInfosFragment()
+            bottomSheetFragment.show(parentFragmentManager, "Settings")
             true
         }
     }

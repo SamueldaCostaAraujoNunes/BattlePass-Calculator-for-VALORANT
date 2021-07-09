@@ -44,11 +44,17 @@
     </PreferenceCategory>
 
     <PreferenceCategory app:title="@string/Bugs">
-
         <Preference
             android:icon="@drawable/ic_bug_report"
             app:key="@string/bugReport"
             app:title="@string/reportar_um_bug" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/infos">
+        <Preference
+            android:icon="@drawable/ic_baseline_info_24"
+            app:key="@string/infosDeveloper"
+            app:title="@string/dev" />
     </PreferenceCategory>
     <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.PreferenceSpace />
 </PreferenceScreen>

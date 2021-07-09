@@ -17,13 +17,13 @@
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            app:tabMode="scrollable"
             android:background="@drawable/background_tablayout"
             android:elevation="4dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:tabIndicator="@drawable/background_item_tablayout"
+            app:tabMode="scrollable"
             app:tabIndicatorAnimationDuration="400"
             app:tabIndicatorAnimationMode="elastic"
             app:tabIndicatorColor="?attr/colorSecondary"
@@ -96,6 +96,7 @@
             app:fadeAnimationText='@{String.format("%.2f", previsoesJogos.jogosRestantes)}'
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
+            app:orderAnimation='@{0}'
             app:layout_constraintBottom_toBottomOf="@+id/textView7"
             app:layout_constraintStart_toEndOf="@+id/textView7"
             app:layout_constraintTop_toTopOf="@+id/textView7"
@@ -124,6 +125,7 @@
             app:fadeAnimationText='@{previsoesJogos.tempoRestante}'
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
+            app:orderAnimation='@{1}'
             app:layout_constraintBottom_toBottomOf="@+id/textView8"
             app:layout_constraintStart_toEndOf="@+id/textView8"
             app:layout_constraintTop_toTopOf="@+id/textView8"
@@ -155,6 +157,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/textView9"
             app:layout_constraintStart_toEndOf="@+id/textView9"
             app:layout_constraintTop_toTopOf="@+id/textView9"
+            app:orderAnimation='@{2}'
             tools:ignore="RtlSymmetry"
             tools:text="1" />
 
@@ -180,6 +183,7 @@
             app:fadeAnimationText="@{previsoesJogos.horasPorDia}"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="20sp"
+            app:orderAnimation='@{3}'
             app:layout_constraintBottom_toBottomOf="@+id/textView10"
             app:layout_constraintStart_toEndOf="@+id/textView10"
             app:layout_constraintTop_toTopOf="@+id/textView10"

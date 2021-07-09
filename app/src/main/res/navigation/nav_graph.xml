@@ -22,8 +22,7 @@
     <fragment
         android:id="@+id/settingsFragment"
         android:name="br.com.samuelnunes.valorantpassbattle.ui.view.fragment.BottomNavigation.SettingsFragment"
-        android:label="SettingsFragment"
-        tools:layout="@xml/root_preferences">
+        android:label="SettingsFragment">
 
         <action
             android:id="@+id/action_settingsFragment_to_dialogFormReportBugs"
@@ -145,5 +144,28 @@
         android:label="DialogFormReportBugs"
         tools:layout="@layout/dialog_form_report_bugs" />
 
+    <activity
+        android:id="@+id/github"
+        app:action="android.intent.action.VIEW"
+        app:data="@string/github" />
 
+    <activity
+        android:id="@+id/linkedin"
+        app:action="android.intent.action.VIEW"
+        app:data="@string/linkedin" />
+
+    <activity
+        android:id="@+id/kofi"
+        app:action="android.intent.action.VIEW"
+        app:data="@string/kofi" />
+
+    <action
+        android:id="@+id/action_global_github"
+        app:destination="@id/github" />
+    <action
+        android:id="@+id/action_global_linkedin"
+        app:destination="@id/linkedin" />
+    <action
+        android:id="@+id/action_global_kofi"
+        app:destination="@id/kofi" />
 </navigation>

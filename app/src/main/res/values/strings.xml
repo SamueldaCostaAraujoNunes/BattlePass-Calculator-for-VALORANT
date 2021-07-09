@@ -136,4 +136,7 @@
     <string name="enviar">Submit</string>
     <string name="feedback">Thanks for the feedback!</string>
     <string name="sem_internet">No internet access</string>
+    <string name="infos">Infos</string>
+    <string name="dev">Desenvolvedor</string>
+
 </resources>

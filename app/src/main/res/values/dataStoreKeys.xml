@@ -6,4 +6,5 @@
     <string name="themeStatus" translatable="false">keyThemeStatus</string>
     <string name="editHistoric" translatable="false">editHistoric</string>
     <string name="bugReport" translatable="false">bugReport</string>
+    <string name="infosDeveloper" translatable="false">infos</string>
 </resources>

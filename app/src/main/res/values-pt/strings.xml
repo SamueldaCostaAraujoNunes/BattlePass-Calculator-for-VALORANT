@@ -134,4 +134,6 @@
     <string name="enviar">Enviar</string>
     <string name="feedback">Obrigado pelo FeedBack!</string>
     <string name="sem_internet">Sem acesso a Internet</string>
+    <string name="infos">Infos</string>
+    <string name="dev">Desenvolvedor</string>
 </resources>
