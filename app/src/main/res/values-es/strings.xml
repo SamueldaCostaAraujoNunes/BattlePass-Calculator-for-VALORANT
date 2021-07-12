@@ -136,5 +136,6 @@
     <string name="feedback">¡Gracias por la respuesta!</string>
     <string name="sem_internet">Sin acceso a Internet</string>
     <string name="infos">Infos</string>
-    <string name="dev">Desenvolvedor</string>
+    <string name="dev">Desarrollador</string>
+    <string name="email">Correo electrónico copiado!!</string>
 </resources>

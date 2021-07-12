@@ -39,10 +39,15 @@ fun TextView.fadeAnimationText(newText: String?, orderAnimation: Int = 0) {
                 text = newText
             }
         })
-        Timer().schedule(orderAnimation.toLong() * 150) {
-            Timber.d(orderAnimation.toString())
+        try {
+            Timer().schedule(orderAnimation.toLong() * 150) {
+                startAnimation(anim)
+            }
+        } catch (e: Exception) {
+            Timber.e(e)
             startAnimation(anim)
         }
+
 
     } else {
         text = newText

@@ -13,6 +13,7 @@ import br.com.samuelnunes.valorantpassbattle.model.dto.Reward
 import br.com.samuelnunes.valorantpassbattle.ui.view.adapter.ItemRewardAdapter
 import br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.FragmentWithTitle
 
+
 const val TIER = 0
 const val CHAPTER = 1
 
@@ -20,7 +21,7 @@ abstract class BaseRewardsFragment : FragmentWithTitle() {
     protected lateinit var binding: FragmentBaseRewardsBinding
     protected lateinit var rewards: List<Reward>
     protected lateinit var positionTier: LiveData<Int>
-    protected lateinit var adapter: ItemRewardAdapter
+    private lateinit var itemRewardAdapter: ItemRewardAdapter
 
     protected open val origin = TIER
 
@@ -50,27 +51,39 @@ abstract class BaseRewardsFragment : FragmentWithTitle() {
             }
             menu.show()
             menu.setOnMenuItemClickListener { item ->
-                (binding.recycleView.adapter as ItemRewardAdapter).filter(item.title.toString())
+                itemRewardAdapter.submitList(filter(item.title.toString()))
                 true
             }
         }
     }
 
-    private fun setupRecyclerView(position: Int = 1) {
-        with(binding.recycleView) {
-            adapter = ItemRewardAdapter(
-                rewards,
-                position,
-                origin
-            )
-            layoutManager?.scrollToPosition(position + 5)
+    private fun filter(text: String): List<Reward> {
+        val filteredList = mutableListOf<Reward>()
+        if (text == getString(R.string.tudo)) {
+            filteredList.addAll(rewards)
+        } else {
+            for (item in rewards) {
+                if (item.tipo == text) {
+                    filteredList.add(item)
+                }
+            }
         }
+        return filteredList
     }
 
+    private fun setupRecyclerView(position: Int = 1) {
+        itemRewardAdapter = ItemRewardAdapter(
+            position,
+            origin
+        )
+        itemRewardAdapter.submitList(rewards)
+        binding.recycleView.apply {
+            adapter = itemRewardAdapter
+        }
+    }
     private fun updateRecyclerView(position: Int = 1) {
-        with(binding.recycleView) {
-            (adapter as ItemRewardAdapter).rewardIndex = position
-            layoutManager?.scrollToPosition(position + 5)
+        binding.recycleView.apply {
+            itemRewardAdapter.rewardIndex = position
         }
     }
 }

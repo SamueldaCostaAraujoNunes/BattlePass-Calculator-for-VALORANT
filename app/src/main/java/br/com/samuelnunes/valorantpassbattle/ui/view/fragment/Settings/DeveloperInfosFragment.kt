@@ -55,7 +55,7 @@ class DeveloperInfosFragment : BottomSheetDialogFragment() {
         }
         binding.gmail.setOnClickListener {
             requireContext().copyToClipboard(getString(R.string.gmail))
-            showSnack("Email Copiado", Snackbar.LENGTH_SHORT)
+            showSnack(getString(R.string.email), Snackbar.LENGTH_SHORT)
             dismiss()
         }
         binding.kofi.setOnClickListener {
