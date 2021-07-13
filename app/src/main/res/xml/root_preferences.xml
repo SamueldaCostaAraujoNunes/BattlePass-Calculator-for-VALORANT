@@ -1,7 +1,10 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:scrollbarAlwaysDrawVerticalTrack="true">
-    <PreferenceCategory app:title="@string/estilo">
+    <PreferenceCategory
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false"
+        app:title="@string/estilo">
 
         <Preference
             android:summary="@string/escolha_um_tema"
@@ -10,7 +13,10 @@
             app:title="@string/trocar_tema" />
     </PreferenceCategory>
 
-    <PreferenceCategory app:title="@string/preferencias">
+    <PreferenceCategory
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false"
+        app:title="@string/preferencias">
 
         <SwitchPreferenceCompat
             app:key="@string/epilogue"
@@ -35,7 +41,10 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory app:title="@string/seu_historico">
+    <PreferenceCategory
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false"
+        app:title="@string/seu_historico">
 
         <Preference
             app:key="@string/editHistoric"
@@ -43,18 +52,27 @@
             app:title="@string/editar_historico" />
     </PreferenceCategory>
 
-    <PreferenceCategory app:title="@string/Bugs">
+    <PreferenceCategory
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false"
+        app:title="@string/Bugs">
         <Preference
             android:icon="@drawable/ic_bug_report"
             app:key="@string/bugReport"
             app:title="@string/reportar_um_bug" />
     </PreferenceCategory>
 
-    <PreferenceCategory app:title="@string/infos">
+    <PreferenceCategory
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false"
+        app:title="@string/infos">
         <Preference
             android:icon="@drawable/ic_baseline_info_24"
             app:key="@string/infosDeveloper"
             app:title="@string/dev" />
     </PreferenceCategory>
-    <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.PreferenceSpace />
+
+    <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.PreferenceSpace
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false" />
 </PreferenceScreen>
