@@ -1,12 +1,8 @@
 <resources>
     <string name="app_name">Calculadora de pases para VALORANT</string>
-    <string name="valorant">vAlorant</string>
-    <string name="ep_ato_atual">FORMACION:ACTO 3</string>
-    <string name="sufixo_nome_app">Calculadora de Pase de Batalla</string>
 
     <string name="tier_atual">Grado actual</string>
     <string name="exp_atual">EXP actual</string>
-    <string name="exp_inicial">EXP Inicial</string>
     <string name="salvar">Ahorrar</string>
     <string name="cancelar">Cancelar</string>
 
@@ -20,20 +16,17 @@
     <string name="adiantado">Por adelantado</string>
     <string name="atrasado">Atrasado</string>
 
-    <string name="data_inicial">La fecha de inicio</string>
     <string name="progresso_porcento">% Progreso</string>
     <string name="total_de_xp">EXP total</string>
     <string name="xp_por_dia">EXP p/ día</string>
     <string name="exp_adiantado_atrasado">EXP avanzado / retrasado</string>
 
-    <string name="linha_do_tempo">Linea del tiempo</string>
+    <string name="linha_do_tempo">Línea del tiempo</string>
     <string name="data_inicial_do_ato">Fecha de acto inicial</string>
     <string name="data_final_do_ato">Fecha final del acto</string>
     <string name="data_finalizacao">Fecha final</string>
     <string name="dia_do_passe">Pase el día</string>
     <string name="dias_adiantados_atrasados">Días tempranos / tardíos</string>
-    <string name="dias_adiantados">Días tempranos</string>
-    <string name="dias_atrasados">Días de retraso</string>
 
     <string name="horas_por_dia">Horas al día</string>
     <string name="jogos_por_dia">Juegos por día</string>
@@ -47,14 +40,9 @@
     <string name="informacoes">Información</string>
     <string name="configuracoes">Ajustes</string>
     <string name="insira_seus_dados">Introduce tus detalles</string>
-    <string name="diarias">Diario</string>
-    <string name="limpar_historico">Historia limpia</string>
     <string name="xp_por_tier">EXP por Grado</string>
 
-    <string name="publicidade">Publicidad</string>
     <string name="trocar_tema">Cambiar de tema</string>
-    <string name="exp_para_completar_">EXP para completar</string>
-    <string name="porcentagem_do_passe">"Porcentaje de aprobación:"</string>
     <string name="recompensa">Recompensa</string>
 
     <string name="recompensa_por_tier">Recompensa del Grado</string>
@@ -62,16 +50,6 @@
     <string name="tipo">Tipo</string>
     <string name="editar_historico">Editar historial</string>
 
-    <string name="exp_de_missoes">Misiones EXP</string>
-    <string name="pular">Saltar</string>
-    <string name="proximo">Prox</string>
-
-    <string name="tutorial_titulo">¡Vaya, vALORaNT jugador!</string>
-    <string name="tutorial_conteudo_primeira_tela">¡Esta aplicación te ayudará a completar el Pase de batalla actual sin prisa! No será necesario que inicies sesión con tu cuenta de Riot, ¡solo sigue los pasos a continuación y uno tiene un buen pase!</string>
-    <string name="tutorial_conteudo_segunda_tela">En la esquina superior izquierda, haz clic en:Pase de batalla</string>
-    <string name="tutorial_conteudo_terceira_tela">En el icono en miniatura de la recompensa, verá el número del nivel actual, en este caso, el Rango 50 y justo por encima, la cantidad de EXP izquierda para completar este nivel (3100 CAD), se trata de la única información que se necesita.</string>
-
-    <string name="tema_do_app">Tema de la Aplicacion</string>
     <string name="tema_claro">Claro</string>
     <string name="tema_escuro">Oscuro</string>
     <string name="tema_padrao_do_sistema">Estándar del sistema</string>
@@ -80,25 +58,14 @@
     <string name="deletar">Eliminar</string>
     <string name="text_delete">¿Quieres eliminar el Grado %1$d?</string>
 
-    <string name="info_exp_missoes">Información de EXP de la misión</string>
-    <string name="exp_de_partidas">Match EXP</string>
     <string name="missoes_diarias">Misiones Diarias</string>
 
     <string name="tudo">Todas</string>
-    <string name="skin">Skin</string>
-    <string name="card">Tarjeta</string>
-    <string name="chaveiro">Buddy</string>
-    <string name="spray">Spray</string>
-    <string name="titulo">Título</string>
-    <string name="radianita">Radianite</string>
 
-    <string name="semanais">Semanario</string>
     <string name="capitulo">"Capitulo"</string>
-    <string name="content_exp_missoes">¡Esta tabla muestra la cantidad de EXP actual obtenida a través de recompensas de partidos, misiones diarias y semanales! ¡Cuantas más misiones completes, menos EXP por juego necesitarás para completar el pase!</string>
     <string name="missoes_semanais">Misiones Semanales</string>
 
     <string name="insira_um_tier">¡Inserta la grado que falta!</string>
-    <string name="tier_edit">Editor de Grado</string>
     <string name="tier_intervalo">¡Inserta un grado entre %1$d y %2$d!</string>
     <string name="insira_o_exp_faltando">¡Inserta la EXP que falta!</string>
     <string name="exp_intervalo">Inserta un EXP entre %1$d y %2$d!</string>
@@ -134,7 +101,6 @@
     <string name="helper_idea">Si tienes alguna idea para mejorar la aplicación, ¡déjala aquí!</string>
     <string name="enviar">Enviar</string>
     <string name="feedback">¡Gracias por la respuesta!</string>
-    <string name="sem_internet">Sin acceso a Internet</string>
     <string name="infos">Infos</string>
     <string name="dev">Desarrollador</string>
     <string name="email">Correo electrónico copiado!!</string>

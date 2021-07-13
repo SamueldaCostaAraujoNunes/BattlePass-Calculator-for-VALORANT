@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Battle Pass Calculator for VALORANT</string>
-    <string name="valorant">vAlorant</string>
-    <string name="ep_ato_atual">FORMATION:ACT 3</string>
-    <string name="sufixo_nome_app">BattlePass Calculator</string>
 
     <string name="tier_atual">Current Tier</string>
     <string name="exp_atual">Current EXP</string>
-    <string name="exp_inicial">Initial EXP</string>
     <string name="salvar">Save</string>
     <string name="cancelar">Cancel</string>
 
@@ -24,7 +20,6 @@
     <string name="adiantado">Forward</string>
     <string name="atrasado">Delayed</string>
 
-    <string name="data_inicial">Initial date</string>
     <string name="progresso_porcento">% Progress</string>
     <string name="total_de_xp">Total EXP</string>
     <string name="xp_por_dia">EXP p/ Day</string>
@@ -36,8 +31,6 @@
     <string name="data_finalizacao">End date</string>
     <string name="dia_do_passe">Pass Day</string>
     <string name="dias_adiantados_atrasados">Early / Late Days</string>
-    <string name="dias_adiantados">Days Forward</string>
-    <string name="dias_atrasados">Days Delayed</string>
 
     <string name="horas_por_dia">Hours per day</string>
     <string name="jogos_por_dia">Games per Day</string>
@@ -51,13 +44,9 @@
     <string name="informacoes">Informations</string>
     <string name="configuracoes">Settings</string>
     <string name="insira_seus_dados">Enter your informations</string>
-    <string name="diarias">Daily</string>
-    <string name="limpar_historico">Clean history</string>
     <string name="xp_por_tier">EXP per Tier</string>
 
-    <string name="publicidade">Publicity</string>
     <string name="trocar_tema">Change Theme</string>
-    <string name="porcentagem_do_passe">Pass Percent:</string>
     <string name="recompensa">Reward</string>
     <string name="capitulo">Chapter</string>
 
@@ -66,18 +55,6 @@
     <string name="tipo">Type</string>
     <string name="editar_historico">Edit History</string>
 
-    <string name="exp_de_missoes">Missions EXP</string>
-    <string name="pular">Skip</string>
-    <string name="proximo">Next</string>
-
-    <string name="tutorial_titulo">Hello, vALORaNT Player!</string>
-    <string name="tutorial_conteudo_primeira_tela">This app will help you complete the Current Battle Pass without rushing! There will be no need to login with your Riot account, just follow the steps below and has a good pass!</string>
-    <string name="tutorial_conteudo_segunda_tela">In the top left corner, click:Battle Pass</string>
-    <string name="tutorial_conteudo_terceira_tela">In the miniature icon of the reward, you will see the number of the Current Tier, in this case, the Tier 50 and just above, the amount of EXP left to complete this Tier (3100 EXP), these are the only information needed.</string>
-    <string name="semanais">Weekly</string>
-    <string name="exp_para_completar_">EXP to complete</string>
-
-    <string name="tema_do_app">App Theme</string>
     <string name="tema_claro">Light</string>
     <string name="tema_escuro">Dark</string>
     <string name="tema_padrao_do_sistema">System Default</string>
@@ -87,21 +64,11 @@
     <string name="text_delete">Do you want to delete Tier %1$d?</string>
 
 
-    <string name="info_exp_missoes">Mission EXP info</string>
-    <string name="content_exp_missoes">This chart shows the amount of current EXP earned through match rewards, daily and weekly missions !! The more missions you complete, the less EXP per game you will need to complete the pass!</string>
-    <string name="exp_de_partidas">Match EXP</string>
     <string name="missoes_diarias">Daily Missions</string>
     <string name="missoes_semanais">Weekly Missions</string>
 
     <string name="tudo">All</string>
-    <string name="skin">Skin</string>
-    <string name="card">Card</string>
-    <string name="chaveiro">Buddie</string>
-    <string name="spray">Spray</string>
-    <string name="titulo">Title</string>
-    <string name="radianita">Radianite</string>
     <string name="insira_um_tier">Insert the tier!</string>
-    <string name="tier_edit">Tier Editor</string>
     <string name="tier_intervalo">Enter a tier between %1$d and %2$d!</string>
     <string name="insira_o_exp_faltando">Insert the missing EXP!</string>
     <string name="exp_intervalo">Enter a EXP between %1$d and %2$d!</string>
@@ -135,7 +102,6 @@
     <string name="helper_idea">If you have any ideas to improve the app, leave it here!</string>
     <string name="enviar">Submit</string>
     <string name="feedback">Thanks for the feedback!</string>
-    <string name="sem_internet">No internet access</string>
     <string name="infos">Infos</string>
     <string name="dev">Developer</string>
     <string name="email">Copied Email!!</string>

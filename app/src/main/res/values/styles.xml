@@ -36,15 +36,6 @@
         <item name="android:fontFamily">@font/muli_font_family</item>
     </style>
 
-    <style name="AppCompat.TelaCheia" parent="Theme.ValorantPassBattle.NoActionBar">
-        <item name="android:windowFullscreen">true</item>
-    </style>
-
-    <style name="CheckBoxTheme" parent="Theme.AppCompat.Light">
-        <item name="colorControlNormal">?attr/colorOnPrimary</item>
-        <item name="colorControlActivated">?attr/colorSecondary</item>
-    </style>
-
     <style name="alertDialog" parent="Theme.ValorantPassBattle.Dialog.Alert">
         <item name="android:background">?attr/colorPrimary</item>
         <item name="android:textColor">?attr/colorOnPrimary</item>
@@ -60,7 +51,6 @@
         <item name="android:textSize">22sp</item>
     </style>
 
-
     <style name="DialogWindowTitle_Custom" parent="Theme.ValorantPassBattle.NoActionBar">
         <item name="android:maxLines">1</item>
         <item name="android:scrollHorizontally">true</item>
@@ -70,11 +60,6 @@
     <style name="TextAppearanceTabLayout" parent="TextAppearance.Design.Tab">
         <item name="android:textSize">14sp</item>
         <item name="android:fontFamily">@font/valorant_font_family</item>
-    </style>
-
-    <style name="Widget.Theme.ValorantPassBattle.ButtonBar.Fullscreen" parent="">
-        <item name="android:background">@color/black_overlay</item>
-        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
     </style>
 
     <style name="SheetDialog" parent="Theme.ValorantPassBattle.Design.BottomSheetDialog">

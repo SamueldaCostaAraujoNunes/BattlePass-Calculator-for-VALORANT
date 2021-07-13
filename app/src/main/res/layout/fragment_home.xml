@@ -39,6 +39,7 @@
                     android:id="@+id/fragmentChart"
                     android:name="br.com.samuelnunes.valorantpassbattle.ui.view.fragment.Charts.ChartExpPerTierFragment"
                     android:layout_width="match_parent"
+                    tools:background="@drawable/ic_grafico"
                     android:layout_height="match_parent" />
 
             </br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule>
@@ -76,6 +77,8 @@
                 android:name="br.com.samuelnunes.valorantpassbattle.ui.view.fragment.Home.EstatisticasFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                tools:layout="@layout/fragment_pager_slider"
+                tools:layout_height="300dp"
                 android:layout_gravity="center" />
 
             <androidx.fragment.app.FragmentContainerView
@@ -83,6 +86,8 @@
                 android:name="br.com.samuelnunes.valorantpassbattle.ui.view.fragment.Home.RewardsFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                tools:layout="@layout/fragment_pager_slider"
+                tools:layout_height="500dp"
                 android:layout_gravity="center" />
 
             <br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.CardModule

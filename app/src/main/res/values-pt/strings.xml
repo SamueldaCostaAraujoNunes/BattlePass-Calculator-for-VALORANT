@@ -1,12 +1,8 @@
 <resources>
     <string name="app_name">Calculadora de passe para VALORANT</string>
-    <string name="valorant">vAlorant</string>
-    <string name="ep_ato_atual">FORMACAO:ATO 3</string>
-    <string name="sufixo_nome_app">Calculadora do Passe de Batalha</string>
 
     <string name="tier_atual">Tier Atual</string>
     <string name="exp_atual">EXP Atual</string>
-    <string name="exp_inicial">EXP Inicial</string>
     <string name="salvar">Salvar</string>
     <string name="cancelar">Cancelar</string>
 
@@ -20,7 +16,6 @@
     <string name="adiantado">Adiantado</string>
     <string name="atrasado">Atrasado</string>
 
-    <string name="data_inicial">Data Inicial</string>
     <string name="progresso_porcento">% Progresso</string>
     <string name="total_de_xp">Total de EXP</string>
     <string name="xp_por_dia">EXP p/ Dia</string>
@@ -32,8 +27,6 @@
     <string name="data_finalizacao">Data de finalização</string>
     <string name="dia_do_passe">Dia do passe</string>
     <string name="dias_adiantados_atrasados">Dias adiantados/atrasados</string>
-    <string name="dias_adiantados">Dias Adiantados</string>
-    <string name="dias_atrasados">Dias Atrasados</string>
 
     <string name="horas_por_dia">Horas por Dia</string>
     <string name="jogos_por_dia">Jogos por Dia</string>
@@ -47,33 +40,17 @@
     <string name="informacoes">Informações</string>
     <string name="configuracoes">Configurações</string>
     <string name="insira_seus_dados">Insira os seus dados</string>
-    <string name="semanais">Semanais</string>
-    <string name="diarias">Diarias</string>
-    <string name="limpar_historico">Limpar Histórico</string>
     <string name="xp_por_tier">EXP Por Tier</string>
 
-    <string name="publicidade">Publicidade</string>
     <string name="trocar_tema">Trocar Tema</string>
-    <string name="exp_para_completar_">EXP para completar</string>
-    <string name="porcentagem_do_passe">Porcentagem do Passe</string>
     <string name="recompensa">Recompensa</string>
-    <string name="capitulo">Capitulo</string>
+    <string name="capitulo">Capítulo</string>
 
     <string name="recompensa_por_tier">Recompensa por tier</string>
-    <string name="recompensa_por_capitulo">Recompensa por Capitulo</string>
+    <string name="recompensa_por_capitulo">Recompensa por Capítulo</string>
     <string name="tipo">Tipo</string>
     <string name="editar_historico">Editar Histórico</string>
 
-    <string name="exp_de_missoes">Exp de Missões</string>
-    <string name="pular">Pular</string>
-    <string name="proximo">Prox</string>
-
-    <string name="tutorial_titulo">Opa, Jogador de vALORaNT!</string>
-    <string name="tutorial_conteudo_primeira_tela">Este app o ajudará a completar o Passe de Batalha Atual, sem pressa! Não será necessário qualquer tipo de login com a sua conta Riot, apenas siga os passo a seguir e um tenha um bom passe!</string>
-    <string name="tutorial_conteudo_segunda_tela">No canto superior esquerdo, clique em:Passe de Batalha</string>
-    <string name="tutorial_conteudo_terceira_tela">No icone em miniatura da recompensa, você verá o número do Tier Atual, neste caso, o Tier 50 e logo acima, a quantidade de EXP que falta para completar este Tier (3100 EXP), essas são as únicas informações necessarias.</string>
-
-    <string name="tema_do_app">Tema do App</string>
     <string name="tema_claro">Claro</string>
     <string name="tema_escuro">Escuro</string>
     <string name="tema_padrao_do_sistema">Padrão do Sistema</string>
@@ -82,22 +59,12 @@
     <string name="deletar">Deletar</string>
     <string name="text_delete">Deseja deletar o Tier %1$d?</string>
 
-    <string name="info_exp_missoes">Info EXP de Missoes</string>
-    <string name="content_exp_missoes">Este gráfico mostra a quantidade de EXP atual, adquirida por meio das recompensas por partida, missões diárias e semanais!! Quanto mais missões realizadas, menor a quantidade de EXP por partida será necessária para completar o passe!</string>
-    <string name="exp_de_partidas">EXP de Partidas</string>
     <string name="missoes_diarias">Missões Diárias</string>
     <string name="missoes_semanais">Missões Semanais</string>
 
     <string name="tudo">Tudo</string>
-    <string name="skin">Skin</string>
-    <string name="card">Card</string>
-    <string name="chaveiro">Chaveiro</string>
-    <string name="spray">Spray</string>
-    <string name="titulo">Título</string>
-    <string name="radianita">Radianitas</string>
 
     <string name="insira_um_tier">Insira um tier!</string>
-    <string name="tier_edit">Editor de Tier</string>
     <string name="tier_intervalo">Insira um tier entre %1$d e %2$d!</string>
     <string name="insira_o_exp_faltando">Insira o EXP faltando!</string>
     <string name="exp_intervalo">Insira um EXP entre %1$d e %2$d!</string>
@@ -133,7 +100,6 @@
     <string name="helper_idea">Caso, tenha alguma ideia para melhorar o app, deixe-a aqui!</string>
     <string name="enviar">Enviar</string>
     <string name="feedback">Obrigado pelo FeedBack!</string>
-    <string name="sem_internet">Sem acesso a Internet</string>
     <string name="infos">Infos</string>
     <string name="dev">Desenvolvedor</string>
     <string name="email">Email Copiado!!</string>
