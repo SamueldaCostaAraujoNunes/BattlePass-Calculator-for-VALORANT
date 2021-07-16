@@ -1,14 +1,13 @@
-package br.com.samuelnunes.valorantpassbattle.extensions.bindingAdapters
+package br.com.samuelnunes.valorantpassbattle.extensions
 
 import android.graphics.Paint
+import android.os.Build
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import br.com.samuelnunes.valorantpassbattle.R
-import br.com.samuelnunes.valorantpassbattle.extensions.formatterLocale
-import br.com.samuelnunes.valorantpassbattle.extensions.getColorFromAttr
-import timber.log.Timber
+import br.com.samuelnunes.valorantpassbattle.extensions.bindingAdapters.getColor
 import java.time.LocalDate
 import java.time.format.FormatStyle
 import java.util.*
@@ -39,15 +38,13 @@ fun TextView.fadeAnimationText(newText: String?, orderAnimation: Int = 0) {
                 text = newText
             }
         })
-        try {
+        if (Build.VERSION.SDK_INT > 25) {
             Timer().schedule(orderAnimation.toLong() * 150) {
                 startAnimation(anim)
             }
-        } catch (e: Exception) {
-            Timber.e(e)
+        } else {
             startAnimation(anim)
         }
-
 
     } else {
         text = newText
