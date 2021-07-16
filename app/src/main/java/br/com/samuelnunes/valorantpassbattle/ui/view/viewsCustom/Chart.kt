@@ -34,7 +34,7 @@ class Chart @JvmOverloads constructor(
         model
             .chartType(AAChartType.Area)
             .tooltipValueSuffix(" EXP")
-            .backgroundColor("#00000000")
+            .backgroundColor(context.getColorHexFromAttr(R.attr.colorPrimary))
             .yAxisTitle("EXP")
             .axesTextColor(
                 context.getColorHexFromAttr(R.attr.colorOnPrimary)
