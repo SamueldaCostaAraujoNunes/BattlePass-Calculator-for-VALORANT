@@ -1,106 +1,78 @@
-# BattlePass Calculator for VALORANT
+<h1 style="color:#FF4655">Battle Pass Calculator for VALORANT</h1>
 
 <img src="https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/BattlePassCalculatorForValorant/master/app/src/main/ic_launcher-playstore.png" align="left"
 width="200" hspace="10" vspace="10">
+Battle Pass Calculator for VALORANT is a Battle Pass management application for VALORANT game users. The app is free and open source, available for Android devices v7 and above.
 
-BattlePass Calculator for VALORANT é um aplicativo de gerenciamento de Passe de Batalha para usuários do jogo VALORANT. O aplicativo é gratuito e de código aberto, disponível para dispositivos Android v7 ou superior.
-
-BattlePass Calculator for VALORANT está disponível na Google Play Store.
+Battle Pass Calculator for VALORANT is available on the Google Play Store.
 
 <p align="left">
 <a href="https://play.google.com/store/apps/details?id=br.com.samuelnunes.valorantpassbattle">
     <img alt="Get it on Google Play"
         height="80"
-        src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" />
+        src="gp.svg" />
 </a> 
 </p>
 
-## Sobre
+<h2 style="color:#FF4655">About</h2>
 
-O Aplicativo foi feito para que o jogador possa se planejar com antecedência, para conseguir concluir o Passe de Batalha sem ter que "rushar" para conquistar todas as recompensas a tempo!
+The Application was made so that the player can plan ahead, to be able to complete the Battle Pass without having to "rush" to win all the rewards in time!
 
-O Passe de Batalha do VALORANT se renova a cada 3-4 Meses. Cada Passe possuí 50 recompensas para quem adquire o Passe, mais 14 recompensas gratuitas ao todo. O App gera previsões sobre o desenvolvimento do passe a medida que o usuário joga e os dias se passam.
+The VALORANT Battle Pass renews every 3-4 Months. Each Pass has 50 rewards for those who purchase the Pass, plus 14 free rewards in total. The App generates predictions about the development of the pass as the user plays and the days pass.
 
-Este aplicativo foi originalmente criado por Samuel Nunes e lançado sob a GNU GPLv3.
+This app was originally created by Samuel Nunes and released under the GNU GPLv3.
 
-## Features
+<h2 style="color:#FF4655">Features</h2>
 
-O aplicativo Android permite que você:
+The Android app allows you to:
 
-- Modo Claro/Escuro.
-- Saiba qual dia concluirá todos os tiers.
-- Saiba quantos jogos serão necessários por dias
-- Saiba quantas horas de jogos faltam
-- Veja as recompensas do passe.
-- Gráficos e estatísticas.
+- Light/Dark mode.
+- Create projections based on the exp of the missions.
+- Optional inclusion of Epilogue.
+- Know which day will complete all tiers.
+- Know how many games will be needed per days
+- Know how many hours of games are left
+- See the rewards of the pass.
+- Graphs and statistics.
 
-## Screenshots
+<h2 style="color:#FF4655">Built with 🛠</h2>
 
-### Tema Escuro / Claro 
-<img 
-    src="https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/BattlePass-Calculator-for-VALORANT/master/prints/Themes.png"
-    align="center" 
-    width="600"
-    hspace="10"
-    vspace="10">
+- [Kotlin](https://kotlinlang.org/) - First class and official programming language for Android development.
+- [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html) - For asynchronous and more...
+- [Flow](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/) - A cold asynchronous data stream that sequentially emits values and completes normally or with an exception.
+- [Android Architecture Components](https://developer.android.com/topic/libraries/architecture) - Collection of libraries that help you design robust, testable, and maintainable apps.
+  - [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - Data objects that notify views when the underlying database changes.
+  - [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Stores UI-related data that isn't destroyed on UI changes. 
+  - [ViewBinding](https://developer.android.com/topic/libraries/view-binding) - Generates a binding class for each XML layout file present in that module and allows you to more easily write code that interacts with views.
+  - [Room](https://developer.android.com/topic/libraries/architecture/room) - SQLite object mapping library.
+  - [Navigation](https://developer.android.com/guide/navigation) - Navigation refers to the interactions that allow users to navigate across, into, and back out from the different pieces of content within your app.
+  - [OkHttp3](https://square.github.io/okhttp/) - A type-safe HTTP client for Android and Java.
+  - [DataStore](https://developer.android.com/topic/libraries/architecture/datastore) - Jetpack DataStore is a data storage solution that allows you to store key-value pairs or typed objects with protocol buffers. DataStore uses Kotlin coroutines and Flow to store data asynchronously, consistently, and transactionally.
+- [Gson](https://github.com/google/gson) - A modern JSON library for Kotlin and Java.
+- [Hilt](https://dagger.dev/hilt/) - A pragmatic lightweight dependency injection framework for Kotlin developers.
+- [Glide](https://github.com/bumptech/glide) - An image loading library for Android backed by Kotlin Coroutines.
+- [Dots Indicator](https://github.com/tommybuonomo/dotsindicator) - This library makes it possible to represent View Pager Dots Indicator with 3 different awesome styles 
+- [AAChartCore-Kotlin](https://github.com/AAChartModel/AAChartCore-Kotlin) - An elegant modern declarative data visualization chart framework for Android.
+- [Timber](https://github.com/JakeWharton/timber) -A logger with a small, extensible API which provides utility on top of Android's normal Log class.
+- [Material Components for Android](https://github.com/material-components/material-components-android) - Modular and customizable Material Design UI components for Android
 
-### Tier Atual e Slider de Informações
-<img src="https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/BattlePass-Calculator-for-VALORANT/master/prints/Menu%20Infos.png"
-    align="center"
-    width="600"
-    hspace="10"
-    vspace="10">
+<h2 style="color:#FF4655">Architecture</h2>
 
-### Lista de Recompensas Tier / Capitulo
-<img src="https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/BattlePass-Calculator-for-VALORANT/master/prints/ListaDeRecompensas.png"
-    align="center"
-    width="600"
-    hspace="10"
-    vspace="10">
+This app uses [***MVVM (Model View View-Model)***](https://developer.android.com/jetpack/docs/guide#recommended-app-arch) architecture.
 
-### Filtro de Pesquisa de Recompensas
-<img src="https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/BattlePass-Calculator-for-VALORANT/master/prints/ListaDeRecompensasFilter.png"
-    align="center"
-    height="600"
-    hspace="10"
-    vspace="10">
+![](https://developer.android.com/topic/libraries/architecture/images/final-architecture.png)
 
-### Caixa de Dialogo de Recompensas Tier / Capitulo
-<img src="https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/BattlePass-Calculator-for-VALORANT/master/prints/ListaDeRecompensasDialog.png"
-    align="center"
-    width="600"
-    hspace="10"
-    vspace="10">
+<h2 style="color:#FF4655">Contact</h2>
 
-### Tela de Gráficos
-<img src="https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/BattlePass-Calculator-for-VALORANT/master/prints/Gr%C3%A1ficos.png"
-    align="center"
-    height="600"
-    hspace="10"
-    vspace="10">
+If you need any help, shoot me an email at **samueldacostaaraujonunes@gmail.com**
 
-### Tela de Informações
-<img src="https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/BattlePass-Calculator-for-VALORANT/master/prints/Infos.png"
-    align="center"
-    height="600"
-    hspace="10"
-    vspace="10">
+<h2 style="color:#FF4655">License</h2>
 
-### Tela de Configurações
-<img src="https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/BattlePass-Calculator-for-VALORANT/master/prints/Configs.png"
-    align="center"
-    height="600"
-    hspace="10"
-    vspace="10">
+```
+GNU GENERAL PUBLIC LICENSE
+                       Version 3, 29 June 2007
 
-### Escolha entre Temas
-<img src="https://raw.githubusercontent.com/SamueldaCostaAraujoNunes/BattlePass-Calculator-for-VALORANT/master/prints/ChooseTheme.png"
-    align="center"
-    height="600"
-    hspace="10"
-    vspace="10">
-
-## License
-
-This application is released under GNU GPLv3 (see [LICENSE](LICENSE)).
-Some of the used libraries are released under different licenses.
+ Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+ Everyone is permitted to copy and distribute verbatim copies
+ of this license document, but changing it is not allowed.
+```
