@@ -22,6 +22,10 @@ The VALORANT Battle Pass renews every 3-4 Months. Each Pass has 50 rewards for t
 
 This app was originally created by Samuel Nunes and released under the GNU GPLv3.
 
+<h2 style="color:#FF4655">Demo</h2>
+
+https://user-images.githubusercontent.com/66431643/126239780-fc858410-3d59-493f-829b-3d265a5dee80.mp4
+
 <h2 style="color:#FF4655">Features</h2>
 
 The Android app allows you to:
