@@ -7,7 +7,7 @@ Battle Pass Calculator for VALORANT is a Battle Pass management application for 
 Battle Pass Calculator for VALORANT is available on the Google Play Store.
 
 <p align="center">
-<a href="https://play.google.com/store/apps/details?id=br.com.samuelnunes.valorantpassbattle">
+<a href="https://play.google.com/store/apps/details?id=br.com.samuelnunes.battlepassforval">
     <img alt="Get it on Google Play"
         height="80"
         src="gp.svg" />
