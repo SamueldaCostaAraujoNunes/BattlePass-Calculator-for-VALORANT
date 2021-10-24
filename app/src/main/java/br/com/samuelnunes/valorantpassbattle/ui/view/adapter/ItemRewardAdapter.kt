@@ -1,5 +1,6 @@
 package br.com.samuelnunes.valorantpassbattle.ui.view.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
@@ -30,6 +31,7 @@ class ItemRewardAdapter(
         get() {
             return rewardCurrent
         }
+        @SuppressLint("NotifyDataSetChanged")
         set(value) {
             rewardCurrent = value
             notifyDataSetChanged()

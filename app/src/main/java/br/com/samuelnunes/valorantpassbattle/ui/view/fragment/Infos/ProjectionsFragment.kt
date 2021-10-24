@@ -4,10 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import br.com.samuelnunes.valorantpassbattle.R
 import br.com.samuelnunes.valorantpassbattle.databinding.FragmentProjectionsBinding
+import br.com.samuelnunes.valorantpassbattle.extensions.addGameTypeItem
+import br.com.samuelnunes.valorantpassbattle.model.GameType.GameType
 import br.com.samuelnunes.valorantpassbattle.ui.view.viewsCustom.FragmentWithTitle
 import br.com.samuelnunes.valorantpassbattle.ui.viewModel.fragment.infos.ProjectionsFragmentViewModel
 import com.google.android.material.tabs.TabLayout
@@ -18,21 +21,13 @@ class ProjectionsFragment : FragmentWithTitle() {
     private val viewModel: ProjectionsFragmentViewModel by viewModels()
     private lateinit var binding: FragmentProjectionsBinding
 
-    companion object {
-        const val DISPUTA_DA_SPIKE = 0
-        const val SEM_CLASSIFICACAO = 1
-        const val DISPARADA = 2
-        const val MATA_MATA = 3
-        const val REPLICACAO = 4
-        const val BATALHA_NEVADA = 5
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentProjectionsBinding.inflate(inflater, container, false)
         binding.lifecycleOwner = this
+        addTabs()
         return binding.root
     }
 
@@ -49,8 +44,15 @@ class ProjectionsFragment : FragmentWithTitle() {
         })
     }
 
-    private fun setListeners(position: Int = DISPUTA_DA_SPIKE) {
-        viewModel.previsoesDosJogos(position).observe(viewLifecycleOwner, Observer {
+    private fun addTabs() {
+        enumValues<GameType>().forEach {
+            binding.tabLayout.addGameTypeItem(it)
+        }
+    }
+
+    private fun setListeners(position: Int = 0) {
+        val gameType: GameType = GameType.values()[position]
+        viewModel.previsoesDosJogos(gameType).observe(viewLifecycleOwner, Observer {
             binding.previsoesJogos = it
         })
     }

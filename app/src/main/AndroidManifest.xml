@@ -23,7 +23,8 @@
         <activity
             android:name="br.com.samuelnunes.valorantpassbattle.ui.view.activity.MainActivity"
             android:hardwareAccelerated="true"
-            android:theme="@style/Theme.ValorantPassBattle.NoActionBar">
+            android:theme="@style/Theme.ValorantPassBattle.NoActionBar"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

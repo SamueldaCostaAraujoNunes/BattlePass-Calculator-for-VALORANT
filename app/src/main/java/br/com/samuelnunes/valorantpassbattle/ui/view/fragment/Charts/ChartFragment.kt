@@ -19,8 +19,7 @@ abstract class ChartFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        chart = Chart(requireContext())
-        return chart
+        return Chart(requireContext()).also { chart = it }
     }
 
     fun setData(label: String, data: List<Int>) {
